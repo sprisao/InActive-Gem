@@ -15,23 +15,24 @@ header
 */
 
 header {
-  margin: 10px auto;
+  margin: 2.5rem auto 0;
 }
 .headercontainer {
+  max-width: 30.8rem;
   display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-  height: 45px;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 0 1.9rem;
 }
 
 .logo {
   cursor: pointer;
-  width: 120px;
+  width: 160px;
 }
 
 .space_holder {
-  width: 250px;
+  width: 80px;
 }
 
 .searchContainer {
@@ -40,6 +41,8 @@ header {
   border: 1px solid #ccc;
   border-radius: 10px;
   overflow: hidden;
+  align-items: center;
+  background-color: #f8f8f8;
 }
 
 .searchIcon {
@@ -48,9 +51,9 @@ header {
 }
 
 .searchBox {
+  width: 100%;
   border: 0;
-  padding: 0.5rem 0.5rem 0.5rem 0;
-  flex: 1;
+  padding: 1rem;
   background-color: #f8f8f8;
 }
 
@@ -71,7 +74,7 @@ nav {
   font-weight: 700;
 }
 .category_wrap {
-  max-width: 76.8rem;
+  max-width: 30.8rem;
   display: -webkit-flex;
   display: flex;
   -webkit-justify-content: space-between;
@@ -98,7 +101,8 @@ nav {
 }
 
 .HomeQuickCategoryItem p {
-  margin-top: 0.2rem;
+  margin-top: 0.1rem;
+  margin-bottom: 0;
   font-weight: 250;
   font-size: 0.9rem;
 }
