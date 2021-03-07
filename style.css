@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  margin: 10px auto;
+}
+.nav-center {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  height: 45px;
+}
+
+.logo {
+  cursor: pointer;
+  width: 120px;
+}
+
+.space_holder {
+  width: 250px;
+}
+
+.searchContainer {
+  display: inline-flex;
+  position: relative;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.searchIcon {
+  padding: 0.5rem;
+  background-color: #f8f8f8;
+}
+
+.searchBox {
+  border: 0;
+  padding: 0.5rem 0.5rem 0.5rem 0;
+  flex: 1;
+  background-color: #f8f8f8;
+}

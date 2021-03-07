@@ -5,27 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gem</title>
-    <script src="https://kit.fontawesome.com/8eb5905426.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style.css" />
+    <script
+      src="https://kit.fontawesome.com/8eb5905426.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <!-- navigation -->
-    <nav>
+    <header>
       <div class="nav-center">
-        <img src="./src/images/logo/[GEM]-BI.png" class="logo" alt="logo" width="100px" />
-        <div class="search">
-          <i class="fas fa-search"></i>
+        <div class="logo_box">
+          <img src="./src/images/logo/[GEM]-BI.png" class="logo" alt="logo" />
+        </div>
+        <div class="space_holder"></div>
+        <div class="searchContainer">
+          <i class="fa fa-search searchIcon"></i>
           <input
-          type="search"
-          id="site-search"
-          name="q"
-          aria-label="Search through site content"
+            class="searchBox"
+            type="search"
+            name="search"
+            placeholder="검색"
           />
         </div>
-        </div>
-    </nav>
+      </div>
+    </header>
     <!-- categories -->
     <div class="category_container">
-
       <div class="categories">
         <div class="category">
           <button type="button" class="category_btn">
@@ -112,111 +118,129 @@
           </div>
         </div>
       </div>
-        <!-- tags -->
-        <div class="tags">
-          <div class="tag">
-            <button class="tag">새로생긴 맛집</button>
-          </div>
-      <div class="tag">
-        <button class="tag">회식</button>
+      <!-- tags -->
+      <div class="tags">
+        <div class="tag">
+          <button class="tag">새로생긴 맛집</button>
+        </div>
+        <div class="tag">
+          <button class="tag">회식</button>
+        </div>
+        <div class="tag">
+          <button class="tag">작업하기 좋은 카페</button>
+        </div>
+        <div class="tag">
+          <button class="tag">데이트하기 좋은 카페</button>
+        </div>
+        <div class="tag">
+          <button class="tag">디저트 맛집</button>
+        </div>
       </div>
-      <div class="tag">
-        <button class="tag">작업하기 좋은 카페</button>
+      <!-- news -->
+      <div class="news">
+        <div class="news_header">원주소식 ></div>
+        <div class="news_title">
+          원주시, 지역상생 우수 공공기관 및 우수기업에 감사패
+        </div>
+        <div class="news_more"><span>.. 더보기</span></div>
       </div>
-      <div class="tag">
-        <button class="tag">데이트하기 좋은 카페</button>
-      </div>
-      <div class="tag">
-        <button class="tag">디저트 맛집</button>
-      </div>
-    </div>
-    <!-- news -->
-    <div class="news">
-      <div class="news_header">원주소식 ></div>
-      <div class="news_title">
-        원주시, 지역상생 우수 공공기관 및 우수기업에 감사패
-      </div>
-      <div class="news_more"><span>.. 더보기</span></div>
-    </div>
-    <!-- Top Recommendations -->
-    <div>
+      <!-- Top Recommendations -->
       <div>
         <div>
-          <h1>맞춤 추천 Top 5</h1>
+          <div>
+            <h1>맞춤 추천 Top 5</h1>
+          </div>
+          <div>
+            <i>화살표 아이콘 추가</i>
+          </div>
         </div>
         <div>
-          <i>화살표 아이콘 추가</i>
+          <span>추천 Describe</span>
+        </div>
+        <!-- cards -->
+        <div class="card_container">
+          <div class="card">
+            <div class="card_img_container">
+              <img
+                src="./src/images/stores/silbermond.JPG"
+                class="store_img"
+                alt=""
+                width="150px"
+              />
+            </div>
+            <div class="card_title_container">
+              <h2>베스트 골프존</h2>
+            </div>
+            <div class="card_sideinfo_container">
+              <div class="sideinfo_location">
+                <span>반곡동</span>
+              </div>
+            </div>
+            <div class="card_description">
+              <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="./src/images/stores/silbermond.JPG"
+              class="store_img"
+              alt=""
+              width="150px"
+            />
+            <img src="" alt="" />
+          </div>
+          <div class="card_title_container">
+            <h2>베스트 골프존</h2>
+          </div>
+          <div class="card_sideinfo_container">
+            <div class="sideinfo_location">
+              <span>반곡동</span>
+            </div>
+          </div>
+          <div class="card_description">
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img
+            src="./src/images/stores/silbermond.JPG"
+            class="store_img"
+            alt=""
+            width="150px"
+          />
+          <img src="" alt="" />
+        </div>
+        <div class="card_title_container">
+          <h2>베스트 골프존</h2>
+        </div>
+        <div class="card_sideinfo_container">
+          <div class="sideinfo_location">
+            <span>반곡동</span>
+          </div>
+        </div>
+        <div class="card_description">
+          <p>Lorem ipsum dolor sit amet.</p>
         </div>
       </div>
-      <div>
-        <span>추천 Describe</span>
+      <div class="card">
+        <img
+          src="./src/images/stores/silbermond.JPG"
+          class="store_img"
+          alt=""
+          width="150px"
+        />
+        <img src="" alt="" />
       </div>
-      <!-- cards -->
-      <div class="card_container">
-        <div class="card">
-          <div class="card_img_container">
-            <img src="" alt="" />
-          </div>
-          <div class="card_title_container">
-            <h2>베스트 골프존</h2>
-          </div>
-          <div class="card_sideinfo_container">
-            <div class="sideinfo_location">
-              <span>반곡동</span>
-            </div>
-          </div>
-          <div class="card_description">
-            <p>Lorem ipsum dolor sit amet.</p>
-          </div>
+      <div class="card_title_container">
+        <h2>베스트 골프존</h2>
+      </div>
+      <div class="card_sideinfo_container">
+        <div class="sideinfo_location">
+          <span>반곡동</span>
         </div>
-        <div class="card">
-          <div class="card_img_container">
-            <img src="" alt="" />
-          </div>
-          <div class="card_title_container">
-            <h2>베스트 골프존</h2>
-          </div>
-          <div class="card_sideinfo_container">
-            <div class="sideinfo_location">
-              <span>반곡동</span>
-            </div>
-          </div>
-          <div class="card_description">
-            <p>Lorem ipsum dolor sit amet.</p>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card_img_container">
-            <img src="" alt="" />
-          </div>
-          <div class="card_title_container">
-            <h2>베스트 골프존</h2>
-          </div>
-          <div class="card_sideinfo_container">
-            <div class="sideinfo_location">
-              <span>반곡동</span>
-            </div>
-          </div>
-          <div class="card_description">
-            <p>Lorem ipsum dolor sit amet.</p>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card_img_container">
-            <img src="" alt="" />
-          </div>
-          <div class="card_title_container">
-            <h2>베스트 골프존</h2>
-          </div>
-          <div class="card_sideinfo_container">
-            <div class="sideinfo_location">
-              <span>반곡동</span>
-            </div>
-          </div>
-          <div class="card_description">
-            <p>Lorem ipsum dolor sit amet.</p>
-          </div>
-        </div>
+      </div>
+      <div class="card_description">
+        <p>Lorem ipsum dolor sit amet.</p>
       </div>
     </div>
 
@@ -238,7 +262,12 @@
       <div class="card_container">
         <div class="card">
           <div class="card_img_container">
-            <img src="" alt="" />
+            <img
+              src="./src/images/stores/silbermond.JPG"
+              class="store_img"
+              alt=""
+              width="150px"
+            />
           </div>
           <div class="card_title_container">
             <h2>베스트 골프존</h2>
@@ -253,54 +282,66 @@
           </div>
         </div>
         <div class="card">
-          <div class="card_img_container">
-            <img src="" alt="" />
-          </div>
-          <div class="card_title_container">
-            <h2>베스트 골프존</h2>
-          </div>
-          <div class="card_sideinfo_container">
-            <div class="sideinfo_location">
-              <span>반곡동</span>
-            </div>
-          </div>
-          <div class="card_description">
-            <p>Lorem ipsum dolor sit amet.</p>
+          <img
+            src="./src/images/stores/silbermond.JPG"
+            class="store_img"
+            alt=""
+            width="150px"
+          />
+          <img src="" alt="" />
+        </div>
+        <div class="card_title_container">
+          <h2>베스트 골프존</h2>
+        </div>
+        <div class="card_sideinfo_container">
+          <div class="sideinfo_location">
+            <span>반곡동</span>
           </div>
         </div>
-        <div class="card">
-          <div class="card_img_container">
-            <img src="" alt="" />
-          </div>
-          <div class="card_title_container">
-            <h2>베스트 골프존</h2>
-          </div>
-          <div class="card_sideinfo_container">
-            <div class="sideinfo_location">
-              <span>반곡동</span>
-            </div>
-          </div>
-          <div class="card_description">
-            <p>Lorem ipsum dolor sit amet.</p>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card_img_container">
-            <img src="" alt="" />
-          </div>
-          <div class="card_title_container">
-            <h2>베스트 골프존</h2>
-          </div>
-          <div class="card_sideinfo_container">
-            <div class="sideinfo_location">
-              <span>반곡동</span>
-            </div>
-          </div>
-          <div class="card_description">
-            <p>Lorem ipsum dolor sit amet.</p>
-          </div>
+        <div class="card_description">
+          <p>Lorem ipsum dolor sit amet.</p>
         </div>
       </div>
+      <div class="card">
+        <img
+          src="./src/images/stores/silbermond.JPG"
+          class="store_img"
+          alt=""
+          width="150px"
+        />
+        <img src="" alt="" />
+      </div>
+      <div class="card_title_container">
+        <h2>베스트 골프존</h2>
+      </div>
+      <div class="card_sideinfo_container">
+        <div class="sideinfo_location">
+          <span>반곡동</span>
+        </div>
+      </div>
+      <div class="card_description">
+        <p>Lorem ipsum dolor sit amet.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img
+        src="./src/images/stores/silbermond.JPG"
+        class="store_img"
+        alt=""
+        width="150px"
+      />
+      <img src="" alt="" />
+    </div>
+    <div class="card_title_container">
+      <h2>베스트 골프존</h2>
+    </div>
+    <div class="card_sideinfo_container">
+      <div class="sideinfo_location">
+        <span>반곡동</span>
+      </div>
+    </div>
+    <div class="card_description">
+      <p>Lorem ipsum dolor sit amet.</p>
     </div>
 
     <!-- Reccomendation Cafes -->
@@ -320,25 +361,29 @@
       <!-- cards -->
       <div class="card_container">
         <div class="card">
-          <div class="card_img_container">
-            <img src="" alt="" />
-          </div>
-          <div class="card_title_container">
-            <h2>베스트 골프존</h2>
-          </div>
-          <div class="card_sideinfo_container">
-            <div class="sideinfo_location">
-              <span>반곡동</span>
-            </div>
-          </div>
-          <div class="card_description">
-            <p>Lorem ipsum dolor sit amet.</p>
+          <img
+            src="./src/images/stores/silbermond.JPG"
+            class="store_img"
+            alt=""
+            width="150px"
+          />
+          <img src="" alt="" />
+        </div>
+        <div class="card_title_container">
+          <h2>베스트 골프존</h2>
+        </div>
+        <div class="card_sideinfo_container">
+          <div class="sideinfo_location">
+            <span>반곡동</span>
           </div>
         </div>
-        <div class="card">
-          <div class="card_img_container">
-            <img src="" alt="" />
-          </div>
+        <div class="card_description">
+          <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card_img_container">
+          <img src="" alt="" />
           <div class="card_title_container">
             <h2>베스트 골프존</h2>
           </div>
@@ -384,95 +429,95 @@
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- New Stores -->
+      <!-- New Stores -->
 
-    <div class="container newstores">
-      <div>
+      <div class="container newstores">
         <div>
-          <h1>새로 오픈했어요!</h1>
+          <div>
+            <h1>새로 오픈했어요!</h1>
+          </div>
+          <div>
+            <i>화살표 아이콘</i>
+          </div>
         </div>
         <div>
-          <i>화살표 아이콘</i>
+          <span> 새로생긴 매장을 가장 먼저 체험해보세요~ </span>
         </div>
-      </div>
-      <div>
-        <span> 새로생긴 매장을 가장 먼저 체험해보세요~ </span>
-      </div>
-      <!-- cards -->
-      <div class="card_container">
-        <div class="card newstore">
-          <div class="card_img_container newstore">
-            <img src="" alt="" />
-          </div>
-          <div class="card_description">
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae
-              vero blanditiis commodi placeat!
-            </p>
-          </div>
-          <div class="card_title_container">
-            <h2>SILBERMOND</h2>
+        <!-- cards -->
+        <div class="card_container">
+          <div class="card newstore">
+            <div class="card_img_container newstore">
+              <img src="" alt="" />
+            </div>
+            <div class="card_description">
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae
+                vero blanditiis commodi placeat!
+              </p>
+            </div>
+            <div class="card_title_container">
+              <h2>SILBERMOND</h2>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="card_container">
-        <div class="card newstore">
-          <div class="card_img_container newstore">
-            <img src="" alt="" />
-          </div>
-          <div class="card_description">
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae
-              vero blanditiis commodi placeat!
-            </p>
-          </div>
-          <div class="card_title_container">
-            <h2>SILBERMOND</h2>
+        <div class="card_container">
+          <div class="card newstore">
+            <div class="card_img_container newstore">
+              <img src="" alt="" />
+            </div>
+            <div class="card_description">
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae
+                vero blanditiis commodi placeat!
+              </p>
+            </div>
+            <div class="card_title_container">
+              <h2>SILBERMOND</h2>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="card_container">
-        <div class="card newstore">
-          <div class="card_img_container newstore">
-            <img src="" alt="" />
-          </div>
-          <div class="card_description">
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae
-              vero blanditiis commodi placeat!
-            </p>
-          </div>
-          <div class="card_title_container">
-            <h2>SILBERMOND</h2>
+        <div class="card_container">
+          <div class="card newstore">
+            <div class="card_img_container newstore">
+              <img src="" alt="" />
+            </div>
+            <div class="card_description">
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae
+                vero blanditiis commodi placeat!
+              </p>
+            </div>
+            <div class="card_title_container">
+              <h2>SILBERMOND</h2>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="card_container">
-        <div class="card newstore">
-          <div class="card_img_container newstore">
-            <img src="" alt="" />
-          </div>
-          <div class="card_description">
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae
-              vero blanditiis commodi placeat!
-            </p>
-          </div>
-          <div class="card_title_container">
-            <h2>SILBERMOND</h2>
+        <div class="card_container">
+          <div class="card newstore">
+            <div class="card_img_container newstore">
+              <img src="" alt="" />
+            </div>
+            <div class="card_description">
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae
+                vero blanditiis commodi placeat!
+              </p>
+            </div>
+            <div class="card_title_container">
+              <h2>SILBERMOND</h2>
+            </div>
           </div>
         </div>
       </div>
+      <!-- Footer -->
+      <hr />
+      <footer>
+        <p>Copyright © 2020 GEM All rights reserved.</p>
+      </footer>
     </div>
-    <!-- Footer -->
-    <hr />
-    <footer>
-      <p>Copyright © 2020 GEM All rights reserved.</p>
-    </footer>
   </body>
 </html>
