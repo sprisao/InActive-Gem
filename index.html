@@ -5,111 +5,118 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gem</title>
+    <script src="https://kit.fontawesome.com/8eb5905426.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <!-- navigation -->
     <nav>
       <div class="nav-center">
         <img src="./src/images/logo/[GEM]-BI.png" class="logo" alt="logo" width="100px" />
-        <input
+        <div class="search">
+          <i class="fas fa-search"></i>
+          <input
           type="search"
           id="site-search"
           name="q"
           aria-label="Search through site content"
-        />
-      </div>
+          />
+        </div>
+        </div>
     </nav>
     <!-- categories -->
-    <div class="categories">
-      <div class="category">
-        <button type="button" class="category_btn">
-          <img src="./src/icons/hot.png" alt="" class="btn_img" />
-          <span id="btn_name">인기장소</span>
-        </button>
+    <div class="category_container">
+
+      <div class="categories">
         <div class="category">
           <button type="button" class="category_btn">
-            <img src="./src/icons/new.png" alt="" class="btn_img" />
-            <span id="btn_name">새로생긴 곳</span>
+            <img src="./src/icons/hot.png" alt="" class="btn_img" />
+            <span id="btn_name">인기장소</span>
           </button>
-        </div>
-        <div class="category">
+          <div class="category">
+            <button type="button" class="category_btn">
+              <img src="./src/icons/new.png" alt="" class="btn_img" />
+              <span id="btn_name">새로생긴 곳</span>
+            </button>
+          </div>
+          <div class="category">
+            <button type="button" class="category_btn">
+              <img src="./src/icons/food.png" alt="" class="btn_img" />
+              <span id="btn_name">음식점</span>
+            </button>
+          </div>
+          <div class="category">
+            <button type="button" class="category_btn">
+              <img src="./src/icons/cafe.png" alt="" class="btn_img" />
+              <span id="btn_name">카페</span>
+            </button>
+          </div>
+          <div class="category">
+            <button type="button" class="category_btn">
+              <img src="./src/icons/golf.png" alt="" class="btn_img" />
+              <span id="btn_name">스크린골프</span>
+            </button>
+          </div>
           <button type="button" class="category_btn">
-            <img src="./src/icons/food.png" alt="" class="btn_img" />
-            <span id="btn_name">음식점</span>
-          </button>
-        </div>
-        <div class="category">
-          <button type="button" class="category_btn">
-            <img src="./src/icons/cafe.png" alt="" class="btn_img" />
-            <span id="btn_name">카페</span>
-          </button>
-        </div>
-        <div class="category">
-          <button type="button" class="category_btn">
-            <img src="./src/icons/golf.png" alt="" class="btn_img" />
-            <span id="btn_name">스크린골프</span>
-          </button>
-        </div>
-        <button type="button" class="category_btn">
             <img src="./src/icons/fitness.png" alt="" class="btn_img" />
             <span id="btn_name">운동・헬스</span>
-        </button>
-    </div>
-    <div class="category">
-        <button type="button" class="category_btn">
+          </button>
+        </div>
+        <div class="category">
+          <button type="button" class="category_btn">
             <img src="./src/icons/studio.png" alt="" class="btn_img" />
             <span id="btn_name">스튜디오</span>
-        </button>
-    </div>
-    <div class="category">
-        <button type="button" class="category_btn">
+          </button>
+        </div>
+        <div class="category">
+          <button type="button" class="category_btn">
             <img src="./src/icons/salon.png" alt="" class="btn_img" />
             <span id="btn_name">미용실</span>
-        </button>
-    </div>
-    <div class="category">
-        <button type="button" class="category_btn">
+          </button>
+        </div>
+        <div class="category">
+          <button type="button" class="category_btn">
             <img src="./src/icons/academy.png" alt="" class="btn_img" />
             <span id="btn_name">학원</span>
-        </button>
-    </div>
-    <div class="category">
-      <button type="button" class="category_btn">
-        <img src="./src/icons/pub.png" alt="" class="btn_img" />
-        <span id="btn_name">호프</span>
-      </button>
-      <div class="category">
-    <div class="category">
-        <button type="button" class="category_btn">
-            <img src="./src/icons/pharmacy.png" alt="" class="btn_img" />
-            <span id="btn_name">약국</span>
           </button>
         </div>
         <div class="category">
           <button type="button" class="category_btn">
-            <img src="./src/icons/hospital.png" alt="" class="btn_img" />
-            <span id="btn_name">병원</span>
+            <img src="./src/icons/pub.png" alt="" class="btn_img" />
+            <span id="btn_name">호프</span>
           </button>
-        </div>
-        <div class="category">
-          <button type="button" class="category_btn">
-            <img src="./src/icons/dog.png" alt="" class="btn_img" />
-            <span id="btn_name">애견</span>
-          </button>
-        </div>
-        <div class="category">
-          <button type="button" class="category_btn">
-            <img src="./src/icons/shopping.png" alt="" class="btn_img" />
-            <span id="btn_name">마트</span>
-          </button>
+          <div class="category">
+            <div class="category">
+              <button type="button" class="category_btn">
+                <img src="./src/icons/pharmacy.png" alt="" class="btn_img" />
+                <span id="btn_name">약국</span>
+              </button>
+            </div>
+            <div class="category">
+              <button type="button" class="category_btn">
+                <img src="./src/icons/hospital.png" alt="" class="btn_img" />
+                <span id="btn_name">병원</span>
+              </button>
+            </div>
+            <div class="category">
+              <button type="button" class="category_btn">
+                <img src="./src/icons/dog.png" alt="" class="btn_img" />
+                <span id="btn_name">애견</span>
+              </button>
+            </div>
+            <div class="category">
+              <button type="button" class="category_btn">
+                <img src="./src/icons/shopping.png" alt="" class="btn_img" />
+                <span id="btn_name">마트</span>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-    <!-- tags -->
-    <div class="tags">
-      <div class="tag">
-        <button class="tag">새로생긴 맛집</button>
-      </div>
+        <!-- tags -->
+        <div class="tags">
+          <div class="tag">
+            <button class="tag">새로생긴 맛집</button>
+          </div>
       <div class="tag">
         <button class="tag">회식</button>
       </div>
