@@ -21,7 +21,7 @@ h6 {
   clear: both;
   font-weight: bold;
   color: #111;
-  line-height: 1.5;
+  line-height: 1.25;
   letter-spacing: -1px;
   word-break: keep-all;
   margin-bottom: 0;
@@ -39,6 +39,11 @@ h2 {
 h3 {
   font-size: 1.5rem;
 }
+
+input:focus {
+  outline: none;
+}
+
 /* 
 ============
 header 
@@ -53,6 +58,7 @@ header {
   display: flex;
   -webkit-justify-content: space-between;
   justify-content: space-between;
+  align-items: center;
   margin: 0 auto;
   padding: 0 1.9rem;
 }
@@ -86,6 +92,7 @@ header {
   border: 0;
   padding: 1rem;
   background-color: #f8f8f8;
+  text-decoration: none;
 }
 
 /* 
@@ -134,7 +141,7 @@ nav {
 .HomeQuickCategoryItem p {
   margin-top: 0.1rem;
   margin-bottom: 0;
-  font-weight: 250;
+  font-weight: 450;
   font-size: 0.9rem;
 }
 
@@ -191,7 +198,7 @@ NEWS
   padding: 5px;
   justify-content: space-between;
   align-items: center;
-  height: 5vw;
+  height: 40px;
   font-size: 14px;
 }
 
@@ -216,6 +223,7 @@ Recommendations
 .seciton_wrapper {
   max-width: 30.8rem;
   margin: 0 auto;
+  margin-bottom: 3rem;
 }
 
 .section_header {
@@ -267,7 +275,8 @@ Recommendations
   border-radius: 10px;
 }
 
-.sideinfo_location {
+.sideinfo_location span {
+  margin-top: 0;
   color: rgb(204, 204, 204);
 }
 
