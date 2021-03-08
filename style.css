@@ -106,3 +106,39 @@ nav {
   font-weight: 250;
   font-size: 0.9rem;
 }
+
+/* 
+===========
+TAGS
+===========
+ */
+
+.tags_container {
+  display: block;
+  max-width: 30.8rem;
+  margin: 0 auto;
+  overflow-x: scroll;
+  box-sizing: border-box;
+}
+
+.tags_swipewrapper::-webkit-scrollbar {
+  display: none !important;
+}
+
+.tags_swipewrapper {
+  display: block;
+  justify-content: space-between;
+  white-space: nowrap;
+  overflow-x: auto;
+}
+
+.tag {
+  display: inline-block;
+  padding: 10px;
+  border-radius: 20px;
+  border: 0.5px solid rgb(204, 204, 204);
+  background-color: white;
+  cursor: pointer;
+  font-size: 14px;
+  margin-right: 0.25rem;
+}
