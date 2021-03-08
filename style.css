@@ -6,10 +6,38 @@ a {
   user-select: none;
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
   cursor: pointer;
+  text-decoration: none;
 }
-
 body {
   margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  clear: both;
+  font-weight: bold;
+  color: #111;
+  line-height: 1.5;
+  letter-spacing: -1px;
+  word-break: keep-all;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
 }
 /* 
 ============
@@ -71,7 +99,7 @@ nav {
   position: relative;
   width: 100%;
   background: #fff;
-  padding: 1.2rem 0 1.6rem;
+  padding: 1.2rem 0 1rem;
   margin: 0 auto;
   font-size: 1.1rem;
   font-weight: 700;
@@ -144,6 +172,8 @@ TAGS
   cursor: pointer;
   font-size: 14px;
   margin-right: 0.25rem;
+  text-decoration: none;
+  color: #707070;
 }
 
 /* 
@@ -157,11 +187,11 @@ NEWS
 .news_container {
   display: flex;
   max-width: 30.8rem;
-  margin: 0.5rem auto;
+  margin: 0.75rem auto;
   padding: 5px;
   justify-content: space-between;
   align-items: center;
-  height: 3vw;
+  height: 5vw;
   font-size: 14px;
 }
 
@@ -175,4 +205,74 @@ NEWS
 }
 .news_more {
   cursor: pointer;
+}
+
+/* 
+========
+Recommendations
+========
+ */
+
+.seciton_wrapper {
+  max-width: 30.8rem;
+  margin: 0 auto;
+}
+
+.section_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+}
+
+.section_desc {
+  font-size: 17px;
+  font-weight: 300px;
+  color: #707070;
+}
+
+.cards_wrapper {
+  display: block;
+  max-width: 30.8rem;
+  margin-top: 1.25em;
+  margin-bottom: 0px;
+  overflow-x: scroll;
+  box-sizing: border-box;
+}
+
+.cards_swipewrapper {
+  display: block;
+  justify-content: space-between;
+  white-space: nowrap;
+  overflow-x: auto;
+}
+
+.card {
+  display: inline-block;
+  cursor: pointer;
+  font-size: 14px;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.card_title h3 {
+  font-size: 28px;
+}
+
+.card img {
+  width: 280px;
+  height: auto;
+  overflow: hidden;
+  margin: 0;
+  border-radius: 10px;
+}
+
+.sideinfo_location {
+  color: rgb(204, 204, 204);
+}
+
+.card p {
+  margin-top: 5px;
+  font-size: 16px;
+  font-weight: 325;
 }
