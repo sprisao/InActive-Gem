@@ -216,7 +216,7 @@ NEWS
 
 /* 
 ========
-Recommendations
+Card Size Big1 Swiper
 ========
  */
 
@@ -239,23 +239,15 @@ Recommendations
   color: #707070;
 }
 
-.cards_wrapper {
-  display: block;
-  max-width: 30.8rem;
-  margin-top: 1.25em;
-  margin-bottom: 0px;
-  overflow-x: scroll;
-  box-sizing: border-box;
-}
-
 .cards_swipewrapper {
   display: block;
   justify-content: space-between;
   white-space: nowrap;
   overflow-x: auto;
+  margin-top: 10px;
 }
 
-.card {
+.card_l1 {
   display: inline-block;
   cursor: pointer;
   font-size: 14px;
@@ -263,11 +255,11 @@ Recommendations
   margin-right: 10px;
 }
 
-.card_title h3 {
+.card_title_l1 h3 {
   font-size: 28px;
 }
 
-.card img {
+.card_l1 img {
   width: 280px;
   height: auto;
   overflow: hidden;
@@ -280,8 +272,79 @@ Recommendations
   color: rgb(204, 204, 204);
 }
 
-.card p {
+.card_l1 p {
   margin-top: 5px;
   font-size: 16px;
   font-weight: 325;
+}
+
+/* 
+========
+Card Size Big1 Swiper
+========
+ */
+
+.card span {
+  font-size: 12px;
+  color: rgb(204, 204, 204);
+}
+
+.band {
+  max-width: 1240px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-gap: 20px;
+  margin-top: 10px;
+}
+
+.card {
+  background-color: #fff;
+  text-decoration: none;
+  color: #444;
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  top: 0;
+  transition: 0.2s;
+}
+
+.card:hover {
+  top: -2px;
+}
+
+.card h1 {
+  font-size: 25px;
+}
+.thumb {
+  padding-bottom: 120%;
+  background-size: cover;
+  background-position: center center;
+  border-radius: 15px;
+}
+
+article {
+  margin-top: 5px;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+article p {
+  flex: 1;
+  color: #707070;
+  margin-top: 5px;
+}
+
+@media screen and (min-width: 350px) {
+  .band {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 850px) {
+  .band {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
