@@ -10,6 +10,7 @@ a {
 }
 body {
   margin: 0;
+  padding-top: 75px;
 }
 
 h1,
@@ -51,7 +52,13 @@ header
 */
 
 header {
-  margin: 2.5rem auto 0;
+  z-index: 9999;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 5px 0;
 }
 .headercontainer {
   max-width: 30.8rem;
@@ -60,7 +67,6 @@ header {
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
-  padding: 0 1.9rem;
 }
 
 .logo {
