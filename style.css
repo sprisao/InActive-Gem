@@ -226,10 +226,14 @@ Card Size Big1 Swiper
   margin-bottom: 3rem;
 }
 
+.seciton_wrapper h2 {
+  align-items: center;
+}
+
 .section_header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: center !important;
   margin: 0;
 }
 
@@ -433,3 +437,10 @@ NEW STORES
 footer
 =========
  */
+footer {
+  text-align: center;
+}
+
+hr {
+  margin-top: 0;
+}
