@@ -277,6 +277,17 @@ New Stores Design
   color: #fff;
 }
 
+.article {
+  z-index: 1;
+  display: flex;
+  flex-direction: row-reverse;
+  text-align: right;
+  margin-top: 300px;
+  margin-right: 20px;
+  margin-left: 50px;
+  white-space: normal !important;
+  color: #fff !important;
+}
 /* 
 Hot Stores design
  */
@@ -299,18 +310,6 @@ Hot Stores design
   margin-top: 5px;
   font-size: 16px;
   font-weight: 325;
-}
-
-.article {
-  z-index: 1;
-  display: flex;
-  flex-direction: row-reverse;
-  text-align: right;
-  margin-top: 280px;
-  margin-right: 20px;
-  margin-left: 50px;
-  white-space: normal !important;
-  color: #fff !important;
 }
 
 /* 
