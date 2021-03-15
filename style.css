@@ -211,7 +211,7 @@ Section Header
 */
 
 .section {
-  max-width: 30.8rem;
+  max-width: 30.8rem !important;
   margin: 0 auto;
   margin-bottom: 3rem;
 }
@@ -301,10 +301,6 @@ Hot Stores design
   font-weight: 325;
 }
 
-/* 
-Card-Layout: Grid
-*/
-
 .article {
   z-index: 1;
   display: flex;
@@ -318,38 +314,19 @@ Card-Layout: Grid
 }
 
 /* 
-========
-Card Size Big1 Swiper
-========
- */
+Card-Layout: Grid
+*/
 
-.sideinfo_location span {
-  margin-top: 0;
-  color: rgb(204, 204, 204);
-}
-
-/* 
-========
-Card Size Big1 Swiper
-========
- */
-
-.card span {
-  font-size: 12px;
-  color: rgb(204, 204, 204);
-}
-
-.band {
-  max-width: 1240px;
-  margin: 0 auto;
+.cards__grid {
   display: grid;
+  margin: 0 auto;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
   grid-gap: 15px;
-  margin-top: 5px;
+  margin-top: 1rem;
 }
 
-.card {
+.cards__grid__card {
   background-color: #fff;
   text-decoration: none;
   color: #444;
@@ -362,29 +339,34 @@ Card Size Big1 Swiper
   transition: 0.2s;
 }
 
-.card:hover {
+.cards__grid__card:hover {
   top: -2px;
 }
 
-.card h1 {
-  font-size: 25px;
-}
-.thumb {
-  padding-bottom: 120%;
-  background-size: cover;
-  background-position: center center;
-  border-radius: 15px;
-}
-
 @media screen and (min-width: 350px) {
-  .band {
+  .cards__grid {
     grid-template-columns: 1fr 1fr;
   }
 }
 @media screen and (min-width: 850px) {
-  .band {
+  .cards__grid {
     grid-template-columns: repeat(2, 1fr);
   }
+}
+
+/* RESTAURANT RECOMMENDATION */
+.thumb16 {
+  padding-bottom: 120%;
+  background-size: cover;
+  background-position: center center;
+  border-radius: 15px;
+  margin-bottom: 5px;
+}
+
+.cards__grid__card p {
+  margin-top: 5px;
+  font-size: 16px;
+  font-weight: 325;
 }
 
 /* 
@@ -398,28 +380,4 @@ footer {
 
 hr {
   margin-top: 0;
-}
-
-/* 
-=========
-Category Page
-=========
-*/
-
-.category_title_container {
-  max-width: 30.8rem;
-  margin: 0 auto;
-}
-
-.CategoryItem {
-  text-decoration: none;
-  color: #1a1a1a;
-  display: inline-block;
-  text-align: center;
-  padding-top: 1.3rem;
-}
-.CategoryItem img {
-  width: 3rem;
-  height: 3rem;
-  z-index: 20;
 }
