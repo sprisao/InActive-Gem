@@ -239,7 +239,15 @@ Card-Layout: Swiper
 ==============
 */
 
-.cards__swiper {
+.cards__swiper__new {
+  display: block;
+  justify-content: space-between;
+  white-space: nowrap;
+  overflow-x: auto;
+  margin-top: 1rem;
+}
+
+.cards__swiper__hot {
   display: block;
   justify-content: space-between;
   white-space: nowrap;
@@ -250,18 +258,17 @@ Card-Layout: Swiper
 .cards__swiper__card {
   display: inline-block;
   cursor: pointer;
+  text-decoration: none;
 }
 
 /* 
 New Stores Design
  */
 .new {
-  width: 350px;
-  height: 450px;
   background-size: cover;
   background-position: center center;
   border-radius: 15px;
-  margin-right: 10px !important;
+  margin-right: 15px;
 }
 
 .new h1 {
@@ -282,9 +289,7 @@ New Stores Design
   display: flex;
   flex-direction: row-reverse;
   text-align: right;
-  margin-top: 300px;
-  margin-right: 20px;
-  margin-left: 50px;
+  margin: 330px 30px 50px 80px;
   white-space: normal !important;
   color: #fff !important;
 }
@@ -293,15 +298,13 @@ Hot Stores design
  */
 
 .hot {
-  display: inline-block;
-  cursor: pointer;
-  text-decoration: none;
-  margin-right: 10px;
+  margin-right: 15px;
 }
 
 .hot img {
   width: 280px;
-  height: auto;
+  height: 280px;
+  object-fit: cover;
   overflow: hidden;
   margin: 0;
   border-radius: 10px;
@@ -316,7 +319,7 @@ Hot Stores design
 Card-Layout: Grid
 */
 
-.cards__grid {
+.cards__grid__food {
   display: grid;
   margin: 0 auto;
   grid-template-columns: 1fr;
@@ -343,12 +346,12 @@ Card-Layout: Grid
 }
 
 @media screen and (min-width: 350px) {
-  .cards__grid {
+  .cards__grid__food {
     grid-template-columns: 1fr 1fr;
   }
 }
 @media screen and (min-width: 850px) {
-  .cards__grid {
+  .cards__grid__food {
     grid-template-columns: repeat(2, 1fr);
   }
 }
