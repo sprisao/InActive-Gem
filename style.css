@@ -211,9 +211,10 @@ Section Header
 */
 
 .section {
-  max-width: 30.8rem !important;
+  max-width: 60.8rem !important;
   margin: 0 auto;
   margin-bottom: 3rem;
+  padding: 0 80px;
 }
 
 .section__header__container {
@@ -289,7 +290,7 @@ New Stores Design
   display: flex;
   flex-direction: row-reverse;
   text-align: right;
-  margin: 330px 30px 50px 80px;
+  margin: 330px 20px 30px 80px;
   white-space: normal !important;
   color: #fff !important;
 }
@@ -319,7 +320,8 @@ Hot Stores design
 Card-Layout: Grid
 */
 
-.cards__grid__food {
+.cards__grid__food,
+.cards__grid__cafe {
   display: grid;
   margin: 0 auto;
   grid-template-columns: 1fr;
@@ -346,13 +348,15 @@ Card-Layout: Grid
 }
 
 @media screen and (min-width: 350px) {
-  .cards__grid__food {
+  .cards__grid__food,
+  .cards__grid__cafe {
     grid-template-columns: 1fr 1fr;
   }
 }
 @media screen and (min-width: 850px) {
-  .cards__grid__food {
-    grid-template-columns: repeat(2, 1fr);
+  .cards__grid__food,
+  .cards__grid__cafe {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 

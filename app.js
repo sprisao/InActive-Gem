@@ -124,12 +124,20 @@ const store = [
 //get parent element
 
 const section__new = document.querySelector(".cards__swiper__new");
+const section__hot = document.querySelector(".cards__swiper__hot");
+const section__food = document.querySelector(".cards__grid__food");
+const section__cafe = document.querySelector(".cards__grid__cafe");
 
+//////// New Stores /////////
 window.addEventListener("DOMContentLoaded", function () {
-  let displayStore = store.map(function (item) {
-    // console.log(item);
+  displayStoreItems(store);
+});
 
-    return `<div class="cards__swiper__card new" style="background-image: url(${item.img})">
+function displayStoreItems(storeItems) {
+  let displayStore = store.map(function (item) {
+    // console.log(item.category);
+    if (item.category === "음식점") {
+      return `<div class="cards__swiper__card new" style="background-image: url(${item.img})">
             <div class="article">
               <article>
                 <p>
@@ -140,21 +148,18 @@ window.addEventListener("DOMContentLoaded", function () {
               </article>
             </div>
           </div>`;
+    }
   });
   displayStore = displayStore.join("");
   section__new.innerHTML = displayStore;
-  console.log(displayStore);
-});
+}
 
-// HOT section
-
-const section__hot = document.querySelector(".cards__swiper__hot");
-
+///////// Hot Stores /////////
 window.addEventListener("DOMContentLoaded", function () {
   let displayStore = store.map(function (item) {
-    // console.log(item);
-
-    return `<div class="cards__swiper__card hot">
+    // console.log(item.category);
+    if (item.category === "카페") {
+      return `<div class="cards__swiper__card hot">
             <img
               src=".${item.img}"
               class="store_img"
@@ -164,21 +169,18 @@ window.addEventListener("DOMContentLoaded", function () {
             <span>${item.location}</span>
             <p>${item.desc}</p>
           </div>`;
+    }
   });
   displayStore = displayStore.join("");
   section__hot.innerHTML = displayStore;
-  console.log(displayStore);
 });
 
-// Restaurant Recommendation
-
-const section__food = document.querySelector(".cards__grid__food");
-
+///////// Restaurant Recommendation /////////
 window.addEventListener("DOMContentLoaded", function () {
   let displayStore = store.map(function (item) {
     // console.log(item);
-
-    return `<a href="#" class="cards__grid__card">
+    if (item.category === "음식점") {
+      return `<a href="#" class="cards__grid__card">
             <div
               class="thumb16"
               style="background-image: url(${item.img})"
@@ -189,8 +191,30 @@ window.addEventListener("DOMContentLoaded", function () {
               <p>${item.desc}</p>
             </article>
           </a>`;
+    }
   });
   displayStore = displayStore.join("");
   section__food.innerHTML = displayStore;
-  console.log(displayStore);
+});
+
+///////// Cafe Recommendation /////////
+window.addEventListener("DOMContentLoaded", function () {
+  let displayStore = store.map(function (item) {
+    console.log(item);
+    if (item.category === "카페") {
+      return `<a href="#" class="cards__grid__card">
+            <div
+              class="thumb16"
+              style="background-image: url(${item.img})"
+            ></div>
+            <article>
+              <h3>${item.title}</h3>
+              <span>${item.location}</span>
+              <p>${item.desc}</p>
+            </article>
+          </a>`;
+    }
+  });
+  displayStore = displayStore.join("");
+  section__cafe.innerHTML = displayStore;
 });
