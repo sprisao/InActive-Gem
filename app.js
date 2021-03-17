@@ -2,7 +2,7 @@ const store = [
   {
     id: 8,
     title: "안432",
-    category: "음식점",
+    business_category: "음식점",
     location: "반곡동",
     img: "/src/images/stores/안432.jpeg",
     desc: "동남아식 프리미엄 샐러드 & 샌드위치",
@@ -10,7 +10,7 @@ const store = [
   {
     id: 1,
     title: "SILBERMOND",
-    category: "음식점",
+    business_category: "음식점",
     location: "반곡동",
     img: "/src/images/stores/실버몬트.jpg",
     desc: "동남아식 프리미엄 샐러드 & 샌드위치",
@@ -18,7 +18,7 @@ const store = [
   {
     id: 2,
     title: "까치둥지",
-    category: "음식점",
+    business_category: "음식점",
     location: "개운동",
     img: "/src/images/stores/까치둥지.jpeg",
     desc: "동남아식 프리미엄 샐러드 & 샌드위치",
@@ -26,7 +26,7 @@ const store = [
   {
     id: 3,
     title: "르미엘",
-    category: "카페",
+    business_category: "카페",
     location: "무실동",
     img: "/src/images/stores/르미엘.jpeg",
     desc: "동남아식 프리미엄 샐러드 & 샌드위치",
@@ -34,7 +34,7 @@ const store = [
   {
     id: 4,
     title: "린",
-    category: "음식점",
+    business_category: "음식점",
     location: "무실동",
     img: "/src/images/stores/린.jpeg",
     desc: "동남아식 프리미엄 샐러드 & 샌드위치",
@@ -42,7 +42,7 @@ const store = [
   {
     id: 5,
     title: "보릿고개",
-    category: "음식점",
+    business_category: "음식점",
     location: "반곡동",
     img: "/src/images/stores/보릿고개.jpeg",
     desc: "동남아식 프리미엄 샐러드 & 샌드위치",
@@ -50,7 +50,7 @@ const store = [
   {
     id: 6,
     title: "사니다카페",
-    category: "카페",
+    business_category: "카페",
     location: "무실동",
     img: "/src/images/stores/사니다카페.jpeg",
     desc: "동남아식 프리미엄 샐러드 & 샌드위치",
@@ -58,7 +58,7 @@ const store = [
   {
     id: 7,
     title: "산정집",
-    category: "음식점",
+    business_category: "음식점",
     location: "행구동",
     img: "/src/images/stores/산정집.jpeg",
     desc: "동남아식 프리미엄 샐러드 & 샌드위치",
@@ -66,7 +66,7 @@ const store = [
   {
     id: 9,
     title: "앤트빌라",
-    category: "음식점",
+    business_category: "음식점",
     location: "반곡동",
     img: "/src/images/stores/앤트빌라.jpeg",
     desc: "동남아식 프리미엄 샐러드 & 샌드위치",
@@ -74,7 +74,7 @@ const store = [
   {
     id: 10,
     title: "착한낙지",
-    category: "음식점",
+    business_category: "음식점",
     location: "단계동",
     img: "/src/images/stores/착한낙지.jpeg",
     desc: "동남아식 프리미엄 샐러드 & 샌드위치",
@@ -82,7 +82,7 @@ const store = [
   {
     id: 12,
     title: "카페 행복지수",
-    category: "카페",
+    business_category: "카페",
     location: "행구동",
     img: "/src/images/stores/카페행복지수.jpeg",
     desc: "동남아식 프리미엄 샐러드 & 샌드위치",
@@ -90,7 +90,7 @@ const store = [
   {
     id: 13,
     title: "카페553",
-    category: "카페",
+    business_category: "카페",
     location: "행구동",
     img: "/src/images/stores/카페553.jpeg",
     desc: "동남아식 프리미엄 샐러드 & 샌드위치",
@@ -98,7 +98,7 @@ const store = [
   {
     id: 14,
     title: "카페치올라",
-    category: "카페",
+    business_category: "카페",
     location: "행구동",
     img: "/src/images/stores/카페치올라.jpeg",
     desc: "동남아식 프리미엄 샐러드 & 샌드위치",
@@ -106,7 +106,7 @@ const store = [
   {
     id: 15,
     title: "향교막국수",
-    category: "음식점",
+    business_category: "음식점",
     location: "개운동",
     img: "/src/images/stores/향교막국수.jpeg",
     desc: "동남아식 프리미엄 샐러드 & 샌드위치",
@@ -114,7 +114,7 @@ const store = [
   {
     id: 16,
     title: "허선웅닭갈비",
-    category: "음식점",
+    business_category: "음식점",
     location: "단계동",
     img: "/src/images/stores/허선웅닭갈비.jpeg",
     desc: "동남아식 프리미엄 샐러드 & 샌드위치",
@@ -135,8 +135,8 @@ window.addEventListener("DOMContentLoaded", function () {
 
 function displayStoreItems(storeItems) {
   let displayStore = store.map(function (item) {
-    // console.log(item.category);
-    if (item.category === "음식점") {
+    // console.log(item.business_category);
+    if (item.business_category === "음식점") {
       return `<div class="cards__swiper__card new" style="background-image: url(${item.img})">
             <div class="article">
               <article>
@@ -157,8 +157,8 @@ function displayStoreItems(storeItems) {
 ///////// Hot Stores /////////
 window.addEventListener("DOMContentLoaded", function () {
   let displayStore = store.map(function (item) {
-    // console.log(item.category);
-    if (item.category === "카페") {
+    // console.log(item.business_category);
+    if (item.business_category === "카페") {
       return `<div class="cards__swiper__card hot">
             <img
               src=".${item.img}"
@@ -179,7 +179,7 @@ window.addEventListener("DOMContentLoaded", function () {
 window.addEventListener("DOMContentLoaded", function () {
   let displayStore = store.map(function (item) {
     // console.log(item);
-    if (item.category === "음식점") {
+    if (item.business_category === "음식점") {
       return `<a href="#" class="cards__grid__card">
             <div
               class="thumb16"
@@ -201,7 +201,7 @@ window.addEventListener("DOMContentLoaded", function () {
 window.addEventListener("DOMContentLoaded", function () {
   let displayStore = store.map(function (item) {
     console.log(item);
-    if (item.category === "카페") {
+    if (item.business_category === "카페") {
       return `<a href="#" class="cards__grid__card">
             <div
               class="thumb16"
