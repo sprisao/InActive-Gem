@@ -4,7 +4,7 @@ const store = [
     title: "안432",
     business_category: "음식점",
     location: "반곡동",
-    img: "/src/images/stores/안432.jpeg",
+    img: ".//src/images/stores/안432.jpeg",
     desc: "동남아식 프리미엄 샐러드 & 샌드위치",
   },
   {
@@ -12,7 +12,7 @@ const store = [
     title: "SILBERMOND",
     business_category: "음식점",
     location: "반곡동",
-    img: "/src/images/stores/실버몬트.jpg",
+    img: ".//src/images/stores/실버몬트.jpg",
     desc: "동남아식 프리미엄 샐러드 & 샌드위치",
   },
   {
@@ -20,7 +20,7 @@ const store = [
     title: "까치둥지",
     business_category: "음식점",
     location: "개운동",
-    img: "/src/images/stores/까치둥지.jpeg",
+    img: ".//src/images/stores/까치둥지.jpeg",
     desc: "동남아식 프리미엄 샐러드 & 샌드위치",
   },
   {
@@ -28,7 +28,7 @@ const store = [
     title: "르미엘",
     business_category: "카페",
     location: "무실동",
-    img: "/src/images/stores/르미엘.jpeg",
+    img: ".//src/images/stores/르미엘.jpeg",
     desc: "동남아식 프리미엄 샐러드 & 샌드위치",
   },
   {
@@ -36,7 +36,7 @@ const store = [
     title: "린",
     business_category: "음식점",
     location: "무실동",
-    img: "/src/images/stores/린.jpeg",
+    img: ".//src/images/stores/린.jpeg",
     desc: "동남아식 프리미엄 샐러드 & 샌드위치",
   },
   {
@@ -44,7 +44,7 @@ const store = [
     title: "보릿고개",
     business_category: "음식점",
     location: "반곡동",
-    img: "/src/images/stores/보릿고개.jpeg",
+    img: ".//src/images/stores/보릿고개.jpeg",
     desc: "동남아식 프리미엄 샐러드 & 샌드위치",
   },
   {
@@ -52,7 +52,7 @@ const store = [
     title: "사니다카페",
     business_category: "카페",
     location: "무실동",
-    img: "/src/images/stores/사니다카페.jpeg",
+    img: ".//src/images/stores/사니다카페.jpeg",
     desc: "동남아식 프리미엄 샐러드 & 샌드위치",
   },
   {
@@ -60,7 +60,7 @@ const store = [
     title: "산정집",
     business_category: "음식점",
     location: "행구동",
-    img: "/src/images/stores/산정집.jpeg",
+    img: ".//src/images/stores/산정집.jpeg",
     desc: "동남아식 프리미엄 샐러드 & 샌드위치",
   },
   {
@@ -68,7 +68,7 @@ const store = [
     title: "앤트빌라",
     business_category: "음식점",
     location: "반곡동",
-    img: "/src/images/stores/앤트빌라.jpeg",
+    img: ".//src/images/stores/앤트빌라.jpeg",
     desc: "동남아식 프리미엄 샐러드 & 샌드위치",
   },
   {
@@ -76,7 +76,7 @@ const store = [
     title: "착한낙지",
     business_category: "음식점",
     location: "단계동",
-    img: "/src/images/stores/착한낙지.jpeg",
+    img: ".//src/images/stores/착한낙지.jpeg",
     desc: "동남아식 프리미엄 샐러드 & 샌드위치",
   },
   {
@@ -84,7 +84,7 @@ const store = [
     title: "카페 행복지수",
     business_category: "카페",
     location: "행구동",
-    img: "/src/images/stores/카페행복지수.jpeg",
+    img: ".//src/images/stores/카페행복지수.jpeg",
     desc: "동남아식 프리미엄 샐러드 & 샌드위치",
   },
   {
@@ -92,7 +92,7 @@ const store = [
     title: "카페553",
     business_category: "카페",
     location: "행구동",
-    img: "/src/images/stores/카페553.jpeg",
+    img: ".//src/images/stores/카페553.jpeg",
     desc: "동남아식 프리미엄 샐러드 & 샌드위치",
   },
   {
@@ -100,7 +100,7 @@ const store = [
     title: "카페치올라",
     business_category: "카페",
     location: "행구동",
-    img: "/src/images/stores/카페치올라.jpeg",
+    img: ".//src/images/stores/카페치올라.jpeg",
     desc: "동남아식 프리미엄 샐러드 & 샌드위치",
   },
   {
@@ -108,7 +108,7 @@ const store = [
     title: "향교막국수",
     business_category: "음식점",
     location: "개운동",
-    img: "/src/images/stores/향교막국수.jpeg",
+    img: ".//src/images/stores/향교막국수.jpeg",
     desc: "동남아식 프리미엄 샐러드 & 샌드위치",
   },
   {
@@ -116,7 +116,7 @@ const store = [
     title: "허선웅닭갈비",
     business_category: "음식점",
     location: "단계동",
-    img: "/src/images/stores/허선웅닭갈비.jpeg",
+    img: ".//src/images/stores/허선웅닭갈비.jpeg",
     desc: "동남아식 프리미엄 샐러드 & 샌드위치",
   },
 ];
