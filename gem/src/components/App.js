@@ -1,10 +1,9 @@
-import Header from "./views/LandingPage/Header/header";
+import Header from './header';
 
 function App() {
   return (
-    <div className="App">
+    <div className='App'>
       <Header />
-      <h2>Hi</h2>
     </div>
   );
 }
