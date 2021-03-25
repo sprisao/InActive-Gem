@@ -3,10 +3,10 @@ import { Image, CloudinaryContext } from 'cloudinary-react';
 
 const Navigation = () => {
   return (
-    <section class='HomeQuickCategory'>
+    <section className='HomeQuickCategory'>
       <CloudinaryContext cloudName='diimwnnmj'>
-        <div class='HomeQuickCategory__wrap'>
-          <a href='' class='HomeQuickCategory__Item'>
+        <div className='HomeQuickCategory__wrap'>
+          <a href='' className='HomeQuickCategory__Item'>
             <Image
               className='HomeQuickCategory__img'
               publicId='hot_whb0c9'
@@ -14,7 +14,7 @@ const Navigation = () => {
             ></Image>
             <p>인기장소</p>
           </a>
-          <a href='' class='HomeQuickCategory__Item'>
+          <a href='' className='HomeQuickCategory__Item'>
             <Image
               className='HomeQuickCategory__img'
               publicId='new_v8vqmp'
@@ -22,7 +22,7 @@ const Navigation = () => {
             ></Image>
             <p>새로생긴 곳</p>
           </a>
-          <a href='' class='HomeQuickCategory__Item'>
+          <a href='' className='HomeQuickCategory__Item'>
             <Image
               className='HomeQuickCategory__img'
               publicId='food_nuddsz'
@@ -30,7 +30,7 @@ const Navigation = () => {
             ></Image>
             <p>맛집</p>
           </a>
-          <a href='' class='HomeQuickCategory__Item'>
+          <a href='' className='HomeQuickCategory__Item'>
             <Image
               className='HomeQuickCategory__img'
               publicId='cafe_dogisg'
@@ -38,7 +38,7 @@ const Navigation = () => {
             ></Image>
             <p>카페</p>
           </a>
-          <a href='' class='HomeQuickCategory__Item'>
+          <a href='' className='HomeQuickCategory__Item'>
             <Image
               className='HomeQuickCategory__img'
               publicId='pub_ypq1dw'
@@ -47,8 +47,8 @@ const Navigation = () => {
             <p>호프</p>
           </a>
         </div>
-        <div class='HomeQuickCategory__wrap'>
-          <a href='' class='HomeQuickCategory__Item'>
+        <div className='HomeQuickCategory__wrap'>
+          <a href='' className='HomeQuickCategory__Item'>
             <Image
               className='HomeQuickCategory__img'
               publicId='fitness_osoaom'
@@ -56,7 +56,7 @@ const Navigation = () => {
             ></Image>
             <p>운동・피트니스</p>
           </a>
-          <a href='' class='HomeQuickCategory__Item'>
+          <a href='' className='HomeQuickCategory__Item'>
             <Image
               className='HomeQuickCategory__img'
               publicId='golf_rp6iid'
@@ -64,7 +64,7 @@ const Navigation = () => {
             ></Image>
             <p>스크린골프</p>
           </a>
-          <a href='' class='HomeQuickCategory__Item'>
+          <a href='' className='HomeQuickCategory__Item'>
             <Image
               className='HomeQuickCategory__img'
               publicId='salon_ciebqq'
@@ -72,7 +72,7 @@ const Navigation = () => {
             ></Image>
             <p>미용실</p>
           </a>
-          <a href='' class='HomeQuickCategory__Item'>
+          <a href='' className='HomeQuickCategory__Item'>
             <Image
               className='HomeQuickCategory__img'
               publicId='academy_vap3fs'
@@ -80,7 +80,7 @@ const Navigation = () => {
             ></Image>
             <p>학원</p>
           </a>
-          <a href='' class='HomeQuickCategory__Item'>
+          <a href='' className='HomeQuickCategory__Item'>
             <Image
               className='HomeQuickCategory__img'
               publicId='studio_fne8nw'
@@ -89,8 +89,8 @@ const Navigation = () => {
             <p>스튜디오</p>
           </a>
         </div>
-        <div class='HomeQuickCategory__wrap'>
-          <a href='' class='HomeQuickCategory__Item'>
+        <div className='HomeQuickCategory__wrap'>
+          <a href='' className='HomeQuickCategory__Item'>
             <Image
               className='HomeQuickCategory__img'
               publicId='pharmacy_ngaewq'
@@ -98,7 +98,7 @@ const Navigation = () => {
             ></Image>
             <p>약국</p>
           </a>
-          <a href='' class='HomeQuickCategory__Item'>
+          <a href='' className='HomeQuickCategory__Item'>
             <Image
               className='HomeQuickCategory__img'
               publicId='hospital_ttw46g'
@@ -106,7 +106,7 @@ const Navigation = () => {
             ></Image>
             <p>병원</p>
           </a>
-          <a href='' class='HomeQuickCategory__Item'>
+          <a href='' className='HomeQuickCategory__Item'>
             <Image
               className='HomeQuickCategory__img'
               publicId='dog_v7ba4i'
@@ -114,7 +114,7 @@ const Navigation = () => {
             ></Image>
             <p>애견</p>
           </a>
-          <a href='' class='HomeQuickCategory__Item'>
+          <a href='' className='HomeQuickCategory__Item'>
             <Image
               className='HomeQuickCategory__img'
               publicId='shopping_aevysq'
@@ -122,7 +122,7 @@ const Navigation = () => {
             ></Image>
             <p>마트</p>
           </a>
-          <a href='' class='HomeQuickCategory__Item'>
+          <a href='' className='HomeQuickCategory__Item'>
             <Image
               className='HomeQuickCategory__img'
               publicId='entertainment_b29fhy'

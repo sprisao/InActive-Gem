@@ -1,7 +1,9 @@
+import React, { useState } from 'react';
 import Header from './header';
 import Navigation from './Navigation';
 import Tags from './Tags';
 import News from './News';
+import NewStores from './Newstores';
 
 function App() {
   return (
@@ -10,6 +12,7 @@ function App() {
       <Navigation />
       <Tags />
       <News />
+      <NewStores />
     </div>
   );
 }

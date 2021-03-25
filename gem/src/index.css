@@ -222,7 +222,10 @@ Section Header
 }
 
 .section__header__container {
+  max-width: 60.8rem !important;
+  margin: 0 auto;
   align-items: center;
+  padding: 0 80px;
 }
 
 .section__header {
@@ -243,6 +246,13 @@ Section Header
 Card-Layout: Swiper
 ==============
 */
+
+.section__cards {
+  max-width: 60.8rem !important;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+  padding: 0 80px;
+}
 
 .cards__swiper__new {
   display: block;
