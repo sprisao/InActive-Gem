@@ -4,7 +4,12 @@ import stores from '../data';
 
 const Newstores = () => {
   const [storeItems, setStoreItems] = useState(stores);
-  const [categories, setCategories] = useState([]);
+
+  const filterItems = (category) => {
+    const newItems = stores.filter((item) => item.category === category);
+    setStoreItems(newItems);
+  };
+
   return (
     <section className='new__stores'>
       <div className='section__header__container'>

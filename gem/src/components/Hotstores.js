@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import Cardslider from './Cardslider';
+import Cardslider2 from './Cardslider2';
 import stores from '../data';
 
 const Hotstores = () => {
   const [storeItems, setStoreItems] = useState(stores);
-  const [categories, setCategories] = useState([]);
   return (
     <section className='hot__stores'>
       <div className='section__header__container'>
@@ -16,7 +15,7 @@ const Hotstores = () => {
         </div>
         <div className='section__desc'>원주사람들은 한번씩 다 가봤데요~</div>
       </div>
-      <Cardslider stores={storeItems} />
+      <Cardslider2 stores={storeItems} />
     </section>
   );
 };

@@ -4,6 +4,8 @@ import Navigation from './Navigation';
 import Tags from './Tags';
 import News from './News';
 import NewStores from './Newstores';
+import Hotstores from './Hotstores';
+import Restaurants from './Restaurants';
 
 function App() {
   return (
@@ -13,6 +15,8 @@ function App() {
       <Tags />
       <News />
       <NewStores />
+      <Hotstores />
+      <Restaurants />
     </div>
   );
 }

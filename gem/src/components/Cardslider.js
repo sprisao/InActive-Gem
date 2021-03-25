@@ -5,14 +5,7 @@ const Cardslider = ({ stores }) => {
     <div className='section__cards'>
       <div className='cards__swiper__new'>
         {stores.map((storeItem) => {
-          const {
-            id,
-            title,
-            business_category,
-            img,
-            desc,
-            location,
-          } = storeItem;
+          const { id, title, category, img, desc, location } = storeItem;
           return (
             <div
               className='cards__swiper__card new'

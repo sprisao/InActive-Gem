@@ -263,6 +263,10 @@ Card-Layout: Swiper
 }
 
 .cards__swiper__hot {
+  max-width: 60.8rem !important;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+  padding: 0 80px;
   display: block;
   justify-content: space-between;
   white-space: nowrap;
@@ -338,7 +342,7 @@ Card-Layout: Grid
 .cards__grid__cafe {
   display: grid;
   margin: 0 auto;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
   grid-gap: 15px;
   margin-top: 1rem;
