@@ -1,10 +1,5 @@
 import React from 'react';
-import {
-  Image,
-  Video,
-  Transformation,
-  CloudinaryContext,
-} from 'cloudinary-react';
+import { Image, CloudinaryContext } from 'cloudinary-react';
 
 const Navigation = () => {
   return (
