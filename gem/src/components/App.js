@@ -1,11 +1,13 @@
-import React, { useState } from 'react';
-import Header from './header';
+import React from 'react';
+import Header from './Header';
 import Navigation from './Navigation';
 import Tags from './Tags';
 import News from './News';
-import NewStores from './Newstores';
-import Hotstores from './Hotstores';
-import Restaurants from './Restaurants';
+import NewStores from './NewSection';
+import Hotstores from './HotSection';
+import Restaurants from './RestaurantSection';
+import Footer from './Footer';
+import Cafes from './CafeSection';
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
       <NewStores />
       <Hotstores />
       <Restaurants />
+      <Cafes />
+      <Footer />
     </div>
   );
 }

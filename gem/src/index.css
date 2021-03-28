@@ -107,14 +107,14 @@ header {
 Nav Categories
 */
 
-.HomeQuickCategory__wrap {
+.Navigation__wrap {
   max-width: 30.8rem;
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
 }
 
-.HomeQuickCategory__Item {
+.Navigation__Item {
   color: inherit;
   text-decoration: none;
   color: #1a1a1a;
@@ -125,14 +125,14 @@ Nav Categories
   min-width: 5.8rem;
 }
 
-.HomeQuickCategory__img {
+.Navigation__img {
   width: 3rem;
   height: 3rem;
   z-index: 20;
   position: relative;
 }
 
-.HomeQuickCategory__Item p {
+.Navigation__Item p {
   margin-top: 0.1rem;
   margin-bottom: 0;
   font-weight: 450;
@@ -398,7 +398,7 @@ Card-Layout: Grid
 footer
 =========
  */
-footer {
+.footer {
   text-align: center;
 }
 
