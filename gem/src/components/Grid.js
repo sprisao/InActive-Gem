@@ -1,6 +1,6 @@
 import React from 'react';
 import { data } from './stores';
-import Card from './Card';
+import GridCard from './GridCard';
 import './Grid.css';
 
 const Grid = (props) => {
@@ -8,7 +8,7 @@ const Grid = (props) => {
     <section className='grid'>
       {data.map((store, index) => {
         if (store.category === props.filter) {
-          return <Card key={store.id} {...store}></Card>;
+          return <GridCard key={store.id} {...store}></GridCard>;
         }
       })}
     </section>

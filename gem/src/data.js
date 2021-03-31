@@ -14,7 +14,7 @@ const store = [
     category: '음식점',
     location: '반곡동',
     img:
-      'https://raw.githubusercontent.com/sprisao/new_gem/master/gem/src/images/stores/%EC%8B%A4%EB%B2%84%EB%AA%AC%ED%8A%B8.JPG',
+      'https://res.cloudinary.com/diimwnnmj/image/upload/v1617150994/stores/%E1%84%89%E1%85%B5%E1%86%AF%E1%84%87%E1%85%A5%E1%84%86%E1%85%A9%E1%86%AB%E1%84%90%E1%85%B3_xmcnlw.jpg',
     desc: '동남아식 프리미엄 샐러드 & 샌드위치',
   },
   {

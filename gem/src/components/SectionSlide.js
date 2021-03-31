@@ -1,18 +1,18 @@
 import React from 'react';
 import Title from './Title';
-import Grid from './Grid';
+import Slide from './Slide';
 import { copywrites } from './copywrites';
 
-const Section = (props) => {
+const SectionSlide = (props) => {
   return (
     <section className='title'>
       {copywrites.map((copywrites, index) => {
         if (copywrites.section === props.section)
           return <Title key={copywrites.id} {...copywrites}></Title>;
       })}
-      <Grid filter={props.filter} />
+      <Slide filter={props.filter} />
     </section>
   );
 };
 
-export default Section;
+export default SectionSlide;

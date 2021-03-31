@@ -1,20 +1,21 @@
 .featuredCard {
   margin-right: 10px;
-  min-width: 350px;
+  min-width: 20rem;
   border-radius: 15px;
 }
 
 .featuredCard_image {
   min-width: 100%;
-  height: 450px;
+  height: 25rem;
   background-size: cover;
   background-position: center center;
   border-radius: 15px;
   padding: 0.5rem;
 }
+
 .article {
   margin-right: 1.1rem;
-  margin-top: 330px;
+  margin-top: 280px;
   display: flex;
   flex-direction: column;
   text-align: right;
