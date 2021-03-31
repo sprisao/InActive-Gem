@@ -3,11 +3,9 @@ import Header from './Header';
 import Navigation from './Navigation';
 import Tags from './Tags';
 import News from './News';
-import NewStores from './NewSection';
-import Hotstores from './HotSection';
-import Restaurants from './RestaurantSection';
+import Section from './Section';
+import Slide from './Slide';
 import Footer from './Footer';
-import Cafes from './CafeSection';
 
 function App() {
   return (
@@ -16,10 +14,11 @@ function App() {
       <Navigation />
       <Tags />
       <News />
-      <NewStores />
-      <Hotstores />
-      <Restaurants />
-      <Cafes />
+      <Slide section='new' filter='음식점' />
+      <Section section='new' filter='음식점' />
+      <Section section='hot' filter='카페' />
+      <Section section='restaurants' filter='음식점' />
+      <Section section='cafes' filter='카페' />
       <Footer />
     </div>
   );

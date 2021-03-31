@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 
+* {
+  margin: 0;
+  padding: 0 0;
+  box-sizing: border-box;
+}
+
 /* s */
 ::-webkit-scrollbar {
   display: none;
@@ -12,8 +18,13 @@ a {
   text-decoration: none;
 }
 body {
-  margin: 0;
-  padding-top: 1rem;
+  max-width: 55.8rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 14px;
+  color: #222;
 }
 
 h1,
@@ -33,15 +44,19 @@ h6 {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 2.25rem;
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 1.75rem;
 }
 
 h3 {
   font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
 }
 
 input:focus {
@@ -239,158 +254,6 @@ Section Header
   font-size: 17px;
   font-weight: 300px;
   color: #707070;
-}
-
-/* 
-==============
-Card-Layout: Swiper
-==============
-*/
-
-.section__cards {
-  max-width: 60.8rem !important;
-  margin: 0 auto;
-  margin-bottom: 3rem;
-  padding: 0 80px;
-}
-
-.cards__swiper__new {
-  display: block;
-  justify-content: space-between;
-  white-space: nowrap;
-  overflow-x: auto;
-  margin-top: 1rem;
-}
-
-.cards__swiper__hot {
-  max-width: 60.8rem !important;
-  margin: 0 auto;
-  margin-bottom: 3rem;
-  padding: 0 80px;
-  display: block;
-  justify-content: space-between;
-  white-space: nowrap;
-  overflow-x: auto;
-  margin-top: 1rem;
-}
-
-.cards__swiper__card {
-  display: inline-block;
-  cursor: pointer;
-  text-decoration: none;
-}
-
-/* 
-New Stores Design
- */
-.new {
-  background-size: cover;
-  background-position: center center;
-  border-radius: 15px;
-  margin-right: 15px;
-}
-
-.new h1 {
-  margin-top: 5px;
-  font-size: 35px;
-  color: #fff;
-}
-
-.new p {
-  margin: 0;
-  font-size: 18px;
-  font-weight: 500px !important;
-  color: #fff;
-}
-
-.article {
-  z-index: 1;
-  display: flex;
-  flex-direction: row-reverse;
-  text-align: right;
-  margin: 330px 20px 30px 80px;
-  white-space: normal !important;
-  color: #fff !important;
-}
-/* 
-Hot Stores design
- */
-
-.hot {
-  margin-right: 15px;
-}
-
-.hot img {
-  width: 280px;
-  height: 280px;
-  object-fit: cover;
-  overflow: hidden;
-  margin: 0;
-  border-radius: 10px;
-}
-.hot p {
-  margin-top: 5px;
-  font-size: 16px;
-  font-weight: 325;
-}
-
-/* 
-Card-Layout: Grid
-*/
-
-.cards__grid__food,
-.cards__grid__cafe {
-  display: grid;
-  margin: 0 auto;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
-  grid-gap: 15px;
-  margin-top: 1rem;
-}
-
-.cards__grid__card {
-  background-color: #fff;
-  text-decoration: none;
-  color: #444;
-  display: flex;
-  min-height: 100%;
-  flex-direction: column;
-  justify-content: space-between;
-  position: relative;
-  top: 0;
-  transition: 0.2s;
-}
-
-.cards__grid__card:hover {
-  top: -2px;
-}
-
-@media screen and (min-width: 350px) {
-  .cards__grid__food,
-  .cards__grid__cafe {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-@media screen and (min-width: 850px) {
-  .cards__grid__food,
-  .cards__grid__cafe {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-/* RESTAURANT RECOMMENDATION */
-.thumb16 {
-  padding-bottom: 120%;
-  background-size: cover;
-  background-position: center center;
-  border-radius: 15px;
-  margin-bottom: 5px;
-}
-
-.cards__grid__card p {
-  margin-top: 5px;
-  font-size: 16px;
-  font-weight: 325;
 }
 
 /* 

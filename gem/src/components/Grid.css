@@ -1,0 +1,22 @@
+.grid {
+  display: grid;
+  margin-top: 1rem;
+  grid-gap: 15px;
+  grid-template-rows: auto;
+}
+
+@media screen and (min-width: 350px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(191px, 230px));
+  }
+}
+@media screen and (min-width: 700px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (min-width: 850px) {
+  .grid {
+    grid-template-columns: repeat(4, minmax(191px, auto));
+  }
+}

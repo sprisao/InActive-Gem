@@ -1,0 +1,11 @@
+::-webkit-scrollbar {
+  display: none;
+}
+.slide {
+  display: flex;
+  margin-top: 1rem;
+  flex-direction: row;
+  justify-content: space-between;
+  white-space: nowrap;
+  overflow-x: auto;
+}
