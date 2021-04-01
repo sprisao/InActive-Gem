@@ -2,6 +2,7 @@
   display: none;
 }
 .slide {
+  max-width: var(--maxWidth);
   display: flex;
   margin-top: 1rem;
   flex-direction: row;

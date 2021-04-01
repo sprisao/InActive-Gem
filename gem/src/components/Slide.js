@@ -1,5 +1,5 @@
 import React from 'react';
-import { data } from './stores';
+import { data } from '../datafiles/stores';
 import FeaturedCard from './FeaturedCard';
 import './Slide.css';
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import Title from './Title';
 import Slide from './Slide';
-import { copywrites } from './copywrites';
+import { copywrites } from '../datafiles/copywrites';
 
 const SectionSlide = (props) => {
   return (

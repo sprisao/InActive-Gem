@@ -1,11 +1,13 @@
 .grid {
+  width: var(--smallWidth);
+  max-width: var(--maxWidth);
   display: grid;
-  margin-top: 1rem;
+  margin: 1rem 0 auto;
   grid-gap: 15px;
   grid-template-rows: auto;
 }
 
-@media screen and (min-width: 350px) {
+/* @media screen and (min-width: 350px) {
   .grid {
     grid-template-columns: repeat(2, minmax(191px, 230px));
   }
@@ -18,5 +20,11 @@
 @media screen and (min-width: 850px) {
   .grid {
     grid-template-columns: repeat(4, minmax(191px, auto));
+  }
+} */
+
+@media screen and (min-width: 350px) {
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(191px, 1fr));
   }
 }
