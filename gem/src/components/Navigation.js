@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { category } from '../datafiles/categories';
+import { Link } from 'react-router-dom';
 import './Navigation.css';
 
 const Navigation = () => {
@@ -9,10 +10,12 @@ const Navigation = () => {
       <div className='navigation__wrap'>
         {navigation.map((category) => {
           return (
-            <div key={category.idCategory} className='navigation__btn'>
-              <img src={category.strIconSource} alt={category.strTitle} />
-              <span>{category.strTitle}</span>
-            </div>
+            <Link to={`/category/$[category.idCategory}`}>
+              <div key={category.idCategory} className='navigation__btn'>
+                <img src={category.strIconSource} alt={category.strTitle} />
+                <span>{category.strTitle}</span>
+              </div>
+            </Link>
           );
         })}
       </div>

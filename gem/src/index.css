@@ -24,6 +24,7 @@ a {
   cursor: pointer;
   text-decoration: none;
 }
+
 body {
   max-width: var(--maxWidth);
   margin: 1rem auto;
