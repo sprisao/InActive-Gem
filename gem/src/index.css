@@ -2,6 +2,7 @@
 
 :root {
   --smallWidth: 85vw;
+  --normalWidth: 28.8rem;
   --maxWidth: 55.8rem;
   --fullWidth: 1170px;
 }
@@ -81,9 +82,6 @@ header {
   z-index: 9999;
   background-color: #fff;
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
   padding: 10px 0;
 }
 
@@ -92,6 +90,7 @@ header {
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
+  margin-bottom: 1rem;
   align-items: center;
 }
 .header__logo {
@@ -124,42 +123,6 @@ header {
 .header__search__icon {
   padding: 0.5rem;
   background-color: #f8f8f8;
-}
-
-/* 
-Nav Categories
-*/
-
-.Navigation__wrap {
-  max-width: 28.8rem;
-  display: flex;
-  justify-content: space-between;
-  margin: 0 auto;
-}
-
-.Navigation__Item {
-  color: inherit;
-  text-decoration: none;
-  color: #1a1a1a;
-  display: inline-block;
-  position: relative;
-  text-align: center;
-  padding-top: 1.3rem;
-  min-width: 5.8rem;
-}
-
-.Navigation__img {
-  width: 3rem;
-  height: 3rem;
-  z-index: 20;
-  position: relative;
-}
-
-.Navigation__Item p {
-  margin-top: 0.1rem;
-  margin-bottom: 0;
-  font-weight: 450;
-  font-size: 0.9rem;
 }
 
 /* 

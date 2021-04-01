@@ -1,7 +1,7 @@
 .grid {
+  display: grid;
   width: var(--smallWidth);
   max-width: var(--maxWidth);
-  display: grid;
   margin: 1rem 0 auto;
   grid-gap: 15px;
   grid-template-rows: auto;
