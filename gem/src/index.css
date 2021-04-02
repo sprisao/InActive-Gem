@@ -91,7 +91,7 @@ header {
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   align-items: center;
 }
 .header__logo {
