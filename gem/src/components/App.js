@@ -1,9 +1,9 @@
 import React from 'react';
 import Header from './Header';
-import Home from './LandingPage';
-import Category from './CategoryPage';
-import Detail from './DetailPage';
-import Error from './Error';
+import Home from './view/LandingPage/LandingPage';
+import RestaurantsPage from './view/CategoryPage/Restaurants';
+import Detail from './view/DetailsPage/DetailPage';
+import Error from './view/ErrorPage/Error';
 import Footer from './Footer';
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
@@ -16,8 +16,8 @@ function App() {
         <Route exact path='/'>
           <Home />
         </Route>
-        <Route path='/category'>
-          <Category />
+        <Route path='/category/restaurants'>
+          <RestaurantsPage />
         </Route>
         <Route path='/store/:id'>
           <Detail />

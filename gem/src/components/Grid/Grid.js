@@ -1,5 +1,5 @@
 import React from 'react';
-import { data } from '../datafiles/stores';
+import { data } from '../../datafiles/stores';
 import GridCard from './GridCard';
 import './Grid.css';
 

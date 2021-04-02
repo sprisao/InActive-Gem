@@ -4,7 +4,7 @@ export const category = [
     strCategory: 'hot',
     strIconSource:
       'https://res.cloudinary.com/diimwnnmj/image/upload/v1616123317/hot_whb0c9.png',
-    strTitle: '인기장소',
+    name: '인기장소',
     display: true,
     activated: true,
   },
@@ -13,7 +13,7 @@ export const category = [
     strCategory: 'new',
     strIconSource:
       'https://res.cloudinary.com/diimwnnmj/image/upload/v1616123317/new_v8vqmp.png',
-    strTitle: '새로생긴 곳',
+    name: '새로생긴 곳',
     display: true,
     activated: true,
   },
@@ -22,7 +22,7 @@ export const category = [
     strCategory: 'restaurants',
     strIconSource:
       'https://res.cloudinary.com/diimwnnmj/image/upload/v1616123316/food_nuddsz.png',
-    strTitle: '맛집',
+    name: '맛집',
     display: true,
     activated: true,
   },
@@ -31,7 +31,7 @@ export const category = [
     strCategory: 'cafes',
     strIconSource:
       'https://res.cloudinary.com/diimwnnmj/image/upload/v1616123316/cafe_dogisg.png',
-    strTitle: '카페',
+    name: '카페',
     display: true,
     activated: true,
   },
@@ -40,7 +40,7 @@ export const category = [
     strCategory: 'drinks',
     strIconSource:
       'https://res.cloudinary.com/diimwnnmj/image/upload/v1616123317/pub_ypq1dw.png',
-    strTitle: '술집',
+    name: '술집',
     display: false,
     activated: true,
   },
@@ -49,7 +49,7 @@ export const category = [
     strCategory: 'fitness',
     strIconSource:
       'https://res.cloudinary.com/diimwnnmj/image/upload/v1616123316/fitness_osoaom.png',
-    strTitle: '운동・피트니스',
+    name: '운동・피트니스',
     display: true,
     activated: true,
   },
@@ -58,7 +58,7 @@ export const category = [
     strCategory: 'screengolf',
     strIconSource:
       'https://res.cloudinary.com/diimwnnmj/image/upload/v1616123316/golf_rp6iid.png',
-    strTitle: '스크린골프',
+    name: '스크린골프',
     display: true,
     activated: true,
   },
@@ -67,7 +67,7 @@ export const category = [
     strCategory: 'salon',
     strIconSource:
       'https://res.cloudinary.com/diimwnnmj/image/upload/v1616123317/salon_ciebqq.png',
-    strTitle: '미용실',
+    name: '미용실',
     display: true,
     activated: true,
   },
@@ -76,7 +76,7 @@ export const category = [
     strCategory: 'academy',
     strIconSource:
       'https://res.cloudinary.com/diimwnnmj/image/upload/v1616123316/academy_vap3fs.png',
-    strTitle: '학원',
+    name: '학원',
     display: true,
     activated: true,
   },
@@ -85,7 +85,7 @@ export const category = [
     strCategory: 'studio',
     strIconSource:
       'https://res.cloudinary.com/diimwnnmj/image/upload/v1616123318/studio_fne8nw.png',
-    strTitle: '스튜디오',
+    name: '스튜디오',
     display: true,
     activated: true,
   },
@@ -94,7 +94,7 @@ export const category = [
     strCategory: 'pharmacy',
     strIconSource:
       'https://res.cloudinary.com/diimwnnmj/image/upload/v1616123317/pharmacy_ngaewq.png',
-    strTitle: '약국',
+    name: '약국',
     display: true,
     activated: true,
   },
@@ -103,7 +103,7 @@ export const category = [
     strCategory: 'hospital',
     strIconSource:
       'https://res.cloudinary.com/diimwnnmj/image/upload/v1616123317/hospital_ttw46g.png',
-    strTitle: '병원',
+    name: '병원',
     display: true,
     activated: true,
   },
@@ -112,7 +112,7 @@ export const category = [
     strCategory: 'pet',
     strIconSource:
       'https://res.cloudinary.com/diimwnnmj/image/upload/v1616123316/dog_v7ba4i.png',
-    strTitle: '애견',
+    name: '애견',
     display: true,
     activated: true,
   },
@@ -121,7 +121,7 @@ export const category = [
     strCategory: 'mart',
     strIconSource:
       'https://res.cloudinary.com/diimwnnmj/image/upload/v1616123318/shopping_aevysq.png',
-    strTitle: '마트',
+    name: '마트',
     display: true,
     activated: true,
   },
@@ -130,7 +130,7 @@ export const category = [
     strCategory: 'entertainment',
     strIconSource:
       'https://res.cloudinary.com/diimwnnmj/image/upload/v1616123316/entertainment_b29fhy.png',
-    strTitle: '엔터테인먼트',
+    name: '엔터테인먼트',
     display: true,
     activated: true,
   },

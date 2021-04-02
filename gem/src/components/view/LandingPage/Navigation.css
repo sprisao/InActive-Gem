@@ -1,7 +1,6 @@
 .navigation {
   max-width: var(--normalWidth);
   margin: 0 auto;
-  text-decoration: none;
 }
 .navigation__wrap {
   display: grid;
@@ -9,6 +8,7 @@
   grid-gap: 15px;
 }
 .navigation__btn {
+  text-decoration: none;
   display: flex;
   justify-content: space-between;
   flex-direction: column;

@@ -1,7 +1,7 @@
 import React from 'react';
-import Title from './Title';
+import Title from '../Title';
 import Grid from './Grid';
-import { copywrites } from '../datafiles/copywrites';
+import { copywrites } from '../../datafiles/copywrites';
 
 const SectionGrid = (props) => {
   return (
