@@ -87,11 +87,11 @@ header {
 }
 
 .header {
-  max-width: 28.8rem;
+  max-width: 30.8rem;
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   align-items: center;
 }
 .header__logo {
@@ -100,7 +100,7 @@ header {
 
 .logo {
   cursor: pointer;
-  width: 160px;
+  width: 140px;
 }
 
 .header__search {
@@ -114,15 +114,15 @@ header {
 }
 
 .header__search__box {
-  width: 100%;
+  width: 85%;
   border: 0;
-  padding: 1rem;
+  padding: 0.75rem;
   background-color: #f8f8f8;
   text-decoration: none;
 }
 
 .header__search__icon {
-  padding: 0.5rem;
+  margin-right: 0.5rem;
   background-color: #f8f8f8;
 }
 
@@ -146,19 +146,20 @@ TAGS
 .HomeQuickTag__container {
   display: block;
   justify-content: space-between;
-  white-space: nowrap;
+  white-space: wrap;
   overflow-x: auto;
 }
 
 .HomeQuickTag__item {
   display: inline-block;
-  padding: 10px;
+  padding: 0.35rem 0.65rem;
   border-radius: 20px;
   border: 0.5px solid rgb(204, 204, 204);
   background-color: white;
   cursor: pointer;
   font-size: 14px;
   margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
   text-decoration: none;
   color: #707070;
 }

@@ -4,21 +4,22 @@ import { GoSearch } from 'react-icons/go';
 
 function Header() {
   return (
-    <div class='header'>
-      <div class='header__logo'>
+    <div className='header'>
+      <div className='header__logo'>
         <Link to='/'>
-          <a href='index.html'>
-            <img
-              src='https://res.cloudinary.com/diimwnnmj/image/upload/v1616123198/GEM_-BI_fgzah7.png'
-              class='logo'
-              alt='gem'
-            />
-          </a>
+          <img
+            src='https://res.cloudinary.com/diimwnnmj/image/upload/v1616123198/GEM_-BI_fgzah7.png'
+            className='logo'
+            alt='gem'
+          />
         </Link>
       </div>
-      <div class='header__search'>
-        <input class='header__search__box' type='search' name='search' />
-        <GoSearch size='1.2em' className='header__search__icon' />
+      <div className='header__search'>
+        <input className='header__search__box' type='search' name='search' />
+        <GoSearch
+          className='header__search__icon'
+          style={{ fontSize: '1.25rem' }}
+        />
       </div>
     </div>
   );

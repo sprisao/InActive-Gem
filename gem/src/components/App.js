@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
 // import pages
 import Home from './View/LandingPage/LandingPage';
 import HotStores from './View/CategoryPage/HotStores';
@@ -17,30 +18,36 @@ import Footer from './Footer';
 function App() {
   return (
     <Router>
-      <Header />
       <Switch>
         <Route exact path='/'>
+          <Header />
           <Home />
         </Route>
         <Route path='/category/hot'>
+          <Header />
           <HotStores />
         </Route>
         <Route path='/category/new'>
+          <Header />
           <NewStores />
         </Route>
         <Route path='/category/restaurants'>
+          <Header />
           <RestaurantsPage />
         </Route>
         <Route path='/category/cafes'>
+          <Header />
           <CafesPage />
         </Route>
         <Route path='/category/*'>
+          <Header />
           <Ready />
         </Route>
         <Route path='/store/:id'>
           <Store />
         </Route>
         <Route path='*'>
+          <Header />
           <Error />
         </Route>
       </Switch>

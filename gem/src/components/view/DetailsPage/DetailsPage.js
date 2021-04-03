@@ -1,12 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { data } from '../../../datafiles/stores';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
+
+import './DetailsPage.css';
+import {
+  IoChevronBackSharp,
+  IoShareOutline,
+  IoHeartOutline,
+  IoLocationSharp,
+} from 'react-icons/io5';
 
 const DetailsPage = () => {
   const [storeData, setStoreData] = useState([]);
 
   const { id } = useParams();
-
   useEffect(() => {
     const newStoreData = data.find((store) => store.id === parseInt(id));
     const title = newStoreData.title;
@@ -15,16 +22,46 @@ const DetailsPage = () => {
     const desc = newStoreData.desc;
     const newStore = { title, img, location, desc };
     setStoreData(newStore);
-  });
+  }, []);
 
   const { title, img, location, desc } = storeData;
+
   return (
-    <div>
-      <h2>{title}</h2>
-      <img src={img} alt='' />
-      <span>{location}</span>
-      <p>{desc}</p>
-    </div>
+    <section className='detailpage'>
+      <div className='navigator'>
+        <Link to={'/'}>
+          <div className='returnBtn'>
+            <button className='returnBtn'>
+              <IoChevronBackSharp style={{ fontSize: '1.25rem' }} />
+              <span> 맛집</span>
+            </button>
+          </div>
+        </Link>
+        <div className='otherBtn'>
+          <button>
+            <IoShareOutline style={{ fontSize: '1.25rem' }} />
+          </button>
+          <button>
+            <IoHeartOutline style={{ fontSize: '1.25rem' }} />
+          </button>
+        </div>
+      </div>
+      <div className='mainInfo'>
+        <div className='imageBox'>
+          <img src={img} alt={title} />
+        </div>
+        <h2>{title}</h2>
+        <p>{desc}</p>
+        <div className='location'>
+          <IoLocationSharp style={{ color: 'red' }} />
+          <span className='location__btn'>{location}</span>
+        </div>
+        <div className='opentime'>
+          <p>영업시간: 10:00 ~ 21:00</p>
+        </div>
+      </div>
+      <div className='detailInfo'></div>
+    </section>
   );
 };
 

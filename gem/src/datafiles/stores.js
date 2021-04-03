@@ -6,7 +6,7 @@ export const data = [
     location: '반곡동',
     img:
       'https://res.cloudinary.com/diimwnnmj/image/upload/v1616122736/stores/%E1%84%8B%E1%85%A1%E1%86%AB432_pcayee.jpg',
-    desc: '17자 내로 가게를 간단히 소개',
+    desc: '실시간 맛집',
   },
   {
     id: 1,
