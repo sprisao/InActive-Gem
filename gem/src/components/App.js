@@ -1,16 +1,18 @@
 import React from 'react';
-import Header from './Header';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+// import pages
 import Home from './View/LandingPage/LandingPage';
 import HotStores from './View/CategoryPage/HotStores';
 import NewStores from './View/CategoryPage/NewStores';
 import RestaurantsPage from './View/CategoryPage/Restaurants';
 import CafesPage from './View/CategoryPage/Cafes';
-import Detail from './View/DetailsPage/DetailPage';
+import Store from './View/DetailsPage/DetailsPage';
 import Error from './View/ErrorPage/Error';
 import Ready from './View/ErrorPage/Ready';
-import Footer from './Footer';
 
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+// import components
+import Header from './Header';
+import Footer from './Footer';
 
 function App() {
   return (
@@ -36,7 +38,7 @@ function App() {
           <Ready />
         </Route>
         <Route path='/store/:id'>
-          <Detail />
+          <Store />
         </Route>
         <Route path='*'>
           <Error />
