@@ -49,7 +49,7 @@ export const category = [
     strCategory: 'fitness',
     strIconSource:
       'https://res.cloudinary.com/diimwnnmj/image/upload/v1616123316/fitness_osoaom.png',
-    name: '운동・피트니스',
+    name: '운동・헬스',
     display: true,
     activated: true,
   },
