@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import GridSection from '../../Grid/SectionGrid';
+
 import { data } from '../../../datafiles/stores';
 import { Link, useParams } from 'react-router-dom';
 
@@ -14,17 +16,19 @@ const DetailsPage = () => {
   const [storeData, setStoreData] = useState([]);
 
   const { id } = useParams();
+
   useEffect(() => {
     const newStoreData = data.find((store) => store.id === parseInt(id));
     const title = newStoreData.title;
     const img = newStoreData.img;
     const location = newStoreData.location;
     const desc = newStoreData.desc;
-    const newStore = { title, img, location, desc };
+    const description = newStoreData.description;
+    const newStore = { title, img, location, desc, description };
     setStoreData(newStore);
   }, []);
 
-  const { title, img, location, desc } = storeData;
+  const { title, img, location, desc, description } = storeData;
 
   return (
     <section className='detailpage'>
@@ -60,7 +64,10 @@ const DetailsPage = () => {
           <p>영업시간: 10:00 ~ 21:00</p>
         </div>
       </div>
-      <div className='detailInfo'></div>
+      <div className='detailInfo'>
+        <p>{description}</p>
+      </div>
+      <GridSection section='after' filter='카페' />
     </section>
   );
 };

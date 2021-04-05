@@ -7,7 +7,7 @@
 .gridCard img {
   object-fit: cover;
   border-radius: 12px;
-  max-width: 191%;
+  max-width: 100%;
   height: 255px;
   margin-bottom: 0.3rem;
 }

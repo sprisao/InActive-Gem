@@ -3,10 +3,12 @@ export const data = [
     id: 8,
     title: '안432',
     category: '음식점',
-    location: '반곡동',
+    location: '반곡동이 아닌 혁신도시',
     img:
       'https://res.cloudinary.com/diimwnnmj/image/upload/v1616122736/stores/%E1%84%8B%E1%85%A1%E1%86%AB432_pcayee.jpg',
     desc: '실시간 맛집',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio est tempore dolore consequuntur quas odit praesentium sapiente animi perspiciatis quae ipsum vero, asperiores quaerat numquam. Maxime accusamus beatae exercitationem perferendis, cupiditate quia odit voluptates nam minima! Dolorem officia quis nemo corporis laboriosam doloribus natus! Incidunt iste minus natus dolor quo?',
   },
   {
     id: 1,
