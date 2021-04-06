@@ -14,7 +14,7 @@ const FeaturedCard = ({ id, img, title, category, location, desc }) => {
         >
           <div className='article'>
             <p>{desc}</p>
-            <h1>{title}</h1>
+            <h2>{title}</h2>
             <span>{location}</span>
           </div>
         </div>

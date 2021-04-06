@@ -6,8 +6,17 @@ html {
 :root {
   --smallWidth: 85vw;
   --normalWidth: 28.8rem;
-  --maxWidth: 55.8rem;
-  --fullWidth: 1170px;
+  --maxWidth: 28.8rem;
+  --fullWidth: 28.8rem;
+}
+
+@media screen and (min-width: 400px) {
+  :root {
+    --smallWidth: 85vw;
+    --normalWidth: 28.8rem;
+    --maxWidth: 80.8rem;
+    --fullWidth: 1170px;
+  }
 }
 
 * {
@@ -60,7 +69,8 @@ h6 {
 }
 
 h1 {
-  font-size: 2.25rem;
+  font-size: 2rem;
+  font-weight: 800;
 }
 
 h2 {
@@ -68,7 +78,7 @@ h2 {
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
 }
 
 h4 {

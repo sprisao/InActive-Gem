@@ -9,7 +9,7 @@ TAGS
   max-width: var(--normalWidth);
   margin: 15px auto;
   overflow-x: scroll;
-  padding: 0 1.5rem;
+  padding: 0 1.25rem;
 }
 
 .HomeQuickTag__container::-webkit-scrollbar {
@@ -19,7 +19,7 @@ TAGS
 .HomeQuickTag__container {
   display: block;
   justify-content: space-between;
-  white-space: wrap;
+  white-space: nowrap;
   overflow-x: auto;
 }
 
@@ -30,9 +30,8 @@ TAGS
   border: 0.5px solid rgb(204, 204, 204);
   background-color: white;
   cursor: pointer;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   margin-right: 0.5rem;
-  margin-bottom: 0.5rem;
   text-decoration: none;
   color: #707070;
 }

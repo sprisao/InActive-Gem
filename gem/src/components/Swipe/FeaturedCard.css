@@ -14,8 +14,8 @@
 }
 
 .article {
-  margin-right: 1.1rem;
-  margin-top: 280px;
+  margin-right: 1rem;
+  margin-top: 17rem;
   display: flex;
   flex-direction: column;
   text-align: right;
@@ -25,7 +25,7 @@
   color: white;
   font-size: 1.1rem;
 }
-.article h1 {
+.article h2 {
   color: white;
 }
 .article span {

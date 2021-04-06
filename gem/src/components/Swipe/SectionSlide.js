@@ -2,6 +2,7 @@ import React from 'react';
 import Title from '../Title';
 import Slide from './Slide';
 import { copywrites } from '../../datafiles/copywrites';
+import './SectionSlide.css';
 
 const SectionSlide = (props) => {
   return (

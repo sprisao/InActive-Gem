@@ -11,12 +11,12 @@ NEWS
 .news__container {
   display: flex;
   max-width: 30.8rem;
-  margin: 0.75rem auto;
+  margin: 0.5rem auto;
   padding: 0 1.25rem;
   justify-content: space-between;
   align-items: center;
-  height: 40px;
-  font-size: 0.65rem;
+  height: 2.75rem;
+  font-size: 0.8rem;
   font-weight: 350;
 }
 

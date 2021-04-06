@@ -8,7 +8,7 @@ const GridCard = ({ id, img, title, category, location, desc }) => {
     <Link to={`/store/${id}`} className=''>
       <article className='gridCard'>
         <img src={img} alt='' />
-        <h4>{title}</h4>
+        <h3>{title}</h3>
         <span>{location}</span>
         <p>{desc}</p>
       </article>
