@@ -6,12 +6,15 @@
 }
 
 .emoji {
-  font-size: 2.75rem;
+  font-size: 2.5rem;
   padding-right: 0.25rem;
 }
 
 .section__title p {
-  margin-top: 0.25rem;
   font-size: 1.2rem;
+  color: #6d7278;
+}
+
+.section__title h4 {
   color: #6d7278;
 }

@@ -6,7 +6,7 @@ html {
 :root {
   --smallWidth: 85vw;
   --normalWidth: 28.8rem;
-  --maxWidth: 28.8rem;
+  --maxWidth: 100vw;
   --fullWidth: 28.8rem;
 }
 
@@ -14,7 +14,23 @@ html {
   :root {
     --smallWidth: 85vw;
     --normalWidth: 28.8rem;
-    --maxWidth: 80.8rem;
+    --maxWidth: 100vw;
+    --fullWidth: 1170px;
+  }
+}
+@media screen and (min-width: 760px) {
+  :root {
+    --smallWidth: 85vw;
+    --normalWidth: 28.8rem;
+    --maxWidth: 95vw;
+    --fullWidth: 1170px;
+  }
+}
+@media screen and (min-width: 1600px) {
+  :root {
+    --smallWidth: 85vw;
+    --normalWidth: 28.8rem;
+    --maxWidth: 60vw;
     --fullWidth: 1170px;
   }
 }
@@ -70,7 +86,7 @@ h6 {
 
 h1 {
   font-size: 2rem;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 h2 {
@@ -78,11 +94,12 @@ h2 {
 }
 
 h3 {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
 }
 
 h4 {
   font-size: 1.25rem;
+  font-weight: 400;
 }
 
 input:focus {

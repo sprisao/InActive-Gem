@@ -3,25 +3,9 @@
   white-space: wrap;
   max-width: var(--maxWidth);
   margin: 1rem 0 auto;
-  grid-gap: 15px;
+  grid-gap: 1rem;
   grid-template-columns: repeat(2, minmax(10rem, 1fr));
 }
-
-/* @media screen and (min-width: 350px) {
-  .grid {
-    grid-template-columns: repeat(2, minmax(191px, 230px));
-  }
-}
-@media screen and (min-width: 700px) {
-  .grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-@media screen and (min-width: 850px) {
-  .grid {
-    grid-template-columns: repeat(4, minmax(191px, auto));
-  }
-} */
 
 @media screen and (min-width: 400px) {
   .grid {
@@ -30,6 +14,6 @@
 }
 @media screen and (min-width: 760px) {
   .grid {
-    grid-template-columns: repeat(4, minmax(191px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(191px, 1fr));
   }
 }

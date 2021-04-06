@@ -7,7 +7,7 @@ const Title = ({ title, emoji, desc }) => {
       <h1>
         <span className='emoji'>{emoji}</span>&nbsp;{title}
       </h1>
-      <p>{desc}</p>
+      <h4>{desc}</h4>
     </div>
   );
 };
