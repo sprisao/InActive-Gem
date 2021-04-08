@@ -6,10 +6,7 @@ TAGS
 
 .HomeQuickTag {
   display: block;
-  max-width: var(--normalWidth);
-  margin: 15px auto;
   overflow-x: scroll;
-  padding: 0 1.25rem;
 }
 
 .HomeQuickTag__container::-webkit-scrollbar {

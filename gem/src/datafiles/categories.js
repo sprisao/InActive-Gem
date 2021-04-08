@@ -19,16 +19,16 @@ export const category = [
   },
   {
     id: 3,
-    strCategory: 'restaurants',
+    strCategory: 'restaurant',
     strIconSource:
       'https://res.cloudinary.com/diimwnnmj/image/upload/v1616123316/food_nuddsz.png',
-    title: '맛집',
+    title: '음식점',
     display: true,
     activated: true,
   },
   {
     id: 4,
-    strCategory: 'cafes',
+    strCategory: 'cafe',
     strIconSource:
       'https://res.cloudinary.com/diimwnnmj/image/upload/v1616123316/cafe_dogisg.png',
     title: '카페',

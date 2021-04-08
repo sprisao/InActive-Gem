@@ -1,0 +1,5 @@
+.Tags__Container {
+  max-width: var(--normalWidth);
+  margin: 15px auto;
+  padding: 0 1.25rem;
+}

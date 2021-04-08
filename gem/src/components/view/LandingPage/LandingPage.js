@@ -5,16 +5,19 @@ import News from './News';
 import SectionGrid from '../../Grid/SectionGrid';
 import SectionSlide from '../../Swipe/SectionSlide';
 
+import './LandingPage.css';
 const LandingPage = () => {
   return (
     <div>
       <Navigation />
-      <Tags />
+      <div className='Tags__Container'>
+        <Tags />
+      </div>
       <News />
-      <SectionSlide section='new' filter='음식점' />
-      <SectionSlide section='hot' filter='카페' />
-      <SectionGrid section='restaurants' filter='음식점' />
-      <SectionGrid section='cafes' filter='카페' />
+      <SectionSlide section='new' filter='restaurant' />
+      <SectionSlide section='hot' filter='cafe' />
+      <SectionGrid section='restaurants' filter='restaurant' />
+      <SectionGrid section='cafes' filter='cafe' />
     </div>
   );
 };
