@@ -29,7 +29,6 @@
       "react-app/jest"
     ]
   },
-  "homepage": "projectgem.netlify.app/",
   "browserslist": {
     "production": [
       ">0.2%",
