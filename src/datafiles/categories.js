@@ -89,15 +89,7 @@ export const category = [
     display: true,
     activated: true,
   },
-  {
-    id: 11,
-    strCategory: 'pharmacy',
-    strIconSource:
-      'https://res.cloudinary.com/diimwnnmj/image/upload/v1616123317/pharmacy_ngaewq.png',
-    title: '약국',
-    display: true,
-    activated: true,
-  },
+
   {
     id: 12,
     strCategory: 'hospital',
@@ -122,15 +114,6 @@ export const category = [
     strIconSource:
       'https://res.cloudinary.com/diimwnnmj/image/upload/v1616123318/shopping_aevysq.png',
     title: '마트',
-    display: true,
-    activated: true,
-  },
-  {
-    id: 15,
-    strCategory: 'entertainment',
-    strIconSource:
-      'https://res.cloudinary.com/diimwnnmj/image/upload/v1616123316/entertainment_b29fhy.png',
-    title: '엔터테인먼트',
     display: true,
     activated: true,
   },

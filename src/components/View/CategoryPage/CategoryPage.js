@@ -26,7 +26,7 @@ const CategoryPage = () => {
   const { title, emoji, strCategory } = categoryData;
 
   return (
-    <section className='CategoryPge'>
+    <section className='CategoryPage'>
       <div className='CategoryTitle__wrapper'>
         <div className='categoryTitle'>
           <img src={emoji} alt='{title}' />
