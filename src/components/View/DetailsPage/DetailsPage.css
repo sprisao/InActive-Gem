@@ -1,42 +1,6 @@
-.detailpage {
-  display: flex;
-  flex-direction: column;
-  max-width: 30.8rem;
+.detailsPage {
+  max-width: var(--normalWidth);
   margin: 0 auto;
-}
-
-.navigator {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  text-align: center;
-  margin-bottom: 0.5rem;
-}
-
-.navigator span {
-  font-size: 1.25rem;
-}
-
-button {
-  border: 0;
-  outline: 0;
-  background-color: white;
-  cursor: pointer;
-}
-
-.returnBtn {
-  display: inline-block;
-  justify-content: center;
-}
-
-.icon {
-  font-size: 1.25rem;
-}
-
-.mainInfo {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 .mainInfo h2 {
@@ -45,16 +9,6 @@ button {
 
 .mainInfo p {
   margin-bottom: 0.5rem;
-}
-.imageBox {
-  margin-bottom: 0.5rem;
-}
-
-.imageBox img {
-  object-fit: cover;
-  height: 33rem;
-  width: 100%;
-  border-radius: 15px;
 }
 
 .location__btn {
