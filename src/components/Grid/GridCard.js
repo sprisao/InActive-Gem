@@ -7,7 +7,7 @@ const GridCard = ({ id, img, title, category, location, desc }) => {
   return (
     <Link to={`/store/${id}`} className=''>
       <article className='gridCard'>
-        <img src={img} alt='' />
+        <img src={img[0]} alt='' />
         <h3>{title}</h3>
         <span>{location}</span>
         <p>{desc}</p>

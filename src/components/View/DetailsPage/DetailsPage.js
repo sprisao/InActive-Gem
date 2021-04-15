@@ -40,7 +40,7 @@ const DetailsPage = () => {
     <section className='detailsPage'>
       <DetailNavigation />
       <ImageBox img={img} title={title} />
-      <Information desc={desc} />
+      <Information title={title} desc={desc} />
       <Header img={img}></Header>
     </section>
   );
