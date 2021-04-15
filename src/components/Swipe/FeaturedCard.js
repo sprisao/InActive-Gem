@@ -9,7 +9,7 @@ const FeaturedCard = ({ id, img, title, category, location, desc }) => {
         <div
           className='featuredCard_image'
           style={{
-            backgroundImage: `url(${img})`,
+            backgroundImage: `url(${img[0]})`,
           }}
         >
           <div className='article'>
