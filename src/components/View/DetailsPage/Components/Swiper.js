@@ -8,7 +8,7 @@ const DetailSwiper = (props) => {
   console.log(props.img);
   return (
     <Swiper
-      spaceBetween={50}
+      spaceBetween={0}
       slidesPerView={1}
       navigation
       pagination={{ clickable: true }}
