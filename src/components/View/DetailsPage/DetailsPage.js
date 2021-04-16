@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-import DetailNavigation from './Components/Navigation';
+import DetailNavigation from './Components/DetailNavigation';
 import ImageBox from './Components/Swiper';
 import Header from './Components/Header';
 import Information from './Components/Information';

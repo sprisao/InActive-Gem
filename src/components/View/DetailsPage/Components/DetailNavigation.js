@@ -8,7 +8,7 @@ import {
   IoLocationSharp,
 } from 'react-icons/io5';
 
-import './Navigation.css';
+import './DetailNavigation.css';
 
 const Navigation = () => {
   return (

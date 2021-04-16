@@ -18,7 +18,7 @@ const DetailSwiper = (props) => {
       {props.img &&
         props.img.map((item) => {
           return (
-            <SwiperSlide className='swiper-slide'>
+            <SwiperSlide key={item.toString()} className='swiper-slide'>
               <img src={item} alt={props.title} />
             </SwiperSlide>
           );

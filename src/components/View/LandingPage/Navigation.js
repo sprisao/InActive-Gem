@@ -10,7 +10,7 @@ const Navigation = () => {
       <div className='navigation__wrap'>
         {navigation.map((category) => {
           return (
-            <Link to={`/category/${category.id}`}>
+            <Link key={category.id} to={`/category/${category.id}`}>
               <div key={category.id} className='navigation__btn'>
                 <img src={category.strIconSource} alt={category.title} />
                 <span>{category.title}</span>
