@@ -1,0 +1,41 @@
+.details__Information {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 1.2rem;
+  margin: 0.5rem 0;
+  font-weight: 300;
+  font-size: 1.1rem;
+}
+
+.details__icon {
+  font-size: 1.2rem;
+  margin-right: 0.5rem;
+}
+.businessHours {
+  display: flex;
+  align-items: center;
+}
+
+.breakDays {
+  display: flex;
+  align-items: center;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+}
+
+.location p {
+  margin-right: 0.25rem;
+}
+
+.phoneNumber {
+  display: flex;
+  align-items: center;
+}
+
+.phoneNumber p {
+  color: #dc0f62;
+}

@@ -1,19 +1,25 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { HiBadgeCheck } from 'react-icons/hi';
+import { FiInstagram } from 'react-icons/fi';
+import './Header.css';
 
 const Header = (props) => {
-  const [images, setImages] = useState(props.img);
   return (
-    <div>
-      <h1>This is HEader</h1>
-      {images &&
-        images.map((item) => {
-          return (
-            <div>
-              <ul>{item.img}</ul>
-            </div>
-          );
-        })}
-      <h2>Header ends</h2>
+    <div className='details__Header'>
+      <div className='details__shorDesc'>
+        <h4>{props.shortDescription}</h4>
+      </div>
+      <div className='details__name'>
+        <h1>{props.name}</h1>
+        <HiBadgeCheck />
+      </div>
+      <div className='details__instagram'>
+        <FiInstagram
+          style={{ strokeWidth: '1px' }}
+          className='details__instagram icon'
+        />
+        <p>{props.instagramAcc}</p>
+      </div>
     </div>
   );
 };

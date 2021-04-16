@@ -4,6 +4,7 @@ import DetailNavigation from './Components/DetailNavigation';
 import ImageBox from './Components/Swiper';
 import Header from './Components/Header';
 import Information from './Components/Information';
+import OwnerSection from './Components/OwnerSection';
 
 import { data } from '../../../datafiles/stores';
 import { useParams } from 'react-router-dom';
@@ -25,23 +26,69 @@ const DetailsPage = () => {
 
   useEffect(() => {
     const newStoreData = data.find((store) => store.id === parseInt(id));
-    const title = newStoreData.name;
+    const name = newStoreData.name;
     const img = newStoreData.img;
-    const location = newStoreData.eupmyeondongRi;
-    const desc = newStoreData.shortDescription;
-    const description = newStoreData.description;
-    const newStore = { title, img, location, desc, description };
+    const eupmyeondongRi = newStoreData.eupmyeondongRi;
+    const shortDescription = newStoreData.shortDescription;
+    const instagramAcc = newStoreData.instagramAccount;
+    const businessHours = newStoreData.businessHours;
+    const breakHours = newStoreData.breakHours;
+    const breakDays = newStoreData.breakDays;
+    const phoneNumber = newStoreData.phoneNumber;
+    const imageOwner = newStoreData.imageOwner;
+    const ownerMessage = newStoreData.ownerMessage;
+    const newStore = {
+      name,
+      img,
+      eupmyeondongRi,
+      shortDescription,
+      instagramAcc,
+      businessHours,
+      breakHours,
+      breakDays,
+      phoneNumber,
+      imageOwner,
+      ownerMessage,
+    };
     setStoreData(newStore);
   }, []);
 
-  const { title, img, location, desc, description } = storeData;
+  const {
+    name,
+    img,
+    eupmyeondongRi,
+    shortDescription,
+    description,
+    instagramAcc,
+    businessHours,
+    breakHours,
+    breakDays,
+    phoneNumber,
+    imageOwner,
+    ownerMessage,
+  } = storeData;
 
   return (
     <section className='detailsPage'>
       <DetailNavigation />
-      <ImageBox img={img} title={title} />
-      <Information title={title} desc={desc} />
-      <Header title={title} desc={desc}></Header>
+      <ImageBox img={img} name={name} />
+      <Header
+        name={name}
+        shortDescription={shortDescription}
+        instagramAcc={instagramAcc}
+      />
+      <hr />
+      <Information
+        businessHours={businessHours}
+        breakHours={breakHours}
+        breakDays={breakDays}
+        phoneNumber={phoneNumber}
+        eupmyeondongRi={eupmyeondongRi}
+      />
+      <hr />
+      <OwnerSection imageOwner={imageOwner} ownerMessage={ownerMessage} />
+      {/* <hr />
+      <div style={{ height: '10rem' }}></div> */}
     </section>
   );
 };

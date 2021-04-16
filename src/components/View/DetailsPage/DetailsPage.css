@@ -14,3 +14,8 @@
 .location__btn {
   text-decoration: underline;
 }
+
+hr {
+  background-color: D3D3D3;
+  height: 0.1px;
+}

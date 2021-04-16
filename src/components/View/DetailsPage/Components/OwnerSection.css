@@ -1,0 +1,18 @@
+.OwnerSection {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ownerImage__container {
+  padding: 1rem;
+}
+.ownerImage__container img {
+  height: 6rem;
+  clip-path: circle(2.75rem at center);
+}
+
+.ownerMessage__container {
+  display: flex;
+  align-items: center;
+  padding-right: 2rem;
+}
