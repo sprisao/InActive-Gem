@@ -7,7 +7,7 @@ const Grid = (props) => {
   return (
     <section className='grid'>
       {data.map((store, index) => {
-        if (store.category === props.filter) {
+        if (store.ctgry === props.filter) {
           return <GridCard key={store.id} {...store}></GridCard>;
         }
       })}

@@ -14,9 +14,9 @@ const LandingPage = () => {
         <Tags />
       </div>
       <News />
-      <SectionSlide section='new' filter='restaurant' />
+      <SectionSlide section='new' filter='rstrn' />
       <SectionSlide section='hot' filter='cafe' />
-      <SectionGrid section='restaurants' filter='restaurant' />
+      <SectionGrid section='restaurants' filter='rstrn' />
       <SectionGrid section='cafes' filter='cafe' />
     </div>
   );

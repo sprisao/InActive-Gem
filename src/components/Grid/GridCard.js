@@ -3,14 +3,21 @@ import { Link } from 'react-router-dom';
 
 import './GridCard.css';
 
-const GridCard = ({ id, img, title, category, location, desc }) => {
+const GridCard = ({
+  id,
+  img,
+  name,
+  ctgry,
+  eupmyeondongRi,
+  shortDescription,
+}) => {
   return (
     <Link to={`/store/${id}`} className=''>
       <article className='gridCard'>
         <img src={img[0]} alt='' />
-        <h3>{title}</h3>
-        <span>{location}</span>
-        <p>{desc}</p>
+        <h3>{name}</h3>
+        <span>{eupmyeondongRi}</span>
+        <p>{shortDescription}</p>
       </article>
     </Link>
   );

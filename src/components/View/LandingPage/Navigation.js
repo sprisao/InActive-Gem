@@ -12,8 +12,8 @@ const Navigation = () => {
           return (
             <Link key={category.id} to={`/category/${category.id}`}>
               <div key={category.id} className='navigation__btn'>
-                <img src={category.strIconSource} alt={category.title} />
-                <span>{category.title}</span>
+                <img src={category.strIconSource} alt={category.ctgryTitle} />
+                <span>{category.ctgryTitle}</span>
               </div>
             </Link>
           );

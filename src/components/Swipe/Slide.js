@@ -7,7 +7,7 @@ const Slide = (props) => {
   return (
     <div className='slide'>
       {data.map((store, index) => {
-        if (store.category === props.filter) {
+        if (store.ctgry === props.filter) {
           return <FeaturedCard key={store.id} {...store}></FeaturedCard>;
         }
       })}

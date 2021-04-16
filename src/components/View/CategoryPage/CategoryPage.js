@@ -16,14 +16,14 @@ const CategoryPage = () => {
     const newCategoryData = category.find(
       (category) => category.id === parseInt(id)
     );
-    const title = newCategoryData.title;
+    const title = newCategoryData.ctgryTitle;
     const emoji = newCategoryData.strIconSource;
-    const strCategory = newCategoryData.strCategory;
-    const newCategory = { title, emoji, strCategory };
+    const ctgry = newCategoryData.ctgry;
+    const newCategory = { title, emoji, ctgry };
     setCategoryData(newCategory);
   }, []);
 
-  const { title, emoji, strCategory } = categoryData;
+  const { title, emoji, ctgry } = categoryData;
 
   return (
     <section className='CategoryPage'>
@@ -43,7 +43,7 @@ const CategoryPage = () => {
       <Gird filter = {분류2}>*/}
 
       <div className='CategoryGrid'>
-        <Grid filter={strCategory} />
+        <Grid filter={ctgry} />
       </div>
     </section>
   );

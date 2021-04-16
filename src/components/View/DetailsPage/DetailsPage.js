@@ -25,10 +25,10 @@ const DetailsPage = () => {
 
   useEffect(() => {
     const newStoreData = data.find((store) => store.id === parseInt(id));
-    const title = newStoreData.title;
+    const title = newStoreData.name;
     const img = newStoreData.img;
-    const location = newStoreData.location;
-    const desc = newStoreData.desc;
+    const location = newStoreData.eupmyeondongRi;
+    const desc = newStoreData.shortDescription;
     const description = newStoreData.description;
     const newStore = { title, img, location, desc, description };
     setStoreData(newStore);
@@ -41,7 +41,7 @@ const DetailsPage = () => {
       <DetailNavigation />
       <ImageBox img={img} title={title} />
       <Information title={title} desc={desc} />
-      <Header img={img}></Header>
+      <Header title={title} desc={desc}></Header>
     </section>
   );
 };

@@ -2,7 +2,14 @@ import React from 'react';
 import './FeaturedCard.css';
 import { Link } from 'react-router-dom';
 
-const FeaturedCard = ({ id, img, title, category, location, desc }) => {
+const FeaturedCard = ({
+  id,
+  img,
+  name,
+  ctgry,
+  eupmyeondongRi,
+  shortDescription,
+}) => {
   return (
     <Link to={`/store/${id}`} className=''>
       <div className='featuredCard'>
@@ -13,9 +20,9 @@ const FeaturedCard = ({ id, img, title, category, location, desc }) => {
           }}
         >
           <div className='article'>
-            <p>{desc}</p>
-            <h2>{title}</h2>
-            <span>{location}</span>
+            <p>{shortDescription}</p>
+            <h2>{name}</h2>
+            <span>{eupmyeondongRi}</span>
           </div>
         </div>
       </div>
