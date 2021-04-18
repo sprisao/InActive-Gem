@@ -1,21 +1,21 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
-import DetailNavigation from './Components/DetailNavigation';
-import ImageBox from './Components/Swiper';
-import Header from './Components/Header';
-import Information from './Components/Information';
-import OwnerSection from './Components/OwnerSection';
+import DetailNavigation from "./Components/DetailNavigation";
+import ImageBox from "./Components/Swiper";
+import Header from "./Components/Header";
+import Information from "./Components/Information";
+import OwnerSection from "./Components/OwnerSection";
 
-import { data } from '../../../datafiles/stores';
-import { useParams } from 'react-router-dom';
+import { data } from "../../../datafiles/stores";
+import { useParams } from "react-router-dom";
 
-import './DetailsPage.css';
+import "./DetailsPage.css";
 
 // Swiper 생성을 위한 Dependencies //
-import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
-import 'swiper/swiper.scss';
-import 'swiper/components/navigation/navigation.scss';
-import 'swiper/components/pagination/pagination.scss';
+import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+import "swiper/swiper.scss";
+import "swiper/components/navigation/navigation.scss";
+import "swiper/components/pagination/pagination.scss";
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
 //////////////////////////////////
@@ -69,7 +69,7 @@ const DetailsPage = () => {
   } = storeData;
 
   return (
-    <section className='detailsPage'>
+    <section className="detailsPage">
       <DetailNavigation />
       <ImageBox img={img} name={name} />
       <Header
