@@ -14,7 +14,7 @@ const Header = (props) => {
         <HiBadgeCheck />
       </div>
       <div className='details__tag'>
-        <p>#원주맛집 #원주핫플레이스 #원주카페 #태그쓸까말까</p>
+        <p>#돈까스맛집 #혁신도시맛집 #젬인증맛집 </p>
       </div>
     </div>
   );

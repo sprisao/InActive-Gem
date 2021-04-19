@@ -23,6 +23,8 @@
 .ownerMessage__container {
   display: flex;
   align-items: center;
-  padding: 0 0.75rem;
+  padding-left: 0.75rem;
   font-weight: 100;
+  font-size: 1.25rem;
+  word-break: break-all;
 }
