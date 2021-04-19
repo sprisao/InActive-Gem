@@ -82,9 +82,6 @@ const DetailsPage = () => {
         eupmyeondongRi={eupmyeondongRi}
         instagramAcc={instagramAcc}
       />
-      <hr />
-      {/* <hr />
-      <div style={{ height: '10rem' }}></div> */}
     </section>
   );
 };
