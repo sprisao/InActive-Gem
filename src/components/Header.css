@@ -5,6 +5,7 @@ header
 */
 .header {
   margin-bottom: 2.75rem;
+  margin-top: 1.25rem;
 }
 
 .header__wrapper {

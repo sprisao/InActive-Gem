@@ -1,5 +1,6 @@
 import React from 'react';
 import {
+  FiInstagram,
   FiClock,
   FiXCircle,
   FiMapPin,
@@ -33,6 +34,10 @@ const Information = (props) => {
           className='details__icon'
         />
         <p>{props.phoneNumber}</p>
+      </div>
+      <div className='details__instagram'>
+        <FiInstagram style={{ strokeWidth: '1px' }} className='details__icon' />
+        <p>{props.instagramAcc}</p>
       </div>
     </div>
   );

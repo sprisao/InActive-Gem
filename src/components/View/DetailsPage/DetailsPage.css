@@ -1,6 +1,6 @@
 .detailsPage {
   max-width: var(--normalWidth);
-  margin: 0 auto;
+  margin: 1rem auto;
 }
 
 .mainInfo h2 {

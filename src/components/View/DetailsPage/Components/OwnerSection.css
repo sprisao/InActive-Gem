@@ -1,18 +1,28 @@
 .OwnerSection {
   display: flex;
   justify-content: space-between;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  padding: 1rem;
 }
 
 .ownerImage__container {
-  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-between;
 }
 .ownerImage__container img {
-  height: 6rem;
-  clip-path: circle(2.75rem at center);
+  height: 8rem;
+  clip-path: circle(4rem at center);
+}
+.ownerName {
+  margin-top: 0.25rem;
 }
 
 .ownerMessage__container {
   display: flex;
   align-items: center;
-  padding-right: 2rem;
+  padding: 0 0.75rem;
+  font-weight: 100;
 }

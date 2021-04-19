@@ -13,7 +13,7 @@ export const category = [
     ctgry: 'new',
     strIconSource:
       'https://res.cloudinary.com/diimwnnmj/image/upload/v1616123317/new_v8vqmp.png',
-    ctgryTitle: '새로생긴 곳',
+    ctgryTitle: '새로찾은 곳',
     displayed: true,
     activated: true,
   },

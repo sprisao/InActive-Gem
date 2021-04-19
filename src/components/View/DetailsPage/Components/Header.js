@@ -13,12 +13,8 @@ const Header = (props) => {
         <h1>{props.name}</h1>
         <HiBadgeCheck />
       </div>
-      <div className='details__instagram'>
-        <FiInstagram
-          style={{ strokeWidth: '1px' }}
-          className='details__instagram icon'
-        />
-        <p>{props.instagramAcc}</p>
+      <div className='details__tag'>
+        <p>#원주맛집 #원주핫플레이스 #원주카페 #태그쓸까말까</p>
       </div>
     </div>
   );

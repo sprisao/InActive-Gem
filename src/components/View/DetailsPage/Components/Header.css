@@ -1,12 +1,13 @@
 .details__Header {
   margin-top: 1.25rem;
-  padding: 0 0.9rem;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.25rem;
 }
 
 .details__Header h4 {
-  font-size: 1.15rem;
-  font-weight: 400;
+  margin-left: 0.2rem;
+  padding-left: 0.9rem;
+  font-size: 1.25rem;
+  font-weight: 300;
 }
 
 .details__name {
@@ -16,17 +17,23 @@
 }
 
 .details__name h1 {
-  font-size: 2.5rem;
+  font-size: 3.5rem;
+  font-weight: 700;
+  padding-left: 0.9rem;
 }
 
-.details__instagram {
+.details__tag {
+  padding-left: 0.9rem;
+  font-size: 1.1rem;
+}
+/* .details__instagram {
   margin-left: 0.15rem;
   display: flex;
   margin-top: 0.2rem;
   align-items: center;
   font-weight: 300;
-}
-
+} */
+/* 
 .details__instagram .icon {
   font-size: 1.2rem;
 }
@@ -35,4 +42,4 @@
   cursor: pointer;
   margin-bottom: 0.1rem;
   margin-left: 0.2rem;
-}
+} */

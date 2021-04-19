@@ -34,6 +34,15 @@
     url('styles/fonts/NotoSansKR-Bold.otf') format('truetype');
 }
 
+@font-face {
+  font-family: 'Noto Sans CJK KR';
+  font-style: normal;
+  font-weight: 900;
+  src: url('styles/fonts/NotoSansKR-Black.woff2') format('woff2'),
+    url('styles/fonts/NotoSansKR-Black.woff') format('woff'),
+    url('styles/fonts/NotoSansKR-Black.otf') format('truetype');
+}
+
 html {
   font-size: 13px;
 }
@@ -88,7 +97,7 @@ a {
 }
 
 body {
-  margin: 1.5rem auto;
+  margin: 0 auto;
   font-family: 'Noto Sans CJK KR', '맑은 고딕', 'malgun gothic',
     'Apple SD Gothic Neo', 'Apple SD 산돌고딕 Neo', 'Microsoft NeoGothic',
     'Droid sans';
