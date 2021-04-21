@@ -10,11 +10,11 @@ const LandingPage = () => {
   return (
     <div>
       <Navigation />
-      <div className='Tags__Container'>
+      {/* <div className='Tags__Container'>
         <Tags />
-      </div>
+      </div> */}
       <News />
-      <SectionSlide section='new' filter='rstrn' />
+      {/* <SectionSlide section='new' filter='rstrn' /> */}
       <SectionSlide section='hot' filter='cafe' />
       <SectionGrid section='restaurants' filter='rstrn' />
       <SectionGrid section='cafes' filter='cafe' />

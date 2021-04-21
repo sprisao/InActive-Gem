@@ -12,16 +12,16 @@ const FeaturedCard = ({
 }) => {
   return (
     <Link to={`/store/${id}`} className=''>
-      <div className='featuredCard'>
-        <div
-          className='featuredCard_image'
-          style={{
-            backgroundImage: `url(${img[0]})`,
-          }}
-        >
+      <div
+        className='featuredCard'
+        style={{
+          backgroundImage: `url(${img[0]})`,
+        }}
+      >
+        <div className='featuredCard_image'>
           <div className='article'>
             <p>{shortDescription}</p>
-            <h2>{name}</h2>
+            <h3>{name}</h3>
             <span>{eupmyeondongRi}</span>
           </div>
         </div>

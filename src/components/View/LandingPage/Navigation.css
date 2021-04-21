@@ -1,7 +1,7 @@
 .navigation {
   max-width: var(--normalWidth);
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 2rem 1.5rem;
 }
 .navigation__wrap {
   display: grid;
