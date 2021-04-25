@@ -5,7 +5,7 @@
 
 .details__Header h4 {
   margin-left: 0.2rem;
-  padding-left: 0.9rem;
+
   font-size: 1.25rem;
   font-weight: 400;
 }
@@ -19,11 +19,9 @@
 .details__name h1 {
   font-size: 3.5rem;
   font-weight: 700;
-  padding-left: 0.9rem;
 }
 
 .details__tag {
-  padding-left: 0.9rem;
   font-size: 1.25rem;
 }
 /* .details__instagram {

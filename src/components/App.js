@@ -21,7 +21,6 @@ function App() {
           <Home />
         </Route>
         <Route path='/category/:id'>
-          <Header />
           <CategoryPage />
         </Route>
         <Route path='/category/*'>

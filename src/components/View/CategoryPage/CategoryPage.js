@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 
+import Navigation from '../LandingPage/Navigation';
+import Header from '../../Header';
 import Grid from '../../Grid/SectionGrid';
 import Tags from '../../Tags';
 
@@ -27,10 +29,13 @@ const CategoryPage = () => {
 
   return (
     <section className='CategoryPage'>
+      <Header />
+      <Navigation />
       <div className='CategoryTitle__wrapper'>
         <div className='categoryTitle'>
           <img src={emoji} alt='{title}' />
           <h1>{title}</h1>
+          <h2>{id}</h2>
         </div>
         <div className='CategoryTags__container'>
           <Tags />
