@@ -8,6 +8,8 @@ import Store from './View/DetailsPage/DetailsPage';
 import Error from './View/ErrorPage/Error';
 import Ready from './View/ErrorPage/Ready';
 
+import Test from './Apitest';
+
 // import components
 import Header from './Header';
 import Footer from './Footer';
@@ -18,7 +20,8 @@ function App() {
       <Switch>
         <Route exact path='/'>
           <Header />
-          <Home />
+          {/* <Home /> */}
+          <Test />
         </Route>
         <Route path='/category/:id'>
           <CategoryPage />
