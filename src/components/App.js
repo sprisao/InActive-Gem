@@ -8,7 +8,7 @@ import Store from './View/DetailsPage/DetailsPage';
 import Error from './View/ErrorPage/Error';
 import Ready from './View/ErrorPage/Ready';
 
-import Test from './Apitest';
+import Test from './Storestest';
 
 // import components
 import Header from './Header';
@@ -20,8 +20,8 @@ function App() {
       <Switch>
         <Route exact path='/'>
           <Header />
-          {/* <Home /> */}
-          <Test />
+          {/* <Test /> */}
+          <Home />
         </Route>
         <Route path='/category/:id'>
           <CategoryPage />
