@@ -1,19 +1,19 @@
 const categories = [
   {
     id: 1,
-    ctgry: 'hot',
+    ctgry: 'home',
     strIconSource:
-      'https://res.cloudinary.com/diimwnnmj/image/upload/v1616123317/hot_whb0c9.png',
-    ctgryTitle: '인기장소',
+      'https://res.cloudinary.com/diimwnnmj/image/upload/v1616123317/new_v8vqmp.png',
+    ctgryTitle: '홈',
     displayed: true,
     activated: true,
   },
   {
     id: 2,
-    ctgry: 'new',
+    ctgry: 'hot',
     strIconSource:
-      'https://res.cloudinary.com/diimwnnmj/image/upload/v1616123317/new_v8vqmp.png',
-    ctgryTitle: '새로찾은 곳',
+      'https://res.cloudinary.com/diimwnnmj/image/upload/v1616123317/hot_whb0c9.png',
+    ctgryTitle: '인기장소',
     displayed: true,
     activated: true,
   },

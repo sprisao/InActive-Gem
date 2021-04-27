@@ -23,6 +23,10 @@ function App() {
           {/* <Test /> */}
           <Home />
         </Route>
+        <Route exact path='/category/1'>
+          <Header />
+          <Home />
+        </Route>
         <Route path='/category/:id'>
           <CategoryPage />
         </Route>
