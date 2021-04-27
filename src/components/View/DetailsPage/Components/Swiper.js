@@ -17,7 +17,7 @@ const DetailSwiper = (props) => {
       onSlideChange={() => console.log('slide change')}
     >
       {props.img &&
-        props.img.map((item) => {
+        props.img.map((item, index) => {
           return (
             <SwiperSlide key={item.toString()} className='swiper-slide'>
               <img src={item} alt={props.title} />

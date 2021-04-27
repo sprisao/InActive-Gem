@@ -27,6 +27,7 @@ const DetailsPage = () => {
     const newStoreData = data.find((store) => store.id === parseInt(id));
     const name = newStoreData.name;
     const img = newStoreData.img;
+    const category = newStoreData.ctgry;
     const eupmyeondongRi = newStoreData.eupmyeondongRi;
     const shortDescription = newStoreData.shortDescription;
     const instagramAcc = newStoreData.instagramAccount;
@@ -39,6 +40,7 @@ const DetailsPage = () => {
     const newStore = {
       name,
       img,
+      category,
       eupmyeondongRi,
       shortDescription,
       instagramAcc,
@@ -50,11 +52,12 @@ const DetailsPage = () => {
       ownerMessage,
     };
     setStoreData(newStore);
-  }, []);
+  }, [id]);
 
   const {
     name,
     img,
+    category,
     eupmyeondongRi,
     shortDescription,
     description,

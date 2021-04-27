@@ -23,7 +23,7 @@ const CategoryPage = () => {
     const ctgry = newCategoryData.ctgry;
     const newCategory = { title, emoji, ctgry };
     setCategoryData(newCategory);
-  }, []);
+  }, [id]);
 
   const { title, emoji, ctgry } = categoryData;
 
@@ -35,7 +35,6 @@ const CategoryPage = () => {
         <div className='categoryTitle'>
           <img src={emoji} alt='{title}' />
           <h1>{title}</h1>
-          <h2>{id}</h2>
         </div>
         <div className='CategoryTags__container'>
           <Tags />

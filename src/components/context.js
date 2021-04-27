@@ -6,7 +6,6 @@ const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
-
   const [categories, setCategories] = useState([]);
 
   const fetchContents = async () => {
