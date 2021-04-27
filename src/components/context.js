@@ -1,7 +1,7 @@
 import React, { useState, useContext, useEffect } from 'react';
 import { useCallback } from 'react';
 
-const url = '/api/category-api';
+const url = '.netlify/functions/category-api';
 const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
