@@ -1,6 +1,7 @@
 .details__Header {
   margin-top: 1.25rem;
   margin-bottom: 0.25rem;
+  padding-left: 0.75rem;
 }
 
 .details__Header h4 {
@@ -17,12 +18,13 @@
 }
 
 .details__name h1 {
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-weight: 700;
 }
 
 .details__tag {
-  font-size: 1.25rem;
+  margin-top: 0.5rem;
+  font-size: 1.15rem;
 }
 /* .details__instagram {
   margin-left: 0.15rem;
