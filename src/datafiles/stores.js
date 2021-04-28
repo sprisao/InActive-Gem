@@ -240,7 +240,7 @@ export const data = [
       'https://res.cloudinary.com/debadvkli/image/upload/v1618726710/cafe/%EC%95%A4%ED%8A%B8%EB%B9%8C%EB%9D%BC/%E1%84%83%E1%85%A1%E1%84%8B%E1%85%AE%E1%86%AB%E1%84%85%E1%85%A9%E1%84%83%E1%85%B3_8_d0anop.jpg',
       'https://res.cloudinary.com/debadvkli/image/upload/v1618726710/cafe/%EC%95%A4%ED%8A%B8%EB%B9%8C%EB%9D%BC/%E1%84%83%E1%85%A1%E1%84%8B%E1%85%AE%E1%86%AB%E1%84%85%E1%85%A9%E1%84%83%E1%85%B3_7_q9rurl.jpg',
       'https://res.cloudinary.com/debadvkli/image/upload/v1618726710/cafe/%EC%95%A4%ED%8A%B8%EB%B9%8C%EB%9D%BC/%E1%84%83%E1%85%A1%E1%84%8B%E1%85%AE%E1%86%AB%E1%84%85%E1%85%A9%E1%84%83%E1%85%B3_zoihu5.jpg',
-      'hhttps://res.cloudinary.com/debadvkli/image/upload/v1618726710/cafe/%EC%95%A4%ED%8A%B8%EB%B9%8C%EB%9D%BC/%E1%84%83%E1%85%A1%E1%84%8B%E1%85%AE%E1%86%AB%E1%84%85%E1%85%A9%E1%84%83%E1%85%B3_9_zcipdy.jpg',
+      'https://res.cloudinary.com/debadvkli/image/upload/v1618726710/cafe/%EC%95%A4%ED%8A%B8%EB%B9%8C%EB%9D%BC/%E1%84%83%E1%85%A1%E1%84%8B%E1%85%AE%E1%86%AB%E1%84%85%E1%85%A9%E1%84%83%E1%85%B3_9_zcipdy.jpg',
       'https://res.cloudinary.com/debadvkli/image/upload/v1618726709/cafe/%EC%95%A4%ED%8A%B8%EB%B9%8C%EB%9D%BC/%E1%84%83%E1%85%A1%E1%84%8B%E1%85%AE%E1%86%AB%E1%84%85%E1%85%A9%E1%84%83%E1%85%B3_2_ig7iqk.jpg',
       'https://res.cloudinary.com/debadvkli/image/upload/v1618726709/cafe/%EC%95%A4%ED%8A%B8%EB%B9%8C%EB%9D%BC/%E1%84%83%E1%85%A1%E1%84%8B%E1%85%AE%E1%86%AB%E1%84%85%E1%85%A9%E1%84%83%E1%85%B3_6_xvgv73.jpg',
     ],

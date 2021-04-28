@@ -12,7 +12,6 @@ const DetailSwiper = (props) => {
       slidesPerView={1}
       navigation
       pagination={{ clickable: true }}
-      Thumbs
       onSwiper={(swiper) => console.log(swiper)}
       onSlideChange={() => console.log('slide change')}
     >

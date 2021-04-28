@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import './GridCard.css';
+import './DetailGridCard.css';
 
-const GridCard = ({
+const DetailGridCard = ({
   id,
   img,
   name,
@@ -13,7 +13,7 @@ const GridCard = ({
 }) => {
   return (
     <Link to={`/store/${id}`} className=''>
-      <article className='gridCard'>
+      <article className='detail__gridCard'>
         <div className='imageContainer'>
           <img src={img[0]} alt='' />
         </div>
@@ -27,4 +27,4 @@ const GridCard = ({
   );
 };
 
-export default GridCard;
+export default DetailGridCard;
