@@ -1335,7 +1335,7 @@ export const data = [
     ctgry: 'rstrn',
     siGunGu: '강원도',
     city: '원주시',
-    eupmyeondongRi: '태반곡관설동장동',
+    eupmyeondongRi: '관설동',
     roadName: '라옹정길',
     detailAddress: '74-34',
     jibun: '1666-18 ',
