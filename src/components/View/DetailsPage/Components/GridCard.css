@@ -1,0 +1,19 @@
+.gridCard {
+  display: grid;
+  grid-gap: 0.5rem;
+  grid-template-columns: 2fr 1fr;
+}
+
+.imageContainer {
+  overflow: hidden;
+  margin: 0 auto;
+}
+.imageContainer img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.articleContainer p {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+}

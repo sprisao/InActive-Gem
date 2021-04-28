@@ -3,7 +3,7 @@ export const category = [
     id: 1,
     ctgry: 'home',
     strIconSource:
-      'https://res.cloudinary.com/diimwnnmj/image/upload/v1616123317/hot_whb0c9.png',
+      'https://res.cloudinary.com/diimwnnmj/image/upload/v1616123317/new_v8vqmp.png',
     ctgryTitle: '홈',
     displayed: true,
     activated: true,

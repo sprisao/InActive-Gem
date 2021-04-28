@@ -6,7 +6,7 @@ import { copywrites } from '../../datafiles/copywrites';
 const SectionGrid = (props) => {
   return (
     <section className='title'>
-      {copywrites.map((copywrites, index) => {
+      {copywrites.map((copywrites) => {
         if (copywrites.section === props.section)
           return <Title key={copywrites.id} {...copywrites}></Title>;
       })}

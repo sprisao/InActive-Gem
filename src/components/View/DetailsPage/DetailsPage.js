@@ -4,6 +4,7 @@ import ImageBox from './Components/Swiper';
 import Header from './Components/Header';
 import Information from './Components/Information';
 import OwnerSection from './Components/OwnerSection';
+import Recommendation from './Components/Recommendations';
 
 import { data } from '../../../datafiles/stores';
 import { useParams } from 'react-router-dom';
@@ -84,6 +85,7 @@ const DetailsPage = () => {
         eupmyeondongRi={eupmyeondongRi}
         instagramAcc={instagramAcc}
       />
+      <Recommendation filter={category} />
     </section>
   );
 };

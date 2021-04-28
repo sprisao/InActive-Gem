@@ -1,0 +1,18 @@
+.grid {
+  display: grid;
+  white-space: wrap;
+  max-width: var(--maxWidth);
+  grid-gap: 1rem;
+  grid-template-columns: repeat(1, minmax(9rem, 1fr));
+}
+/* 
+@media screen and (min-width: 400px) {
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(191px, 1fr));
+  }
+}
+@media screen and (min-width: 760px) {
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(191px, 1fr));
+  }
+} */

@@ -8,7 +8,7 @@ import Store from './View/DetailsPage/DetailsPage';
 import Error from './View/ErrorPage/Error';
 import Ready from './View/ErrorPage/Ready';
 
-import Test from './Storestest';
+import ScrollToTop from './ScrollToTop';
 
 // import components
 import Header from './Header';
@@ -17,32 +17,33 @@ import Footer from './Footer';
 function App() {
   return (
     <Router>
-      <Switch>
-        <Route exact path='/'>
-          <Header />
-          {/* <Test /> */}
-          <Home />
-        </Route>
-        <Route exact path='/category/1'>
-          <Header />
-          <Home />
-        </Route>
-        <Route path='/category/:id'>
-          <CategoryPage />
-        </Route>
-        <Route path='/category/*'>
-          <Header />
-          <Ready />
-        </Route>
-        <Route path='/store/:id'>
-          <Store />
-        </Route>
-        <Route path='*'>
-          <Header />
-          <Error />
-        </Route>
-      </Switch>
-      <Footer />
+      <ScrollToTop>
+        <Switch>
+          <Route exact path='/'>
+            <Header />
+            <Home />
+          </Route>
+          <Route exact path='/category/1'>
+            <Header />
+            <Home />
+          </Route>
+          <Route path='/category/:id'>
+            <CategoryPage />
+          </Route>
+          <Route path='/category/*'>
+            <Header />
+            <Ready />
+          </Route>
+          <Route path='/store/:id'>
+            <Store />
+          </Route>
+          <Route path='*'>
+            <Header />
+            <Error />
+          </Route>
+        </Switch>
+        <Footer />
+      </ScrollToTop>
     </Router>
   );
 }
