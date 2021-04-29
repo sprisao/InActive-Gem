@@ -1,19 +1,25 @@
 import React, { useState } from 'react';
-import { category } from '../../../datafiles/categories';
+
+import { useGlobalContext } from '../../context';
+
 import { Link } from 'react-router-dom';
 import './Navigation.css';
 
 const Navigation = () => {
-  const [navigation, setNavigation] = useState(category);
+  const { categories, loading } = useGlobalContext();
+
+  if (loading) {
+    return <div>로딩중</div>;
+  }
   return (
     <section className='navigation'>
       <div className='navigation__wrap'>
-        {navigation.map((category) => {
+        {categories.map((item) => {
           return (
-            <Link key={category.id} to={`/category/${category.id}`}>
-              <div key={category.id} className='navigation__btn'>
-                <img src={category.strIconSource} alt={category.ctgryTitle} />
-                <span>{category.ctgryTitle}</span>
+            <Link key={item.id} to={`/category/${item.id}`}>
+              <div key={item.id} className='navigation__btn'>
+                <img src={item.strIconSource} alt={item.ctgryTitle} />
+                <span>{item.ctgryTitle}</span>
               </div>
             </Link>
           );

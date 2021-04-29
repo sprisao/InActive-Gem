@@ -1,6 +1,12 @@
 [build]
 functions = "./functions"
 
+
+[[redirects]]
+from = "/*"
+to = "/index.html"
+status = 200
+
 [[redirects]]
 from = "/api/*"
 to = "/.netlify/functions/:splat"
