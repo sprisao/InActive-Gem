@@ -28,7 +28,7 @@ export const data = [
     breakDays: '매주 일요일',
     phoneNumber: '0507-1363-4320',
     imageOwner:
-      'https://res.cloudinary.com/diimwnnmj/image/upload/v1618553750/%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%91%E1%85%B5%E1%86%AF_x1qekw.jpg',
+      'https://res.cloudinary.com/diimwnnmj/image/upload/v1619754206/optimize_etpsuv.jpg',
     ownerMessage:
       ' 반곡동의 자그마한 가게에서 시작하여 원주 최고의 돈가스 맛집으로! 앞으로도 많은 사랑 부탁드립니다.',
   },
@@ -58,7 +58,7 @@ export const data = [
     breakDays: '매주 월요일',
     phoneNumber: '033-761-8008',
     imageOwner:
-      'https://res.cloudinary.com/diimwnnmj/image/upload/v1618553750/%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%91%E1%85%B5%E1%86%AF_x1qekw.jpg',
+      'https://res.cloudinary.com/diimwnnmj/image/upload/v1619754206/optimize_etpsuv.jpg',
     ownerMessage:
       ' 반곡동의 자그마한 가게에서 시작하여 원주 최고의 돈가스 맛집으로! 앞으로도 많은 사랑 부탁드립니다.',
   },
@@ -92,7 +92,7 @@ export const data = [
     breakDays: '',
     phoneNumber: '033-747-8617',
     imageOwner:
-      'https://res.cloudinary.com/diimwnnmj/image/upload/v1618553750/%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%91%E1%85%B5%E1%86%AF_x1qekw.jpg',
+      'https://res.cloudinary.com/diimwnnmj/image/upload/v1619754206/optimize_etpsuv.jpg',
     ownerMessage:
       ' 반곡동의 자그마한 가게에서 시작하여 원주 최고의 돈가스 맛집으로! 앞으로도 많은 사랑 부탁드립니다.',
   },
@@ -122,7 +122,7 @@ export const data = [
     breakDays: '',
     phoneNumber: '033-748-9977',
     imageOwner:
-      'https://res.cloudinary.com/diimwnnmj/image/upload/v1618553750/%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%91%E1%85%B5%E1%86%AF_x1qekw.jpg',
+      'https://res.cloudinary.com/diimwnnmj/image/upload/v1619754206/optimize_etpsuv.jpg',
     ownerMessage:
       ' 반곡동의 자그마한 가게에서 시작하여 원주 최고의 돈가스 맛집으로! 앞으로도 많은 사랑 부탁드립니다.',
   },
@@ -151,7 +151,7 @@ export const data = [
     breakDays: '매주 화요일',
     phoneNumber: '0507-1427-8313',
     imageOwner:
-      'https://res.cloudinary.com/diimwnnmj/image/upload/v1618553750/%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%91%E1%85%B5%E1%86%AF_x1qekw.jpg',
+      'https://res.cloudinary.com/diimwnnmj/image/upload/v1619754206/optimize_etpsuv.jpg',
     ownerMessage:
       '3대째 내려오는 전통의 맛과 가르침, 매일 매일 되뇌이며 여러분의 사랑으로 나날이 발전하는 보릿고개가 되겠습니다. 감사합니다.',
     description:
@@ -187,7 +187,7 @@ export const data = [
     breakDays: '',
     phoneNumber: '070-7776-4422',
     imageOwner:
-      'https://res.cloudinary.com/diimwnnmj/image/upload/v1618553750/%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%91%E1%85%B5%E1%86%AF_x1qekw.jpg',
+      'https://res.cloudinary.com/diimwnnmj/image/upload/v1619754206/optimize_etpsuv.jpg',
     ownerMessage:
       ' 반곡동의 자그마한 가게에서 시작하여 원주 최고의 돈가스 맛집으로! 앞으로도 많은 사랑 부탁드립니다.',
   },
@@ -218,7 +218,7 @@ export const data = [
     breakDays: '매주 일요일, 공휴일',
     phoneNumber: '033-742-8556',
     imageOwner:
-      'https://res.cloudinary.com/diimwnnmj/image/upload/v1618553750/%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%91%E1%85%B5%E1%86%AF_x1qekw.jpg',
+      'https://res.cloudinary.com/diimwnnmj/image/upload/v1619754206/optimize_etpsuv.jpg',
     ownerMessage:
       ' 반곡동의 자그마한 가게에서 시작하여 원주 최고의 돈가스 맛집으로! 앞으로도 많은 사랑 부탁드립니다.',
   },
@@ -253,7 +253,7 @@ export const data = [
     breakDays: '',
     phoneNumber: '033-731-9900',
     imageOwner:
-      'https://res.cloudinary.com/diimwnnmj/image/upload/v1618553750/%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%91%E1%85%B5%E1%86%AF_x1qekw.jpg',
+      'https://res.cloudinary.com/diimwnnmj/image/upload/v1619754206/optimize_etpsuv.jpg',
     ownerMessage:
       ' 반곡동의 자그마한 가게에서 시작하여 원주 최고의 돈가스 맛집으로! 앞으로도 많은 사랑 부탁드립니다.',
   },
@@ -282,7 +282,7 @@ export const data = [
     breakDays: '',
     phoneNumber: '033-744-7767',
     imageOwner:
-      'https://res.cloudinary.com/diimwnnmj/image/upload/v1618553750/%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%91%E1%85%B5%E1%86%AF_x1qekw.jpg',
+      'https://res.cloudinary.com/diimwnnmj/image/upload/v1619754206/optimize_etpsuv.jpg',
     ownerMessage:
       ' 반곡동의 자그마한 가게에서 시작하여 원주 최고의 돈가스 맛집으로! 앞으로도 많은 사랑 부탁드립니다.',
   },
@@ -312,7 +312,7 @@ export const data = [
     breakDays: '',
     phoneNumber: '010-5672-2280',
     imageOwner:
-      'https://res.cloudinary.com/diimwnnmj/image/upload/v1618553750/%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%91%E1%85%B5%E1%86%AF_x1qekw.jpg',
+      'https://res.cloudinary.com/diimwnnmj/image/upload/v1619754206/optimize_etpsuv.jpg',
     ownerMessage:
       ' 반곡동의 자그마한 가게에서 시작하여 원주 최고의 돈가스 맛집으로! 앞으로도 많은 사랑 부탁드립니다.',
   },
@@ -342,7 +342,7 @@ export const data = [
     breakDays: '',
     phoneNumber: '0507-1393-3131',
     imageOwner:
-      'https://res.cloudinary.com/diimwnnmj/image/upload/v1618553750/%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%91%E1%85%B5%E1%86%AF_x1qekw.jpg',
+      'https://res.cloudinary.com/diimwnnmj/image/upload/v1619754206/optimize_etpsuv.jpg',
     ownerMessage:
       ' 반곡동의 자그마한 가게에서 시작하여 원주 최고의 돈가스 맛집으로! 앞으로도 많은 사랑 부탁드립니다.',
   },
@@ -373,7 +373,7 @@ export const data = [
     breakDays: '매주 목요일',
     phoneNumber: '070-8843-5500',
     imageOwner:
-      'https://res.cloudinary.com/diimwnnmj/image/upload/v1618553750/%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%91%E1%85%B5%E1%86%AF_x1qekw.jpg',
+      'https://res.cloudinary.com/diimwnnmj/image/upload/v1619754206/optimize_etpsuv.jpg',
     ownerMessage:
       ' 반곡동의 자그마한 가게에서 시작하여 원주 최고의 돈가스 맛집으로! 앞으로도 많은 사랑 부탁드립니다.',
   },
@@ -402,7 +402,7 @@ export const data = [
     breakDays: '매주 월요일',
     phoneNumber: '033-764-4982',
     imageOwner:
-      'https://res.cloudinary.com/diimwnnmj/image/upload/v1618553750/%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%91%E1%85%B5%E1%86%AF_x1qekw.jpg',
+      'https://res.cloudinary.com/diimwnnmj/image/upload/v1619754206/optimize_etpsuv.jpg',
     ownerMessage:
       ' 반곡동의 자그마한 가게에서 시작하여 원주 최고의 돈가스 맛집으로! 앞으로도 많은 사랑 부탁드립니다.',
   },
@@ -431,7 +431,7 @@ export const data = [
     breakDays: '',
     phoneNumber: '0507-1404-5482',
     imageOwner:
-      'https://res.cloudinary.com/diimwnnmj/image/upload/v1618553750/%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%91%E1%85%B5%E1%86%AF_x1qekw.jpg',
+      'https://res.cloudinary.com/diimwnnmj/image/upload/v1619754206/optimize_etpsuv.jpg',
     ownerMessage:
       ' 반곡동의 자그마한 가게에서 시작하여 원주 최고의 돈가스 맛집으로! 앞으로도 많은 사랑 부탁드립니다.',
   },
@@ -462,7 +462,7 @@ export const data = [
     breakDays: '매주 월요일',
     phoneNumber: '0507-1410-2650',
     imageOwner:
-      'https://res.cloudinary.com/diimwnnmj/image/upload/v1618553750/%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%91%E1%85%B5%E1%86%AF_x1qekw.jpg',
+      'https://res.cloudinary.com/diimwnnmj/image/upload/v1619754206/optimize_etpsuv.jpg',
     ownerMessage:
       ' 반곡동의 자그마한 가게에서 시작하여 원주 최고의 돈가스 맛집으로! 앞으로도 많은 사랑 부탁드립니다.',
   },
@@ -493,7 +493,7 @@ export const data = [
     breakDays: '',
     phoneNumber: '010-2521-9328',
     imageOwner:
-      'https://res.cloudinary.com/diimwnnmj/image/upload/v1618553750/%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%91%E1%85%B5%E1%86%AF_x1qekw.jpg',
+      'https://res.cloudinary.com/diimwnnmj/image/upload/v1619754206/optimize_etpsuv.jpg',
     ownerMessage:
       ' 반곡동의 자그마한 가게에서 시작하여 원주 최고의 돈가스 맛집으로! 앞으로도 많은 사랑 부탁드립니다.',
   },
@@ -524,7 +524,7 @@ export const data = [
     breakDays: '',
     phoneNumber: '0507-1411-3606',
     imageOwner:
-      'https://res.cloudinary.com/diimwnnmj/image/upload/v1618553750/%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%91%E1%85%B5%E1%86%AF_x1qekw.jpg',
+      'https://res.cloudinary.com/diimwnnmj/image/upload/v1619754206/optimize_etpsuv.jpg',
     ownerMessage:
       ' 반곡동의 자그마한 가게에서 시작하여 원주 최고의 돈가스 맛집으로! 앞으로도 많은 사랑 부탁드립니다.',
   },
@@ -555,7 +555,7 @@ export const data = [
     breakDays: '',
     phoneNumber: '0507-1395-2882',
     imageOwner:
-      'https://res.cloudinary.com/diimwnnmj/image/upload/v1618553750/%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%91%E1%85%B5%E1%86%AF_x1qekw.jpg',
+      'https://res.cloudinary.com/diimwnnmj/image/upload/v1619754206/optimize_etpsuv.jpg',
     ownerMessage:
       ' 반곡동의 자그마한 가게에서 시작하여 원주 최고의 돈가스 맛집으로! 앞으로도 많은 사랑 부탁드립니다.',
   },
@@ -586,7 +586,7 @@ export const data = [
     breakDays: '매주 월요일',
     phoneNumber: '0507-1315-8356',
     imageOwner:
-      'https://res.cloudinary.com/diimwnnmj/image/upload/v1618553750/%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%91%E1%85%B5%E1%86%AF_x1qekw.jpg',
+      'https://res.cloudinary.com/diimwnnmj/image/upload/v1619754206/optimize_etpsuv.jpg',
     ownerMessage:
       ' 반곡동의 자그마한 가게에서 시작하여 원주 최고의 돈가스 맛집으로! 앞으로도 많은 사랑 부탁드립니다.',
   },
@@ -617,7 +617,7 @@ export const data = [
     breakDays: '매주 일요일',
     phoneNumber: '0507-1446-9969',
     imageOwner:
-      'https://res.cloudinary.com/diimwnnmj/image/upload/v1618553750/%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%91%E1%85%B5%E1%86%AF_x1qekw.jpg',
+      'https://res.cloudinary.com/diimwnnmj/image/upload/v1619754206/optimize_etpsuv.jpg',
     ownerMessage:
       ' 반곡동의 자그마한 가게에서 시작하여 원주 최고의 돈가스 맛집으로! 앞으로도 많은 사랑 부탁드립니다.',
   },
@@ -648,7 +648,7 @@ export const data = [
     breakDays: '1,3째 주 토요일',
     phoneNumber: '0507-1363-4320',
     imageOwner:
-      'https://res.cloudinary.com/diimwnnmj/image/upload/v1618553750/%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%91%E1%85%B5%E1%86%AF_x1qekw.jpg',
+      'https://res.cloudinary.com/diimwnnmj/image/upload/v1619754206/optimize_etpsuv.jpg',
     ownerMessage:
       ' 반곡동의 자그마한 가게에서 시작하여 원주 최고의 돈가스 맛집으로! 앞으로도 많은 사랑 부탁드립니다.',
   },
@@ -679,7 +679,7 @@ export const data = [
     breakDays: '매주 월요일',
     phoneNumber: '033-900-1234',
     imageOwner:
-      'https://res.cloudinary.com/diimwnnmj/image/upload/v1618553750/%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%91%E1%85%B5%E1%86%AF_x1qekw.jpg',
+      'https://res.cloudinary.com/diimwnnmj/image/upload/v1619754206/optimize_etpsuv.jpg',
     ownerMessage:
       ' 반곡동의 자그마한 가게에서 시작하여 원주 최고의 돈가스 맛집으로! 앞으로도 많은 사랑 부탁드립니다.',
   },
@@ -710,7 +710,7 @@ export const data = [
     breakDays: '매주 월요일',
     phoneNumber: '0507-1338-8681',
     imageOwner:
-      'https://res.cloudinary.com/diimwnnmj/image/upload/v1618553750/%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%91%E1%85%B5%E1%86%AF_x1qekw.jpg',
+      'https://res.cloudinary.com/diimwnnmj/image/upload/v1619754206/optimize_etpsuv.jpg',
     ownerMessage:
       ' 반곡동의 자그마한 가게에서 시작하여 원주 최고의 돈가스 맛집으로! 앞으로도 많은 사랑 부탁드립니다.',
   },
@@ -741,7 +741,7 @@ export const data = [
     breakDays: '매주 수요일',
     phoneNumber: '033-900-5151',
     imageOwner:
-      'https://res.cloudinary.com/diimwnnmj/image/upload/v1618553750/%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%91%E1%85%B5%E1%86%AF_x1qekw.jpg',
+      'https://res.cloudinary.com/diimwnnmj/image/upload/v1619754206/optimize_etpsuv.jpg',
     ownerMessage:
       ' 반곡동의 자그마한 가게에서 시작하여 원주 최고의 돈가스 맛집으로! 앞으로도 많은 사랑 부탁드립니다.',
   },
@@ -772,7 +772,7 @@ export const data = [
     breakDays: '',
     phoneNumber: '010-6870-1205',
     imageOwner:
-      'https://res.cloudinary.com/diimwnnmj/image/upload/v1618553750/%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%91%E1%85%B5%E1%86%AF_x1qekw.jpg',
+      'https://res.cloudinary.com/diimwnnmj/image/upload/v1619754206/optimize_etpsuv.jpg',
     ownerMessage:
       ' 반곡동의 자그마한 가게에서 시작하여 원주 최고의 돈가스 맛집으로! 앞으로도 많은 사랑 부탁드립니다.',
   },
@@ -803,7 +803,7 @@ export const data = [
     breakDays: '매주 월요일',
     phoneNumber: '033-732-0008',
     imageOwner:
-      'https://res.cloudinary.com/diimwnnmj/image/upload/v1618553750/%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%91%E1%85%B5%E1%86%AF_x1qekw.jpg',
+      'https://res.cloudinary.com/diimwnnmj/image/upload/v1619754206/optimize_etpsuv.jpg',
     ownerMessage:
       ' 반곡동의 자그마한 가게에서 시작하여 원주 최고의 돈가스 맛집으로! 앞으로도 많은 사랑 부탁드립니다.',
   },
@@ -834,7 +834,7 @@ export const data = [
     breakDays: '',
     phoneNumber: '',
     imageOwner:
-      'https://res.cloudinary.com/diimwnnmj/image/upload/v1618553750/%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%91%E1%85%B5%E1%86%AF_x1qekw.jpg',
+      'https://res.cloudinary.com/diimwnnmj/image/upload/v1619754206/optimize_etpsuv.jpg',
     ownerMessage:
       ' 반곡동의 자그마한 가게에서 시작하여 원주 최고의 돈가스 맛집으로! 앞으로도 많은 사랑 부탁드립니다.',
   },
@@ -865,7 +865,7 @@ export const data = [
     breakDays: '매주 화요일',
     phoneNumber: '070-4351-2283',
     imageOwner:
-      'https://res.cloudinary.com/diimwnnmj/image/upload/v1618553750/%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%91%E1%85%B5%E1%86%AF_x1qekw.jpg',
+      'https://res.cloudinary.com/diimwnnmj/image/upload/v1619754206/optimize_etpsuv.jpg',
     ownerMessage:
       ' 반곡동의 자그마한 가게에서 시작하여 원주 최고의 돈가스 맛집으로! 앞으로도 많은 사랑 부탁드립니다.',
   },
@@ -896,7 +896,7 @@ export const data = [
     breakDays: '매주 수요일',
     phoneNumber: '0507-1359-1525',
     imageOwner:
-      'https://res.cloudinary.com/diimwnnmj/image/upload/v1618553750/%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%91%E1%85%B5%E1%86%AF_x1qekw.jpg',
+      'https://res.cloudinary.com/diimwnnmj/image/upload/v1619754206/optimize_etpsuv.jpg',
     ownerMessage:
       ' 반곡동의 자그마한 가게에서 시작하여 원주 최고의 돈가스 맛집으로! 앞으로도 많은 사랑 부탁드립니다.',
   },
@@ -927,7 +927,7 @@ export const data = [
     breakDays: '',
     phoneNumber: '0507-1402-7484',
     imageOwner:
-      'https://res.cloudinary.com/diimwnnmj/image/upload/v1618553750/%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%91%E1%85%B5%E1%86%AF_x1qekw.jpg',
+      'https://res.cloudinary.com/diimwnnmj/image/upload/v1619754206/optimize_etpsuv.jpg',
     ownerMessage:
       ' 반곡동의 자그마한 가게에서 시작하여 원주 최고의 돈가스 맛집으로! 앞으로도 많은 사랑 부탁드립니다.',
   },
@@ -958,7 +958,7 @@ export const data = [
     breakDays: '매주 목,금요일',
     phoneNumber: '0507-1312-6950',
     imageOwner:
-      'https://res.cloudinary.com/diimwnnmj/image/upload/v1618553750/%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%91%E1%85%B5%E1%86%AF_x1qekw.jpg',
+      'https://res.cloudinary.com/diimwnnmj/image/upload/v1619754206/optimize_etpsuv.jpg',
     ownerMessage:
       ' 반곡동의 자그마한 가게에서 시작하여 원주 최고의 돈가스 맛집으로! 앞으로도 많은 사랑 부탁드립니다.',
   },
@@ -989,7 +989,7 @@ export const data = [
     breakDays: '매주 월,화요일',
     phoneNumber: '0507-1403-7625',
     imageOwner:
-      'https://res.cloudinary.com/diimwnnmj/image/upload/v1618553750/%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%91%E1%85%B5%E1%86%AF_x1qekw.jpg',
+      'https://res.cloudinary.com/diimwnnmj/image/upload/v1619754206/optimize_etpsuv.jpg',
     ownerMessage:
       ' 반곡동의 자그마한 가게에서 시작하여 원주 최고의 돈가스 맛집으로! 앞으로도 많은 사랑 부탁드립니다.',
   },
@@ -1020,7 +1020,7 @@ export const data = [
     breakDays: '매주 일요일',
     phoneNumber: '0507-1449-8113',
     imageOwner:
-      'https://res.cloudinary.com/diimwnnmj/image/upload/v1618553750/%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%91%E1%85%B5%E1%86%AF_x1qekw.jpg',
+      'https://res.cloudinary.com/diimwnnmj/image/upload/v1619754206/optimize_etpsuv.jpg',
     ownerMessage:
       ' 반곡동의 자그마한 가게에서 시작하여 원주 최고의 돈가스 맛집으로! 앞으로도 많은 사랑 부탁드립니다.',
   },
@@ -1051,7 +1051,7 @@ export const data = [
     breakDays: '매주 일요일',
     phoneNumber: '0507-1317-8598',
     imageOwner:
-      'https://res.cloudinary.com/diimwnnmj/image/upload/v1618553750/%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%91%E1%85%B5%E1%86%AF_x1qekw.jpg',
+      'https://res.cloudinary.com/diimwnnmj/image/upload/v1619754206/optimize_etpsuv.jpg',
     ownerMessage:
       ' 반곡동의 자그마한 가게에서 시작하여 원주 최고의 돈가스 맛집으로! 앞으로도 많은 사랑 부탁드립니다.',
   },
@@ -1081,7 +1081,7 @@ export const data = [
     breakDays: '',
     phoneNumber: '033-761-0794',
     imageOwner:
-      'https://res.cloudinary.com/diimwnnmj/image/upload/v1618553750/%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%91%E1%85%B5%E1%86%AF_x1qekw.jpg',
+      'https://res.cloudinary.com/diimwnnmj/image/upload/v1619754206/optimize_etpsuv.jpg',
     ownerMessage:
       ' 반곡동의 자그마한 가게에서 시작하여 원주 최고의 돈가스 맛집으로! 앞으로도 많은 사랑 부탁드립니다.',
   },
@@ -1112,7 +1112,7 @@ export const data = [
     breakDays: '매주 월요일',
     phoneNumber: '033-734-5262',
     imageOwner:
-      'https://res.cloudinary.com/diimwnnmj/image/upload/v1618553750/%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%91%E1%85%B5%E1%86%AF_x1qekw.jpg',
+      'https://res.cloudinary.com/diimwnnmj/image/upload/v1619754206/optimize_etpsuv.jpg',
     ownerMessage:
       ' 반곡동의 자그마한 가게에서 시작하여 원주 최고의 돈가스 맛집으로! 앞으로도 많은 사랑 부탁드립니다.',
   },
@@ -1142,7 +1142,7 @@ export const data = [
     breakDays: '매주 월요일',
     phoneNumber: '0507-1439-0888',
     imageOwner:
-      'https://res.cloudinary.com/diimwnnmj/image/upload/v1618553750/%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%91%E1%85%B5%E1%86%AF_x1qekw.jpg',
+      'https://res.cloudinary.com/diimwnnmj/image/upload/v1619754206/optimize_etpsuv.jpg',
     ownerMessage:
       ' 반곡동의 자그마한 가게에서 시작하여 원주 최고의 돈가스 맛집으로! 앞으로도 많은 사랑 부탁드립니다.',
   },
@@ -1170,7 +1170,7 @@ export const data = [
     breakDays: '',
     phoneNumber: '033-742-8849',
     imageOwner:
-      'https://res.cloudinary.com/diimwnnmj/image/upload/v1618553750/%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%91%E1%85%B5%E1%86%AF_x1qekw.jpg',
+      'https://res.cloudinary.com/diimwnnmj/image/upload/v1619754206/optimize_etpsuv.jpg',
     ownerMessage:
       ' 반곡동의 자그마한 가게에서 시작하여 원주 최고의 돈가스 맛집으로! 앞으로도 많은 사랑 부탁드립니다.',
   },
@@ -1201,7 +1201,7 @@ export const data = [
     breakDays: '매주 일요일',
     phoneNumber: '0507-1435-7793',
     imageOwner:
-      'https://res.cloudinary.com/diimwnnmj/image/upload/v1618553750/%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%91%E1%85%B5%E1%86%AF_x1qekw.jpg',
+      'https://res.cloudinary.com/diimwnnmj/image/upload/v1619754206/optimize_etpsuv.jpg',
     ownerMessage:
       ' 반곡동의 자그마한 가게에서 시작하여 원주 최고의 돈가스 맛집으로! 앞으로도 많은 사랑 부탁드립니다.',
   },
@@ -1232,7 +1232,7 @@ export const data = [
     breakDays: '매주 월요일',
     phoneNumber: '033-732-6333',
     imageOwner:
-      'https://res.cloudinary.com/diimwnnmj/image/upload/v1618553750/%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%91%E1%85%B5%E1%86%AF_x1qekw.jpg',
+      'https://res.cloudinary.com/diimwnnmj/image/upload/v1619754206/optimize_etpsuv.jpg',
     ownerMessage:
       ' 반곡동의 자그마한 가게에서 시작하여 원주 최고의 돈가스 맛집으로! 앞으로도 많은 사랑 부탁드립니다.',
   },
@@ -1263,7 +1263,7 @@ export const data = [
     breakDays: '매주 월요일',
     phoneNumber: '033-735-9928',
     imageOwner:
-      'https://res.cloudinary.com/diimwnnmj/image/upload/v1618553750/%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%91%E1%85%B5%E1%86%AF_x1qekw.jpg',
+      'https://res.cloudinary.com/diimwnnmj/image/upload/v1619754206/optimize_etpsuv.jpg',
     ownerMessage:
       ' 반곡동의 자그마한 가게에서 시작하여 원주 최고의 돈가스 맛집으로! 앞으로도 많은 사랑 부탁드립니다.',
   },
@@ -1294,7 +1294,7 @@ export const data = [
     breakDays: '매주 화요일',
     phoneNumber: '0507-1469-8851',
     imageOwner:
-      'https://res.cloudinary.com/diimwnnmj/image/upload/v1618553750/%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%91%E1%85%B5%E1%86%AF_x1qekw.jpg',
+      'https://res.cloudinary.com/diimwnnmj/image/upload/v1619754206/optimize_etpsuv.jpg',
     ownerMessage:
       ' 반곡동의 자그마한 가게에서 시작하여 원주 최고의 돈가스 맛집으로! 앞으로도 많은 사랑 부탁드립니다.',
   },
@@ -1325,7 +1325,7 @@ export const data = [
     breakDays: '',
     phoneNumber: '033-761-0558',
     imageOwner:
-      'https://res.cloudinary.com/diimwnnmj/image/upload/v1618553750/%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%91%E1%85%B5%E1%86%AF_x1qekw.jpg',
+      'https://res.cloudinary.com/diimwnnmj/image/upload/v1619754206/optimize_etpsuv.jpg',
     ownerMessage:
       ' 반곡동의 자그마한 가게에서 시작하여 원주 최고의 돈가스 맛집으로! 앞으로도 많은 사랑 부탁드립니다.',
   },
@@ -1355,7 +1355,7 @@ export const data = [
     breakDays: '매주 일요일',
     phoneNumber: '0507-1407-1559',
     imageOwner:
-      'https://res.cloudinary.com/diimwnnmj/image/upload/v1618553750/%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%91%E1%85%B5%E1%86%AF_x1qekw.jpg',
+      'https://res.cloudinary.com/diimwnnmj/image/upload/v1619754206/optimize_etpsuv.jpg',
     ownerMessage:
       ' 반곡동의 자그마한 가게에서 시작하여 원주 최고의 돈가스 맛집으로! 앞으로도 많은 사랑 부탁드립니다.',
   },
@@ -1386,7 +1386,7 @@ export const data = [
     breakDays: '',
     phoneNumber: '0507-1436-5402',
     imageOwner:
-      'https://res.cloudinary.com/diimwnnmj/image/upload/v1618553750/%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%91%E1%85%B5%E1%86%AF_x1qekw.jpg',
+      'https://res.cloudinary.com/diimwnnmj/image/upload/v1619754206/optimize_etpsuv.jpg',
     ownerMessage:
       ' 반곡동의 자그마한 가게에서 시작하여 원주 최고의 돈가스 맛집으로! 앞으로도 많은 사랑 부탁드립니다.',
   },
