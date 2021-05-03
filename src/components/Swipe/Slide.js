@@ -1,12 +1,17 @@
 import React from 'react';
-import { data } from '../../datafiles/stores';
+import { useGlobalContext } from '../../components/storeContext';
 import FeaturedCard from './FeaturedCard';
 import './Slide.css';
 
 const Slide = (props) => {
+  const { stores, loading } = useGlobalContext();
+
+  if (loading) {
+    return <div>로딩중</div>;
+  }
   return (
     <div className='slide'>
-      {data.map((store, index) => {
+      {stores.map((store, index) => {
         if (store.ctgry === props.filter) {
           return <FeaturedCard key={store.id} {...store}></FeaturedCard>;
         }
