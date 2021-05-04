@@ -12,9 +12,10 @@ const Slide = (props) => {
   return (
     <div className='slide'>
       {stores.map((store, index) => {
-        if (store.ctgry === props.filter) {
+        if (store.categoryTitle === props.filter) {
           return <FeaturedCard key={store.id} {...store}></FeaturedCard>;
         }
+        console.log(store);
       })}
     </div>
   );

@@ -1,7 +1,7 @@
 import React, { useState, useContext, useEffect } from 'react';
+import axios from 'axios';
 import { useCallback } from 'react';
 
-const url = 'https://projectgem.netlify.app/.netlify/functions/store-api';
 const StoreContext = React.createContext();
 
 const StoreProvider = ({ children }) => {
@@ -11,8 +11,9 @@ const StoreProvider = ({ children }) => {
   const fetchContents = async () => {
     setLoading(true);
     try {
-      const response = await fetch(`${url}`);
-      const data = await response.json();
+      const { data } = await axios.get('/api/store-api');
+
+      console.log(data);
 
       setStores(data);
       setLoading(false);

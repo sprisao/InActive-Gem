@@ -15,7 +15,7 @@ const LandingPage = () => {
       </div> */}
       <News />
       {/* <SectionSlide section='new' filter='rstrn' /> */}
-      <SectionSlide section='hot' filter='cafe' />
+      <SectionSlide section='hot' filter='카페' />
       <SectionGrid section='restaurants' filter='rstrn' />
       <SectionGrid section='cafes' filter='cafe' />
     </div>

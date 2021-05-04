@@ -4,9 +4,8 @@ import { Link } from 'react-router-dom';
 
 const FeaturedCard = ({
   id,
-  img,
   name,
-  ctgry,
+  mainImage,
   eupmyeondongRi,
   shortDescription,
 }) => {
@@ -15,7 +14,7 @@ const FeaturedCard = ({
       <div
         className='featuredCard'
         style={{
-          backgroundImage: `url(${img[0]})`,
+          backgroundImage: `url(${mainImage})`,
         }}
       >
         <div className='featuredCard_image'>

@@ -29,11 +29,12 @@ exports.handler = async (event, context) => {
         breakDays,
         instagramAccount,
         naverLink,
-        image,
+        images,
         ownerImage,
         storeVerified,
         phoneNumber,
       } = store.fields;
+      const mainImage = images[0].url;
       return {
         id,
         name,
@@ -55,7 +56,7 @@ exports.handler = async (event, context) => {
         breakDays,
         instagramAccount,
         naverLink,
-        image,
+        mainImage,
         ownerImage,
         storeVerified,
         phoneNumber,
