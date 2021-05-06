@@ -3,24 +3,17 @@ import { Link } from 'react-router-dom';
 
 import './DetailGridCard.css';
 
-const DetailGridCard = ({
-  id,
-  img,
-  name,
-  ctgry,
-  eupmyeondongRi,
-  shortDescription,
-}) => {
+const DetailGridCard = ({ store }) => {
   return (
-    <Link to={`/store/${id}`} className=''>
+    <Link to={`/store/${store.id}`} className=''>
       <article className='detail__gridCard'>
         <div className='imageContainer'>
-          <img src={img[0]} alt='' />
+          <img src={store.fields.images[0].url} alt={store.fields.name} />
         </div>
         <div className='articleContainer'>
-          <h2>{name}</h2>
-          <span>{eupmyeondongRi}</span>
-          <p>{shortDescription}</p>
+          <h2>{store.fields.name}</h2>
+          <span>{store.fields.eupmyeondongRi}</span>
+          <p>{store.fields.shortDescription}</p>
         </div>
       </article>
     </Link>

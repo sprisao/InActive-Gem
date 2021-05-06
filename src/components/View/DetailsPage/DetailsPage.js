@@ -6,7 +6,6 @@ import Information from './Components/Information';
 import OwnerSection from './Components/OwnerSection';
 import Recommendation from './Components/Recommendations';
 
-import { data } from '../../../datafiles/stores';
 import { useParams } from 'react-router-dom';
 
 import './DetailsPage.css';
@@ -16,76 +15,45 @@ import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import 'swiper/swiper.scss';
 import 'swiper/components/navigation/navigation.scss';
 import 'swiper/components/pagination/pagination.scss';
-SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
 //////////////////////////////////
+import Airtable from 'airtable';
+
+SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
+
+const base = new Airtable({ apiKey: 'key5AMdi7ejadTzUy' }).base(
+  'appDzyBPyX5MjMkrU'
+);
 
 const DetailsPage = () => {
-  const [storeData, setStoreData] = useState([]);
   const { id } = useParams();
+  const [store, setStore] = useState([]);
 
   useEffect(() => {
-    const newStoreData = data.find((store) => store.id === parseInt(id));
-    const name = newStoreData.name;
-    const img = newStoreData.img;
-    const category = newStoreData.ctgry;
-    const eupmyeondongRi = newStoreData.eupmyeondongRi;
-    const shortDescription = newStoreData.shortDescription;
-    const instagramAcc = newStoreData.instagramAccount;
-    const businessHours = newStoreData.businessHours;
-    const breakHours = newStoreData.breakHours;
-    const breakDays = newStoreData.breakDays;
-    const phoneNumber = newStoreData.phoneNumber;
-    const imageOwner = newStoreData.imageOwner;
-    const ownerMessage = newStoreData.ownerMessage;
-    const newStore = {
-      name,
-      img,
-      category,
-      eupmyeondongRi,
-      shortDescription,
-      instagramAcc,
-      businessHours,
-      breakHours,
-      breakDays,
-      phoneNumber,
-      imageOwner,
-      ownerMessage,
-    };
-    setStoreData(newStore);
+    base('stores').find(id, function (err, record) {
+      if (err) {
+        console.error(err);
+        return;
+      }
+      setStore(record);
+    });
   }, [id]);
-
-  const {
-    name,
-    img,
-    category,
-    eupmyeondongRi,
-    shortDescription,
-    description,
-    instagramAcc,
-    businessHours,
-    breakHours,
-    breakDays,
-    phoneNumber,
-    imageOwner,
-    ownerMessage,
-  } = storeData;
-
+  console.log(store);
   return (
     <section className='detailsPage'>
-      {/* <DetailNavigation /> */}
-      <ImageBox img={img} name={name} />
-      <Header name={name} shortDescription={shortDescription} />
-      <OwnerSection imageOwner={imageOwner} ownerMessage={ownerMessage} />
-      <Information
-        businessHours={businessHours}
-        breakHours={breakHours}
-        breakDays={breakDays}
-        phoneNumber={phoneNumber}
-        eupmyeondongRi={eupmyeondongRi}
-        instagramAcc={instagramAcc}
+      <Header
+        name={store.fields.name}
+        shortDescription={store.fields.shortDescription}
       />
-      <Recommendation filter={category} />
+      <OwnerSection ownerMessage={store.fields.ownerMessage} />
+      <Information
+        businessHours={store.fields.businessHours}
+        breakDays={store.fields.breakDays}
+        phoneNumber={store.fields.phoneNumber}
+        eupmyeondongRi={store.fields.eupmyeondongRi}
+        instagramAcc={store.fields.instagramAcc}
+      />
+      <Recommendation filter={store.fields.categoryTitle} />
     </section>
   );
 };
