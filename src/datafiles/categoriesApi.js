@@ -58,7 +58,7 @@ const categories = [
     ctgry: 'screengolf',
     strIconSource:
       'https://res.cloudinary.com/diimwnnmj/image/upload/v1616123316/golf_rp6iid.png',
-    ctgryTitle: '스크린골프장',
+    ctgryTitle: '스크린골프',
     displayed: true,
     activated: true,
   },
