@@ -5,19 +5,17 @@ import './Slide.css';
 
 const Slide = (props) => {
   const { stores, loading } = useGlobalContext();
-  console.log(stores);
 
-  if (loading) {
-    return <div>로딩중</div>;
-  }
+  // if (loading) {
+  //   return <div>로딩중</div>;
+  // }
   return (
     <div className='slide'>
-      {/* {stores.map((store) => {
-        if (store.categoryTitle === props.filter) {
-          return <FeaturedCard key={store.id} {...store}></FeaturedCard>;
+      {stores.map((store) => {
+        if (store.fields.categoryTitle === props.filter) {
+          return <FeaturedCard key={store.id} store={store}></FeaturedCard>;
         }
-        console.log(store);
-      })} */}
+      })}
     </div>
   );
 };

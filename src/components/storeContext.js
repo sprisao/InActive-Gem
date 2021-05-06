@@ -1,29 +1,23 @@
 import React, { useState, useContext, useEffect } from 'react';
-import axios from 'axios';
-import { useCallback } from 'react';
+import Airtable from 'airtable';
 
+const base = new Airtable({ apiKey: 'key5AMdi7ejadTzUy' }).base(
+  'appDzyBPyX5MjMkrU'
+);
 const StoreContext = React.createContext();
 
 const StoreProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const [stores, setStores] = useState([]);
 
-  const fetchContents = async () => {
-    setLoading(true);
-    try {
-      const { data } = await axios.get('/api/store-api');
-
-      console.log(data);
-
-      setStores(data);
-      setLoading(false);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
   useEffect(() => {
-    fetchContents();
+    base('stores')
+      .select({ view: 'Grid view' })
+      .eachPage((records, fetchNextPage) => {
+        console.log(records);
+        setStores(records);
+        fetchNextPage();
+      });
   }, []);
 
   return (

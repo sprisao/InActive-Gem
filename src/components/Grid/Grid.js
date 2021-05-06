@@ -1,14 +1,16 @@
 import React from 'react';
-import { data } from '../../datafiles/stores';
+import { useGlobalContext } from '../../components/storeContext';
 import GridCard from './GridCard';
 import './Grid.css';
 
 const Grid = (props) => {
+  const { stores, loading } = useGlobalContext();
+
   return (
     <section className='grid'>
-      {data.map((store, index) => {
-        if (store.ctgry === props.filter) {
-          return <GridCard key={store.id} {...store}></GridCard>;
+      {stores.map((store) => {
+        if (store.fields.categoryTitle === props.filter) {
+          return <GridCard key={store.id} store={store}></GridCard>;
         }
       })}
     </section>

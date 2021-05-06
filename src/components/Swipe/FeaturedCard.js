@@ -1,27 +1,22 @@
 import React from 'react';
-import './FeaturedCard.css';
 import { Link } from 'react-router-dom';
 
-const FeaturedCard = ({
-  id,
-  name,
-  mainImage,
-  eupmyeondongRi,
-  shortDescription,
-}) => {
+import './FeaturedCard.css';
+
+const FeaturedCard = ({ store }) => {
   return (
-    <Link to={`/store/${id}`} className=''>
+    <Link to={`/store/${store.id}`} className=''>
       <div
         className='featuredCard'
         style={{
-          backgroundImage: `url(${mainImage})`,
+          backgroundImage: `url(${store.fields.images[0].url})`,
         }}
       >
         <div className='featuredCard_image'>
           <div className='article'>
-            <p>{shortDescription}</p>
-            <h3>{name}</h3>
-            <span>{eupmyeondongRi}</span>
+            <p>{store.fields.shortDescription}</p>
+            <h3>{store.fields.name}</h3>
+            <span>{store.fields.eupmyeondongRi}</span>
           </div>
         </div>
       </div>

@@ -20,12 +20,12 @@ const CategoryPage = () => {
     );
     const title = newCategoryData.ctgryTitle;
     const emoji = newCategoryData.strIconSource;
-    const ctgry = newCategoryData.ctgry;
-    const newCategory = { title, emoji, ctgry };
+    const ctgryTitle = newCategoryData.ctgryTitle;
+    const newCategory = { title, emoji, ctgryTitle };
     setCategoryData(newCategory);
   }, [id]);
 
-  const { title, emoji, ctgry } = categoryData;
+  const { title, emoji, ctgryTitle } = categoryData;
 
   return (
     <section className='CategoryPage'>
@@ -47,7 +47,7 @@ const CategoryPage = () => {
       <Gird filter = {분류2}>*/}
 
       <div className='CategoryGrid'>
-        <Grid filter={ctgry} />
+        <Grid filter={ctgryTitle} />
       </div>
     </section>
   );
