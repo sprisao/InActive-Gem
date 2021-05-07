@@ -38,10 +38,11 @@ const DetailsPage = () => {
       setStore(record);
     });
   }, [id]);
+
   console.log(store);
   return (
     <section className='detailsPage'>
-      <Header
+      {/* <Header
         name={store.fields.name}
         shortDescription={store.fields.shortDescription}
       />
@@ -53,7 +54,7 @@ const DetailsPage = () => {
         eupmyeondongRi={store.fields.eupmyeondongRi}
         instagramAcc={store.fields.instagramAcc}
       />
-      <Recommendation filter={store.fields.categoryTitle} />
+      <Recommendation filter={store.fields.categoryTitle} /> */}
     </section>
   );
 };
