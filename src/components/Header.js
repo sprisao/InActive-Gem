@@ -10,7 +10,7 @@ function Header() {
         <div className='header-logo'>
           <Link to='/'>
             <img
-              src='https://res.cloudinary.com/diimwnnmj/image/upload/v1620364978/%E1%84%80%E1%85%A9%E1%84%80%E1%85%A9%E1%84%8C%E1%85%A6%E1%86%B7BI_dmdqpq.png'
+              src='https://res.cloudinary.com/diimwnnmj/image/upload/v1620365110/%E1%84%80%E1%85%A9%E1%84%80%E1%85%A9%E1%84%8C%E1%85%A6%E1%86%B7BI_udvemv.png'
               className='logo'
               alt='logo'
             />
