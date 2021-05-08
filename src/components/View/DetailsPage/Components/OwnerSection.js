@@ -6,7 +6,7 @@ const OwnerSection = (props) => {
   return (
     <div className='OwnerSection'>
       <div className='ownerImage__container'>
-        <img src={props.imageOwner} alt='' />
+        <img src={props.ownerImage} alt='' />
         <div className='ownerName'>
           <p>사장님</p>
         </div>

@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 // import pages
 import Home from './View/LandingPage/LandingPage';
 import CategoryPage from './View/CategoryPage/CategoryPage';
-import Store from './View/DetailsPage/DetailsPage';
+import Details from './View/DetailsPage/DetailsData';
 import Error from './View/ErrorPage/Error';
 import Ready from './View/ErrorPage/Ready';
 
@@ -35,7 +35,7 @@ function App() {
             <Ready />
           </Route>
           <Route path='/store/:id'>
-            <Store />
+            <Details />
           </Route>
           <Route path='*'>
             <Header />

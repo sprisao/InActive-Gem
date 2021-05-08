@@ -14,6 +14,9 @@ const Header = (props) => {
         <HiBadgeCheck />
       </div>
       <div className='details__tag'>
+        {props.tags.map((tag) => {
+          return tag;
+        })}
         <p>#돈까스맛집 #혁신도시맛집 #젬인증맛집 </p>
       </div>
     </div>
