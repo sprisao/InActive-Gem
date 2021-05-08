@@ -1,6 +1,6 @@
 {
-  "short_name": "GEM",
-  "name": "Create React App Sample",
+  "short_name": "고고젬",
+  "name": "어디로 갈지 고민한다면? 고고젬",
   "icons": [
     {
       "src": "[GEM]-BI.png",
@@ -8,12 +8,12 @@
       "type": "image/x-icon"
     },
     {
-      "src": "logo192.png",
+      "src": "favicon.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "logo512.png",
+      "src": "favicon.png",
       "type": "image/png",
       "sizes": "512x512"
     }
