@@ -53,11 +53,10 @@
   margin-right: 0.2rem;
   margin-left: 0.1rem;
   padding: 0.1rem;
-  border: 1px solid;
+  border: 0.75px solid;
   border-radius: 3px;
 }
-.details__naver__icon img {
-}
+
 .details__naver p {
   color: #dc0f62;
   font-size: large;

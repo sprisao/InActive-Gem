@@ -27,7 +27,7 @@ const Header = (props) => {
       <div className='details__naver'>
         <img
           className='details__naver__icon'
-          src='https://www.flaticon.com/svg/vstatic/svg/3522/3522533.svg?token=exp=1620618989~hmac=9d3c03448961cae19454d4e99c468071'
+          src='https://res.cloudinary.com/diimwnnmj/image/upload/v1620621770/n_j9cdkl.svg'
           alt=''
         />
         <p onClick={() => window.open(props.naverLink)}>{props.name} </p>
