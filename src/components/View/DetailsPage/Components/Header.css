@@ -5,7 +5,7 @@
 }
 
 .details__Header h4 {
-  margin-left: 0.2rem;
+  margin-left: 0.1rem;
 
   font-size: 1.25rem;
   font-weight: 400;
@@ -24,22 +24,42 @@
 
 .details__tag {
   margin-top: 0.5rem;
-  font-size: 1.15rem;
+  font-size: 1.25rem;
 }
-/* .details__instagram {
-  margin-left: 0.15rem;
+
+.details__instagram {
   display: flex;
-  margin-top: 0.2rem;
   align-items: center;
-  font-weight: 300;
-} */
-/* 
-.details__instagram .icon {
+}
+
+.details__instagram__icon {
   font-size: 1.2rem;
+  margin-right: 0.2rem;
 }
 .details__instagram p {
   color: #dc0f62;
+  font-size: large;
   cursor: pointer;
-  margin-bottom: 0.1rem;
-  margin-left: 0.2rem;
-} */
+}
+
+.details__naver {
+  margin-top: 0.15rem;
+  display: flex;
+  align-items: center;
+}
+
+.details__naver__icon {
+  width: 1.05rem;
+  margin-right: 0.2rem;
+  margin-left: 0.1rem;
+  padding: 0.1rem;
+  border: 1px solid;
+  border-radius: 3px;
+}
+.details__naver__icon img {
+}
+.details__naver p {
+  color: #dc0f62;
+  font-size: large;
+  cursor: pointer;
+}

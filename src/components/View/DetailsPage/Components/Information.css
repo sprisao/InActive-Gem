@@ -16,10 +16,17 @@
   display: flex;
   align-items: center;
 }
+.breakTime {
+  display: flex;
+  align-items: center;
+}
 
 .breakDays {
   display: flex;
   align-items: center;
+}
+.breakDays p {
+  color: orange;
 }
 
 .location {
@@ -37,14 +44,4 @@
 }
 
 .phoneNumber p {
-  color: #dc0f62;
-}
-
-.details__instagram {
-  display: flex;
-  align-items: center;
-}
-
-.details__instagram p {
-  color: #dc0f62;
 }

@@ -29,17 +29,21 @@ const DetailsPage = ({ store }) => {
         name={store.fields.name}
         shortDescription={store.fields.shortDescription}
         tags={store.fields.tags}
+        instagramAccount={store.fields.instagramAccount}
+        naverLink={store.fields.naverLink}
       />
       <OwnerSection
         ownerMessage={store.fields.ownerMessage}
         ownerImage={store.fields.ownerImage[0].url}
       />
       <Information
-        businessHours={store.fields.businessHours}
+        openHour={store.fields.openHour}
+        closeHour={store.fields.closeHour}
+        breaktimeStart={store.fields.breaktimeStart}
+        breaktimeEnd={store.fields.breaktimeEnd}
         breakDays={store.fields.breakDays}
         phoneNumber={store.fields.phoneNumber}
         eupmyeondongRi={store.fields.eupmyeondongRi}
-        instagramAcc={store.fields.instagramAcc}
       />
       <Recommendation filter={store.fields.categoryTitle} />
     </section>
@@ -47,3 +51,34 @@ const DetailsPage = ({ store }) => {
 };
 
 export default DetailsPage;
+
+// name;
+// shortDescription;
+// ownerMessage;
+// phoneNumber;
+// categoryTitle;
+// secondCategory;
+// mainMenu;
+// tags;
+// fullAddress;
+// sigunGu;
+// eupmyeondongRi;
+// streetName;
+// streetNumber;
+// buildingNumber;
+// openHour;
+// closeHour;
+// breaktimeStart;
+// breaktimeEnd;
+// breakDays;
+// instagramAccount;
+// naverLink;
+// images;
+// productImage;
+// storeImage;
+// ownerImage;
+// storeVerified;
+// ownerVerfied;
+// createdTime;
+// ourRating;
+// recordId;
