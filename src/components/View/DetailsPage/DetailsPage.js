@@ -15,6 +15,8 @@ import 'swiper/components/navigation/navigation.scss';
 import 'swiper/components/pagination/pagination.scss';
 //////////////////////////////////
 
+import { FiChevronLeft } from 'react-icons/fi';
+
 import './DetailsPage.css';
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
@@ -22,8 +24,10 @@ SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 const DetailsPage = ({ store }) => {
   return (
     <section className='detailsPage'>
-      <Link to={'/'}>
-        <button> home </button>{' '}
+      <Link to={`/category/${store.fields.categoryNumber}`}>
+        <button>
+          <FiChevronLeft /> {store.fields.categoryTitle}{' '}
+        </button>
       </Link>
       <Header
         name={store.fields.name}

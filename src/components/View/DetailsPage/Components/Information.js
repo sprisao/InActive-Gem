@@ -15,30 +15,42 @@ import './Information.css';
 // 특정 필드에 데이터가 있을 경우에만 그 필드가 속한 'div'가 표시되면 좋겠다.
 
 const Information = (props) => {
-  console.log(props.breakDays);
-  return (
-    <div className='details__Information'>
+  let businessHours;
+  if (props.breaktimeStart) {
+    businessHours = (
       <div className='businessHours'>
         <FiClock style={{ strokeWidth: '1px' }} className='details__icon' />
         <p>
-          운영시간 {props.openHour} ~ {props.closeHour}
+          {props.openHour} ~ {props.closeHour} 휴게시간 {props.breaktimeStart} ~
+          {props.breaktimeEnd}
         </p>
       </div>
-      <div className='breakTime'>
-        <FiMinusCircle
-          style={{ strokeWidth: '1px' }}
-          className='details__icon'
-        />
-        <p>
-          휴게시간 {props.breaktimeStart} ~ {props.breaktimeEnd}
-        </p>
-      </div>
+    );
+  } else {
+    <div className='businessHours'>
+      <FiClock style={{ strokeWidth: '1px' }} className='details__icon' />
+      <p>
+        {props.openHour} ~ {props.closeHour}
+      </p>
+    </div>;
+  }
+
+  let breakDays;
+  if (props.breakDays) {
+    breakDays = (
       <div className='breakDays'>
         <FiXCircle style={{ strokeWidth: '1px' }} className='details__icon' />
         <p>
           {props.breakDays} <span style={{ color: 'black' }}>휴무</span>
         </p>
       </div>
+    );
+  }
+
+  return (
+    <div className='details__Information'>
+      {businessHours}
+      {breakDays}
       <div className='location'>
         <FiMapPin style={{ strokeWidth: '1px' }} className='details__icon' />
         <p>{props.eupmyeondongRi}</p>

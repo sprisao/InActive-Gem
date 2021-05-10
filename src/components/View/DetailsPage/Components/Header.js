@@ -6,15 +6,9 @@ import './Header.css';
 const url = 'https://www.instagram.com/';
 
 const Header = (props) => {
-  return (
-    <div className='details__Header'>
-      <div className='details__shortDesc'>
-        <h4>{props.shortDescription}</h4>
-      </div>
-      <div className='details__name'>
-        <h1>{props.name}</h1>
-        <HiBadgeCheck />
-      </div>
+  let instagramAcc;
+  if (props.instagramAccount) {
+    instagramAcc = (
       <div className='details__instagram'>
         <FiInstagram
           style={{ strokeWidth: '1px' }}
@@ -24,6 +18,20 @@ const Header = (props) => {
           {props.instagramAccount}
         </p>
       </div>
+    );
+  } else {
+  }
+
+  return (
+    <div className='details__Header'>
+      <div className='details__shortDesc'>
+        <h4>{props.shortDescription}</h4>
+      </div>
+      <div className='details__name'>
+        <h1>{props.name}</h1>
+        <HiBadgeCheck />
+      </div>
+      {instagramAcc}
       <div className='details__naver'>
         <img
           className='details__naver__icon'
