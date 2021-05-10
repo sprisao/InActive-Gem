@@ -1,6 +1,8 @@
 .OwnerSection {
-  display: flex;
+  display: grid;
   justify-content: space-between;
+  align-items: center;
+  grid-template-columns: 1fr 4fr;
   background-color: #f8f8f8;
   border-radius: 10px;
   padding: 1rem;
@@ -8,14 +10,15 @@
 }
 
 .ownerImage__container {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr;
   flex-direction: column;
   text-align: center;
   justify-content: space-between;
 }
 .ownerImage__container img {
-  height: 8rem;
-  clip-path: circle(4rem at center);
+  width: 100%;
+  clip-path: circle(50% at center);
 }
 .ownerName {
   margin-top: 0.25rem;
@@ -26,6 +29,6 @@
   align-items: center;
   padding-left: 0.75rem;
   font-weight: 100;
-  font-size: 1.21rem;
-  word-break: break-all;
+  font-size: 1.15rem;
+  word-break: keep-all;
 }
