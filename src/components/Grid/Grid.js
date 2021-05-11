@@ -10,7 +10,13 @@ const Grid = (props) => {
     <section className='grid'>
       {stores.map((store) => {
         if (store.fields.categoryTitle === props.filter) {
-          return <GridCard key={store.id} store={store}></GridCard>;
+          return (
+            <GridCard
+              key={store.id}
+              store={store}
+              tags={store.fields.tags}
+            ></GridCard>
+          );
         }
       })}
     </section>

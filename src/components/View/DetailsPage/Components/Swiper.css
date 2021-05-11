@@ -5,6 +5,10 @@
   justify-content: space-between;
 }
 
+.swiper-slide {
+  width: 100% !important;
+}
+
 .swiper-slide img {
   object-fit: cover;
   height: 30rem;
@@ -14,10 +18,11 @@
 
 .swiper-button-prev,
 .swiper-button-next {
+  height: 1rem !important;
   color: white !important;
 }
 
 .swiper-button-prev:after,
 .swiper-button-next:after {
-  font-size: 1.35rem !important;
+  font-size: 1.5rem !important;
 }
