@@ -25,3 +25,8 @@
   font-size: 0.95rem;
   color: #444;
 }
+.tags span {
+  font-size: 1rem;
+  font-weight: 325;
+  padding: 0.2rem 0;
+}
