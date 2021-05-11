@@ -42,7 +42,7 @@ const Header = (props) => {
       </div>
       <div className='details__tag'>
         {props.tags.map((tag) => {
-          return <span>#{tag} </span>;
+          return <span key={tag}>#{tag} </span>;
         })}
       </div>
     </div>

@@ -26,9 +26,10 @@ const DetailsPage = ({ store }) => {
     <section className='detailsPage'>
       <Link to={`/category/${store.fields.categoryNumber}`}>
         <button>
-          <FiChevronLeft /> {store.fields.categoryTitle}{' '}
+          <FiChevronLeft /> {store.fields.categoryTitle}
         </button>
       </Link>
+      <ImageBox img={store.fields.images} name={store.fields.name} />
       <Header
         name={store.fields.name}
         shortDescription={store.fields.shortDescription}

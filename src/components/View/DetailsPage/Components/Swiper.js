@@ -6,6 +6,10 @@ import './Swiper.css';
 
 const DetailSwiper = (props) => {
   console.log(props.img);
+
+  const images = props.img;
+
+  console.log(images);
   return (
     <Swiper
       spaceBetween={0}
@@ -18,8 +22,8 @@ const DetailSwiper = (props) => {
       {props.img &&
         props.img.map((item, index) => {
           return (
-            <SwiperSlide key={item.toString()} className='swiper-slide'>
-              <img src={item} alt={props.title} />
+            <SwiperSlide key={item.id} className='swiper-slide'>
+              <img src={item.url} alt={props.title} />
             </SwiperSlide>
           );
         })}
