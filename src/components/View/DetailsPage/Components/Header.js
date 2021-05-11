@@ -14,7 +14,7 @@ const Header = (props) => {
           style={{ strokeWidth: '1px' }}
           className='details__instagram__icon'
         />
-        <p onClick={() => window.open(url + props.instagramAccount)}>
+        <p onClick={() => window.open(url + props.instagramAccount, '_parent')}>
           {props.instagramAccount}
         </p>
       </div>
@@ -38,7 +38,9 @@ const Header = (props) => {
           src='https://res.cloudinary.com/diimwnnmj/image/upload/v1620621770/n_j9cdkl.svg'
           alt=''
         />
-        <p onClick={() => window.open(props.naverLink)}>{props.name} </p>
+        <p onClick={() => window.open(props.naverLink, '_parent')}>
+          {props.name}
+        </p>
       </div>
       <div className='details__tag'>
         {props.tags.map((tag) => {
