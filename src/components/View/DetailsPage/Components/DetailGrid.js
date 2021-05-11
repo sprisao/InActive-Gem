@@ -9,7 +9,13 @@ const DetailGrid = (props) => {
     <section className='detail__grid'>
       {stores.map((store) => {
         if (store.fields.categoryTitle === props.filter) {
-          return <DetailGridCard key={store.id} store={store}></DetailGridCard>;
+          return (
+            <DetailGridCard
+              key={store.id}
+              store={store}
+              tags={store.fields.tags}
+            ></DetailGridCard>
+          );
         }
       })}
     </section>
