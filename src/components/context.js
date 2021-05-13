@@ -20,14 +20,13 @@ const AppProvider = ({ children }) => {
       console.log(error);
     }
   };
-
+  console.log('navigation', loading);
   useEffect(() => {
     fetchContents();
   }, []);
 
   return (
     <AppContext.Provider value={{ loading, categories }}>
-      {/* 왜 여기서 searchTerm만 setserchTerm까지 추가했는가? */}
       {children}
     </AppContext.Provider>
   );

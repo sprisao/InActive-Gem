@@ -10,14 +10,24 @@ const StoreProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const [stores, setStores] = useState([]);
 
+  const fetchStores = async () => {
+    setLoading(true);
+    try {
+      base('stores')
+        .select({ view: 'Grid view' })
+        .eachPage((records, fetchNextPage) => {
+          setStores(records);
+          fetchNextPage();
+        });
+      setLoading(false);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  console.log('stores', loading);
   useEffect(() => {
-    base('stores')
-      .select({ view: 'Grid view' })
-      .eachPage((records, fetchNextPage) => {
-        console.log(records);
-        setStores(records);
-        fetchNextPage();
-      });
+    fetchStores();
   }, []);
 
   return (
