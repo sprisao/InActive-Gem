@@ -23,6 +23,7 @@ TAGS
   justify-content: space-between;
   white-space: nowrap;
   overflow-x: auto;
+  padding: 0.2rem 0;
 }
 
 .SeondCategory__item {
