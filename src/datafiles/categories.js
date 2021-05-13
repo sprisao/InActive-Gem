@@ -1,4 +1,4 @@
-export const category = [
+export const categories = [
   {
     id: 1,
     ctgry: 'home',
@@ -23,6 +23,7 @@ export const category = [
     strIconSource:
       'https://res.cloudinary.com/diimwnnmj/image/upload/v1616123316/food_nuddsz.png',
     ctgryTitle: '음식점',
+    secondCategory: ['한식', '중식', '일식', '양식', '탕', '고기'],
     displayed: true,
     activated: true,
   },

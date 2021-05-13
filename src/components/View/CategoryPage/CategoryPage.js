@@ -4,9 +4,9 @@ import { Link, useParams } from 'react-router-dom';
 import Navigation from '../LandingPage/Navigation';
 import Header from '../../Header';
 import Grid from '../../Grid/SectionGrid';
-import Tags from '../../Tags';
+import SecondCategory from '../../SecondCategory';
 
-import { category } from '../../../datafiles/categories';
+import { categories } from '../../../datafiles/categories';
 import './CategoryPage.css';
 
 const CategoryPage = () => {
@@ -15,8 +15,8 @@ const CategoryPage = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    const newCategoryData = category.find(
-      (category) => category.id === parseInt(id)
+    const newCategoryData = categories.find(
+      (categories) => categories.id === parseInt(id)
     );
     const title = newCategoryData.ctgryTitle;
     const emoji = newCategoryData.strIconSource;
@@ -36,8 +36,8 @@ const CategoryPage = () => {
           <img src={emoji} alt='{title}' />
           <h1>{title}</h1>
         </div>
-        <div className='CategoryTags__container'>
-          <Tags />
+        <div className='SecondCategory__container'>
+          <SecondCategory />
         </div>
       </div>
 
