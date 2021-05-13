@@ -13,7 +13,7 @@ header
   display: grid;
   grid-gap: 1rem;
   grid-template-columns: repeat(2, minmax(10rem, 1fr));
-  padding: 0 1.5rem;
+  padding: 0 1rem;
   margin: 0 auto;
 }
 
