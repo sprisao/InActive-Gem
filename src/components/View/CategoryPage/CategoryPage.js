@@ -4,7 +4,7 @@ import { Link, useParams } from 'react-router-dom';
 import Navigation from '../LandingPage/Navigation';
 import Header from '../../Header';
 import Grid from '../../Grid/SectionGrid';
-import SecondCategory from '../../SecondCategory';
+import SecondCategory from './SecondCategory';
 
 import { categories } from '../../../datafiles/categories';
 import './CategoryPage.css';

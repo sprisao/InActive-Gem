@@ -1,8 +1,5 @@
 import React, { useState } from 'react';
 import './SecondCategory.css';
-import { categories } from '../datafiles/categories';
-
-import { useGlobalContext } from './storeContext';
 
 const Tags = () => {
   return (

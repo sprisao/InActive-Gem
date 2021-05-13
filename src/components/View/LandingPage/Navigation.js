@@ -1,4 +1,5 @@
 import React from 'react';
+import Loading from '../../Loading';
 
 import { useGlobalContext } from '../../context';
 
@@ -9,7 +10,7 @@ const Navigation = () => {
   const { categories, loading } = useGlobalContext();
 
   if (loading) {
-    return <div>로딩중</div>;
+    return <Loading />;
   }
   return (
     <section className='navigation'>

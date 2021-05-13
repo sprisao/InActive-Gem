@@ -1,0 +1,9 @@
+.loading {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+}
+
+.loading__contents {
+  margin: 0 auto;
+}
