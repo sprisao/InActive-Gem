@@ -20,7 +20,7 @@ const AppProvider = ({ children }) => {
       console.log(error);
     }
   };
-  console.log('navigation', loading);
+
   useEffect(() => {
     fetchContents();
   }, []);

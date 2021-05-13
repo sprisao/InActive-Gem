@@ -37,7 +37,7 @@ const CategoryPage = () => {
           <h1>{title}</h1>
         </div>
         <div className='SecondCategory__container'>
-          <SecondCategory />
+          <SecondCategory category={title} />
         </div>
       </div>
 

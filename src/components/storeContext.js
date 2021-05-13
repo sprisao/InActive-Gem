@@ -25,7 +25,6 @@ const StoreProvider = ({ children }) => {
     }
   };
 
-  console.log('stores', loading);
   useEffect(() => {
     fetchStores();
   }, []);
