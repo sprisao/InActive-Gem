@@ -11,6 +11,7 @@ import { useGlobalContext } from '../../storeContext';
 import './CategoryPage.css';
 
 const CategoryPage = () => {
+  const [secondCategory, setSecondCategory] = useState('all');
   const [categoryData, setCategoryData] = useState([]);
 
   // 1차 카테고리 렌더링 부분
@@ -24,18 +25,18 @@ const CategoryPage = () => {
     const ctgryTitle = newCategoryData.ctgryTitle;
     const newCategory = { title, emoji, ctgryTitle };
     setCategoryData(newCategory);
+    setSecondCategory('all');
   }, [id]);
 
   const { title, emoji, ctgryTitle } = categoryData;
 
-  const { stores, loading } = useGlobalContext();
-  const [secondCategory, setSecondCategory] = useState('all');
   const getSecondCategory = (value) => {
     setSecondCategory(value);
   };
 
   console.log(secondCategory);
 
+  // 새로운 카테고리 클릭시 secondCategory의 State가 'all'로 바뀌어야 한다.
   let grid;
   if (secondCategory === 'all') {
     grid = <Grid filter={ctgryTitle} />;
