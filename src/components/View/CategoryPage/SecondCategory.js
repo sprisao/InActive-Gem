@@ -95,12 +95,6 @@ const Tags = (props) => {
         </button>
         <button
           className='SeondCategory__item'
-          onClick={() => sendSecondCategory('뷰 맛집')}
-        >
-          ⛰ 뷰 맛집
-        </button>
-        <button
-          className='SeondCategory__item'
           onClick={() => sendSecondCategory('디저트 맛집')}
         >
           🍰 디저트 맛집
@@ -116,6 +110,18 @@ const Tags = (props) => {
           onClick={() => sendSecondCategory('인스타 감성')}
         >
           📸 인스타 감성
+        </button>
+        <button
+          className='SeondCategory__item'
+          onClick={() => sendSecondCategory('자연')}
+        >
+          🌳 자연
+        </button>
+        <button
+          className='SeondCategory__item'
+          onClick={() => sendSecondCategory('뷰 맛집')}
+        >
+          ⛰ 뷰 맛집
         </button>
       </div>
     );
