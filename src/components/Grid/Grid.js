@@ -4,7 +4,7 @@ import GridCard from './GridCard';
 import Loading from '../Loading';
 import './Grid.css';
 
-const Grid = (props) => {
+const Grid = ({ filter }) => {
   const { stores, loading } = useGlobalContext();
   if (loading) {
     return <Loading />;
@@ -12,7 +12,17 @@ const Grid = (props) => {
   return (
     <section className='grid'>
       {stores.map((store) => {
-        if (store.fields.categoryTitle === props.filter) {
+        if (store.fields.categoryTitle === filter) {
+          return (
+            <GridCard
+              key={store.id}
+              store={store}
+              tags={store.fields.tags}
+            ></GridCard>
+          );
+        }
+        if (store.fields.secondCategory === filter) {
+          console.log(store.fields.secondCategory);
           return (
             <GridCard
               key={store.id}
