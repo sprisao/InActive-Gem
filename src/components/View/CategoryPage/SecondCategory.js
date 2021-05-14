@@ -75,13 +75,48 @@ const Tags = (props) => {
   if (props.category === '카페') {
     secondCategory = (
       <div className='SeondCategory__container'>
-        <button className='SeondCategory__item'>🅰 전체</button>
-        <button className='SeondCategory__item'>✨ 분위기</button>
-        <button className='SeondCategory__item'>👩🏻‍💻 작업하기 좋은</button>
-        <button className='SeondCategory__item'>⛰ 뷰 맛집</button>
-        <button className='SeondCategory__item'>🍰 디저트 맛집</button>
-        <button className='SeondCategory__item'>🥗 브런치</button>
-        <button className='SeondCategory__item'>📸 인스타 감성</button>
+        <button
+          className='SeondCategory__item'
+          onClick={() => sendSecondCategory('all')}
+        >
+          🅰 전체
+        </button>
+        <button
+          className='SeondCategory__item'
+          onClick={() => sendSecondCategory('분위기')}
+        >
+          ✨ 분위기
+        </button>
+        <button
+          className='SeondCategory__item'
+          onClick={() => sendSecondCategory('작업하기 좋은')}
+        >
+          👩🏻‍💻 작업하기 좋은
+        </button>
+        <button
+          className='SeondCategory__item'
+          onClick={() => sendSecondCategory('뷰 맛집')}
+        >
+          ⛰ 뷰 맛집
+        </button>
+        <button
+          className='SeondCategory__item'
+          onClick={() => sendSecondCategory('디저트 맛집')}
+        >
+          🍰 디저트 맛집
+        </button>
+        <button
+          className='SeondCategory__item'
+          onClick={() => sendSecondCategory('브런치')}
+        >
+          🥗 브런치
+        </button>
+        <button
+          className='SeondCategory__item'
+          onClick={() => sendSecondCategory('인스타 감성')}
+        >
+          📸 인스타 감성
+        </button>
       </div>
     );
   }
