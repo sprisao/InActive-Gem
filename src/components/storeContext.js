@@ -15,15 +15,15 @@ const StoreProvider = ({ children }) => {
     try {
       base('stores')
         .select({ view: 'Grid view' })
-        .eachPage((records, fetchNextPage) => {
+        .eachPage((records) => {
           setStores(records);
-          fetchNextPage();
         });
       setLoading(false);
     } catch (error) {
       console.log(error);
     }
   };
+  console.log(stores);
 
   useEffect(() => {
     fetchStores();
