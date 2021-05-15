@@ -8,7 +8,7 @@ const DetailGrid = (props) => {
   return (
     <section className='detail__grid'>
       {stores.map((store) => {
-        if (store.fields.categoryTitle === props.filter) {
+        if (store.fields.secondCategory === props.filter) {
           return (
             <DetailGridCard
               key={store.id}

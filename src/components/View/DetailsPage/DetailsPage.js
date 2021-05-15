@@ -50,7 +50,7 @@ const DetailsPage = ({ store }) => {
         phoneNumber={store.fields.phoneNumber}
         eupmyeondongRi={store.fields.eupmyeondongRi}
       />
-      <Recommendation filter={store.fields.categoryTitle} />
+      <Recommendation filter={store.fields.secondCategory} />
     </section>
   );
 };
