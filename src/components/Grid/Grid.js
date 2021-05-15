@@ -31,6 +31,16 @@ const Grid = ({ filter }) => {
             ></GridCard>
           );
         }
+        if (store.fields.eupmyeondongRi === filter) {
+          console.log(store.fields.eupmyeondongRi);
+          return (
+            <GridCard
+              key={store.id}
+              store={store}
+              tags={store.fields.tags}
+            ></GridCard>
+          );
+        }
       })}
     </section>
   );

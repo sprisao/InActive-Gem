@@ -126,6 +126,72 @@ const Tags = (props) => {
       </div>
     );
   }
+  if (props.category === '동네별로') {
+    secondCategory = (
+      <div className='SeondCategory__container'>
+        <button
+          className='SeondCategory__item'
+          onClick={() => sendSecondCategory('all')}
+        >
+          🅰 전체
+        </button>
+        <button
+          className='SeondCategory__item'
+          onClick={() => sendSecondCategory('단계동')}
+        >
+          단계동
+        </button>
+        <button
+          className='SeondCategory__item'
+          onClick={() => sendSecondCategory('무실동')}
+        >
+          무실동
+        </button>
+        <button
+          className='SeondCategory__item'
+          onClick={() => sendSecondCategory('단구동')}
+        >
+          단구동
+        </button>
+        <button
+          className='SeondCategory__item'
+          onClick={() => sendSecondCategory('반곡동')}
+        >
+          반곡동
+        </button>
+        <button
+          className='SeondCategory__item'
+          onClick={() => sendSecondCategory('중앙동')}
+        >
+          중앙동
+        </button>
+        <button
+          className='SeondCategory__item'
+          onClick={() => sendSecondCategory('흥업면')}
+        >
+          흥업면
+        </button>
+        <button
+          className='SeondCategory__item'
+          onClick={() => sendSecondCategory('지정면')}
+        >
+          지정면
+        </button>
+        <button
+          className='SeondCategory__item'
+          onClick={() => sendSecondCategory('호저면')}
+        >
+          호저면
+        </button>
+        <button
+          className='SeondCategory__item'
+          onClick={() => sendSecondCategory('근교')}
+        >
+          원주시 근교
+        </button>
+      </div>
+    );
+  }
   return <section className='SeondCategory'>{secondCategory}</section>;
 };
 
