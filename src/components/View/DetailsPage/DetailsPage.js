@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
+import DetailsNavi from './../../Header';
+
 import ImageBox from './Components/Swiper';
 import Header from './Components/Header';
 import Information from './Components/Information';
@@ -24,6 +26,7 @@ SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 const DetailsPage = ({ store }) => {
   return (
     <section className='detailsPage'>
+      <DetailsNavi />
       <Link to={`/category/${store.fields.categoryNumber}`}>
         <button>
           <FiChevronLeft /> {store.fields.categoryTitle}
