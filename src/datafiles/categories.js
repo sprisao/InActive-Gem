@@ -18,12 +18,20 @@ export const categories = [
     activated: true,
   },
   {
+    id: 15,
+    ctgry: 'around',
+    strIconSource:
+      'https://res.cloudinary.com/diimwnnmj/image/upload/v1621065993/world-map_1f5fa_rbvl1i.png',
+    ctgryTitle: '우리동네',
+    displayed: true,
+    activated: true,
+  },
+  {
     id: 3,
     ctgry: 'rstrn',
     strIconSource:
       'https://res.cloudinary.com/diimwnnmj/image/upload/v1616123316/food_nuddsz.png',
     ctgryTitle: '음식점',
-    secondCategory: ['한식', '중식', '일식', '양식', '탕', '고기'],
     displayed: true,
     activated: true,
   },

@@ -18,6 +18,15 @@ const categories = [
     activated: true,
   },
   {
+    id: 15,
+    ctgry: 'around',
+    strIconSource:
+      'https://res.cloudinary.com/diimwnnmj/image/upload/v1621065993/world-map_1f5fa_rbvl1i.png',
+    ctgryTitle: '동네별로',
+    displayed: true,
+    activated: true,
+  },
+  {
     id: 3,
     ctgry: 'rstrn',
     strIconSource:
