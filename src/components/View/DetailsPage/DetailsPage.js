@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
-import DetailsNavi from './../../Header';
+import DetailsHeader from './../../Header';
 
+import DetailsNavi from './Components/DetailsNavi';
 import ImageBox from './Components/Swiper';
 import Header from './Components/Header';
 import Information from './Components/Information';
@@ -17,8 +18,6 @@ import 'swiper/components/navigation/navigation.scss';
 import 'swiper/components/pagination/pagination.scss';
 //////////////////////////////////
 
-import { FiChevronLeft } from 'react-icons/fi';
-
 import './DetailsPage.css';
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
@@ -26,12 +25,11 @@ SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 const DetailsPage = ({ store }) => {
   return (
     <section className='detailsPage'>
-      <DetailsNavi />
-      <Link to={`/category/${store.fields.categoryNumber}`}>
-        <button>
-          <FiChevronLeft /> {store.fields.categoryTitle}
-        </button>
-      </Link>
+      <DetailsHeader />
+      <DetailsNavi
+        categoryNumber={store.fields.categoryNumber}
+        categoryTitle={store.fields.categoryTitle}
+      />
       <ImageBox img={store.fields.images} name={store.fields.name} />
       <Header
         name={store.fields.name}

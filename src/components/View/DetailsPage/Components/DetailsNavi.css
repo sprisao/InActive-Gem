@@ -1,0 +1,29 @@
+.detailsNavi {
+  width: var(--maxWidth);
+  margin-bottom: 0.3rem;
+}
+
+.detailsNavi__box {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.detailsNavi__box img {
+  margin-right: 0.2rem;
+  width: 1.8rem;
+  height: 100%;
+}
+
+.detailsNavi__icon {
+  font-size: 1.7rem;
+  margin-left: -0.25rem;
+}
+
+.detailsNavi__contents {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  font-size: 1;
+  font-weight: 400;
+}
