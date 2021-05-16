@@ -16,10 +16,10 @@ const DetailsNavi = (props) => {
               <div className='detailsNavi__box'>
                 <FiChevronLeft className='detailsNavi__icon' />
                 <div className='detailsNavi__contents'>
-                  <img
+                  {/* <img
                     src={category.strIconSource}
                     alt='{props.categoryTitle}'
-                  />
+                  /> */}
                   <p>{props.categoryTitle}</p>
                 </div>
               </div>
