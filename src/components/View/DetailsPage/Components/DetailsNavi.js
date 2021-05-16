@@ -13,7 +13,7 @@ const DetailsNavi = (props) => {
         {categories.map((category) => {
           if (category.id === props.categoryNumber) {
             return (
-              <div className='detailsNavi__box'>
+              <div key={category.id} className='detailsNavi__box'>
                 <FiChevronLeft className='detailsNavi__icon' />
                 <div className='detailsNavi__contents'>
                   {/* <img

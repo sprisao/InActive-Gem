@@ -5,11 +5,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import './Swiper.css';
 
 const DetailSwiper = (props) => {
-  console.log(props.img);
-
   const images = props.img;
 
-  console.log(images);
   return (
     <Swiper
       spaceBetween={0}

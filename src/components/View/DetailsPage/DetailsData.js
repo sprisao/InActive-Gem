@@ -9,13 +9,13 @@ const DetailsData = () => {
   const { stores, loading } = useGlobalContext();
 
   return (
-    <div>
+    <>
       {stores.map((store) => {
         if (store.id === id) {
           return <DetailsPage key={store.id} store={store}></DetailsPage>;
         }
       })}
-    </div>
+    </>
   );
 };
 
