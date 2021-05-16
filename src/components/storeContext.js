@@ -14,10 +14,10 @@ const StoreProvider = ({ children }) => {
     setLoading(true);
     try {
       base('stores')
-        .select({ view: 'Grid view' })
-        .eachPage((records) => {
+        .select({ maxRecords: 800, view: 'Grid view' })
+        .eachPage((records, fetchNextPage) => {
           setStores(records);
-          // fetchNextPage();
+          fetchNextPage();
         });
       setLoading(false);
     } catch (error) {

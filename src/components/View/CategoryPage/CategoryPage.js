@@ -29,6 +29,8 @@ const CategoryPage = () => {
     setSecondCategory('all');
   }, [id]);
 
+  console.log(categoryData);
+
   const { title, emoji } = categoryData;
 
   const getSecondCategory = (value) => {

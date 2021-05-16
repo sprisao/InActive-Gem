@@ -95,6 +95,12 @@ const Tags = (props) => {
         </button>
         <button
           className='SeondCategory__item'
+          onClick={() => sendSecondCategory('인스타 감성')}
+        >
+          📸 인스타 감성
+        </button>
+        <button
+          className='SeondCategory__item'
           onClick={() => sendSecondCategory('디저트 맛집')}
         >
           🍰 디저트 맛집
@@ -107,9 +113,9 @@ const Tags = (props) => {
         </button>
         <button
           className='SeondCategory__item'
-          onClick={() => sendSecondCategory('인스타 감성')}
+          onClick={() => sendSecondCategory('베이커리 카페')}
         >
-          📸 인스타 감성
+          🥨 베이커리 카페
         </button>
         <button
           className='SeondCategory__item'

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useGlobalContext } from '../../components/storeContext';
 import GridCard from './GridCard';
 import Loading from '../Loading';
@@ -7,15 +7,24 @@ import './Grid.css';
 
 const Grid = ({ filter }) => {
   const { stores, loading } = useGlobalContext();
+  const [filtered, setFiltered] = useState([]);
+  useEffect(() => {
+    const storeList = stores.map((store) => {
+      const firstFilter = store.fields.categoryTitle;
+      const secondFilter = store.fields.secondCategory;
+      const location = store.fields.eupmyeondongRi;
+
+      // const newStores = { firstFilter, secondFilter, location };
+      // setStore(newStores);
+    });
+    setFiltered(storeList);
+  }, []);
+
+  console.log(filtered);
 
   if (loading) {
     return <Loading />;
   }
-
-  // let leerfilter2;
-  // if (store.fields.categoryTitle === filter) {
-  //   leerfilter2 = ( )
-  // }
 
   let leerfilter;
   if (filter === 'leer') {
