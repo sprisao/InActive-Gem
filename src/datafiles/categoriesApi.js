@@ -75,7 +75,7 @@ const categories = [
     id: 8,
     ctgry: 'beauty',
     strIconSource:
-      'https://res.cloudinary.com/diimwnnmj/image/upload/v1616123318/shopping_aevysq.png',
+      'https://res.cloudinary.com/diimwnnmj/image/upload/v1621226951/icons/beauty_icon_xy16qs.png',
     ctgryTitle: '미용・뷰티',
     displayed: true,
     activated: true,
@@ -127,7 +127,7 @@ const categories = [
     activated: true,
   },
   {
-    id: 15,
+    id: 16,
     ctgry: 'camping',
     strIconSource:
       'https://res.cloudinary.com/diimwnnmj/image/upload/v1621226951/icons/camping_icon_nbkv8g.png',
@@ -136,7 +136,7 @@ const categories = [
     activated: true,
   },
   {
-    id: 16,
+    id: 17,
     ctgry: 'entertainment',
     strIconSource:
       'https://res.cloudinary.com/diimwnnmj/image/upload/v1621226951/icons/entertainment_icon_qfo80t.png',
@@ -145,16 +145,16 @@ const categories = [
     activated: true,
   },
   {
-    id: 17,
+    id: 18,
     ctgry: 'sports',
     strIconSource:
-      'https://res.cloudinary.com/diimwnnmj/image/upload/v1616123318/shopping_aevysq.png',
+      'https://res.cloudinary.com/diimwnnmj/image/upload/v1621226952/icons/sport_icon_rblqqp.png',
     ctgryTitle: '스포츠・레져',
     displayed: true,
     activated: true,
   },
   {
-    id: 18,
+    id: 19,
     ctgry: 'flower',
     strIconSource:
       'https://res.cloudinary.com/diimwnnmj/image/upload/v1621226952/icons/flowershop_icon_mld7fw.png',
