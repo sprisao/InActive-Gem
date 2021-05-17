@@ -73,10 +73,10 @@ export const categories = [
   },
   {
     id: 8,
-    ctgry: 'salon',
+    ctgry: 'beauty',
     strIconSource:
-      'https://res.cloudinary.com/diimwnnmj/image/upload/v1616123317/salon_ciebqq.png',
-    ctgryTitle: '미용실',
+      'https://res.cloudinary.com/diimwnnmj/image/upload/v1621226951/icons/beauty_icon_xy16qs.png',
+    ctgryTitle: '미용・뷰티',
     displayed: true,
     activated: true,
   },
@@ -101,10 +101,10 @@ export const categories = [
 
   {
     id: 12,
-    ctgry: 'hospital',
+    ctgry: 'dentist',
     strIconSource:
-      'https://res.cloudinary.com/diimwnnmj/image/upload/v1616123317/hospital_ttw46g.png',
-    ctgryTitle: '병원',
+      'https://res.cloudinary.com/diimwnnmj/image/upload/v1621227219/icons/dentist_icon_akhzyy.png',
+    ctgryTitle: '치과',
     displayed: true,
     activated: true,
   },
@@ -123,6 +123,42 @@ export const categories = [
     strIconSource:
       'https://res.cloudinary.com/diimwnnmj/image/upload/v1616123318/shopping_aevysq.png',
     ctgryTitle: '마트',
+    displayed: true,
+    activated: true,
+  },
+  {
+    id: 16,
+    ctgry: 'camping',
+    strIconSource:
+      'https://res.cloudinary.com/diimwnnmj/image/upload/v1621226951/icons/camping_icon_nbkv8g.png',
+    ctgryTitle: '캠핑장',
+    displayed: true,
+    activated: true,
+  },
+  {
+    id: 17,
+    ctgry: 'entertainment',
+    strIconSource:
+      'https://res.cloudinary.com/diimwnnmj/image/upload/v1621226951/icons/entertainment_icon_qfo80t.png',
+    ctgryTitle: '엔터테인먼트',
+    displayed: true,
+    activated: true,
+  },
+  {
+    id: 18,
+    ctgry: 'sports',
+    strIconSource:
+      'https://res.cloudinary.com/diimwnnmj/image/upload/v1621226952/icons/sport_icon_rblqqp.png',
+    ctgryTitle: '스포츠・레져',
+    displayed: true,
+    activated: true,
+  },
+  {
+    id: 19,
+    ctgry: 'flower',
+    strIconSource:
+      'https://res.cloudinary.com/diimwnnmj/image/upload/v1621226952/icons/flowershop_icon_mld7fw.png',
+    ctgryTitle: '꽃집',
     displayed: true,
     activated: true,
   },
