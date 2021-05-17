@@ -54,6 +54,15 @@ const categories = [
     activated: true,
   },
   {
+    id: 8,
+    ctgry: 'beauty',
+    strIconSource:
+      'https://res.cloudinary.com/diimwnnmj/image/upload/v1621226951/icons/beauty_icon_xy16qs.png',
+    ctgryTitle: '미용・뷰티',
+    displayed: true,
+    activated: true,
+  },
+  {
     id: 6,
     ctgry: 'fitness',
     strIconSource:
@@ -63,20 +72,20 @@ const categories = [
     activated: true,
   },
   {
+    id: 17,
+    ctgry: 'entertainment',
+    strIconSource:
+      'https://res.cloudinary.com/diimwnnmj/image/upload/v1621226951/icons/entertainment_icon_qfo80t.png',
+    ctgryTitle: '엔터테인먼트',
+    displayed: true,
+    activated: true,
+  },
+  {
     id: 7,
     ctgry: 'screengolf',
     strIconSource:
       'https://res.cloudinary.com/diimwnnmj/image/upload/v1616123316/golf_rp6iid.png',
     ctgryTitle: '스크린골프',
-    displayed: true,
-    activated: true,
-  },
-  {
-    id: 8,
-    ctgry: 'beauty',
-    strIconSource:
-      'https://res.cloudinary.com/diimwnnmj/image/upload/v1621226951/icons/beauty_icon_xy16qs.png',
-    ctgryTitle: '미용・뷰티',
     displayed: true,
     activated: true,
   },
@@ -132,15 +141,6 @@ const categories = [
     strIconSource:
       'https://res.cloudinary.com/diimwnnmj/image/upload/v1621226951/icons/camping_icon_nbkv8g.png',
     ctgryTitle: '캠핑장',
-    displayed: true,
-    activated: true,
-  },
-  {
-    id: 17,
-    ctgry: 'entertainment',
-    strIconSource:
-      'https://res.cloudinary.com/diimwnnmj/image/upload/v1621226951/icons/entertainment_icon_qfo80t.png',
-    ctgryTitle: '엔터테인먼트',
     displayed: true,
     activated: true,
   },
