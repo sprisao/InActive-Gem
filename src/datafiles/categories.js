@@ -122,7 +122,7 @@ export const categories = [
     ctgry: 'pet',
     strIconSource:
       'https://res.cloudinary.com/diimwnnmj/image/upload/v1616123316/dog_v7ba4i.png',
-    ctgryTitle: '애견',
+    ctgryTitle: '반려동물',
     displayed: true,
     activated: true,
   },
