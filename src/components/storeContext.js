@@ -8,27 +8,38 @@ const StoreContext = React.createContext();
 
 const StoreProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
+  const store = [];
   const [stores, setStores] = useState([]);
 
-  const fetchStores = async () => {
-    setLoading(true);
-    try {
-      base('stores')
-        .select({ view: 'Grid view' })
-        .eachPage((records) => {
-          setStores(records);
-          // fetchNextPage();
-        });
-      setLoading(false);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-  console.log(stores);
-
   useEffect(() => {
-    fetchStores();
+    base('stores')
+      .select({
+        view: 'Grid view',
+      })
+      .eachPage(
+        function page(records, fetchNextPage) {
+          records.forEach(function (record) {
+            store.push({
+              id: record.id,
+              ...record._rawJson.fields,
+            });
+          });
+          fetchNextPage();
+        },
+        function done(err) {
+          if (err) {
+            console.error(err);
+          } else {
+            console.log('success');
+            console.log(store);
+            setStores(store);
+            setLoading(false);
+          }
+        }
+      );
   }, []);
+
+  console.log(stores);
 
   return (
     <StoreContext.Provider value={{ loading, stores }}>

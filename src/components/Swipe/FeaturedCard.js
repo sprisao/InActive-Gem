@@ -9,14 +9,14 @@ const FeaturedCard = ({ store }) => {
       <div
         className='featuredCard'
         style={{
-          backgroundImage: `url(${store.fields.images[0].url})`,
+          backgroundImage: `url(${store.images[0].url})`,
         }}
       >
         <div className='featuredCard_image'>
           <div className='article'>
-            <p>{store.fields.shortDescription}</p>
-            <h3>{store.fields.name}</h3>
-            <span>{store.fields.eupmyeondongRi}</span>
+            <p>{store.shortDescription}</p>
+            <h3>{store.name}</h3>
+            <span>{store.eupmyeondongRi}</span>
           </div>
         </div>
       </div>

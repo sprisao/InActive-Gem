@@ -7,15 +7,15 @@ const GridCard = ({ store, tags }) => {
   return (
     <Link to={`/store/${store.id}`} className=''>
       <article className='gridCard'>
-        <img src={store.fields.images[0].url} alt={store.fields.name} />
+        <img src={store.images[0].url} alt={store.name} />
         <div className='tags'>
           {tags.map((tag) => {
             return <span key={tag}>#{tag} </span>;
           })}
         </div>
-        <h3>{store.fields.name}</h3>
-        <span>{store.fields.eupmyeondongRi}</span>
-        <p>{store.fields.shortDescription}</p>
+        <h3>{store.name}</h3>
+        <span>{store.eupmyeondongRi}</span>
+        <p>{store.shortDescription}</p>
       </article>
     </Link>
   );

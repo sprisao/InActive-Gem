@@ -10,17 +10,15 @@ const Grid = ({ filter }) => {
   const [filtered, setFiltered] = useState([]);
   useEffect(() => {
     const storeList = stores.map((store) => {
-      const firstFilter = store.fields.categoryTitle;
-      const secondFilter = store.fields.secondCategory;
-      const location = store.fields.eupmyeondongRi;
+      const firstFilter = store.categoryTitle;
+      const secondFilter = store.secondCategory;
+      const location = store.eupmyeondongRi;
 
       // const newStores = { firstFilter, secondFilter, location };
       // setStore(newStores);
     });
     setFiltered(storeList);
   }, []);
-
-  console.log(filtered);
 
   if (loading) {
     return <Loading />;
@@ -33,32 +31,32 @@ const Grid = ({ filter }) => {
     leerfilter = (
       <section className='grid'>
         {stores.map((store) => {
-          if (store.fields.categoryTitle === filter) {
+          if (store.categoryTitle === filter) {
             return (
               <GridCard
                 key={store.id}
                 store={store}
-                tags={store.fields.tags}
+                tags={store.tags}
               ></GridCard>
             );
           }
-          if (store.fields.secondCategory === filter) {
-            console.log(store.fields.secondCategory);
+          if (store.secondCategory === filter) {
+            console.log(store.secondCategory);
             return (
               <GridCard
                 key={store.id}
                 store={store}
-                tags={store.fields.tags}
+                tags={store.tags}
               ></GridCard>
             );
           }
-          if (store.fields.eupmyeondongRi === filter) {
-            console.log(store.fields.eupmyeondongRi);
+          if (store.eupmyeondongRi === filter) {
+            console.log(store.eupmyeondongRi);
             return (
               <GridCard
                 key={store.id}
                 store={store}
-                tags={store.fields.tags}
+                tags={store.tags}
               ></GridCard>
             );
           }
