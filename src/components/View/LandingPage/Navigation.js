@@ -15,12 +15,12 @@ const Navigation = () => {
   return (
     <section className='navigation'>
       <div className='navigation__wrap'>
-        {categories.map((item) => {
+        {categories.map((category) => {
           return (
-            <Link key={item.id} to={`/category/${item.id}`}>
-              <div key={item.id} className='navigation__btn'>
-                <img src={item.strIconSource} alt={item.ctgryTitle} />
-                <span>{item.ctgryTitle}</span>
+            <Link key={category.id} to={`/category/${category.ctgryTitle}`}>
+              <div key={category.id} className='navigation__btn'>
+                <img src={category.strIconSource} alt={category.ctgryTitle} />
+                <span>{category.ctgryTitle}</span>
               </div>
             </Link>
           );

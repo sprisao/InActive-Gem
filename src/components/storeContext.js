@@ -38,8 +38,6 @@ const StoreProvider = ({ children }) => {
       );
   }, []);
 
-  console.log(stores);
-
   return (
     <StoreContext.Provider value={{ loading, stores }}>
       {children}
