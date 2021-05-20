@@ -27,31 +27,31 @@ const DetailsPage = ({ store }) => {
     <section className='detailsPage'>
       <DetailsHeader />
       <DetailsNavi
-        categoryNumber={store.fields.categoryNumber}
-        categoryTitle={store.fields.categoryTitle}
+        categoryNumber={store.categoryNumber}
+        categoryTitle={store.categoryTitle}
       />
-      <ImageBox img={store.fields.images} name={store.fields.name} />
+      <ImageBox img={store.images} name={store.name} />
       <Header
-        name={store.fields.name}
-        shortDescription={store.fields.shortDescription}
-        tags={store.fields.tags}
-        instagramAccount={store.fields.instagramAccount}
-        naverLink={store.fields.naverLink}
+        name={store.name}
+        shortDescription={store.shortDescription}
+        tags={store.tags}
+        instagramAccount={store.instagramAccount}
+        naverLink={store.naverLink}
       />
       <OwnerSection
-        ownerMessage={store.fields.ownerMessage}
-        ownerImage={store.fields.ownerImage[0].url}
+        ownerMessage={store.ownerMessage}
+        ownerImage={store.ownerImage[0].url}
       />
       <Information
-        openHour={store.fields.openHour}
-        closeHour={store.fields.closeHour}
-        breaktimeStart={store.fields.breaktimeStart}
-        breaktimeEnd={store.fields.breaktimeEnd}
-        breakDays={store.fields.breakDays}
-        phoneNumber={store.fields.phoneNumber}
-        eupmyeondongRi={store.fields.eupmyeondongRi}
+        openHour={store.openHour}
+        closeHour={store.closeHour}
+        breaktimeStart={store.breaktimeStart}
+        breaktimeEnd={store.breaktimeEnd}
+        breakDays={store.breakDays}
+        phoneNumber={store.phoneNumber}
+        eupmyeondongRi={store.eupmyeondongRi}
       />
-      <Recommendation filter={store.fields.secondCategory} />
+      <Recommendation filter={store.secondCategory} />
     </section>
   );
 };

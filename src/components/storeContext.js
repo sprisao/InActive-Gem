@@ -31,7 +31,6 @@ const StoreProvider = ({ children }) => {
             console.error(err);
           } else {
             console.log('success');
-            console.log(store);
             setStores(store);
             setLoading(false);
           }
