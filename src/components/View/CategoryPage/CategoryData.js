@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import { useGlobalContext } from '../../context';
+import { useGlobalContext } from '../../storeContext';
 import { useParams } from 'react-router-dom';
 
 import CategoryPage from './CategoryPage';
 const CategoryData = () => {
   const { ctgryTitle } = useParams();
-  const { categories } = useGlobalContext();
+  const { firstCategories, secondCategories, loading } = useGlobalContext();
 
   return (
     <>
-      {categories.map((category) => {
+      {firstCategories.map((category) => {
         if (category.ctgryTitle === ctgryTitle) {
           console.log(category.id);
           return (

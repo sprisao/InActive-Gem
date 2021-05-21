@@ -11,7 +11,7 @@ import './CategoryPage.css';
 
 const CategoryPage = (category) => {
   const [secondCategory, setSecondCategory] = useState('전체');
-
+  console.log(category.category.ctgryTitle);
   const getSecondCategory = (value) => {
     setSecondCategory(value);
   };
@@ -33,7 +33,7 @@ const CategoryPage = (category) => {
       <Navigation />
       <div className='CategoryTitle__wrapper'>
         <div className='categoryTitle'>
-          <img src={category.category.strIconSource} alt='{title}' />
+          <img src={category.category.strIconSource[0].url} alt='{title}' />
           <h1>{category.category.ctgryTitle}</h1>
         </div>
         <div className='SecondCategory__container'>
