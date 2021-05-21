@@ -10,7 +10,7 @@ import Leerpage from '../ErrorPage/LeerPage';
 import './CategoryPage.css';
 
 const CategoryPage = (category) => {
-  const [secondCategory, setSecondCategory] = useState('all');
+  const [secondCategory, setSecondCategory] = useState('전체');
 
   const getSecondCategory = (value) => {
     setSecondCategory(value);
@@ -18,7 +18,7 @@ const CategoryPage = (category) => {
 
   let grid;
   if (secondCategory) {
-    if (secondCategory === 'all') {
+    if (secondCategory === '전체') {
       grid = <Grid filter={category.category.ctgryTitle} />;
     } else {
       grid = <Grid filter={secondCategory} />;
