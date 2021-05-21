@@ -21,7 +21,7 @@ const Tags = (props) => {
               <button
                 key={secondCategory.id}
                 className='SeondCategory__item'
-                onClick={() => sendSecondCategory({ secondCategory })}
+                onClick={() => sendSecondCategory(secondCategory.title)}
               >
                 {secondCategory.emoji}
                 {secondCategory.title}
