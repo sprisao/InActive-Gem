@@ -1,5 +1,5 @@
 import React from 'react';
-import { categories } from '../../../../datafiles/categories';
+import { useGlobalContext } from '../../../storeContext';
 
 import { Link } from 'react-router-dom';
 import { FiChevronLeft } from 'react-icons/fi';
@@ -7,11 +7,12 @@ import { FiChevronLeft } from 'react-icons/fi';
 import './DetailsNavi.css';
 
 const DetailsNavi = (props) => {
+  const { firstCategories, loading } = useGlobalContext();
   return (
     <section className='detailsNavi'>
-      <Link to={`/category/${props.categoryNumber}`}>
-        {categories.map((category) => {
-          if (category.id === props.categoryNumber) {
+      <Link to={`/category/${props.categoryTitle}`}>
+        {firstCategories.map((category) => {
+          if (category.ctgryTitle === props.categoryTitle) {
             return (
               <div key={category.id} className='detailsNavi__box'>
                 <FiChevronLeft className='detailsNavi__icon' />
