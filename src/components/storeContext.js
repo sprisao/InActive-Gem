@@ -49,7 +49,7 @@ const StoreProvider = ({ children }) => {
       );
 
     // 카테고리 데이터 불러오기
-    categoryBase('firstCategory')
+    storeBase('firstCategoryData')
       .select({
         view: 'Grid view',
       })
@@ -77,7 +77,7 @@ const StoreProvider = ({ children }) => {
 
     // 세컨드카테고리 데이터 불러오기
 
-    categoryBase('secondCategory')
+    storeBase('secondCategoryData')
       .select({
         view: 'Grid view',
       })
