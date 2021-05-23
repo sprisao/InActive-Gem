@@ -13,9 +13,15 @@ const GridCard = ({ store, tags }) => {
             return <span key={tag}>#{tag} </span>;
           })}
         </div>
-        <h3>{store.name}</h3>
-        <span>{store.eupmyeondongRi}</span>
-        <p>{store.shortDescription}</p>
+        <div className='storeName'>
+          <h3>{store.name}</h3>
+        </div>
+        <div className='quickInfos'>
+          <span>{store.eupmyeondongRi}</span>
+        </div>
+        <div className='shortDesc'>
+          <p>{store.shortDescription}</p>
+        </div>
       </article>
     </Link>
   );
