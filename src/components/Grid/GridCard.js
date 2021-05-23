@@ -1,9 +1,16 @@
 import React from 'react';
+import { HiBadgeCheck } from 'react-icons/hi';
 import { Link } from 'react-router-dom';
 
 import './GridCard.css';
 
 const GridCard = ({ store, tags }) => {
+  let verfiedStore;
+  if (store.storeVerified === true) {
+    verfiedStore = <HiBadgeCheck />;
+  }
+  console.log(store.storeVerified);
+
   return (
     <Link to={`/store/${store.id}`} className=''>
       <article className='gridCard'>
@@ -15,6 +22,7 @@ const GridCard = ({ store, tags }) => {
         </div>
         <div className='storeName'>
           <h3>{store.name}</h3>
+          {verfiedStore}
         </div>
         <div className='quickInfos'>
           <span>{store.eupmyeondongRi}</span>

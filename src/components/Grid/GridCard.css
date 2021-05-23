@@ -7,6 +7,8 @@
 
 .gridCard h3 {
   color: #272323;
+  font-size: 1.35rem;
+  font-weight: 500;
 }
 .gridCard img {
   object-fit: cover;
@@ -25,8 +27,16 @@
   font-size: 0.95rem;
   color: #444;
 }
+.tags {
+  word-break: keep-all;
+}
 .tags span {
-  font-size: 1rem;
+  font-size: 0.85rem;
   font-weight: 325;
   padding: 0.2rem 0;
+}
+
+.storeName {
+  display: flex;
+  color: #dc0f62;
 }
