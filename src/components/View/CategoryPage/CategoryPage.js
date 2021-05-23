@@ -15,12 +15,12 @@ const CategoryPage = (category) => {
     setSecondCategory(value);
   };
 
-  console.log(category.category.ctgryTitle);
+  console.log(category.category.firstCategory);
 
   let grid;
   if (secondCategory) {
     if (secondCategory === '전체') {
-      grid = <Grid filter={category.category.ctgryTitle} />;
+      grid = <Grid filter={category.category.firstCategory} />;
     } else {
       grid = <Grid filter={secondCategory} />;
     }
@@ -35,11 +35,11 @@ const CategoryPage = (category) => {
       <div className='CategoryTitle__wrapper'>
         <div className='categoryTitle'>
           <img src={category.category.strIconSource[0].url} alt='{title}' />
-          <h1>{category.category.ctgryTitle}</h1>
+          <h1>{category.category.firstCategory}</h1>
         </div>
         <div className='SecondCategory__container'>
           <SecondCategory
-            category={category.category.ctgryTitle}
+            category={category.category.firstCategory}
             getSecondCategory={getSecondCategory}
           />
         </div>

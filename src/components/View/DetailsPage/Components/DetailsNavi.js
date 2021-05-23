@@ -12,7 +12,7 @@ const DetailsNavi = (props) => {
     <section className='detailsNavi'>
       <Link to={`/category/${props.categoryTitle}`}>
         {firstCategories.map((category) => {
-          if (category.ctgryTitle === props.categoryTitle) {
+          if (category.firstCategory === props.categoryTitle) {
             return (
               <div key={category.id} className='detailsNavi__box'>
                 <FiChevronLeft className='detailsNavi__icon' />

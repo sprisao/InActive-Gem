@@ -28,7 +28,7 @@ const DetailsPage = ({ store }) => {
       <DetailsHeader />
       <DetailsNavi
         categoryNumber={store.categoryNumber}
-        categoryTitle={store.categoryTitle}
+        categoryTitle={store.firstCategory[0]}
       />
       <ImageBox img={store.images} name={store.name} />
       <Header

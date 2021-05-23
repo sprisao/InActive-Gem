@@ -18,13 +18,16 @@ const Navigation = () => {
         {firstCategories.map((category) => {
           if (category.displayed === true)
             return (
-              <Link key={category.id} to={`/category/${category.ctgryTitle}`}>
+              <Link
+                key={category.id}
+                to={`/category/${category.firstCategory}`}
+              >
                 <div key={category.id} className='navigation__btn'>
                   <img
                     src={category.strIconSource[0].url}
-                    alt={category.ctgryTitle}
+                    alt={category.firstCategory}
                   />
-                  <span>{category.ctgryTitle}</span>
+                  <span>{category.firstCategory}</span>
                 </div>
               </Link>
             );
