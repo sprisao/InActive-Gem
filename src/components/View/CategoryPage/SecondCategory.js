@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+import { Link } from 'react-router-dom';
 import { useGlobalContext } from '../../context';
 import './SecondCategory.css';
 
@@ -13,19 +14,25 @@ const Tags = (props) => {
     <section className='SeondCategory'>
       <div className='SeondCategory__container'>
         {secondCategories.map((secondCategory) => {
+          console.log(secondCategory.title);
           if (
             props.category === secondCategory.firstCategory[0] &&
             secondCategory.isActive === true
           )
             return (
-              <button
+              <Link
                 key={secondCategory.id}
-                className='SeondCategory__item'
-                onClick={() => sendSecondCategory(secondCategory.title)}
+                to={`/category/${secondCategory.firstCategory}/${secondCategory.title}`}
               >
-                {secondCategory.emoji}
-                {secondCategory.title}
-              </button>
+                <button
+                  key={secondCategory.id}
+                  className='SeondCategory__item'
+                  onClick={() => sendSecondCategory(secondCategory.title)}
+                >
+                  {secondCategory.emoji}
+                  {secondCategory.title}
+                </button>
+              </Link>
             );
         })}
       </div>
