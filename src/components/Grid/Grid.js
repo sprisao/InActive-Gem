@@ -10,7 +10,7 @@ const Grid = ({ filter }) => {
   const [filtered, setFiltered] = useState([]);
   useEffect(() => {
     const storeList = stores.map((store) => {
-      const firstFilter = store.categoryTitle;
+      const firstFilter = store.firstCategory[0];
       const secondFilter = store.secondCategory;
       const location = store.eupmyeondongRi;
 
@@ -31,7 +31,7 @@ const Grid = ({ filter }) => {
     leerfilter = (
       <section className='grid'>
         {stores.map((store) => {
-          if (store.categoryTitle === filter) {
+          if (store.firstCategory[0] === filter) {
             return (
               <GridCard
                 key={store.id}
