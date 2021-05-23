@@ -10,13 +10,15 @@ const Slide = (props) => {
   //   return <div>로딩중</div>;
   // }
   return (
-    <div className='slide'>
-      {stores.map((store) => {
-        if (store.firstCategory[0] === props.filter) {
-          return <FeaturedCard key={store.id} store={store}></FeaturedCard>;
-        }
-      })}
-    </div>
+    <section className='title'>
+      <div className='slide'>
+        {stores.map((store) => {
+          if (store.firstCategory[0] === props.filter) {
+            return <FeaturedCard key={store.id} store={store}></FeaturedCard>;
+          }
+        })}
+      </div>
+    </section>
   );
 };
 

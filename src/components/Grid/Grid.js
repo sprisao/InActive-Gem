@@ -13,37 +13,39 @@ const Grid = ({ filter }) => {
     leerfilter = <Leerpage />;
   } else {
     leerfilter = (
-      <section className='grid'>
-        {stores.map((store) => {
-          if (store.firstCategory[0] === filter) {
-            return (
-              <GridCard
-                key={store.id}
-                store={store}
-                tags={store.tags}
-              ></GridCard>
-            );
-          }
-          if (store.secondCategory[0] === filter) {
-            return (
-              <GridCard
-                key={store.id}
-                store={store}
-                tags={store.tags}
-              ></GridCard>
-            );
-          }
-          if (store.eupmyeondongRi === filter) {
-            console.log(store.eupmyeondongRi);
-            return (
-              <GridCard
-                key={store.id}
-                store={store}
-                tags={store.tags}
-              ></GridCard>
-            );
-          }
-        })}
+      <section className='title'>
+        <section className='grid'>
+          {stores.map((store) => {
+            if (store.firstCategory[0] === filter) {
+              return (
+                <GridCard
+                  key={store.id}
+                  store={store}
+                  tags={store.tags}
+                ></GridCard>
+              );
+            }
+            if (store.secondCategory[0] === filter) {
+              return (
+                <GridCard
+                  key={store.id}
+                  store={store}
+                  tags={store.tags}
+                ></GridCard>
+              );
+            }
+            if (store.eupmyeondongRi === filter) {
+              console.log(store.eupmyeondongRi);
+              return (
+                <GridCard
+                  key={store.id}
+                  store={store}
+                  tags={store.tags}
+                ></GridCard>
+              );
+            }
+          })}
+        </section>
       </section>
     );
   }

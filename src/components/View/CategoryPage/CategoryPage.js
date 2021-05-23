@@ -3,7 +3,7 @@ import { Link, useParams } from 'react-router-dom';
 
 import Navigation from '../LandingPage/Navigation';
 import Header from '../../Header';
-import Grid from '../../Grid/SectionGrid';
+import Grid from '../../../components/Grid/Grid';
 import SecondCategory from './SecondCategory';
 import Leerpage from '../ErrorPage/LeerPage';
 
@@ -14,6 +14,9 @@ const CategoryPage = (category) => {
   const getSecondCategory = (value) => {
     setSecondCategory(value);
   };
+
+  console.log(category.category.ctgryTitle);
+
   let grid;
   if (secondCategory) {
     if (secondCategory === '전체') {

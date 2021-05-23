@@ -1,7 +1,7 @@
 import React from 'react';
 import Navigation from './Navigation';
-import SectionGrid from '../../Grid/SectionGrid';
-import SectionSlide from '../../Swipe/SectionSlide';
+import Grid from '../../Grid/Grid';
+import Slide from '../../Swipe/Slide';
 
 import './LandingPage.css';
 const LandingPage = () => {
@@ -9,11 +9,11 @@ const LandingPage = () => {
     <div>
       <Navigation />
       {/* <News /> */}
-      {/* <SectionSlide section='new' filter='rstrn' /> */}
-      <SectionSlide section='hot' filter='카페' />
-      <SectionGrid section='restaurants' filter='음식점' />
+      {/* <Slide section='new' filter='rstrn' /> */}
+      <Slide section='hot' filter='카페' />
+      <Grid filter='맛집' />
 
-      <SectionGrid section='cafes' filter='카페' />
+      <Grid section='cafes' filter='카페' />
     </div>
   );
 };
