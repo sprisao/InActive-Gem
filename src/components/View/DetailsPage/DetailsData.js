@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useGlobalContext } from '../../storeContext';
+import { useGlobalContext } from '../../context';
 import { useParams } from 'react-router-dom';
 
 import DetailsPage from './DetailsPage';

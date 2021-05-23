@@ -1,0 +1,15 @@
+.footer {
+  width: 100vw;
+  margin-top: 3rem;
+}
+
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 5rem;
+}
+
+.footer__container p {
+  margin: 0 auto;
+}

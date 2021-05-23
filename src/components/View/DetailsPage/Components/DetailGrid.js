@@ -1,5 +1,5 @@
 import React from 'react';
-import { useGlobalContext } from '../../../storeContext';
+import { useGlobalContext } from '../../../context';
 import DetailGridCard from './DetailGridCard';
 import './DetailGrid.css';
 

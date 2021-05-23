@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { useGlobalContext } from '../../storeContext';
+import { useGlobalContext } from '../../context';
 import './SecondCategory.css';
 
 const Tags = (props) => {

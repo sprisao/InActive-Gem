@@ -1,5 +1,5 @@
 import React from 'react';
-import { useGlobalContext } from '../../components/storeContext';
+import { useGlobalContext } from '../context';
 import FeaturedCard from './FeaturedCard';
 import './Slide.css';
 

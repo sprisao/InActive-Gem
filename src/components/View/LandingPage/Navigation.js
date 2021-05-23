@@ -1,7 +1,7 @@
 import React from 'react';
 import Loading from '../../Loading';
 
-import { useGlobalContext } from '../../storeContext';
+import { useGlobalContext } from '../../context';
 
 import { Link } from 'react-router-dom';
 import './Navigation.css';

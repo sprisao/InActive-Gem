@@ -9,7 +9,6 @@ const GridCard = ({ store, tags }) => {
   if (store.storeVerified === true) {
     verfiedStore = <HiBadgeCheck />;
   }
-  console.log(store.storeVerified);
 
   return (
     <Link to={`/store/${store.id}`} className=''>
