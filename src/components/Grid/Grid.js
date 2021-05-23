@@ -40,8 +40,7 @@ const Grid = ({ filter }) => {
               ></GridCard>
             );
           }
-          if (store.secondCategory === filter) {
-            console.log(store.secondCategory);
+          if (store.secondCategory[0] === filter) {
             return (
               <GridCard
                 key={store.id}
