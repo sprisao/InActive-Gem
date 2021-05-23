@@ -27,13 +27,16 @@ function App() {
             <Header />
             <Home />
           </Route>
-          <Route path='/category/:ctgryTitle'>
+          <Route path='/category/:firstCategory'>
             <CategoryData />
           </Route>
-          <Route path='/category/*'>
+          <Route path='/category/:firstCategory/:secondCategory'>
+            <CategoryData />
+          </Route>
+          {/* <Route path='/category/*'>
             <Header />
             <Ready />
-          </Route>
+          </Route> */}
           <Route path='/store/:id'>
             <DetailsData />
           </Route>
