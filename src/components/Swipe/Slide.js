@@ -1,14 +1,15 @@
 import React from 'react';
 import { useGlobalContext } from '../context';
 import FeaturedCard from './FeaturedCard';
+import Loading from '../Loading';
 import './Slide.css';
 
 const Slide = (props) => {
   const { stores, loading } = useGlobalContext();
 
-  // if (loading) {
-  //   return <div>로딩중</div>;
-  // }
+  if (loading) {
+    return <Loading />;
+  }
   return (
     <section className='title'>
       <div className='slide'>

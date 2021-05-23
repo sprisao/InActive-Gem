@@ -1,5 +1,6 @@
 import React from 'react';
 import Navigation from './Navigation';
+import SectionHeader from '../../../components/SectionHeader/Title';
 import Grid from '../../Grid/Grid';
 import Slide from '../../Swipe/Slide';
 
@@ -8,8 +9,7 @@ const LandingPage = () => {
   return (
     <div>
       <Navigation />
-      {/* <News /> */}
-      {/* <Slide section='new' filter='rstrn' /> */}
+      <SectionHeader title='인기카페' emoji='' desc='원주 최고의 인기카페' />
       <Slide section='hot' filter='카페' />
       <Grid filter='맛집' />
 

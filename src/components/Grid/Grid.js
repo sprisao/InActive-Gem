@@ -8,6 +8,11 @@ import './Grid.css';
 const Grid = ({ filter }) => {
   const { stores, loading } = useGlobalContext();
   console.log(filter);
+
+  if (loading) {
+    return <Loading />;
+  }
+
   let leerfilter;
   if (filter === 'leer') {
     leerfilter = <Leerpage />;
