@@ -31,6 +31,7 @@ const Grid = ({ filter }) => {
     leerfilter = (
       <section className='grid'>
         {stores.map((store) => {
+          console.log(store.secondCategory[0]);
           if (store.firstCategory[0] === filter) {
             return (
               <GridCard

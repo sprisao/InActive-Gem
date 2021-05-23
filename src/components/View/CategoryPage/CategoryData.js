@@ -6,7 +6,7 @@ import CategoryPage from './CategoryPage';
 const CategoryData = () => {
   const { ctgryTitle } = useParams();
   const { firstCategories, secondCategories, loading } = useGlobalContext();
-  console.log(secondCategories.firstCategoryData);
+  console.log(secondCategories);
   return (
     <>
       {firstCategories.map((category) => {
