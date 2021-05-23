@@ -5,10 +5,6 @@ const storeBase = new Airtable({ apiKey: 'key5AMdi7ejadTzUy' }).base(
   'appDzyBPyX5MjMkrU'
 );
 
-const categoryBase = new Airtable({ apiKey: 'key5AMdi7ejadTzUy' }).base(
-  'appBXpitZEzwoEZCK'
-);
-
 const StoreContext = React.createContext();
 
 const StoreProvider = ({ children }) => {

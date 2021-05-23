@@ -51,7 +51,7 @@ const DetailsPage = ({ store }) => {
         phoneNumber={store.phoneNumber}
         eupmyeondongRi={store.eupmyeondongRi}
       />
-      <Recommendation filter={store.secondCategory} />
+      <Recommendation filter={store.secondCategory[0]} />
     </section>
   );
 };
