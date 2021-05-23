@@ -14,7 +14,7 @@ const Tags = (props) => {
       <div className='SeondCategory__container'>
         {secondCategories.map((secondCategory) => {
           if (
-            props.category === secondCategory.firstCategory &&
+            props.category === secondCategory.firstCategory[0] &&
             secondCategory.isActive === true
           )
             return (

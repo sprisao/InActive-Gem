@@ -11,11 +11,9 @@ import './CategoryPage.css';
 
 const CategoryPage = (category) => {
   const [secondCategory, setSecondCategory] = useState('전체');
-  console.log(category.category.ctgryTitle);
   const getSecondCategory = (value) => {
     setSecondCategory(value);
   };
-
   let grid;
   if (secondCategory) {
     if (secondCategory === '전체') {

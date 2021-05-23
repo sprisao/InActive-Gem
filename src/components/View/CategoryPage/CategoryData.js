@@ -6,12 +6,11 @@ import CategoryPage from './CategoryPage';
 const CategoryData = () => {
   const { ctgryTitle } = useParams();
   const { firstCategories, secondCategories, loading } = useGlobalContext();
-
+  console.log(secondCategories.firstCategoryData);
   return (
     <>
       {firstCategories.map((category) => {
         if (category.ctgryTitle === ctgryTitle) {
-          console.log(category.id);
           return (
             <CategoryPage key={category.id} category={category}></CategoryPage>
           );
