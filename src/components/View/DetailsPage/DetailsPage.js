@@ -36,6 +36,7 @@ const DetailsPage = ({ store }) => {
         shortDescription={store.shortDescription}
         tags={store.tags}
         instagramAccount={store.instagramAccount}
+        storeVerified={store.storeVerified}
         naverLink={store.naverLink}
       />
       <OwnerSection

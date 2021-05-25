@@ -6,7 +6,7 @@
 .details__Header h4 {
   margin-left: 0.1rem;
 
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   font-weight: 400;
 }
 
@@ -17,13 +17,13 @@
 }
 
 .details__name h1 {
-  font-size: 3rem;
-  font-weight: 700;
+  font-size: 2rem;
+  font-weight: 500;
 }
 
 .details__tag {
   margin-top: 0.5rem;
-  font-size: 1.25rem;
+  font-size: 1.15rem;
 }
 
 .details__instagram {

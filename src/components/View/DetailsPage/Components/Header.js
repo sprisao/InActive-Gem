@@ -22,6 +22,12 @@ const Header = (props) => {
   } else {
   }
 
+  // 인증업체여부 필터링
+  let verfiedStore;
+  if (props.storeVerified === true) {
+    verfiedStore = <HiBadgeCheck />;
+  }
+
   return (
     <div className='details__Header'>
       <div className='details__shortDesc'>
@@ -29,7 +35,7 @@ const Header = (props) => {
       </div>
       <div className='details__name'>
         <h1>{props.name}</h1>
-        <HiBadgeCheck />
+        {verfiedStore}
       </div>
       {instagramAcc}
       <div className='details__naver'>

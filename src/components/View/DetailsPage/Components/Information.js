@@ -35,16 +35,27 @@ const Information = (props) => {
     </div>;
   }
 
+  // 휴무 필터링
   let breakDays;
+
   if (props.breakDays) {
-    breakDays = (
-      <div className='breakDays'>
-        <FiXCircle style={{ strokeWidth: '1px' }} className='details__icon' />
-        <p>
-          {props.breakDays} <span style={{ color: 'black' }}>휴무</span>
-        </p>
-      </div>
-    );
+    if (props.breakDays[0] === '연중무휴') {
+      breakDays = (
+        <div className='breakDays'>
+          <FiXCircle style={{ strokeWidth: '1px' }} className='details__icon' />
+          <p>{props.breakDays}</p>
+        </div>
+      );
+    } else {
+      breakDays = (
+        <div className='breakDays'>
+          <FiXCircle style={{ strokeWidth: '1px' }} className='details__icon' />
+          <p>
+            {props.breakDays} <span style={{ color: 'black' }}>휴무</span>
+          </p>
+        </div>
+      );
+    }
   }
 
   return (
