@@ -16,8 +16,10 @@
   justify-content: space-between;
 }
 .ownerImage__container img {
-  width: 100%;
+  height: 5.375rem;
+  width: 5.375rem;
   clip-path: circle(50% at center);
+  object-fit: cover;
 }
 .ownerName {
   margin-top: 0.25rem;

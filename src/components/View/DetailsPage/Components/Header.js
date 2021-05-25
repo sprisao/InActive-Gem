@@ -37,21 +37,23 @@ const Header = (props) => {
         <h1>{props.name}</h1>
         {verfiedStore}
       </div>
-      {instagramAcc}
-      <div className='details__naver'>
-        <img
-          className='details__naver__icon'
-          src='https://res.cloudinary.com/diimwnnmj/image/upload/v1620621770/n_j9cdkl.svg'
-          alt=''
-        />
-        <p onClick={() => window.open(props.naverLink, '_parent')}>
-          {props.name}
-        </p>
-      </div>
       <div className='details__tag'>
         {props.tags.map((tag) => {
           return <span key={tag}>#{tag} </span>;
         })}
+      </div>
+      <div className='sns__container'>
+        {instagramAcc}
+        <div className='details__naver'>
+          <img
+            className='details__naver__icon'
+            src='https://res.cloudinary.com/diimwnnmj/image/upload/v1620621770/n_j9cdkl.svg'
+            alt=''
+          />
+          <p onClick={() => window.open(props.naverLink, '_parent')}>
+            {props.name}
+          </p>
+        </div>
       </div>
     </div>
   );

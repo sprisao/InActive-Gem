@@ -1,6 +1,6 @@
 .details__Header {
   margin-bottom: 0.25rem;
-  padding-left: 1rem;
+  padding: 0 1rem;
 }
 
 .details__Header h4 {
@@ -22,8 +22,12 @@
 }
 
 .details__tag {
-  margin-top: 0.5rem;
+  margin-top: 0.3rem;
   font-size: 1.15rem;
+}
+
+.sns__container {
+  margin-top: 0.25rem;
 }
 
 .details__instagram {
@@ -42,7 +46,7 @@
 }
 
 .details__naver {
-  margin-top: 0.15rem;
+  margin-top: 0.2rem;
   display: flex;
   align-items: center;
 }
