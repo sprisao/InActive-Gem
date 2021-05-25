@@ -8,7 +8,7 @@
 .menu__background {
   background-color: #f8f8f8;
 }
-.menu__containter {
+.menu__container {
   display: grid;
   align-items: start;
   grid-template-columns: 2fr 4fr;
