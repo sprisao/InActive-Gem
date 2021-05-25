@@ -15,8 +15,6 @@ const CategoryPage = (category) => {
     setSecondCategory(value);
   };
 
-  console.log(category.category.firstCategory);
-
   let grid;
   if (secondCategory) {
     if (secondCategory === '전체') {

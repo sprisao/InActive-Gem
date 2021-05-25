@@ -7,7 +7,6 @@ import './Grid.css';
 
 const Grid = ({ filter }) => {
   const { stores, loading } = useGlobalContext();
-  console.log(filter);
 
   if (loading) {
     return <Loading />;

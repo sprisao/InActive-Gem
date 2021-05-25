@@ -14,7 +14,6 @@ const Tags = (props) => {
     <section className='SeondCategory'>
       <div className='SeondCategory__container'>
         {secondCategories.map((secondCategory) => {
-          console.log(secondCategory.title);
           if (
             props.category === secondCategory.firstCategory[0] &&
             secondCategory.isActive === true

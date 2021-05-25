@@ -10,24 +10,20 @@ const DetailsNavi = (props) => {
   const { firstCategories, loading } = useGlobalContext();
   return (
     <section className='detailsNavi'>
-      <Link to={`/category/${props.categoryTitle}`}>
-        {firstCategories.map((category) => {
-          if (category.firstCategory === props.categoryTitle) {
-            return (
-              <div key={category.id} className='detailsNavi__box'>
+      {firstCategories.map((category) => {
+        if (category.firstCategory === props.categoryTitle) {
+          return (
+            <Link key={category.id} to={`/category/${props.categoryTitle}`}>
+              <div className='detailsNavi__box'>
                 <FiChevronLeft className='detailsNavi__icon' />
                 <div className='detailsNavi__contents'>
-                  {/* <img
-                    src={category.strIconSource}
-                    alt='{props.categoryTitle}'
-                  /> */}
                   <p>{props.categoryTitle}</p>
                 </div>
               </div>
-            );
-          }
-        })}
-      </Link>
+            </Link>
+          );
+        }
+      })}
     </section>
   );
 };

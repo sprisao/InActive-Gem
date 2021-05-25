@@ -65,7 +65,7 @@ const StoreProvider = ({ children }) => {
           } else {
             console.log('카테고리 데이터 불러오기 성공');
             setFirstCategories(firstCategory);
-            console.log(firstCategory);
+
             setLoading(false);
           }
         }
@@ -93,7 +93,6 @@ const StoreProvider = ({ children }) => {
           } else {
             console.log('세컨드 카테고리 데이터 불러오기 성공');
             setSecondCategories(secondCategory);
-            console.log(secondCategory);
             setLoading(false);
           }
         }

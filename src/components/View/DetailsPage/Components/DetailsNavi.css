@@ -7,12 +7,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-}
-
-.detailsNavi__box img {
-  margin-right: 0.2rem;
-  width: 1.8rem;
-  height: 100%;
+  width: 10rem;
 }
 
 .detailsNavi__icon {
@@ -22,8 +17,8 @@
 
 .detailsNavi__contents {
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-end;
-  font-size: 1;
+  align-items: center;
+  width: 8rem;
+  font-size: 1.15rem;
   font-weight: 400;
 }
