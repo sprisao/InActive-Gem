@@ -1,16 +1,17 @@
 .menu {
-  padding: 0 1rem;
 }
 
 .menu h2 {
   font-weight: 500;
+  padding: 0 1rem;
 }
-
+.menu__background {
+  background-color: #f8f8f8;
+}
 .menu__containter {
   display: grid;
   align-items: start;
   grid-template-columns: 2fr 4fr;
-  background-color: #f8f8f8;
   padding: 1rem;
   margin-top: 0.7rem;
   grid-column-gap: 1.2rem;
@@ -19,17 +20,12 @@
 
 .image__container {
   position: relative;
-  height: 8rem;
-  width: 8rem;
+  height: 8.5rem;
+  width: 8.5rem;
   object-fit: cover;
   clip-path: circle(50% at center);
 }
 
-.article__container {
-  display: flex;
-  flex-direction: column;
-  padding: 0.5rem 0;
-}
 .image__container img {
   position: absolute;
   width: 100%;
@@ -37,6 +33,13 @@
   object-fit: cover;
 }
 
+.article__container {
+  display: flex;
+  flex-direction: column;
+  padding: 0.75rem 0;
+}
+
 .menu__price {
+  font-size: 1.1rem;
   margin-top: 1rem;
 }
