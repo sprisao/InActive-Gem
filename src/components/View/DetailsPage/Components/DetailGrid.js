@@ -21,7 +21,6 @@ const DetailGrid = (props) => {
   };
   const maxNum = maxLength();
 
-  console.log('str.ctrg : ' + stores[0].secondCategory[0]);
   const selectIndex = (totalIndex, selectingNumber) => {
     const randomIndexArray = [];
     for (let i = 0; i < selectingNumber; i++) {

@@ -7,6 +7,7 @@ import ImageBox from './Components/Swiper';
 import Header from './Components/Header';
 import Information from './Components/Information';
 import OwnerSection from './Components/OwnerSection';
+import Menu from './Components/Menu/Menu';
 import Recommendation from './Components/Recommendations';
 
 import { Link } from 'react-router-dom';
@@ -23,11 +24,15 @@ import './DetailsPage.css';
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
 const DetailsPage = ({ store }) => {
+  let menu;
+  if (store.isMenu === true) {
+    menu = <Menu store={store.name} />;
+  }
   return (
     <section className='detailsPage'>
       <DetailsHeader />
       <DetailsNavi
-        categoryNumber={store.categoryNumber}
+        categoryNumber={store.categoryNumber[0]}
         categoryTitle={store.firstCategory[0]}
       />
       <ImageBox img={store.images} name={store.name} />
@@ -52,6 +57,7 @@ const DetailsPage = ({ store }) => {
         phoneNumber={store.phoneNumber}
         eupmyeondongRi={store.eupmyeondongRi}
       />
+      {menu}
       <Recommendation filter={store.secondCategory[0]} self={store.id} />
     </section>
   );

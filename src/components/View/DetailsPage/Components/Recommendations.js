@@ -6,7 +6,7 @@ import './Recommendations.css';
 const Recommendations = (props) => {
   return (
     <section className='recommendation'>
-      <h1>비슷한 가게들</h1>
+      <h2>비슷한 가게들</h2>
       <DetailGrid filter={props.filter} self={props.self} />
     </section>
   );

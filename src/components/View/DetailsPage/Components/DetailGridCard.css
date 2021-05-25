@@ -9,8 +9,8 @@
   margin: 0 auto;
 }
 .imageContainer img {
-  border-radius: 10px;
   width: 100%;
+  border-radius: 10px;
   height: 13.5rem;
   object-fit: cover;
 }
@@ -20,4 +20,12 @@
   font-weight: 350;
   font-size: 1rem;
   color: #444;
+}
+
+.articleContainer h3 {
+  font-weight: 400;
+}
+
+.menu__intro {
+  word-break: keep-all;
 }
