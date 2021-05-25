@@ -52,7 +52,7 @@ const DetailsPage = ({ store }) => {
         phoneNumber={store.phoneNumber}
         eupmyeondongRi={store.eupmyeondongRi}
       />
-      <Recommendation filter={store.secondCategory[0]} />
+      <Recommendation filter={store.secondCategory[0]} self={store.id} />
     </section>
   );
 };

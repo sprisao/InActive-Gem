@@ -43,13 +43,14 @@ const DetailGrid = (props) => {
   return (
     <section className='detail__grid'>
       {selectIndex(stores.length, maxNum).map((index) => {
-        return (
-          <DetailGridCard
-            key={stores[index].id}
-            store={stores[index]}
-            tags={stores[index].tags}
-          ></DetailGridCard>
-        );
+        if (stores[index].id !== props.self)
+          return (
+            <DetailGridCard
+              key={stores[index].id}
+              store={stores[index]}
+              tags={stores[index].tags}
+            ></DetailGridCard>
+          );
       })}
     </section>
   );
