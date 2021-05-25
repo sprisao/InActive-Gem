@@ -41,7 +41,7 @@ const DetailsPage = ({ store }) => {
       />
       <OwnerSection
         ownerMessage={store.ownerMessage}
-        ownerImage={store.images[1].thumbnails.large.url}
+        ownerImage={store.images[0].url}
       />
       <Information
         openHour={store.openHour}
