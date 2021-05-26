@@ -20,7 +20,7 @@
   z-index: 2;
 }
 
-.article {
+.featuredCard__articleContainer {
   margin-right: 1rem;
   margin-top: 10.5rem;
   display: flex;
@@ -29,14 +29,21 @@
   z-index: 1;
 }
 
-.article p {
+.featuredCard__articleContainer p {
   color: white;
   font-size: 1rem;
 }
-.article h3 {
+.featuredCard__articleContainer h3 {
   color: white;
   font-weight: 500;
 }
-.article span {
+.featuredCard__articleContainer span {
   color: white;
+}
+
+.featuredCard__storeName {
+  display: flex;
+  justify-content: flex-end;
+  color: white;
+  margin-right: -1rem;
 }

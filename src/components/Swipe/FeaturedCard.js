@@ -1,9 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { HiBadgeCheck } from 'react-icons/hi';
 
 import './FeaturedCard.css';
 
 const FeaturedCard = ({ store }) => {
+  let verfiedStore;
+  if (store.storeVerified === true) {
+    verfiedStore = <HiBadgeCheck />;
+  }
   return (
     <Link to={`/store/${store.id}`} className=''>
       <div
@@ -13,9 +18,14 @@ const FeaturedCard = ({ store }) => {
         }}
       >
         <div className='featuredCard_image'>
-          <div className='article'>
-            <p>{store.shortDescription}</p>
-            <h3>{store.name}</h3>
+          <div className='featuredCard__articleContainer'>
+            <div className='featuredCard__shortDesc'>
+              <p>{store.shortDescription}</p>
+            </div>
+            <div className='featuredCard__storeName'>
+              <h3>{store.name}</h3>
+              {verfiedStore}
+            </div>
             <span>{store.eupmyeondongRi}</span>
           </div>
         </div>
