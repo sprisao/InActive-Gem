@@ -26,6 +26,8 @@ const Grid = ({ filter }) => {
                   key={store.id}
                   store={store}
                   tags={store.tags}
+                  open={store.openHour}
+                  close={store.closeHour}
                 ></GridCard>
               );
             }
@@ -35,6 +37,8 @@ const Grid = ({ filter }) => {
                   key={store.id}
                   store={store}
                   tags={store.tags}
+                  open={store.openHour}
+                  close={store.closeHour}
                 ></GridCard>
               );
             }
@@ -45,6 +49,8 @@ const Grid = ({ filter }) => {
                   key={store.id}
                   store={store}
                   tags={store.tags}
+                  open={store.openHour}
+                  close={store.closeHour}
                 ></GridCard>
               );
             }

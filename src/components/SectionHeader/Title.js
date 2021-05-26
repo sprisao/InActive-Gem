@@ -5,10 +5,7 @@ const Title = ({ title, emoji, desc }) => {
   return (
     <section className='title'>
       <div className='section__title'>
-        <h1>
-          <span className='emoji'>{emoji}</span>
-          {title}
-        </h1>
+        <h1>{title}</h1>
         <h4>{desc}</h4>
       </div>
     </section>
