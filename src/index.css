@@ -56,7 +56,7 @@ html {
   --fullWidth: 100%;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 500px) {
   :root {
     --width: 100%;
     --smallWidth: 85vw;
@@ -113,7 +113,12 @@ body {
   color: #222;
 }
 
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 480px) {
+  html {
+    font-size: 14.5px;
+  }
+}
+@media screen and (min-width: 780px) {
   html {
     font-size: 16px;
   }

@@ -1,5 +1,6 @@
 .gridCard {
   display: grid;
+  white-space: wrap;
   grid-template-columns: 1fr;
   text-align: start;
   border-radius: 15px;
