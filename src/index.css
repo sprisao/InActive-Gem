@@ -53,20 +53,22 @@ html {
   --fullWidth: 28.8rem;
 }
 
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 380px) {
   :root {
+    --width: 100%;
     --smallWidth: 85vw;
-    --normalWidth: 28.8rem;
-    --maxWidth: 100vw;
+    --normalWidth: 100%;
+    --maxWidth: 100%;
     --fullWidth: 1170px;
   }
 }
 @media screen and (min-width: 760px) {
   :root {
+    --width: 100%;
     --smallWidth: 85vw;
-    --normalWidth: 28.8rem;
-    --maxWidth: 95vw;
-    --fullWidth: 1170px;
+    --normalWidth: 100%;
+    --maxWidth: 100%;
+    --fullWidth: 100%;
   }
 }
 @media screen and (min-width: 1600px) {

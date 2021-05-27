@@ -1,5 +1,5 @@
 .navigation {
-  max-width: var(--normalWidth);
+  max-width: 640px;
   margin: 0 auto;
   padding: 1.25rem 1rem;
 }
@@ -9,6 +9,18 @@
   grid-row-gap: 1rem;
   grid-column-gap: 0.8rem;
 }
+
+@media screen and (min-width: 480px) {
+  .navigation__wrap {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media screen and (min-width: 600px) {
+  .navigation__wrap {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
 .navigation__btn {
   display: flex;
   flex-direction: column;
