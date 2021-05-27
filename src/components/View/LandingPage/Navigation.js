@@ -23,11 +23,15 @@ const Navigation = () => {
                 to={`/category/${category.firstCategory}`}
               >
                 <div key={category.id} className='navigation__btn'>
-                  <img
-                    src={category.strIconSource[0].url}
-                    alt={category.firstCategory}
-                  />
-                  <span>{category.firstCategory}</span>
+                  <div className='navigation__btn__imageContainer'>
+                    <img
+                      src={category.strIconSource[0].url}
+                      alt={category.firstCategory}
+                    />
+                  </div>
+                  <div className='navigation__btn__textContainer'>
+                    <span>{category.firstCategory}</span>
+                  </div>
                 </div>
               </Link>
             );
