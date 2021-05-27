@@ -46,14 +46,17 @@
 html {
   font-size: 13px;
 }
+
+/* Display Width */
+
 :root {
   --smallWidth: 85vw;
-  --normalWidth: 28.8rem;
-  --maxWidth: 100vw;
-  --fullWidth: 28.8rem;
+  --normalWidth: 100%;
+  --maxWidth: 100%;
+  --fullWidth: 100%;
 }
 
-@media screen and (min-width: 380px) {
+@media screen and (min-width: 450px) {
   :root {
     --width: 100%;
     --smallWidth: 85vw;
@@ -162,7 +165,6 @@ Section Header
 */
 
 .section {
-  max-width: 60.8rem !important;
   margin: 0 auto;
   margin-bottom: 3rem;
   padding: 0 80px;
