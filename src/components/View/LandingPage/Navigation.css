@@ -22,8 +22,8 @@
   }
 
   .navigation__btn__imageContainer {
-    width: 3rem;
-    height: 3rem;
+    width: 3.5rem;
+    height: 3.5rem;
   }
   .navigation__btn__textContainer {
     font-size: 1.25rem;
@@ -42,8 +42,8 @@
 .navigation__btn__imageContainer {
   justify-content: center;
   align-items: center;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 3.5rem;
+  height: 3.5rem;
   border-radius: 50%;
   /* border: rgba(236, 236, 236, 0.938) 0.1px solid; */
   margin-bottom: 0.15rem;
@@ -56,7 +56,7 @@
 }
 
 .navigation__btn__textContainer {
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   font-weight: 400;
   margin: 0;
 }
