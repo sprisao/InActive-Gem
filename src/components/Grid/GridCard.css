@@ -21,6 +21,7 @@
 .gridCard h3 {
   color: #272323;
   font-weight: 500;
+  white-space: normal;
 }
 
 .tags {

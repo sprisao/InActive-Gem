@@ -56,11 +56,11 @@ html {
   --fullWidth: 100%;
 }
 
-@media screen and (min-width: 450px) {
+@media screen and (min-width: 480px) {
   :root {
     --width: 100%;
     --smallWidth: 85vw;
-    --normalWidth: 100%;
+    --normalWidth: 28.5rem;
     --maxWidth: 100%;
     --fullWidth: 1170px;
   }
@@ -69,7 +69,7 @@ html {
   :root {
     --width: 100%;
     --smallWidth: 85vw;
-    --normalWidth: 100%;
+    --normalWidth: 28.5rem;
     --maxWidth: 100%;
     --fullWidth: 100%;
   }
@@ -77,7 +77,7 @@ html {
 @media screen and (min-width: 1600px) {
   :root {
     --smallWidth: 85vw;
-    --normalWidth: 28.8rem;
+    --normalWidth: 28.5rem;
     --maxWidth: 60vw;
     --fullWidth: 1170px;
   }
