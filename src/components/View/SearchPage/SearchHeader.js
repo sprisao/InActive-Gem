@@ -1,13 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { GoSearch } from 'react-icons/go';
-import './Header.css';
+import './SearchHeader.css';
 
 function Header() {
   return (
     <section className='header'>
-      <div className='header__wrapper'>
-        <div className='placeholder'></div>
+      <div className='searchHeader__wrapper'>
         <Link to='/'>
           <div className='logo__container'>
             <img
@@ -15,11 +14,6 @@ function Header() {
               className='logo'
               alt='logo'
             />
-          </div>
-        </Link>
-        <Link to='/search'>
-          <div className='search__container'>
-            <GoSearch />
           </div>
         </Link>
       </div>

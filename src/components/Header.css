@@ -4,22 +4,24 @@ header
 ============
 */
 .header {
-  margin-bottom: 1rem;
-  margin-top: 1.25rem;
+  margin-top: 1rem;
+  margin-bottom: 0.75rem;
 }
 
 .header__wrapper {
   max-width: var(--normalWidth);
-  display: grid;
-  grid-gap: 1rem;
-  grid-template-columns: repeat(2, minmax(10rem, 1fr));
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 0 1rem;
   margin: 0 auto;
 }
+.logo__container {
+  width: 12rem;
+}
 
-.header-logo img {
+.logo__container img {
   width: 100%;
-  height: auto;
 }
 
 .header-search {
