@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
 
-import DetailsHeader from './../../Header';
-
 import DetailsNavi from './Components/DetailsNavi';
 import ImageBox from './Components/Swiper';
 import Header from './Components/Header';
@@ -30,7 +28,6 @@ const DetailsPage = ({ store }) => {
   }
   return (
     <section className='detailsPage'>
-      <DetailsHeader />
       <DetailsNavi
         categoryNumber={store.categoryNumber[0]}
         categoryTitle={store.firstCategory[0]}

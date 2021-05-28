@@ -5,7 +5,7 @@ import { useGlobalContext } from '../../context';
 import './SecondCategory.css';
 
 const Tags = (props) => {
-  const { secondCategories, firstCategories } = useGlobalContext();
+  const { secondCategories } = useGlobalContext();
   const sendSecondCategory = (text) => {
     props.getSecondCategory(text);
   };

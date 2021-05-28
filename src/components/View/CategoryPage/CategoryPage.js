@@ -28,7 +28,6 @@ const CategoryPage = (category) => {
 
   return (
     <section className='CategoryPage'>
-      <Header />
       <Navigation />
       <div className='CategoryTitle__wrapper'>
         <div className='categoryTitle'>
