@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 
 import Navigation from '../LandingPage/Navigation';
-import Header from '../../Header';
 import Grid from '../../../components/Grid/Grid';
 import SecondCategory from './SecondCategory';
 import Leerpage from '../ErrorPage/LeerPage';

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { GoSearch } from 'react-icons/go';
 import './Header.css';
 
-function Header() {
+function Header(props) {
   return (
     <section className='header'>
       <div className='header__wrapper'>
@@ -17,7 +17,12 @@ function Header() {
           </Link>
         </div>
         <div className='header-search'>
-          <input className='header-searchBox' type='search' name='search' />
+          <input
+            className='header-searchBox'
+            type='search'
+            name='search'
+            onChange={props.handleChange}
+          />
           <GoSearch
             className='header-searchIcon'
             style={{ fontSize: '1.25rem' }}
