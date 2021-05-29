@@ -52,7 +52,7 @@ const DetailsPage = ({ store }) => {
         breaktimeEnd={store.breaktimeEnd}
         breakDays={store.breakDays}
         phoneNumber={store.phoneNumber}
-        eupmyeondongRi={store.eupmyeondongRi}
+        fullAddress={store.fullAddress}
       />
       {menu}
       <Recommendation filter={store.secondCategory[0]} self={store.id} />

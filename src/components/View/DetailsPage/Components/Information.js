@@ -64,8 +64,7 @@ const Information = (props) => {
       {breakDays}
       <div className='location'>
         <FiMapPin style={{ strokeWidth: '1px' }} className='details__icon' />
-        <p>{props.eupmyeondongRi}</p>
-        <FiChevronDown />
+        <p>{props.fullAddress}</p>
       </div>
       <div className='phoneNumber'>
         <FiPhoneOutgoing

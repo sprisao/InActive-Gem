@@ -36,12 +36,12 @@
 }
 
 .details__instagram__icon {
-  font-size: 1.2rem;
+  font-size: 1.35rem;
   margin-right: 0.2rem;
 }
 .details__instagram p {
   color: #dc0f62;
-  font-size: large;
+  font-size: 1.35;
   cursor: pointer;
 }
 
@@ -52,16 +52,16 @@
 }
 
 .details__naver__icon {
-  width: 1.05rem;
+  width: 1.25rem;
   margin-right: 0.2rem;
-  margin-left: 0.1rem;
-  padding: 0.1rem;
+  margin-left: 0.08rem;
+  padding: 0.2rem;
   border: 0.75px solid;
   border-radius: 3px;
 }
 
 .details__naver p {
   color: #dc0f62;
-  font-size: large;
+  font-size: 1.35;
   cursor: pointer;
 }
