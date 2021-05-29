@@ -18,8 +18,8 @@ function Header() {
           </div>
         </Link>
         <Link to='/search'>
-          <div className='search__container'>
-            <GoSearch />
+          <div className='searchIcon__container'>
+            <GoSearch style={{ fontSize: '1.6rem' }} />
           </div>
         </Link>
       </div>

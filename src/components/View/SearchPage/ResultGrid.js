@@ -7,7 +7,7 @@ const Grid = ({ filter }) => {
 
   return (
     <section className='title'>
-      <h1> 검색결과: </h1>
+      <h3> 검색결과: </h3>
       <section className='grid'>
         {filter.map((store) => {
           return (

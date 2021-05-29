@@ -25,7 +25,7 @@ const SearchPage = () => {
           onChange={handleChange}
         />
       </div>
-      <SearchResults userInput={userInput} />;
+      <SearchResults userInput={userInput} />
     </section>
   );
 };

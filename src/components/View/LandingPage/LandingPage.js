@@ -7,7 +7,7 @@ import Slide from '../../Swipe/Slide';
 import './LandingPage.css';
 const LandingPage = () => {
   return (
-    <div>
+    <>
       <Navigation />
       <SectionHeader title='인기카페 ✨' desc='원주 최고의 인기카페' />
       <Slide section='hot' filter='카페' />
@@ -22,7 +22,7 @@ const LandingPage = () => {
       <Grid filter='카페' />
 
       {/* <Grid section='cafes' filter='카페' /> */}
-    </div>
+    </>
   );
 };
 

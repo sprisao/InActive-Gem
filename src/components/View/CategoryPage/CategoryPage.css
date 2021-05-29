@@ -1,6 +1,7 @@
 .CategoryTitle__wrapper {
   padding: 0 1.2rem;
   margin: 0 auto;
+  margin-top: 1rem;
   width: var(--maxWidth);
 }
 
@@ -10,7 +11,6 @@
 }
 
 .categoryTitle img {
-  margin-right: 0.5rem;
-  width: 3rem;
-  height: 100%;
+  margin-right: 0.25rem;
+  width: 2.5rem;
 }

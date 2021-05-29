@@ -60,7 +60,7 @@ const Grid = ({ filter }) => {
     );
   }
 
-  return <div>{leerfilter}</div>;
+  return <>{leerfilter}</>;
 };
 
 export default Grid;

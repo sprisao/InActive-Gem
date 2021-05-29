@@ -12,8 +12,3 @@
     grid-template-columns: repeat(auto-fill, minmax(191px, 1fr));
   }
 }
-@media screen and (min-width: 760px) {
-  .grid {
-    grid-template-columns: repeat(auto-fill, minmax(191px, 1fr));
-  }
-}

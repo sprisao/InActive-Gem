@@ -3,10 +3,11 @@
   flex-direction: column;
   width: var(--maxWidth);
   justify-content: center;
+  margin: 0 auto;
 }
 
 .searchBox__container {
-  margin: 0 auto;
+  margin-bottom: 1rem;
   display: flex;
   justify-content: center;
   width: var(--normalWidth);
