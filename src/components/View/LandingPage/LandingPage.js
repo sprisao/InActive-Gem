@@ -1,10 +1,12 @@
-import React from 'react';
-import Navigation from './Navigation';
-import SectionHeader from '../../../components/SectionHeader/Title';
-import Grid from '../../Grid/Grid';
-import Slide from '../../Swipe/Slide';
+import React from "react";
+import Navigation from "./Navigation";
+import SectionHeader from "../../../components/SectionHeader/Title";
+import Grid from "../../Grid/Grid";
+import GridRandom from "../../Grid/GridRandom";
+import Slide from "../../Swipe/Slide";
 
-import './LandingPage.css';
+import "./LandingPage.css";
+
 const LandingPage = () => {
   return (
     <>
@@ -19,7 +21,8 @@ const LandingPage = () => {
       />
       <Slide section='hot' filter='호프・주점' /> */}
 
-      <Grid filter='카페' />
+      {/* <Grid filter='카페' /> */}
+      <GridRandom filter="카페" filter2="맛집" />
 
       {/* <Grid section='cafes' filter='카페' /> */}
     </>
