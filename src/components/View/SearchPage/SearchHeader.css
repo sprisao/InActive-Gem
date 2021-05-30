@@ -3,10 +3,6 @@
 header 
 ============
 */
-.header {
-  margin-top: 1rem;
-  margin-bottom: 0.75rem;
-}
 
 .searchHeader__wrapper {
   max-width: var(--normalWidth);
@@ -15,11 +11,4 @@ header
   align-items: center;
   padding: 0 1rem;
   margin: 0 auto;
-}
-.logo__container {
-  width: 12rem;
-}
-
-.logo__container img {
-  width: 100%;
 }

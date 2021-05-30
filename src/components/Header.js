@@ -11,7 +11,7 @@ function Header() {
         <Link to='/'>
           <div className='logo__container'>
             <img
-              src='https://res.cloudinary.com/diimwnnmj/image/upload/v1620457721/%E1%84%80%E1%85%A9%E1%84%80%E1%85%A9%E1%84%8C%E1%85%A6%E1%86%B7BI_fpwc2t.png'
+              src='https://res.cloudinary.com/diimwnnmj/image/upload/v1622362199/gem/%E1%84%80%E1%85%A9%E1%84%80%E1%85%A9%E1%84%8C%E1%85%A6%E1%86%B7BI_rkcuwf.png'
               className='logo'
               alt='logo'
             />

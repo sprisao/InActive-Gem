@@ -4,8 +4,8 @@ header
 ============
 */
 .header {
-  margin-top: 1rem;
-  margin-bottom: 0.75rem;
+  margin-top: 2rem;
+  height: 4.5rem;
 }
 
 .header__wrapper {
@@ -22,7 +22,7 @@ header
 }
 
 .logo__container {
-  width: 12rem;
+  width: 9rem;
 }
 
 .logo__container img {
