@@ -1,19 +1,19 @@
 {
-  "short_name": "고고젬",
-  "name": "어디로 갈지 고민한다면? 고고젬",
+  "short_name": "GEM",
+  "name": "어디가지? 고민할 땐, 고고젬!",
   "icons": [
     {
-      "src": "[GEM]-BI.png",
+      "src": "GEM-favicon.png",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "favicon.png",
+      "src": "GEM-favicon.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "favicon.png",
+      "src": "GEM-favicon.png",
       "type": "image/png",
       "sizes": "512x512"
     }
