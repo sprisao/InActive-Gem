@@ -1,11 +1,11 @@
-import React from "react";
-import Navigation from "./Navigation";
-import SectionHeader from "../../../components/SectionHeader/Title";
-import Grid from "../../Grid/Grid";
-import GridRandom from "../../Grid/GridRandom";
-import Slide from "../../Swipe/Slide";
+import React from 'react';
+import Navigation from './Navigation';
+import SectionHeader from '../../../components/SectionHeader/Title';
+import Grid from '../../Grid/Grid';
+import GridRandom from '../../Grid/GridRandom';
+import Slide from '../../Swipe/Slide';
 
-import "./LandingPage.css";
+import './LandingPage.css';
 
 const LandingPage = () => {
   return (
@@ -19,10 +19,14 @@ const LandingPage = () => {
         title='이번 주말 추천! 🔥'
         desc='좋은 사람들과 좋은 곳에서 시원하게 한잔! 🍻'
       />
+      <SectionHeader
+        title='이번 주말 추천! 🔥'
+        desc='좋은 사람들과 좋은 곳에서 시원하게 한잔! 🍻'
+      />
       <Slide section='hot' filter='호프・주점' /> */}
 
       {/* <Grid filter='카페' /> */}
-      <GridRandom filter="카페" filter2="맛집" />
+      <GridRandom filter='카페' filter2='맛집' />
 
       {/* <Grid section='cafes' filter='카페' /> */}
     </>

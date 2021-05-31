@@ -1,13 +1,21 @@
 .footer {
   width: 100vw;
   margin-top: 3rem;
+  margin-bottom: 2rem;
 }
 
 .footer__container {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 5rem;
+
+  height: 5.5rem;
+}
+
+.footer__container img {
+  width: 2rem;
+  cursor: pointer;
+  margin: 1rem auto;
 }
 
 .footer__container p {
