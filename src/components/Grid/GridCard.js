@@ -47,7 +47,7 @@ const GridCard = ({ store, tags, open, close }) => {
           </div>
           <div className='quickInfos'>
             <div className='quickInfos__location'>
-              <span>{store.eupmyeondongRi}</span>
+              <span>{store.miniAddress}</span>
             </div>
             {businessHour}
           </div>

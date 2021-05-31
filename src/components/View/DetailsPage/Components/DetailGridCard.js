@@ -18,7 +18,7 @@ const DetailGridCard = ({ store, tags }) => {
             })}
           </div>
           <h3>{store.name}</h3>
-          <span>{store.eupmyeondongRi}</span>
+          <span>{store.miniAddress}</span>
           <p>{store.shortDescription}</p>
         </div>
       </article>

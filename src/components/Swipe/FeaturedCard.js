@@ -26,7 +26,7 @@ const FeaturedCard = ({ store }) => {
               <h3>{store.name}</h3>
               {verfiedStore}
             </div>
-            <span>{store.eupmyeondongRi}</span>
+            <span>{store.miniAddress}</span>
           </div>
         </div>
       </div>
