@@ -10,7 +10,7 @@ header
 
 .header__wrapper {
   display: flex;
-  height: 3rem;
+  height: 3.5rem;
   justify-content: space-between;
   max-width: var(--normalWidth);
   align-items: center;
@@ -31,9 +31,7 @@ header
 }
 
 .searchIcon__container {
-  display: flex;
   width: 3rem;
-  justify-content: center;
   padding: 0.7rem;
 }
 
