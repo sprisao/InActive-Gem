@@ -79,7 +79,7 @@ html {
     --width: 100%;
     --smallWidth: 85vw;
     --normalWidth: 28.5rem;
-    --maxWidth: 1350px;
+    --maxWidth: 900px;
     --fullWidth: 100%;
   }
 }
