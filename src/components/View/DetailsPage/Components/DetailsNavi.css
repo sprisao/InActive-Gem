@@ -1,6 +1,7 @@
 .detailsNavi {
   width: var(--normalWidth);
   margin-bottom: 0.3rem;
+  padding: 0.5rem 0.5rem;
 }
 
 .detailsNavi__box {
@@ -11,10 +12,15 @@
 }
 
 .detailsNavi__icon {
-  font-size: 1.7rem;
-  margin-left: -0.25rem;
+  display: flex;
+  align-items: center;
+  width: 1.25rem;
+  margin-right: 0.25rem;
 }
 
+.detailsNavi__icon img {
+  width: 100%;
+}
 .detailsNavi__contents {
   display: flex;
   align-items: center;
