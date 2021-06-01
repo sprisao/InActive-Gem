@@ -1,21 +1,21 @@
 .details__Header {
   margin-bottom: 0.25rem;
-  padding: 0 1rem;
 }
 
 .details__Header h4 {
-  margin-left: 0.1rem;
-
   font-size: 1.15rem;
   font-weight: 400;
 }
 
-.details__name {
-  display: flex;
-  font-size: 1.5rem;
-  color: #dc0f62;
+.details__Header__Container {
+  padding: 1rem;
+  background-color: #f8f8f8;
 }
 
+.details__name {
+  display: flex;
+  color: #dc0f62;
+}
 .details__name h1 {
   font-size: 2rem;
   font-weight: 500;
@@ -27,7 +27,9 @@
 }
 
 .sns__container {
-  margin-top: 0.25rem;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
 }
 
 .details__instagram {
@@ -36,12 +38,11 @@
 }
 
 .details__instagram__icon {
-  font-size: 1.35rem;
-  margin-right: 0.2rem;
+  font-size: 1.25rem;
+  margin-right: 0.4rem;
 }
 .details__instagram p {
-  color: #dc0f62;
-  font-size: 1.35;
+  font-size: 1.35rem;
   cursor: pointer;
 }
 
@@ -52,16 +53,15 @@
 }
 
 .details__naver__icon {
-  width: 1.25rem;
-  margin-right: 0.2rem;
+  width: 1.13rem;
+  margin-right: 0.45rem;
   margin-left: 0.08rem;
-  padding: 0.2rem;
+  padding: 0.1rem;
   border: 0.75px solid;
   border-radius: 3px;
 }
 
 .details__naver p {
-  color: #dc0f62;
-  font-size: 1.35;
+  font-size: 1.35rem;
   cursor: pointer;
 }

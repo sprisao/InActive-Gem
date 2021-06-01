@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 import DetailsNavi from './Components/DetailsNavi';
 import ImageBox from './Components/Swiper';
@@ -7,8 +7,6 @@ import Information from './Components/Information';
 import OwnerSection from './Components/OwnerSection';
 import Menu from './Components/Menu/Menu';
 import Recommendation from './Components/Recommendations';
-
-import { Link } from 'react-router-dom';
 
 // Swiper 생성을 위한 Dependencies //
 import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
@@ -44,6 +42,7 @@ const DetailsPage = ({ store }) => {
       <OwnerSection
         ownerMessage={store.ownerMessage}
         ownerImage={store.images[0].url}
+        name={store.name}
       />
       <Information
         openHour={store.openHour}

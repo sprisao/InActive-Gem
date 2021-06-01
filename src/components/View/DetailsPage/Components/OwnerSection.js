@@ -10,7 +10,7 @@ const OwnerSection = (props) => {
           <img src={props.ownerImage} alt='' />
         </div>
         <div className='ownerName__container'>
-          <p>사장님</p>
+          <p>{props.name}</p>
         </div>
         <div className='ownerName'></div>
       </div>

@@ -30,17 +30,19 @@ const Header = (props) => {
 
   return (
     <div className='details__Header'>
-      <div className='details__shortDesc'>
-        <h4>{props.shortDescription}</h4>
-      </div>
-      <div className='details__name'>
-        <h1>{props.name}</h1>
-        {verfiedStore}
-      </div>
-      <div className='details__tag'>
-        {props.tags.map((tag) => {
-          return <span key={tag}>#{tag} </span>;
-        })}
+      <div className='details__Header__Container'>
+        <div className='details__shortDesc'>
+          <h4>{props.shortDescription}</h4>
+        </div>
+        <div className='details__name'>
+          <h1>{props.name}</h1>
+          {verfiedStore}
+        </div>
+        <div className='details__tag'>
+          {props.tags.map((tag) => {
+            return <span key={tag}>#{tag} </span>;
+          })}
+        </div>
       </div>
       <div className='sns__container'>
         {instagramAcc}
@@ -53,7 +55,11 @@ const Header = (props) => {
           <p onClick={() => window.open(props.naverLink, '_parent')}>
             {props.name}
           </p>
+          <br />
         </div>
+        <p style={{ fontSize: '0.8rem', marginTop: '0.2rem' }}>
+          *클릭하면 링크로 이동합니다.
+        </p>
       </div>
     </div>
   );
