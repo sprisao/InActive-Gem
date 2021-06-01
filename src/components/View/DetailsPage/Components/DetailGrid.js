@@ -4,7 +4,7 @@ import DetailGridCard from './DetailGridCard';
 import './DetailGrid.css';
 
 const DetailGrid = (props) => {
-  const { stores, loading } = useGlobalContext();
+  const { stores } = useGlobalContext();
 
   const maxLength = () => {
     let j = 0;
@@ -13,8 +13,8 @@ const DetailGrid = (props) => {
         j++;
       }
     }
-    if (j > 9) {
-      return 10;
+    if (j > props.length - 1) {
+      return props.length;
     } else {
       return j;
     }

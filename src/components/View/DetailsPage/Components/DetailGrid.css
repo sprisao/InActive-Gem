@@ -1,8 +1,7 @@
 .detail__grid {
   display: grid;
   white-space: wrap;
-  max-width: var(--maxWidth);
   margin: 1rem 0 auto;
   grid-gap: 1rem;
-  grid-template-columns: repeat(1, minmax(9rem, 1fr));
+  grid-template-columns: 1fr;
 }
