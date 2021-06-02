@@ -61,3 +61,7 @@
   font-size: 1.3rem;
   margin-left: 0.15rem;
 }
+
+.btn_container {
+  all: unset;
+}
