@@ -7,6 +7,11 @@
   font-size: 1.35rem;
 }
 
+.details__Information hr {
+  margin: 0.5rem auto;
+  width: 98%;
+  border: #f8f8f8 0.5px solid;
+}
 .details__icon {
   font-size: 1.35rem;
   margin-right: 0.7rem;
@@ -33,14 +38,21 @@
   align-items: center;
 }
 
-.location p {
-  margin-right: 0.25rem;
-}
-
 .phoneNumber {
   display: flex;
   align-items: center;
 }
 
-.phoneNumber p {
+.copyBtn__container {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  color: #dc0f62;
+  margin-left: 0.85rem;
+}
+.copyBtn__container p {
+  margin-top: 0.1rem;
+  align-items: center;
+  font-size: 1.3rem;
+  margin-left: 0.15rem;
 }
