@@ -6,22 +6,6 @@ import './Header.css';
 const url = 'https://www.instagram.com/';
 
 const Header = (props) => {
-  let instagramAcc;
-  if (props.instagramAccount) {
-    instagramAcc = (
-      <div className='details__instagram'>
-        <FiInstagram
-          style={{ strokeWidth: '1px' }}
-          className='details__instagram__icon'
-        />
-        <p onClick={() => window.open(url + props.instagramAccount, '_parent')}>
-          {props.instagramAccount}
-        </p>
-      </div>
-    );
-  } else {
-  }
-
   // 인증업체여부 필터링
   let verfiedStore;
   if (props.storeVerified === true) {
@@ -43,23 +27,6 @@ const Header = (props) => {
             return <span key={tag}>#{tag} </span>;
           })}
         </div>
-      </div>
-      <div className='sns__container'>
-        {instagramAcc}
-        <div className='details__naver'>
-          <img
-            className='details__naver__icon'
-            src='https://res.cloudinary.com/diimwnnmj/image/upload/v1620621770/n_j9cdkl.svg'
-            alt=''
-          />
-          <p onClick={() => window.open(props.naverLink, '_parent')}>
-            {props.name}
-          </p>
-          <br />
-        </div>
-        <p style={{ fontSize: '0.8rem', marginTop: '0.2rem' }}>
-          *클릭하면 링크로 이동합니다.
-        </p>
       </div>
     </div>
   );

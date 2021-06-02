@@ -3,6 +3,7 @@ import React from 'react';
 import DetailsNavi from './Components/DetailsNavi';
 import ImageBox from './Components/Swiper';
 import Header from './Components/Header';
+import SNS from './Components/SNS';
 import Information from './Components/Information';
 import OwnerSection from './Components/OwnerSection';
 import Menu from './Components/Menu/Menu';
@@ -38,6 +39,11 @@ const DetailsPage = ({ store }) => {
         instagramAccount={store.instagramAccount}
         storeVerified={store.storeVerified}
         naverLink={store.naverLink}
+      />
+      <SNS
+        instagramAccount={store.instagramAccount}
+        naverLink={store.naverLink}
+        name={store.name}
       />
       <OwnerSection
         ownerMessage={store.ownerMessage}
