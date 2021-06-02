@@ -51,7 +51,6 @@ const Information = (props) => {
 
   // 휴무 필터링
   let breakDays;
-  console.log(props.breakDays.length);
 
   if (props.breakDays) {
     if (props.breakDays[0] === '연중무휴') {
