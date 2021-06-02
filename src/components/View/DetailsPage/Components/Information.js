@@ -148,7 +148,7 @@ const Information = (props) => {
         <button className='btn_container' type='button' onClick={openLink}>
           <div className='copyBtn__container'>
             <FiPhoneCall style={{ fontSize: '1.15rem' }} />
-            <p>전화</p>
+            <p>전화걸기</p>
           </div>
         </button>
 
