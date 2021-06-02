@@ -61,7 +61,7 @@ const DetailsPage = ({ store }) => {
       />
       {menu}
       <Recommendation
-        filter={store.secondCategory[0]}
+        filter={store.firstCategory[0]}
         filter2={store.secondCategory[0]}
         self={store.id}
       />
