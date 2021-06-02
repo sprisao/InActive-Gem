@@ -38,6 +38,11 @@
   align-items: center;
 }
 
+.location__fullAddress {
+  max-width: 75%;
+  word-break: keep-all;
+}
+
 .phoneNumber {
   display: flex;
   align-items: center;

@@ -112,7 +112,9 @@ const Information = (props) => {
           style={{ strokeWidth: '1px', color: '#a8a8a8' }}
           className='details__icon'
         />
-        <p>{props.fullAddress}</p>
+        <div className='location__fullAddress'>
+          <p>{props.fullAddress}</p>
+        </div>
         <CopyToClipboard
           text={props.fullAddress}
           onCopy={() => setCopied(true)}
