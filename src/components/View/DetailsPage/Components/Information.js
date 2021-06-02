@@ -20,6 +20,9 @@ import './Information.css';
 
 const Information = (props) => {
   const [copied, setCopied] = useState(false);
+
+  console.log(props.openHour);
+
   let businessHours;
   if (props.breaktimeStart) {
     businessHours = (
@@ -38,15 +41,20 @@ const Information = (props) => {
       </>
     );
   } else {
-    <div className='businessHours'>
-      <FiClock
-        style={{ strokeWidth: '1px', color: '#a8a8a8' }}
-        className='details__icon'
-      />
-      <p>
-        {props.openHour} ~ {props.closeHour}
-      </p>
-    </div>;
+    businessHours = (
+      <>
+        <div className='businessHours'>
+          <FiClock
+            style={{ strokeWidth: '1px', color: '#a8a8a8' }}
+            className='details__icon'
+          />
+          <p>
+            {props.openHour} ~ {props.closeHour}
+          </p>
+        </div>
+        <hr />
+      </>
+    );
   }
 
   // 휴무 필터링
