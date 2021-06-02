@@ -36,13 +36,21 @@
 .location {
   display: flex;
   align-items: center;
+  height: 1.9rem;
 }
 
 .location__fullAddress {
-  max-width: 75%;
+  display: flex;
+  max-width: 73%;
+  height: 100%;
+  align-items: flex-start;
+  overflow: scroll;
   word-break: keep-all;
 }
 
+.location__fullAddress p {
+  align-items: flex-start;
+}
 .phoneNumber {
   display: flex;
   align-items: center;

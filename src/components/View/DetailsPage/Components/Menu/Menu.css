@@ -6,14 +6,14 @@
   padding: 0 1rem;
 }
 .menu__background {
-  background-color: #f8f8f8;
+  margin-top: 0.7rem;
 }
 .menu__container {
+  background-color: #f8f8f8;
   display: grid;
   align-items: start;
   grid-template-columns: 2fr 4fr;
   padding: 1rem;
-  margin-top: 0.7rem;
   grid-column-gap: 1.2rem;
   grid-row-gap: 1.2rem;
 }
