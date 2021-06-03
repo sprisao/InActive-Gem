@@ -19,6 +19,8 @@ import './Information.css';
 const Information = (props) => {
   const [copied, setCopied] = useState(false);
 
+  // 전화걸기 기능
+
   const openLink = () => {
     const telNumber = props.phoneNumber;
     const pageUrl = 'tel:' + telNumber;
@@ -26,6 +28,8 @@ const Information = (props) => {
   };
 
   console.log(props.openHour);
+
+  // 브레이크 타임 필터링
 
   let businessHours;
   if (props.breaktimeStart) {

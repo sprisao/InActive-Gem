@@ -2,6 +2,6 @@
   display: grid;
   white-space: wrap;
   margin: 1rem 0 auto;
-  grid-gap: 1rem;
+  grid-gap: 1.25rem;
   grid-template-columns: 1fr;
 }
