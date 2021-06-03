@@ -38,9 +38,17 @@ const Menu = (props) => {
 
   return (
     <section className='menu'>
-      <h2>메뉴</h2>
+      <h2>대표 메뉴</h2>
       <div className='menu__background'>
         {menu.map((item) => {
+          let englishName;
+          if (item.engMenu) {
+            englishName = (
+              <div className='english__menu__name'>
+                <p>{item.engMenu}</p>
+              </div>
+            );
+          }
           return (
             <div className='menu__container' key={item.id}>
               <div className='image__container'>
@@ -50,6 +58,7 @@ const Menu = (props) => {
                 <div className='menu__name'>
                   <h4>{item.menu}</h4>
                 </div>
+                {englishName}
                 <div className='menu__intro'>
                   <p>{item.menuDesc}</p>
                 </div>
