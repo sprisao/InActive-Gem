@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { useGlobalContext } from '../../context';
 import './SecondCategory.css';
 
-const Tags = (props) => {
+const SecondCategory = (props) => {
   const { secondCategories } = useGlobalContext();
   const sendSecondCategory = (text) => {
     props.getSecondCategory(text);
@@ -38,4 +38,4 @@ const Tags = (props) => {
   );
 };
 
-export default Tags;
+export default SecondCategory;
