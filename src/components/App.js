@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 // import pages
@@ -7,12 +7,12 @@ import CategoryData from './View/CategoryPage/CategoryData';
 import DetailsData from './View/DetailsPage/DetailsData';
 import SearchPage from './View/SearchPage/SearchPage';
 import Error from './View/ErrorPage/Error';
-import Ready from './View/ErrorPage/Ready';
 
 import ScrollToTop from './ScrollToTop';
 
 // import components
 import Header from './Header';
+import Navigation from './Navigation';
 import SearchHeader from './View/SearchPage/SearchHeader';
 import Footer from './Footer';
 
@@ -23,10 +23,12 @@ function App() {
         <Switch>
           <Route exact path='/'>
             <Header />
+            <Navigation />
             <LandingPage />
           </Route>
           <Route exact path='/category/홈'>
             <Header />
+            <Navigation />
             <LandingPage />
           </Route>
           <Route exact path='/search'>
@@ -35,10 +37,12 @@ function App() {
           </Route>
           <Route path='/category/:firstCategory'>
             <Header />
+            <Navigation />
             <CategoryData />
           </Route>
           <Route path='/category/:firstCategory/:secondCategory'>
             <Header />
+            <Navigation />
             <CategoryData />
           </Route>
           {/* <Route path='/category/*'>

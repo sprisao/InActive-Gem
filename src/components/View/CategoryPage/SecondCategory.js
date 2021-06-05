@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import { Link } from 'react-router-dom';
 import { useGlobalContext } from '../../context';
@@ -32,6 +32,7 @@ const SecondCategory = (props) => {
                 </button>
               </Link>
             );
+          else return null;
         })}
       </div>
     </section>

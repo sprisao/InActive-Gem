@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { useGlobalContext } from '../../context';
 import ResultGrid from './ResultGrid';
 
 const SearchResults = (props) => {
-  const [results, setResults] = useState([]);
-  const { stores, loading } = useGlobalContext();
+  const { stores } = useGlobalContext();
 
   const filterResult = stores.filter(
     (result) =>

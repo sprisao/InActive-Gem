@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { useGlobalContext } from '../../context';
 import { useParams } from 'react-router-dom';
 
 import CategoryPage from './CategoryPage';
 const CategoryData = () => {
   const { firstCategory } = useParams();
-  const { firstCategories, secondCategories, loading } = useGlobalContext();
+  const { firstCategories } = useGlobalContext();
   return (
     <>
       {firstCategories.map((category) => {
@@ -13,7 +13,7 @@ const CategoryData = () => {
           return (
             <CategoryPage key={category.id} category={category}></CategoryPage>
           );
-        }
+        } else return null;
       })}
     </>
   );

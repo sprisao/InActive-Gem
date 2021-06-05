@@ -1,10 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import React, { useState } from 'react';
 
-import Navigation from '../LandingPage/Navigation';
 import Grid from '../../../components/Grid/Grid';
 import SecondCategory from './SecondCategory';
-import Leerpage from '../ErrorPage/LeerPage';
 
 import './CategoryPage.css';
 
@@ -27,7 +24,6 @@ const CategoryPage = (category) => {
 
   return (
     <section className='CategoryPage'>
-      <Navigation />
       <div className='CategoryTitle__wrapper'>
         <div className='categoryTitle'>
           <img src={category.category.strIconSource[0].url} alt='{title}' />

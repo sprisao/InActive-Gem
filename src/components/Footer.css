@@ -1,5 +1,6 @@
 .footer {
   width: 100vw;
+  height: 8rem;
   margin-top: 3rem;
   margin-bottom: 2rem;
 }
@@ -8,10 +9,11 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-
-  height: 5.5rem;
 }
 
+.contact {
+  display: flex;
+}
 .footer__container img {
   width: 2rem;
   cursor: pointer;

@@ -1,16 +1,14 @@
 import React from 'react';
-import Navigation from './Navigation';
-import SectionHeader from '../../../components/SectionHeader/Title';
-import Grid from '../../Grid/Grid';
+// import SectionHeader from '../../../components/SectionHeader/Title';
+// import Grid from '../../Grid/Grid';
 import GridRandom from '../../Grid/GridRandom';
-import Slide from '../../Swipe/Slide';
+// import Slide from '../../Swipe/Slide';
 
 import './LandingPage.css';
 
 const LandingPage = () => {
   return (
     <>
-      <Navigation />
       {/* <SectionHeader title='인기카페 ✨' desc='원주 최고의 인기카페' />
       <Slide section='hot' filter='카페' />
       <SectionHeader title='오늘의 맛집 🍛' desc='원쥴랭 추천 맛집' />

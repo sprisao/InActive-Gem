@@ -1,13 +1,15 @@
-import React from 'react';
-import Loading from '../../Loading';
+import React, { useRef, useEffect } from 'react';
+import Loading from './Loading';
 
-import { useGlobalContext } from '../../context';
+import { useGlobalContext } from './context';
 
 import { Link } from 'react-router-dom';
 import './Navigation.css';
 
 const Navigation = () => {
   const { firstCategories, loading } = useGlobalContext();
+
+  const headerRef = useRef(null);
 
   if (loading) {
     return <Loading />;
@@ -35,6 +37,7 @@ const Navigation = () => {
                 </div>
               </Link>
             );
+          else return null;
         })}
       </div>
     </section>
