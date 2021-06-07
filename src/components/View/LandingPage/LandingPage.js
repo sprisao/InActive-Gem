@@ -22,6 +22,7 @@ const LandingPage = () => {
   useEffect(() => {
     base('stores')
       .select({
+        maxRecords: 30,
         view: 'main',
       })
       .firstPage(function (err, records) {
