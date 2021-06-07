@@ -7,11 +7,11 @@ import { Link } from 'react-router-dom';
 import './Navigation.css';
 
 const Navigation = () => {
-  const { firstCategories, loading } = useGlobalContext();
+  const { firstCategories, navigationLoading } = useGlobalContext();
 
   const headerRef = useRef(null);
 
-  if (loading) {
+  if (navigationLoading) {
     return <Loading />;
   }
   return (

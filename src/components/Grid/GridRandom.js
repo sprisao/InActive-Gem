@@ -1,12 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import { useGlobalContext } from '../context';
+import React from 'react';
 import GridCard from './GridCard';
-import Loading from '../Loading';
 import Leerpage from '../View/ErrorPage/LeerPage';
 import './Grid.css';
 
 const GridRandom = (props) => {
-  const { stores, loading } = useGlobalContext();
   const maxLength = () => {
     let j = 0;
     for (let i = 0; i < props.stores.length; i++) {
@@ -41,10 +38,6 @@ const GridRandom = (props) => {
     }
     return randomIndexArray;
   };
-
-  if (loading) {
-    return <Loading />;
-  }
 
   let leerfilter;
   if (props.filter === 'leer' || props.filter2 === 'leer') {

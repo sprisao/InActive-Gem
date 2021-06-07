@@ -9,6 +9,9 @@ const Context = React.createContext();
 
 const StoreProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
+  const [navigationLoading, setNavigationLoading] = useState(true);
+  const [secondLoading, setSecondLoading] = useState(true);
+  const [locationLoading, setLocationLoading] = useState(true);
   const [stores, setStores] = useState([]);
   const [firstCategories, setFirstCategories] = useState([]);
   const [secondCategories, setSecondCategories] = useState([]);
@@ -45,8 +48,10 @@ const StoreProvider = ({ children }) => {
           }
         }
       );
+  }, []);
 
-    // 카테고리 데이터 불러오기
+  // 카테고리 데이터 불러오기
+  useEffect(() => {
     storeBase('firstCategoryData')
       .select({
         view: 'Grid view',
@@ -68,13 +73,14 @@ const StoreProvider = ({ children }) => {
             console.log('카테고리 데이터 불러오기 성공');
             setFirstCategories(firstCategory);
 
-            setLoading(false);
+            setNavigationLoading(false);
           }
         }
       );
+  }, []);
 
-    // 세컨드카테고리 데이터 불러오기
-
+  // 세컨드카테고리 데이터 불러오기
+  useEffect(() => {
     storeBase('secondCategoryData')
       .select({
         view: 'Grid view',
@@ -95,11 +101,13 @@ const StoreProvider = ({ children }) => {
           } else {
             console.log('세컨드 카테고리 데이터 불러오기 성공');
             setSecondCategories(secondCategory);
-            setLoading(false);
+            setSecondLoading(false);
           }
         }
       );
+  }, []);
 
+  useEffect(() => {
     storeBase('locationCategoryData')
       .select({
         view: 'Grid view',
@@ -120,7 +128,7 @@ const StoreProvider = ({ children }) => {
           } else {
             console.log('로케이션 카테고리 데이터 불러오기 성공');
             setlocationCategories(locationCategory);
-            setLoading(false);
+            setLocationLoading(false);
           }
         }
       );
@@ -130,10 +138,13 @@ const StoreProvider = ({ children }) => {
     <Context.Provider
       value={{
         loading,
+        navigationLoading,
         stores,
         firstCategories,
         secondCategories,
         locationCategories,
+        secondLoading,
+        locationLoading,
       }}
     >
       {children}
