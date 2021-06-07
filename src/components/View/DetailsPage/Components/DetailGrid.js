@@ -19,6 +19,14 @@ const DetailGrid = (props) => {
           j++;
         }
       }
+      if (props.categoryType === "3") {
+        if (
+          stores[i].firstCategory[0] === props.filter &&
+          stores[i].secondCategory[0] !== props.filter2
+        ) {
+          j++;
+        }
+      }
     }
     if (j > props.length - 1) {
       return props.length;
@@ -46,6 +54,20 @@ const DetailGrid = (props) => {
       }
       if (props.categoryType === "2") {
         if (stores[randomNum].secondCategory[0] === props.filter2) {
+          if (randomIndexArray.indexOf(randomNum) === -1) {
+            randomIndexArray.push(randomNum);
+          } else {
+            i--;
+          }
+        } else {
+          i--;
+        }
+      }
+      if (props.categoryType === "3") {
+        if (
+          stores[randomNum].firstCategory[0] === props.filter &&
+          stores[randomNum].secondCategory[0] !== props.filter2
+        ) {
           if (randomIndexArray.indexOf(randomNum) === -1) {
             randomIndexArray.push(randomNum);
           } else {
