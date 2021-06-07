@@ -1,18 +1,18 @@
-import React, { useState, useEffect } from "react";
-import { useGlobalContext } from "../context";
-import GridCard from "./GridCard";
-import Loading from "../Loading";
-import Leerpage from "../View/ErrorPage/LeerPage";
-import "./Grid.css";
+import React, { useState, useEffect } from 'react';
+import { useGlobalContext } from '../context';
+import GridCard from './GridCard';
+import Loading from '../Loading';
+import Leerpage from '../View/ErrorPage/LeerPage';
+import './Grid.css';
 
 const GridRandom = (props) => {
   const { stores, loading } = useGlobalContext();
   const maxLength = () => {
     let j = 0;
-    for (let i = 0; i < stores.length; i++) {
+    for (let i = 0; i < props.stores.length; i++) {
       if (
-        stores[i].firstCategory[0] === props.filter ||
-        stores[i].firstCategory[0] === props.filter2
+        props.stores[i].firstCategory[0] === props.filter ||
+        props.stores[i].firstCategory[0] === props.filter2
       ) {
         j++;
       }
@@ -27,8 +27,8 @@ const GridRandom = (props) => {
       let randomNum = Math.floor(Math.random() * totalIndex);
 
       if (
-        stores[randomNum].firstCategory[0] === props.filter ||
-        stores[randomNum].firstCategory[0] === props.filter2
+        props.stores[randomNum].firstCategory[0] === props.filter ||
+        props.stores[randomNum].firstCategory[0] === props.filter2
       ) {
         if (randomIndexArray.indexOf(randomNum) === -1) {
           randomIndexArray.push(randomNum);
@@ -47,20 +47,20 @@ const GridRandom = (props) => {
   }
 
   let leerfilter;
-  if (props.filter === "leer" || props.filter2 === "leer") {
+  if (props.filter === 'leer' || props.filter2 === 'leer') {
     leerfilter = <Leerpage />;
   } else {
     leerfilter = (
-      <section className="title">
-        <section className="grid">
-          {selectIndex(stores.length, maxNum).map((index) => {
+      <section className='title'>
+        <section className='grid'>
+          {selectIndex(props.stores.length, maxNum).map((index) => {
             return (
               <GridCard
-                key={stores[index].id}
-                store={stores[index]}
-                tags={stores[index].tags}
-                open={stores[index].openHour}
-                close={stores[index].closeHour}
+                key={props.stores[index].id}
+                store={props.stores[index]}
+                tags={props.stores[index].tags}
+                open={props.stores[index].openHour}
+                close={props.stores[index].closeHour}
               ></GridCard>
             );
           })}
