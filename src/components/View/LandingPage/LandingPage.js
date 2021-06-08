@@ -17,31 +17,64 @@ const base = new Airtable({ apiKey: 'key5AMdi7ejadTzUy' }).base(
 const LandingPage = () => {
   const [mainStores, setMainStores] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [page, setPage] = useState(false);
 
   const mainStore = [];
-  useEffect(() => {
+
+  const fetchStores = () => {
+    setLoading(true);
     base('stores')
       .select({
-        maxRecords: 30,
-        view: 'main',
+        maxRecords: 150,
+        pageSize: 30,
+        view: 'Grid view',
       })
-      .firstPage(function (err, records) {
-        if (err) {
-          console.error(err);
-          return;
-        }
-        records.forEach(function (record) {
-          mainStore.push({
-            id: record.id,
-            ...record._rawJson.fields,
+      .eachPage(
+        function page(records, fetchNextPage) {
+          records.forEach(function (record) {
+            mainStore.push({
+              id: record.id,
+              ...record._rawJson.fields,
+            });
+            console.log('Retrieved', record.get('name'));
           });
-        });
-        setMainStores(mainStore);
-        setLoading(false);
-      });
+          console.log(mainStore);
+          setMainStores(mainStore);
+          setLoading(false);
+          fetchNextPage();
+        },
+        function done(err) {
+          console.log('no more records');
+          if (err) {
+            console.error(err);
+            return;
+          }
+        }
+      );
+  };
+
+  useEffect(() => {
+    fetchStores();
   }, []);
 
-  console.log(mainStores);
+  useEffect(() => {
+    const event = window.addEventListener('scroll', () => {
+      // console.log(`innerHeight ${window.innerHeight}`);
+      // console.log(`scrollY ${window.scrollY}`);
+      // console.log(`body height ${document.body.scrollHeight}`);
+      if (
+        window.innerHeight + window.scrollY >=
+        document.body.scrollHeight - 2
+      ) {
+        // setPage((oldPage) => {
+        //   return oldPage + 1;
+        // });
+        setPage(true);
+        console.log('작업중');
+      }
+    });
+    return () => window.removeEventListener('scroll', event);
+  }, []);
 
   if (loading) {
     return <Loading />;
@@ -69,6 +102,7 @@ const LandingPage = () => {
       <SectionHeader title='GEM💎' desc='원주 실시간 맛집, 카페' />
 
       <GridRandom filter='카페' filter2='맛집' stores={mainStores} />
+      {loading && <h2 className='loading'>loading...</h2>}
     </>
   );
 };

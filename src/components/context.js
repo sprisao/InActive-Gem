@@ -27,6 +27,7 @@ const StoreProvider = ({ children }) => {
     storeBase('stores')
       .select({
         view: 'Grid view',
+        pageSize: 30,
       })
       .eachPage(
         function page(records, fetchNextPage) {
@@ -37,14 +38,14 @@ const StoreProvider = ({ children }) => {
             });
           });
           fetchNextPage();
+          setStores(store);
+          setLoading(false);
         },
         function done(err) {
           if (err) {
             console.error(err);
           } else {
             console.log('업체데이터 불러오기 성공');
-            setStores(store);
-            setLoading(false);
           }
         }
       );
@@ -55,6 +56,7 @@ const StoreProvider = ({ children }) => {
     storeBase('firstCategoryData')
       .select({
         view: 'Grid view',
+        pageSize: 50,
       })
       .eachPage(
         function page(records, fetchNextPage) {
@@ -65,15 +67,15 @@ const StoreProvider = ({ children }) => {
             });
           });
           fetchNextPage();
+          setFirstCategories(firstCategory);
+
+          setNavigationLoading(false);
         },
         function done(err) {
           if (err) {
             console.error(err);
           } else {
             console.log('카테고리 데이터 불러오기 성공');
-            setFirstCategories(firstCategory);
-
-            setNavigationLoading(false);
           }
         }
       );
@@ -84,6 +86,7 @@ const StoreProvider = ({ children }) => {
     storeBase('secondCategoryData')
       .select({
         view: 'Grid view',
+        pageSize: 30,
       })
       .eachPage(
         function page(records, fetchNextPage) {
@@ -93,6 +96,8 @@ const StoreProvider = ({ children }) => {
               ...record._rawJson.fields,
             });
           });
+          setSecondCategories(secondCategory);
+          setSecondLoading(false);
           fetchNextPage();
         },
         function done(err) {
@@ -100,8 +105,6 @@ const StoreProvider = ({ children }) => {
             console.error(err);
           } else {
             console.log('세컨드 카테고리 데이터 불러오기 성공');
-            setSecondCategories(secondCategory);
-            setSecondLoading(false);
           }
         }
       );
@@ -111,6 +114,7 @@ const StoreProvider = ({ children }) => {
     storeBase('locationCategoryData')
       .select({
         view: 'Grid view',
+        pageSize: 30,
       })
       .eachPage(
         function page(records, fetchNextPage) {
@@ -120,6 +124,8 @@ const StoreProvider = ({ children }) => {
               ...record._rawJson.fields,
             });
           });
+          setlocationCategories(locationCategory);
+          setLocationLoading(false);
           fetchNextPage();
         },
         function done(err) {
@@ -127,8 +133,6 @@ const StoreProvider = ({ children }) => {
             console.error(err);
           } else {
             console.log('로케이션 카테고리 데이터 불러오기 성공');
-            setlocationCategories(locationCategory);
-            setLocationLoading(false);
           }
         }
       );
