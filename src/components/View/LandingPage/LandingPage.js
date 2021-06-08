@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import NewStores from './NewStores';
 import SectionHeader from '../../../components/SectionHeader/Title';
 import GridRandom from '../../Grid/GridRandom';
 import Loading from '../../Loading';
@@ -81,6 +82,7 @@ const LandingPage = () => {
   }
   return (
     <>
+      <NewStores></NewStores>
       <SectionHeader title='인기카페 ✨' desc='원주 최고의 인기카페' />
       <div className='slide'>
         {mainStores.map((store) => {
