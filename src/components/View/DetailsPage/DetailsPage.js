@@ -39,6 +39,7 @@ const DetailsPage = ({ store }) => {
         instagramAccount={store.instagramAccount}
         storeVerified={store.storeVerified}
         naverLink={store.naverLink}
+        branch={store.branch}
       />
       <SNS
         instagramAccount={store.instagramAccount}

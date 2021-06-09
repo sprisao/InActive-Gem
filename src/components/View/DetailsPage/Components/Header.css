@@ -25,3 +25,9 @@
   margin-top: 0.3rem;
   font-size: 1.15rem;
 }
+
+.branch p {
+  font-size: 1.1rem;
+  color: #1b1b1b;
+  font-weight: 400;
+}

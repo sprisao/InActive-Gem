@@ -22,6 +22,9 @@ const Header = (props) => {
           <h1>{props.name}</h1>
           {verfiedStore}
         </div>
+        <div className='branch'>
+          <p>{props.branch}</p>
+        </div>
         <div className='details__tag'>
           {props.tags.map((tag) => {
             return <span key={tag}>#{tag} </span>;

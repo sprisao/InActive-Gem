@@ -29,6 +29,11 @@ const GridCard = ({ store, tags, open, close }) => {
     );
   }
 
+  let branch;
+  if (store.branch) {
+    branch = <p>・ {store.branch}</p>;
+  }
+
   return (
     <Link to={`/store/${store.id}`} className=''>
       <div className='gridCard'>
@@ -48,6 +53,7 @@ const GridCard = ({ store, tags, open, close }) => {
           <div className='quickInfos'>
             <div className='quickInfos__location'>
               <span>{store.miniAddress}</span>
+              {branch}
             </div>
             {businessHour}
           </div>
