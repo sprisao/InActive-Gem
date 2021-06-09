@@ -22,7 +22,7 @@ const NewStores = () => {
     base('stores')
       .select({
         maxRecords: 25,
-        pageSize: 30,
+        pageSize: 5,
         view: 'new',
       })
       .eachPage(
@@ -32,15 +32,13 @@ const NewStores = () => {
               id: record.id,
               ...record._rawJson.fields,
             });
-            console.log('Retrieved', record.get('name'));
           });
-          console.log(newStore);
           setnewStores(newStore);
           setLoading(false);
           fetchNextPage();
         },
         function done(err) {
-          console.log('no more records');
+          console.log('새로운 가게 데이터 로딩 완료');
           if (err) {
             console.error(err);
             return;

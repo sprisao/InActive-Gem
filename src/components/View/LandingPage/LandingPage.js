@@ -26,7 +26,7 @@ const LandingPage = () => {
     setLoading(true);
     base('stores')
       .select({
-        maxRecords: 150,
+        maxRecords: 120,
         pageSize: 30,
         view: 'Grid view',
       })
@@ -37,15 +37,13 @@ const LandingPage = () => {
               id: record.id,
               ...record._rawJson.fields,
             });
-            console.log('Retrieved', record.get('name'));
           });
-          console.log(mainStore);
           setMainStores(mainStore);
           setLoading(false);
           fetchNextPage();
         },
         function done(err) {
-          console.log('no more records');
+          console.log('메인 데이터 로딩 완료');
           if (err) {
             console.error(err);
             return;
