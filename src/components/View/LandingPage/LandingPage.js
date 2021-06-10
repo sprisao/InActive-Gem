@@ -8,8 +8,8 @@ import Airtable from 'airtable';
 
 import './LandingPage.css';
 
-import SlideCard from '../../Swipe/FeaturedCard';
-import '../../Swipe/Slide.css';
+import Slide from '../../Swiper/Slide';
+import '../../Swiper/SlideWrapper.css';
 
 const base = new Airtable({ apiKey: 'key5AMdi7ejadTzUy' }).base(
   'appDzyBPyX5MjMkrU'
@@ -85,7 +85,7 @@ const LandingPage = () => {
       <div className='slide'>
         {mainStores.map((store) => {
           if (store.firstCategory[0] === '카페') {
-            return <SlideCard key={store.id} store={store}></SlideCard>;
+            return <Slide key={store.id} store={store}></Slide>;
           } else return null;
         })}
       </div>
@@ -95,7 +95,7 @@ const LandingPage = () => {
       <div className='slide'>
         {mainStores.map((store) => {
           if (store.firstCategory[0] === '맛집') {
-            return <SlideCard key={store.id} store={store}></SlideCard>;
+            return <Slide key={store.id} store={store}></Slide>;
           } else return null;
         })}
       </div>

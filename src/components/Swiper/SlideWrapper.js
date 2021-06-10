@@ -1,8 +1,8 @@
 import React from 'react';
 import { useGlobalContext } from '../context';
-import FeaturedCard from './FeaturedCard';
+import Slide from './Slide';
 import Loading from '../Loading';
-import './Slide.css';
+import './SlideWrapper.css';
 
 const Slide = (props) => {
   const { stores, loading } = useGlobalContext();

@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { HiBadgeCheck } from 'react-icons/hi';
 
-import './FeaturedCard.css';
+import './Slide.css';
 
 const FeaturedCard = ({ store }) => {
   let verfiedStore;
