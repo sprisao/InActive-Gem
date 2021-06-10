@@ -1,10 +1,10 @@
 import React from 'react';
 import { useGlobalContext } from '../context';
-import Slide from './Slide';
+import SlideCard from './SlideCard';
 import Loading from '../Loading';
 import './SlideWrapper.css';
 
-const Slide = (props) => {
+const SlideWrapper = (props) => {
   const { stores, loading } = useGlobalContext();
 
   if (loading) {
@@ -12,10 +12,10 @@ const Slide = (props) => {
   }
   return (
     <section className='title'>
-      <div className='slide'>
+      <div className='SlideWrapper'>
         {stores.map((store) => {
-          if (store.firstCategory[0] === props.filter) {
-            return <FeaturedCard key={store.id} store={store}></FeaturedCard>;
+          if (props.condition === props.filter) {
+            return <SlideCard key={store.id} store={store}></SlideCard>;
           }
         })}
       </div>
@@ -23,4 +23,4 @@ const Slide = (props) => {
   );
 };
 
-export default Slide;
+export default SlideWrapper;

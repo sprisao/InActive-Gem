@@ -9,18 +9,22 @@ const Context = React.createContext();
 
 const StoreProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
+  const [mainLoading, setMainLoading] = useState(true);
   const [navigationLoading, setNavigationLoading] = useState(true);
   const [secondLoading, setSecondLoading] = useState(true);
   const [locationLoading, setLocationLoading] = useState(true);
+
   const [stores, setStores] = useState([]);
   const [firstCategories, setFirstCategories] = useState([]);
   const [secondCategories, setSecondCategories] = useState([]);
   const [locationCategories, setlocationCategories] = useState([]);
+  const [mainStores, setMainStores] = useState([]);
 
   const store = [];
   const firstCategory = [];
   const secondCategory = [];
   const locationCategory = [];
+  const mainStore = [];
 
   // 업체데이터 불러오기
   useEffect(() => {
@@ -138,17 +142,48 @@ const StoreProvider = ({ children }) => {
       );
   }, []);
 
+  useEffect(() => {
+    storeBase('stores')
+      .select({
+        maxRecords: 120,
+        pageSize: 30,
+        view: 'Grid view',
+      })
+      .eachPage(
+        function page(records, fetchNextPage) {
+          records.forEach(function (record) {
+            mainStore.push({
+              id: record.id,
+              ...record._rawJson.fields,
+            });
+          });
+          setMainStores(mainStore);
+          setMainLoading(false);
+          fetchNextPage();
+        },
+        function done(err) {
+          console.log('메인 데이터 로딩 완료');
+          if (err) {
+            console.error(err);
+            return;
+          }
+        }
+      );
+  }, []);
+
   return (
     <Context.Provider
       value={{
         loading,
         navigationLoading,
+        mainStores,
         stores,
         firstCategories,
         secondCategories,
         locationCategories,
         secondLoading,
         locationLoading,
+        mainLoading,
       }}
     >
       {children}
