@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import NewStores from './NewStores';
 import SectionHeader from '../../../components/SectionHeader/Title';
 import SlideCard from '../../SwiperComponent/SlideCard';
-import GridRandom from '../../GridComponent/GridRandom';
+import GridRandom from '../../Grid/GridRandom';
 import Loading from '../../Loading';
 import { useGlobalContext } from '../../context';
 
