@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { useGlobalContext } from '../context';
 import GridCard from './GridCard';
 import Loading from '../Loading';
@@ -49,7 +49,7 @@ const Grid = ({ filter }) => {
                   close={store.closeHour}
                 ></GridCard>
               );
-            }
+            } else return null;
           })}
         </section>
       </section>
