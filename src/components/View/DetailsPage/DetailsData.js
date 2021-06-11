@@ -47,7 +47,7 @@ const DetailsData = () => {
 
   useEffect(() => {
     fetchStore();
-  }, []);
+  }, [id]);
 
   if (loading) {
     return <Loading />;
