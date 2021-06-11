@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 // import pages
 import LandingPage from './View/LandingPage/LandingPage';
+import EnterCityPage from './View/CategoryPage/EnterCityPage/EnterCityPage';
 import CategoryData from './View/CategoryPage/CategoryData';
 import DetailsData from './View/DetailsPage/DetailsData';
 import SearchPage from './View/SearchPage/SearchPage';
@@ -30,6 +31,11 @@ function App() {
             <Header />
             <Navigation />
             <LandingPage />
+          </Route>
+          <Route exact path='/category/원주기업도시'>
+            <Header />
+            <Navigation />
+            <EnterCityPage />
           </Route>
           <Route exact path='/search'>
             <SearchHeader />

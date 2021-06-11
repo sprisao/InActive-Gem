@@ -31,7 +31,7 @@ const StoreProvider = ({ children }) => {
     storeBase('stores')
       .select({
         view: 'Grid view',
-        pageSize: 30,
+        pageSize: 20,
       })
       .eachPage(
         function page(records, fetchNextPage) {
