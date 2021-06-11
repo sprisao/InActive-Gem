@@ -73,20 +73,22 @@ const EnterCityPage = () => {
         })}
       </div>
       <SectionHeader title='기업도시 내 모든 젬💎' />
-      <div className='grid'>
-        {enterStores.map((store) => {
-          return (
-            <GridCard
-              key={store.id}
-              store={store}
-              tags={store.tags}
-              open={store.openHour}
-              close={store.closeHour}
-            ></GridCard>
-          );
-          console.log(store);
-        })}
-      </div>
+      <section className='title'>
+        <div className='grid'>
+          {enterStores.map((store) => {
+            return (
+              <GridCard
+                key={store.id}
+                store={store}
+                tags={store.tags}
+                open={store.openHour}
+                close={store.closeHour}
+              ></GridCard>
+            );
+            console.log(store);
+          })}
+        </div>
+      </section>
     </section>
   );
 };

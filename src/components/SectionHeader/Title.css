@@ -1,5 +1,5 @@
 .section__title {
-  margin-top: 1.5rem;
+  margin-top: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -16,5 +16,6 @@
 }
 
 .section__title h4 {
+  margin-top: 0.2rem;
   color: #6d7278;
 }
