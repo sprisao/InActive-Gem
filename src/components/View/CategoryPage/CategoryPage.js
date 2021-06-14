@@ -41,8 +41,8 @@ const CategoryPage = (props) => {
             </button>
           </Link>
           <div className='categoryTitle'>
-            <img src={props.category.strIconSource[0].url} alt='{title}' />
-            <h1>{props.category.firstCategory}</h1>
+            {/* <img src={props.category.strIconSource[0].url} alt='{title}' /> */}
+            <h3>{props.category.firstCategory}</h3>
           </div>
           <div className='place_holder'> </div>
         </div>
