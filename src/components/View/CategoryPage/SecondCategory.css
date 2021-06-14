@@ -1,7 +1,7 @@
 .SecondCategory__container {
   width: var(--maxWidth);
   margin: 0 auto;
-  margin-top: 1rem;
+  margin-top: 0.35rem;
 }
 .SeondCategory {
   display: block;

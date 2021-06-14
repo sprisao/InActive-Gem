@@ -5,6 +5,8 @@ import SecondCategory from './SecondCategory';
 import Loading from '../../Loading';
 import { Link } from 'react-router-dom';
 
+import { FiChevronLeft } from 'react-icons/fi';
+
 import './CategoryPage.css';
 
 const CategoryPage = (props) => {
@@ -33,11 +35,7 @@ const CategoryPage = (props) => {
         <div className='categoryTitle'>
           <Link to={`/category/홈`}>
             <button className='backward'>
-              <img
-                src='https://res.cloudinary.com/diimwnnmj/image/upload/v1622513949/%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8_%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%82%E1%85%B3%E1%86%AB_%E1%84%8B%E1%85%A1%E1%84%90%E1%85%B3%E1%84%8B%E1%85%AF%E1%84%8F%E1%85%B3_3_zqkqpv.png'
-                alt='뒤로가기'
-                className='backward-img'
-              />
+              <FiChevronLeft style={{ fontSize: '1.8rem' }} />
             </button>
           </Link>
           <div className='categoryTitle'>
