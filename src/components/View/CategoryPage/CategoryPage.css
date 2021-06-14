@@ -1,5 +1,4 @@
 .CategoryTitle__wrapper {
-  padding: 0 1.2rem;
   margin: 0 auto;
   margin-top: 1rem;
   width: var(--maxWidth);
@@ -7,10 +6,38 @@
 
 .categoryTitle {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0.5rem;
 }
 
 .categoryTitle img {
-  margin-right: 0.25rem;
-  width: 2.5rem;
+  margin-right: 0.3rem;
+  width: 2rem;
+}
+.categoryTitle button {
+  width: 3rem;
+}
+
+.backward {
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+}
+.backward img {
+  width: 1.2rem;
+  height: auto;
+}
+
+.categoryTitle h1 {
+  font-weight: 500;
+  font-size: 1.75rem;
+}
+
+.place_holder {
+  width: 3rem;
+}
+
+.SecondCategory__container {
 }

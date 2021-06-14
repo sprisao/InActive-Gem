@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import SectionHeader from '../../../SectionHeader/Title';
 import SlideCard from '../../../SwiperComponent/SlideCard';
 import Loading from '../../../Loading';
-import Grid from '../../../Grid/Grid';
 import GridCard from '../../../Grid/GridCard';
 import Airtable from 'airtable';
 
@@ -85,7 +84,6 @@ const EnterCityPage = () => {
                 close={store.closeHour}
               ></GridCard>
             );
-            console.log(store);
           })}
         </div>
       </section>
