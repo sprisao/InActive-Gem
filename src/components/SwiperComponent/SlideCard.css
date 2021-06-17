@@ -14,8 +14,8 @@
 
   background-image: linear-gradient(
     to bottom,
-    rgba(255, 255, 255, 0) 50%,
-    rgba(39, 39, 39, 0.836) 95%
+    rgba(0, 0, 0, 0) 50%,
+    rgba(17, 16, 16, 0.685) 80%
   );
   z-index: 2;
 }
