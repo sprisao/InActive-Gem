@@ -67,6 +67,7 @@ const Information = (props) => {
 
   // 휴무 필터링
   let breakDays;
+  console.log(props.breakDays);
 
   if (props.breakDays) {
     if (props.breakDays[0] === '연중무휴') {
@@ -83,7 +84,7 @@ const Information = (props) => {
         </>
       );
     }
-    if (props.breakDays[0] !== '연중무휴' && props.breakDays.length !== 1) {
+    if (props.breakDays[0] !== '연중무휴' && props.breakDays.length == 1) {
       breakDays = (
         <>
           <div className='breakDays'>
