@@ -8,7 +8,6 @@ import {
   FiPhoneCall,
 } from 'react-icons/fi';
 
-import ReactDOM from 'react-dom';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 import './Information.css';
@@ -84,7 +83,7 @@ const Information = (props) => {
         </>
       );
     }
-    if (props.breakDays[0] !== '연중무휴' && props.breakDays.length == 1) {
+    if (props.breakDays[0] !== '연중무휴' && props.breakDays.length === 1) {
       breakDays = (
         <>
           <div className='breakDays'>

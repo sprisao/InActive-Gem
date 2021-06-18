@@ -1,11 +1,31 @@
 .footer {
   width: 100vw;
-  height: 8rem;
   margin-top: 3rem;
-  margin-bottom: 2rem;
+}
+.footer__info__container {
+  max-width: var(--normalWidth);
+  color: black;
+  margin: 0 auto;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__button {
+  cursor: pointer;
+  font-size: 0.75rem;
+  padding: 0.5rem;
+}
+
+.footer__button .emoji {
+  font-size: 1rem;
+  margin-bottom: 0.35rem;
 }
 
 .footer__container {
+  background-color: rgb(8, 4, 8);
+  color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -15,11 +35,12 @@
   display: flex;
 }
 .footer__container img {
-  width: 2rem;
+  width: 5rem;
   cursor: pointer;
-  margin: 1rem auto;
+  margin: 1.5rem auto;
 }
 
 .footer__container p {
   margin: 0 auto;
+  padding-bottom: 1.5rem;
 }
