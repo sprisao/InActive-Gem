@@ -24,6 +24,7 @@ const Footer = () => {
   return (
     <section className='footer'>
       <div>
+        <hr></hr>
         {isShowing && (
           <p
             style={{
@@ -49,7 +50,7 @@ const Footer = () => {
         <CopyToClipboard text={url} onCopy={() => setCopied(true)}>
           <div className='footer__button' onClick={openModal}>
             <p className='emoji'>🚀</p>
-            <p>친구에게 젬 알리기</p>
+            <p>친구에게 '젬' 알리기</p>
           </div>
         </CopyToClipboard>
         |
@@ -66,6 +67,21 @@ const Footer = () => {
             window.open('http://pf.kakao.com/_FCGCs/chat', '_parent')
           }
         /> */}
+
+        <div className='legal__info'>
+          <p>
+            - '젬'에서 직접 촬영한 모든 이미지의 저작권은 '젬'에게 있습니다.
+          </p>
+          <p>
+            - '젬'에서 직접 촬영한 이미지를 제외한 모든 이미지의 저작권은 각
+            업체에게 있습니다.
+          </p>
+          <p>
+            - '젬'은 해당 업체의 홍보 목적 외에 그 어떤 용도로도 이미지를
+            사용하지 않습니다.
+          </p>
+          <p>- 게시를 원치 않으실 경우 '내 가게 문의하기'로 문의 바랍니다.</p>
+        </div>
         <img
           src='https://res.cloudinary.com/diimwnnmj/image/upload/v1623988968/GEM-%E1%84%92%E1%85%AA%E1%84%8B%E1%85%B5%E1%84%90%E1%85%B3_j3zim7.png'
           alt='footer-logo'

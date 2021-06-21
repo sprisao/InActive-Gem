@@ -24,7 +24,7 @@
 }
 
 .footer__container {
-  background-color: rgb(8, 4, 8);
+  background-color: #707070;
   color: white;
   display: flex;
   flex-direction: column;
@@ -41,6 +41,21 @@
 }
 
 .footer__container p {
+  padding-bottom: 1.25rem;
+}
+
+.legal__info {
   margin: 0 auto;
-  padding-bottom: 1.5rem;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: black;
+}
+
+.legal__info p {
+  margin: 0;
+  padding: 0;
+  font-size: 0.75rem;
 }
