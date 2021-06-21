@@ -30,7 +30,7 @@
   align-items: center;
 }
 .breakDays p {
-  color: #dc0f62;
+  color: #f21d73;
 }
 
 .location {
@@ -60,7 +60,7 @@
   display: flex;
   cursor: pointer;
   align-items: center;
-  color: #dc0f62;
+  color: #f21d73;
   margin-left: 0.85rem;
 }
 .copyBtn__container p {
