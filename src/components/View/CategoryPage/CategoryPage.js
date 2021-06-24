@@ -38,10 +38,12 @@ const CategoryPage = (props) => {
               <FiChevronLeft style={{ fontSize: '1.8rem' }} />
             </button>
           </Link>
-          <div className='categoryTitle'>
-            {/* <img src={props.category.strIconSource[0].url} alt='{title}' /> */}
-            <h3>{props.category.firstCategory}</h3>
-          </div>
+          <Link to={`/category/${props.category.firstCategory}`}>
+            <div className='categoryTitle'>
+              {/* <img src={props.category.strIconSource[0].url} alt='{title}' /> */}
+              <h3>{props.category.firstCategory}</h3>
+            </div>
+          </Link>
           <div className='place_holder'> </div>
         </div>
       </div>
