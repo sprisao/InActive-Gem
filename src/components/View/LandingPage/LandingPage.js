@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 import SearchBox from '../SearchPage/SearchBox';
+import NewNavigation from '../../NewNavigation';
 import NewStores from './NewStores';
 import SectionHeader from '../../../components/SectionHeader/Title';
 import SlideCard from '../../SwiperComponent/SlideCard';
@@ -39,6 +40,7 @@ const LandingPage = () => {
   return (
     <>
     <SearchBox/>
+    <NewNavigation/>
       <NewStores></NewStores>
 
       <SectionHeader title='인기카페 ✨' desc='원주 최고의 인기카페' />
