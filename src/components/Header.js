@@ -7,24 +7,20 @@ function Header() {
   return (
     <section className='header'>
       <div className='header__wrapper'>
-        <div className='placeholder'></div>
+        <div className="spaceholder"></div>
         <Link to='/'>
           <div className='logo__container'>
             <img
-              src='https://res.cloudinary.com/diimwnnmj/image/upload/v1622384476/gem/%E1%84%80%E1%85%A9%E1%84%80%E1%85%A9%E1%84%8C%E1%85%A6%E1%86%B7BI2_z0ghml.png'
+              src='https://res.cloudinary.com/diimwnnmj/image/upload/v1624505613/%E1%84%8C%E1%85%A6%E1%86%B7-%E1%84%8B%E1%85%B5%E1%86%B7%E1%84%89%E1%85%B5-%E1%84%92%E1%85%A1%E1%86%AB%E1%84%80%E1%85%B3%E1%86%AF-%E1%84%86%E1%85%B5%E1%86%BE-%E1%84%89%E1%85%B5%E1%86%B7%E1%84%87%E1%85%A9%E1%86%AF-%E1%84%85%E1%85%A9%E1%84%80%E1%85%A9_kiawpo.png'
               className='logo'
               alt='logo'
             />
           </div>
         </Link>
-        <Link to='/search'>
-          <div className='searchIcon__container'>
-            <img
-              src='https://res.cloudinary.com/diimwnnmj/image/upload/v1622432596/%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8_%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%82%E1%85%B3%E1%86%AB_%E1%84%8B%E1%85%A1%E1%84%90%E1%85%B3%E1%84%8B%E1%85%AF%E1%84%8F%E1%85%B3_rmmcly.png'
-              alt='searchIcon'
-            />
-          </div>
-        </Link>
+        <div className="sharingGem__button">
+          <img src="https://res.cloudinary.com/diimwnnmj/image/upload/v1624585303/message_menex3.svg" alt="" />
+          <p>친구에게 알리기</p>
+        </div>
       </div>
     </section>
   );

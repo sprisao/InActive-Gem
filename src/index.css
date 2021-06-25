@@ -43,6 +43,28 @@
     url('styles/fonts/NotoSansKR-Black.otf') format('truetype');
 }
 
+
+@font-face {
+    font-family: 'CookieRun-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/CookieRun-Regular.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CookieRunOTF-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/CookieRunOTF-Bold00.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CookieRunOTF-Black';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/CookieRunOTF-Black00.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 html {
   font-size: 13px;
 }
@@ -150,11 +172,12 @@ h6 {
 }
 
 h1 {
+  font-family: 'CookieRunOTF-Regular';
   font-size: 2rem;
-  font-weight: 700;
 }
 
 h2 {
+  font-family: 'CookieRunOTF-Regular';
   font-size: 1.75rem;
 }
 
