@@ -26,12 +26,10 @@ function App() {
       <Switch>
         <Route exact path='/'>
           <Header />
-          <Navigation />
           <LandingPage />
         </Route>
         <Route exact path='/category/홈'>
           <Header />
-          <Navigation />
           <LandingPage />
         </Route>
         <Route exact path='/category/맛집'>

@@ -23,11 +23,12 @@ header
 .logo__container {
   display: flex;
   align-items: center;
-  width: 6.75rem;
+  width: 7rem;
 }
 
 .logo__container img {
   width: 100%;
+  stroke-width: 2.5px;
 }
 
 .sharingGem__button {
@@ -39,10 +40,10 @@ header
 }
 
 .sharingGem__button img {
-  width: 1.5rem;
+  width: 1.35rem;
   margin: 0.25rem;
 }
 .sharingGem__button p{
-  font-size: 0.925rem;
+  font-size: 0.85rem;
 font-family: 'CookieRunOTF-Regular'
 }

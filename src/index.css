@@ -46,27 +46,27 @@
 
 @font-face {
     font-family: 'CookieRun-Regular';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/CookieRun-Regular.woff') format('woff');
-    font-weight: 300;
+    src: url('styles/fonts/Cookierun/OTF/CookieRun\ Regular.otf') format('truetype');
+    font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'CookieRunOTF-Bold';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/CookieRunOTF-Bold00.woff') format('woff');
+    src: url('styles/fonts/Cookierun/OTF/CookieRun\ Bold.otf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'CookieRunOTF-Black';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/CookieRunOTF-Black00.woff') format('woff');
+    src: url('styles/fonts/Cookierun/OTF/CookieRun\ Black.otf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 html {
-  font-size: 13px;
+  font-size: 14px;
 }
 
 /* Display Width */
@@ -137,8 +137,6 @@ body {
   font-family: 'Noto Sans CJK KR', '맑은 고딕', 'malgun gothic',
     'Apple SD Gothic Neo', 'Apple SD 산돌고딕 Neo', 'Microsoft NeoGothic',
     'Droid sans';
-  /* -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
   line-height: 1.4;
   font-weight: 350;
   color: #222;
@@ -146,7 +144,7 @@ body {
 
 @media screen and (min-width: 480px) {
   html {
-    font-size: 14.5px;
+    font-size: 16px;
   }
 }
 @media screen and (min-width: 780px) {
@@ -162,11 +160,8 @@ h4,
 h5,
 h6 {
   clear: both;
-  font-weight: bold;
-  color: #111;
-  line-height: 1.25;
+  line-height: 1.35;
   letter-spacing: -0.05rem;
-  word-break: keep-all;
   margin-bottom: 0;
   margin-top: 0;
 }

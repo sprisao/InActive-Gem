@@ -1,0 +1,33 @@
+.SearchBox {
+ width: var(--width);
+ padding: 1rem;
+}
+
+.SearchBox__Container {
+ max-width: var(--normalWidth);
+ height: 3.75rem;
+ display: flex;
+ align-items: center;
+ margin: 0 auto;
+ padding: 1rem;
+ background-color: #f5f5f5;
+ border-radius: 0.8rem;
+}
+
+
+
+.inputBox {
+ margin-left: 1rem;
+ margin-top: 0.15rem;
+ width: 88%;
+ border: 0;
+ font-size: 1.1rem;
+ text-decoration: none;
+ background-color:transparent;
+}
+
+input::placeholder {
+font-family: 'CookieRun-Regular';
+font-size: 1rem;
+color: #a7a7a7;
+}

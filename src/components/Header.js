@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { GoSearch } from 'react-icons/go';
 import './Header.css';
 
 function Header() {
@@ -18,7 +17,7 @@ function Header() {
           </div>
         </Link>
         <div className="sharingGem__button">
-          <img src="https://res.cloudinary.com/diimwnnmj/image/upload/v1624585303/message_menex3.svg" alt="" />
+          <img src="https://res.cloudinary.com/diimwnnmj/image/upload/v1624590337/message_wnwz94.png" alt="share" />
           <p>친구에게 알리기</p>
         </div>
       </div>
