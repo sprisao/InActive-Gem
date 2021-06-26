@@ -119,6 +119,7 @@
 .Navigation__Item__Emoji__Container img {
   z-index: 999;
   width: 3rem;
+  height: auto;
 }
 
 @media screen and (min-width: 320px) {
