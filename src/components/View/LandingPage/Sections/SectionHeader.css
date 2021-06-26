@@ -1,5 +1,7 @@
 .Section__Header {
   display: flex;
+  width: var(--normalWidth);
+  margin: 0 auto;
   justify-content: space-between;
 }
 

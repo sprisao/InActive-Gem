@@ -13,7 +13,7 @@ const NewNavigation = () => {
           <Link to={`/category/맛집`}>
             <div className='FirstGrid__Item'>
               <div className='Navigation__Item__Header'>
-                <h1>맛집</h1>
+                <p>맛집</p>
                 <FiChevronRight
                   style={{
                     fontSize: '1.5rem',
@@ -28,7 +28,7 @@ const NewNavigation = () => {
           <Link to={`/category/카페`}>
             <div className='FirstGrid__Item'>
               <div className='Navigation__Item__Header'>
-                <h1>카페</h1>
+                <p>카페</p>
                 <FiChevronRight
                   style={{
                     fontSize: '1.5rem',
@@ -45,7 +45,7 @@ const NewNavigation = () => {
           <Link to={`/category/홈`}>
             <div className='SecondGrid__Item'>
               <div className='Navigation__Item__Header'>
-                <h1>가볼만한 곳</h1>
+                <p>가볼만한 곳</p>
                 <FiChevronRight
                   style={{
                     fontSize: '1.5rem',
@@ -62,7 +62,7 @@ const NewNavigation = () => {
           <Link to={`/category/호프・주점`}>
             <div className='ThirdGrid__Item'>
               <div className='Navigation__Item__Header'>
-                <h2>호프・주점</h2>
+                <p>호프・주점</p>
               </div>
               <div className='Navigation__Item__Emoji__Container'>
                 <img
@@ -75,7 +75,7 @@ const NewNavigation = () => {
           <Link to={`/category/운동・헬스`}>
             <div className='ThirdGrid__Item'>
               <div className='Navigation__Item__Header'>
-                <h2>운동・헬스</h2>
+                <p>운동・헬스</p>
               </div>
               <div className='Navigation__Item__Emoji__Container'>
                 <img
@@ -88,7 +88,7 @@ const NewNavigation = () => {
           <Link to={`/category/미용・뷰티`}>
             <div className='ThirdGrid__Item'>
               <div className='Navigation__Item__Header'>
-                <h2>미용・뷰티</h2>
+                <p>미용・뷰티</p>
               </div>
               <div className='Navigation__Item__Emoji__Container'>
                 <img
@@ -101,7 +101,7 @@ const NewNavigation = () => {
           <Link to={`/category/스튜디오`}>
             <div className='ThirdGrid__Item'>
               <div className='Navigation__Item__Header'>
-                <h2>스튜디오</h2>
+                <p>스튜디오</p>
               </div>
               <div className='Navigation__Item__Emoji__Container'>
                 <img
@@ -114,7 +114,7 @@ const NewNavigation = () => {
           <Link to={`/category/게임・노래`}>
             <div className='ThirdGrid__Item'>
               <div className='Navigation__Item__Header'>
-                <h2>게임・노래</h2>
+                <p>게임・노래</p>
               </div>
               <div className='Navigation__Item__Emoji__Container'>
                 <img
@@ -127,7 +127,7 @@ const NewNavigation = () => {
           <Link to={`/category/꽃`}>
             <div className='ThirdGrid__Item'>
               <div className='Navigation__Item__Header'>
-                <h2>꽃</h2>
+                <p>꽃</p>
               </div>
               <div className='Navigation__Item__Emoji__Container'>
                 <img
@@ -140,7 +140,7 @@ const NewNavigation = () => {
           <Link to={`/category/키즈`}>
             <div className='ThirdGrid__Item'>
               <div className='Navigation__Item__Header'>
-                <h2>키즈</h2>
+                <p>키즈</p>
               </div>
               <div className='Navigation__Item__Emoji__Container'>
                 <img
@@ -153,7 +153,7 @@ const NewNavigation = () => {
           <Link to={`/category/홈`}>
             <div className='ThirdGrid__Item'>
               <div className='Navigation__Item__Header'>
-                <h2>캠핑장</h2>
+                <p>캠핑장</p>
               </div>
               <div className='Navigation__Item__Emoji__Container'>
                 <img
@@ -168,7 +168,7 @@ const NewNavigation = () => {
           <Link to={`/`}>
             <div className='FourthGrid__Item'>
               <div className='Navigation__Item__Header'>
-                <h2>원주혁신도시</h2>
+                <p>원주혁신도시</p>
                 <FiChevronRight
                   style={{
                     fontSize: '1.5rem',
@@ -183,7 +183,7 @@ const NewNavigation = () => {
           <Link to={`/`}>
             <div className='FourthGrid__Item'>
               <div className='Navigation__Item__Header'>
-                <h2>원주기업도시</h2>
+                <p>원주기업도시</p>
                 <FiChevronRight
                   style={{
                     fontSize: '1.5rem',

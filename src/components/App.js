@@ -15,7 +15,6 @@ import ScrollToTop from './ScrollToTop';
 
 // import components
 import Header from './Header';
-import Navigation from './Navigation';
 import SearchHeader from './View/SearchPage/SearchHeader';
 import Footer from './Footer';
 
@@ -42,7 +41,6 @@ function App() {
           </Route>
           <Route exact path='/category/원주기업도시'>
             <Header />
-            <Navigation />
             <EnterCityPage />
           </Route>
           <Route exact path='/search'>
@@ -56,7 +54,6 @@ function App() {
           </Route>
           <Route path='/category/:firstCategory/:secondCategory'>
             <Header />
-            <Navigation />
             <CategoryData />
           </Route>
           {/* <Route path='/category/*'>

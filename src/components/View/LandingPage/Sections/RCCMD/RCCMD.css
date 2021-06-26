@@ -1,6 +1,6 @@
 .RCCMD {
   display: flex;
   flex-direction: column;
-  width: var(--normalWidth);
+  width: var(--width);
   padding: 1rem;
 }

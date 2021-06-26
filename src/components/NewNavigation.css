@@ -9,7 +9,7 @@
   margin: 0 auto;
   grid-gap: 0.75rem;
   grid-template-columns: 1fr;
-  grid-template-rows: 3.5fr 2fr 3fr 1.35fr;
+  grid-template-rows: 3.35fr 2fr 3fr 1.35fr;
 }
 
 .Navigation__Item__Header {
@@ -47,8 +47,12 @@
   border-radius: 0.65rem;
   background-color: #f5f5f5;
 }
-
-.SecondGrid__Item h1 {
+.FirstGrid__Item p {
+  font-family: 'CookieRunOTF-Bold';
+  font-size: 1.6rem;
+}
+.SecondGrid__Item p {
+  font-family: 'CookieRunOTF-Bold';
   font-size: 1.45rem;
 }
 
@@ -75,8 +79,9 @@
   margin-bottom: 0.15rem;
 }
 
-.ThirdGrid__Item h2 {
-  font-size: 1.03rem;
+.ThirdGrid__Item p {
+  font-family: 'CookieRunOTF-Bold';
+  font-size: 1rem;
 }
 .Navigation__Item__Emoji__Container {
   display: flex;
@@ -106,6 +111,7 @@
   background-color: #f5f5f5;
 }
 
-.FourthGrid__Item h2 {
+.FourthGrid__Item p {
+  font-family: 'CookieRunOTF-Bold';
   font-size: 1.2rem;
 }
