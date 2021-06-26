@@ -1,7 +1,7 @@
 .CategoryTitle__wrapper {
   margin: 0 auto;
   margin-top: 1rem;
-  width: var(--maxWidth);
+  width: var(--normalWidth);
   padding: 0.4rem 0;
 }
 

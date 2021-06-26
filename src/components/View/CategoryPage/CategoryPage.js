@@ -40,7 +40,6 @@ const CategoryPage = (props) => {
           </Link>
           <Link to={`/category/${props.category.firstCategory}`}>
             <div className='categoryTitle'>
-              {/* <img src={props.category.strIconSource[0].url} alt='{title}' /> */}
               <h3>{props.category.firstCategory}</h3>
             </div>
           </Link>

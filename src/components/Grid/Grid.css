@@ -15,7 +15,7 @@
 }
 
 @media screen and (min-width: 430px) {
-  .grid {
+  .grid__wrapper {
     grid-template-columns: repeat(auto-fill, minmax(191px, 1fr));
   }
 }

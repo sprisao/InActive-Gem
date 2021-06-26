@@ -151,7 +151,7 @@ const NewNavigation = () => {
               </div>
             </div>
           </Link>
-          <Link to={`/category/홈`}>
+          <Link to={`/category/캠핑장`}>
             <div className='ThirdGrid__Item'>
               <div className='Navigation__Item__Header'>
                 <p>캠핑장</p>
