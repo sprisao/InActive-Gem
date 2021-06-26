@@ -57,16 +57,31 @@
 }
 
 .ThirdGrid__Item {
-  height: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 5.2rem;
   border: solid 1.25px #dfdfdf;
   border-radius: 0.65rem;
   align-items: flex-start;
   padding: 0.75rem;
   background-color: #f5f5f5;
+  overflow: hidden;
 }
 
 .ThirdGrid__Item h2 {
   font-size: 1.03rem;
+}
+.Navigation__Item__Emoji__Container {
+  display: flex;
+  width: calc(100% + 0.75rem * 2);
+  margin: 0rem 0 0.75rem -0.6rem;
+  margin-top: 0.1rem;
+  justify-content: flex-end;
+}
+.Navigation__Item__Emoji__Container img {
+  z-index: 999;
+  width: 3rem;
 }
 
 .FourthGrid__Wrap {
@@ -82,4 +97,8 @@
   border: solid 1.25px #dfdfdf;
   border-radius: 0.65rem;
   background-color: #f5f5f5;
+}
+
+.FourthGrid__Item h2 {
+  font-size: 1.2rem;
 }
