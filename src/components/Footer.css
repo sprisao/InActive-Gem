@@ -41,8 +41,7 @@
   align-items: flex-start;
   text-align: left;
   color: rgb(26, 26, 26);
-  font-size: 0.35rem;
-  font-weight: lighter;
+  font-size: 10px;
 }
 
 .Copyrights {
@@ -51,8 +50,7 @@
   width: 100%;
   padding: 1.25rem 0;
   align-items: flex-start;
-  font-size: 0.5rem;
-  font-weight: regular;
+  font-size: 11px;
 }
 .footer__container img {
   width: 4rem;
