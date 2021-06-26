@@ -7,7 +7,7 @@ const Separator = () => {
         borderTop: '1px solid #c6c6c6',
         height: '0.75rem',
         backgroundColor: '#f3f3f3',
-        margin: '1rem 0',
+        margin: '0.75rem 0',
       }}
     >
       {' '}

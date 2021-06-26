@@ -43,26 +43,26 @@
     url('styles/fonts/NotoSansKR-Black.otf') format('truetype');
 }
 
-
 @font-face {
-    font-family: 'CookieRun-Regular';
-    src: url('styles/fonts/Cookierun/OTF/CookieRun\ Regular.otf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'CookieRun-Regular';
+  src: url('styles/fonts/Cookierun/OTF/CookieRun\ Regular.otf')
+    format('truetype');
+  font-weight: lighter;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'CookieRunOTF-Bold';
-    src: url('styles/fonts/Cookierun/OTF/CookieRun\ Bold.otf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'CookieRunOTF-Bold';
+  src: url('styles/fonts/Cookierun/OTF/CookieRun\ Bold.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'CookieRunOTF-Black';
-    src: url('styles/fonts/Cookierun/OTF/CookieRun\ Black.otf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'CookieRunOTF-Black';
+  src: url('styles/fonts/Cookierun/OTF/CookieRun\ Black.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 html {
@@ -136,7 +136,7 @@ body {
   margin: 0 auto;
   font-family: 'Noto Sans CJK KR', '맑은 고딕', 'malgun gothic',
     'Apple SD Gothic Neo', 'Apple SD 산돌고딕 Neo', 'Microsoft NeoGothic',
-    'Droid sans';
+    'CookieRun-Regular' 'Droid sans';
   line-height: 1.4;
   font-weight: 350;
   color: #222;
@@ -159,7 +159,6 @@ h3,
 h4,
 h5,
 h6 {
-  clear: both;
   line-height: 1.35;
   letter-spacing: -0.05rem;
   margin-bottom: 0;
@@ -233,11 +232,4 @@ footer
 
 hr {
   margin-top: 0;
-}
-
-.title {
-  margin: 0 auto;
-  padding: 0 1rem;
-  width: var(--maxWidth);
-  max-width: var(--maxwidth);
 }

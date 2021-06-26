@@ -1,0 +1,6 @@
+.LunchRCCMD {
+  display: flex;
+  flex-direction: column;
+  width: var(--normalWidth);
+  padding: 1rem;
+}

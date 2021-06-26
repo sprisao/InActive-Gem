@@ -13,8 +13,8 @@ const Grid = ({ filter }) => {
     leerfilter = <Leerpage />;
   } else {
     leerfilter = (
-      <section className='title'>
-        <section className='grid'>
+      <section className='grid'>
+        <section className='grid__wrapper'>
           {stores.map((store) => {
             if (store.firstCategory[0] === filter) {
               return (

@@ -1,0 +1,16 @@
+.Section__Header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Section__Title {
+  font-family: 'CookieRunOTF-Regular';
+  font-size: 1.3rem;
+  letter-spacing: -0.05rem;
+  color: #161616;
+}
+
+.Section__More {
+  display: flex;
+  align-items: center;
+}

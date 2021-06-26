@@ -1,6 +1,6 @@
 .new__Navigation {
   width: var(--width);
-  padding: 0 1rem;
+  padding: 0 1rem 1rem;
 }
 
 .Navigation__Container {
@@ -25,6 +25,7 @@
 .FirstGrid__Item {
   display: flex;
   align-items: flex-start;
+  height: 100%;
   border: solid 1.25px #dfdfdf;
   border-radius: 0.65rem;
   padding: 0.95rem;
@@ -39,6 +40,7 @@
 
 .SecondGrid__Item {
   display: flex;
+  height: 100%;
   align-items: flex-start;
   padding: 0.95rem;
   border: solid 1.25px #dfdfdf;
@@ -69,6 +71,10 @@
   overflow: hidden;
 }
 
+.ThirdGrid__Item .Navigation__Item__Header {
+  margin-bottom: 0.15rem;
+}
+
 .ThirdGrid__Item h2 {
   font-size: 1.03rem;
 }
@@ -92,6 +98,7 @@
 
 .FourthGrid__Item {
   display: flex;
+  height: 100%;
   padding: 0.55rem;
   align-items: flex-start;
   border: solid 1.25px #dfdfdf;

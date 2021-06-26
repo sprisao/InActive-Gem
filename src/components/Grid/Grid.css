@@ -1,4 +1,11 @@
 .grid {
+  margin: 0 auto;
+  padding: 0 1rem;
+  width: var(--maxWidth);
+  max-width: var(--maxwidth);
+}
+
+.grid__wrapper {
   display: grid;
   white-space: wrap;
   max-width: var(--maxWidth);

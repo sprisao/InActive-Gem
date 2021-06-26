@@ -18,13 +18,13 @@ const StoreProvider = ({ children }) => {
   const [firstCategories, setFirstCategories] = useState([]);
   const [secondCategories, setSecondCategories] = useState([]);
   const [locationCategories, setlocationCategories] = useState([]);
-  const [mainStores, setMainStores] = useState([]);
+  const [lunchRCCMD, setLunchRCCMD] = useState([]);
 
   const store = [];
   const firstCategory = [];
   const secondCategory = [];
   const locationCategory = [];
-  const mainStore = [];
+  const lunchRCCMDstore = [];
 
   // 업체데이터 불러오기
   useEffect(() => {
@@ -147,17 +147,17 @@ const StoreProvider = ({ children }) => {
       .select({
         maxRecords: 120,
         pageSize: 30,
-        view: 'Grid view',
+        view: 'LunchRCCMD',
       })
       .eachPage(
         function page(records, fetchNextPage) {
           records.forEach(function (record) {
-            mainStore.push({
+            lunchRCCMDstore.push({
               id: record.id,
               ...record._rawJson.fields,
             });
           });
-          setMainStores(mainStore);
+          setLunchRCCMD(lunchRCCMDstore);
           setMainLoading(false);
           fetchNextPage();
         },
@@ -176,14 +176,13 @@ const StoreProvider = ({ children }) => {
       value={{
         loading,
         navigationLoading,
-        mainStores,
         stores,
         firstCategories,
         secondCategories,
         locationCategories,
         secondLoading,
         locationLoading,
-        mainLoading,
+        lunchRCCMD,
       }}
     >
       {children}
