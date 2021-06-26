@@ -12,6 +12,18 @@
   grid-template-rows: 3.35fr 2fr 3fr 1.35fr;
 }
 
+@media screen and (min-width: 320px) {
+  .Navigation__Container {
+    grid-template-rows: 3fr 1.65fr 3fr 1.25fr;
+  }
+}
+
+@media screen and (min-width: 350px) {
+  .Navigation__Container {
+    grid-template-rows: 3.35fr 2fr 3fr 1.35fr;
+  }
+}
+
 .Navigation__Item__Header {
   display: flex;
   align-items: center;
@@ -81,8 +93,21 @@
 
 .ThirdGrid__Item p {
   font-family: 'CookieRunOTF-Bold';
-  font-size: 1rem;
+  font-size: 0.95rem;
 }
+
+@media screen and (min-width: 320px) {
+  .ThirdGrid__Item p {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .ThirdGrid__Item p {
+    font-size: 0.95rem;
+  }
+}
+
 .Navigation__Item__Emoji__Container {
   display: flex;
   width: calc(100% + 0.75rem * 2);
@@ -90,11 +115,25 @@
   margin-top: 0.1rem;
   justify-content: flex-end;
 }
+
 .Navigation__Item__Emoji__Container img {
   z-index: 999;
   width: 3rem;
 }
 
+@media screen and (min-width: 320px) {
+  .Navigation__Item__Emoji__Container img {
+    z-index: 999;
+    width: 3rem;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .Navigation__Item__Emoji__Container img {
+    z-index: 999;
+    width: 3rem;
+  }
+}
 .FourthGrid__Wrap {
   display: grid;
   grid-template-columns: 1fr 1fr;

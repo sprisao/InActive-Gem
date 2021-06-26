@@ -26,6 +26,18 @@ header
   width: 7rem;
 }
 
+@media screen and (min-width: 320px) {
+  .logo__container {
+    width: 6rem;
+  }
+}
+
+@media screen and (min-width: 350px) {
+  .logo__container {
+    width: 7rem;
+  }
+}
+
 .logo__container img {
   width: 100%;
   stroke-width: 2.5px;
