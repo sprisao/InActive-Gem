@@ -11,7 +11,7 @@ import DetailsData from './View/DetailsPage/DetailsData';
 import SearchPage from './View/SearchPage/SearchPage';
 import Error from './View/ErrorPage/Error';
 
-// import ScrollToTop from './ScrollToTop';
+import ScrollToTop from './ScrollToTop';
 
 // import components
 import Header from './Header';
@@ -22,58 +22,58 @@ import Footer from './Footer';
 function App() {
   return (
     <Router>
-      {/* <ScrollToTop> */}
-      <Switch>
-        <Route exact path='/'>
-          <Header />
-          <LandingPage />
-        </Route>
-        <Route exact path='/category/홈'>
-          <Header />
-          <LandingPage />
-        </Route>
-        <Route exact path='/category/맛집'>
-          <Header />
-          <RestaurantPage />
-        </Route>
-        <Route exact path='/category/카페'>
-          <Header />
-          <CafePage />
-        </Route>
-        <Route exact path='/category/원주기업도시'>
-          <Header />
-          <Navigation />
-          <EnterCityPage />
-        </Route>
-        <Route exact path='/search'>
-          <SearchHeader />
-          <SearchPage />
-        </Route>
-        <Route path='/category/:firstCategory'>
-          <Header />
-          {/* <Navigation /> */}
-          <CategoryData />
-        </Route>
-        <Route path='/category/:firstCategory/:secondCategory'>
-          <Header />
-          <Navigation />
-          <CategoryData />
-        </Route>
-        {/* <Route path='/category/*'>
+      <ScrollToTop>
+        <Switch>
+          <Route exact path='/'>
+            <Header />
+            <LandingPage />
+          </Route>
+          <Route exact path='/category/홈'>
+            <Header />
+            <LandingPage />
+          </Route>
+          <Route exact path='/category/맛집'>
+            <Header />
+            <RestaurantPage />
+          </Route>
+          <Route exact path='/category/카페'>
+            <Header />
+            <CafePage />
+          </Route>
+          <Route exact path='/category/원주기업도시'>
+            <Header />
+            <Navigation />
+            <EnterCityPage />
+          </Route>
+          <Route exact path='/search'>
+            <SearchHeader />
+            <SearchPage />
+          </Route>
+          <Route path='/category/:firstCategory'>
+            <Header />
+            {/* <Navigation /> */}
+            <CategoryData />
+          </Route>
+          <Route path='/category/:firstCategory/:secondCategory'>
+            <Header />
+            <Navigation />
+            <CategoryData />
+          </Route>
+          {/* <Route path='/category/*'>
             <Header />
             <Ready />
           </Route> */}
-        <Route path='/store/:id'>
-          <Header />
-          <DetailsData />
-        </Route>
-        <Route path='*'>
-          <Header />
-          <Error />
-        </Route>
-      </Switch>
-      <Footer />
-      {/* </ScrollToTop> */}
+          <Route path='/store/:id'>
+            <Header />
+            <DetailsData />
+          </Route>
+          <Route path='*'>
+            <Header />
+            <Error />
+          </Route>
+        </Switch>
+        <Footer />
+      </ScrollToTop>
     </Router>
   );
 }

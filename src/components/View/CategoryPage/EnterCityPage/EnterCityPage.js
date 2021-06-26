@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import SectionHeader from '../../../SectionHeader/Title';
-import SlideCard from '../../../SwiperComponent/SlideCard';
+import SlideCard from '../../../SwiperComponent/SlideType2';
 import Loading from '../../../Loading';
 import GridCard from '../../../Grid/GridCard';
 import Airtable from 'airtable';

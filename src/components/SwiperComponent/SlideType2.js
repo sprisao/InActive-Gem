@@ -2,29 +2,29 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { HiBadgeCheck } from 'react-icons/hi';
 
-import './SlideCard.css';
+import './SlideType2.css';
 
-const FeaturedCard = ({ store }) => {
-  let verfiedStore;
-  if (store.storeVerified === true) {
-    verfiedStore = <HiBadgeCheck />;
-  }
+const SlideType2 = ({ store }) => {
+  // let verfiedStore;
+  // if (store.storeVerified === true) {
+  //   verfiedStore = <HiBadgeCheck />;
+  // }
   return (
     <Link to={`/store/${store.id}`} className=''>
       <div
-        className='featuredCard'
+        className='SlideType2'
         style={{
           backgroundImage: `url(${store.images[0].url})`,
         }}
       >
-        <div className='featuredCard_image'>
-          <div className='featuredCard__articleContainer'>
-            <div className='featuredCard__shortDesc'>
+        <div className='SlideType2_image'>
+          <div className='SlideType2__articleContainer'>
+            <div className='SlideType2__shortDesc'>
               <p>{store.shortDescription}</p>
             </div>
-            <div className='featuredCard__storeName'>
+            <div className='SlideType2__storeName'>
               <h3>{store.name}</h3>
-              {verfiedStore}
+              {/* {verfiedStore} */}
             </div>
             <span>{store.miniAddress}</span>
           </div>
@@ -33,4 +33,4 @@ const FeaturedCard = ({ store }) => {
     </Link>
   );
 };
-export default FeaturedCard;
+export default SlideType2;

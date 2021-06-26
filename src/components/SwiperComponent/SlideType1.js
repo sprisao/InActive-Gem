@@ -5,13 +5,12 @@ import { HiBadgeCheck } from 'react-icons/hi';
 import './SlideType1.css';
 
 const SlideType1 = ({ store }) => {
-  console.log(store.storeVerified);
-  let verfiedStore;
-  if (store.storeVerified === true) {
-    verfiedStore = (
-      <HiBadgeCheck style={{ fontSize: '1.75rem', color: 'white' }} />
-    );
-  }
+  // let verfiedStore;
+  // if (store.storeVerified === true) {
+  //   verfiedStore = (
+  //     <HiBadgeCheck style={{ fontSize: '1.75rem', color: 'white' }} />
+  //   );
+  // }
   return (
     <Link to={`/store/${store.id}`} className=''>
       <div
@@ -21,7 +20,7 @@ const SlideType1 = ({ store }) => {
         }}
       >
         <div className='SlideType1__Container'>
-          {verfiedStore}
+          {/* {verfiedStore} */}
           <div className='SlideType1__articleContainer'>
             <div className='SlideType1__Tags'>
               {store.tags.map((tag) => {

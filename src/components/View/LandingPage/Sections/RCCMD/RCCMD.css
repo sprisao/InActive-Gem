@@ -1,4 +1,4 @@
-.LunchRCCMD {
+.RCCMD {
   display: flex;
   flex-direction: column;
   width: var(--normalWidth);

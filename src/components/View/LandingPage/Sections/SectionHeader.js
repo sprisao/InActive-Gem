@@ -1,6 +1,8 @@
 import React from 'react';
 import { FiChevronRight } from 'react-icons/fi';
 
+import { Link } from 'react-router-dom';
+
 import './SectionHeader.css';
 
 const SectionHeader = (props) => {
@@ -9,10 +11,12 @@ const SectionHeader = (props) => {
       <div className='Section__Title'>
         <p>{props.title}</p>
       </div>
-      <div className='Section__More'>
-        <p>더 보기</p>
-        <FiChevronRight />
-      </div>
+      <Link to={`/category/${props.category}`}>
+        <div className='Section__More'>
+          <p>더 보기</p>
+          <FiChevronRight />
+        </div>
+      </Link>
     </div>
   );
 };

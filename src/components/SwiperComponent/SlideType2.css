@@ -1,12 +1,13 @@
-.featuredCard {
+.SlideType2 {
   margin-right: 1rem;
-  min-width: 22rem;
-  border-radius: 10px;
+  width: 20rem;
+  height: 15rem;
+  border-radius: 0.85rem;
   background-size: cover;
   background-position: center center;
 }
 
-.featuredCard_image {
+.SlideType2_image {
   min-width: 100%;
   border-radius: 10px;
   padding: 2rem 1rem 1rem 1rem;
@@ -20,28 +21,29 @@
   z-index: 2;
 }
 
-.featuredCard__articleContainer {
+.SlideType2__articleContainer {
   margin-right: 1rem;
-  margin-top: 10.5rem;
+  margin-top: 7rem;
   display: flex;
   flex-direction: column;
   text-align: right;
   z-index: 1;
 }
 
-.featuredCard__articleContainer p {
+.SlideType2__articleContainer p {
   color: white;
   font-size: 1rem;
 }
-.featuredCard__articleContainer h3 {
+.SlideType2__articleContainer h3 {
   color: white;
   font-weight: 500;
 }
-.featuredCard__articleContainer span {
+.SlideType2__articleContainer span {
   color: white;
+  font-weight: 300;
 }
 
-.featuredCard__storeName {
+.SlideType2__storeName {
   display: flex;
   justify-content: flex-end;
   color: white;

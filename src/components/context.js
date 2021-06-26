@@ -19,12 +19,14 @@ const StoreProvider = ({ children }) => {
   const [secondCategories, setSecondCategories] = useState([]);
   const [locationCategories, setlocationCategories] = useState([]);
   const [lunchRCCMD, setLunchRCCMD] = useState([]);
+  const [cafeRCCMD, setCafeRCCMD] = useState([]);
 
   const store = [];
   const firstCategory = [];
   const secondCategory = [];
   const locationCategory = [];
   const lunchRCCMDstore = [];
+  const cafeRCCMDstore = [];
 
   // 업체데이터 불러오기
   useEffect(() => {
@@ -145,7 +147,7 @@ const StoreProvider = ({ children }) => {
   useEffect(() => {
     storeBase('stores')
       .select({
-        maxRecords: 120,
+        maxRecords: 30,
         pageSize: 30,
         view: 'LunchRCCMD',
       })
@@ -171,6 +173,34 @@ const StoreProvider = ({ children }) => {
       );
   }, []);
 
+  useEffect(() => {
+    storeBase('stores')
+      .select({
+        maxRecords: 30,
+        pageSize: 30,
+        view: 'CafeRCCMD',
+      })
+      .eachPage(
+        function page(records, fetchNextPage) {
+          records.forEach(function (record) {
+            cafeRCCMDstore.push({
+              id: record.id,
+              ...record._rawJson.fields,
+            });
+          });
+          setCafeRCCMD(cafeRCCMDstore);
+          setMainLoading(false);
+          fetchNextPage();
+        },
+        function done(err) {
+          console.log('메인 데이터 로딩 완료');
+          if (err) {
+            console.error(err);
+            return;
+          }
+        }
+      );
+  }, []);
   return (
     <Context.Provider
       value={{
@@ -183,6 +213,7 @@ const StoreProvider = ({ children }) => {
         secondLoading,
         locationLoading,
         lunchRCCMD,
+        cafeRCCMD,
       }}
     >
       {children}
