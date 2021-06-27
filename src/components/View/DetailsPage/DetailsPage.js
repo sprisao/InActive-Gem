@@ -3,11 +3,11 @@ import React from 'react';
 import DetailsNavi from './Components/DetailsNavi';
 import ImageBox from './Components/Swiper';
 import Header from './Components/Header';
-import SNS from './Components/SNS';
 import Information from './Components/Information';
-import OwnerSection from './Components/OwnerSection';
 import Menu from './Components/Menu/Menu';
 import Recommendation from './Components/Recommendations';
+
+import Separator from '../../Separator';
 
 // Swiper 생성을 위한 Dependencies //
 import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
@@ -23,13 +23,19 @@ SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 const DetailsPage = ({ store }) => {
   let menu;
   if (store.isMenu === true) {
-    menu = <Menu store={store.name} />;
+    menu = (
+      <>
+        <Menu store={store.name} />
+        <Separator />
+      </>
+    );
   }
   return (
     <section className='detailsPage'>
       <DetailsNavi
         categoryNumber={store.categoryNumber[0]}
         categoryTitle={store.firstCategory[0]}
+        name={store.name}
       />
       <ImageBox img={store.images} name={store.name} />
       <Header
@@ -41,16 +47,9 @@ const DetailsPage = ({ store }) => {
         naverLink={store.naverLink}
         branch={store.branch}
       />
-      <SNS
-        instagramAccount={store.instagramAccount}
-        naverLink={store.naverLink}
-        name={store.name}
-      />
-      <OwnerSection
-        ownerMessage={store.ownerMessage}
-        ownerImage={store.images[0].url}
-        name={store.name}
-      />
+
+      <Separator />
+
       <Information
         openHour={store.openHour}
         closeHour={store.closeHour}
@@ -60,6 +59,7 @@ const DetailsPage = ({ store }) => {
         phoneNumber={store.phoneNumber}
         fullAddress={store.fullAddress}
       />
+      <Separator />
       {menu}
       <Recommendation
         filter={store.firstCategory[0]}

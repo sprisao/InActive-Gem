@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import Airtable from 'airtable';
 import './Menu.css';
 
+import { FiChevronDown } from 'react-icons/fi';
+
 const base = new Airtable({ apiKey: 'key5AMdi7ejadTzUy' }).base(
   'appDzyBPyX5MjMkrU'
 );
@@ -38,7 +40,10 @@ const Menu = (props) => {
 
   return (
     <section className='menu'>
-      <h2>대표 메뉴</h2>
+      <div className='details__section__menu__header'>
+        <h2>대표메뉴</h2>
+        <FiChevronDown style={{ fontSize: '1.5rem' }} />
+      </div>
       <div className='menu__background'>
         {menu.map((item) => {
           let englishName;

@@ -5,7 +5,7 @@ import {
   FiMapPin,
   FiPhoneOutgoing,
   FiCopy,
-  FiPhoneCall,
+  FiChevronDown,
 } from 'react-icons/fi';
 
 import { CopyToClipboard } from 'react-copy-to-clipboard';
@@ -27,6 +27,7 @@ const Information = (props) => {
     const pageUrl = 'tel:' + telNumber;
     document.location.href = pageUrl;
   };
+
   const [isShowing, setIsShowing] = useState(false);
   const openModal = () => {
     setIsShowing(true);
@@ -39,8 +40,6 @@ const Information = (props) => {
       return () => clearTimeout(notiTimer);
     }
   }, [isShowing]);
-
-  console.log(props.openHour);
 
   // 브레이크 타임 필터링
 
@@ -134,59 +133,58 @@ const Information = (props) => {
 
   return (
     <div className='details__Information'>
-      {businessHours}
-      {breakDays}
-      <div className='location'>
-        <FiMapPin
-          style={{ strokeWidth: '1px', color: '#a8a8a8' }}
-          className='details__icon'
-        />
-        <div className='location__fullAddress'>
-          <p>{props.fullAddress}</p>
-        </div>
-        <CopyToClipboard
-          text={props.fullAddress}
-          onCopy={() => setCopied(true)}
-        >
-          <button className='btn_container' type='button' onClick={openModal}>
-            <div className='copyBtn__container'>
-              <FiCopy style={{ fontSize: '1rem' }} />
-              <p>복사</p>
-            </div>
-
-            <div>{isShowing && <Modal />}</div>
-          </button>
-        </CopyToClipboard>
-        {/* {copied ? <span style={{ color: 'red' }}>Copied.</span> : null} */}
+      <div className='details__section__header'>
+        <h2>가게정보</h2>
+        <FiChevronDown style={{ fontSize: '1.5rem' }} />
       </div>
-      <hr />
-      <div className='phoneNumber'>
-        <FiPhoneOutgoing
-          style={{ strokeWidth: '1px', color: '#a8a8a8' }}
-          className='details__icon'
-        />
-        <p>{props.phoneNumber}</p>
-
-        <button className='btn_container' type='button' onClick={openLink}>
-          <div className='copyBtn__container'>
-            <FiPhoneCall style={{ fontSize: '1.15rem' }} />
-            <p>전화걸기</p>
+      <div className='details__Information__wrapper'>
+        {businessHours}
+        {breakDays}
+        <div className='location'>
+          <FiMapPin
+            style={{ strokeWidth: '1px', color: '#a8a8a8' }}
+            className='details__icon'
+          />
+          <div className='location__fullAddress'>
+            <p>{props.fullAddress}</p>
           </div>
-        </button>
+          <CopyToClipboard
+            text={props.fullAddress}
+            onCopy={() => setCopied(true)}
+          >
+            <button className='btn_container' type='button' onClick={openModal}>
+              <div className='copyBtn__container'>
+                <FiCopy style={{ fontSize: '1rem' }} />
+                <p>복사</p>
+              </div>
 
-        <CopyToClipboard
-          text={props.phoneNumber}
-          onCopy={() => setCopied(true)}
-        >
-          <button className='btn_container' type='button' onClick={openModal}>
-            <div className='copyBtn__container'>
-              <FiCopy style={{ fontSize: '1rem' }} />
-              <p>복사</p>
-            </div>
+              <div>{isShowing && <Modal />}</div>
+            </button>
+          </CopyToClipboard>
+          {/* {copied ? <span style={{ color: 'red' }}>Copied.</span> : null} */}
+        </div>
+        <hr />
+        <div className='phoneNumber'>
+          <FiPhoneOutgoing
+            style={{ strokeWidth: '1px', color: '#a8a8a8' }}
+            className='details__icon'
+          />
+          <p>{props.phoneNumber}</p>
 
-            <div>{isShowing && <Modal />}</div>
-          </button>
-        </CopyToClipboard>
+          <CopyToClipboard
+            text={props.phoneNumber}
+            onCopy={() => setCopied(true)}
+          >
+            <button className='btn_container' type='button' onClick={openModal}>
+              <div className='copyBtn__container'>
+                <FiCopy style={{ fontSize: '1rem' }} />
+                <p>복사</p>
+              </div>
+
+              <div>{isShowing && <Modal />}</div>
+            </button>
+          </CopyToClipboard>
+        </div>
       </div>
     </div>
   );

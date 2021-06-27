@@ -4,13 +4,22 @@
   justify-content: space-between;
   padding: 1rem;
   font-weight: 300;
-  font-size: 1.35rem;
+  font-size: 1.25rem;
 }
 
 .details__Information hr {
-  margin: 0.5rem auto;
+  margin: 0.45rem auto;
   width: 98%;
   border: #f8f8f8 0.5px solid;
+}
+
+.details__section__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.details__Information__wrapper {
+  padding: 1rem 0;
 }
 .details__icon {
   font-size: 1.35rem;
@@ -28,9 +37,6 @@
 .breakDays {
   display: flex;
   align-items: center;
-}
-.breakDays p {
-  color: #f21d73;
 }
 
 .location {
@@ -66,7 +72,7 @@
 .copyBtn__container p {
   margin-top: 0.1rem;
   align-items: center;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   margin-left: 0.15rem;
 }
 

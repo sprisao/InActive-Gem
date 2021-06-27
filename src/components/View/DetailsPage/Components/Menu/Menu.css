@@ -2,19 +2,21 @@
   margin-top: 1rem;
 }
 
-.menu h2 {
-  font-weight: 500;
+.details__section__menu__header {
+  display: flex;
+  justify-content: space-between;
   padding: 0 1rem;
 }
 .menu__background {
+  display: grid;
+  grid-row-gap: 0.25rem;
   margin-top: 0.7rem;
 }
 .menu__container {
-  background-color: #f8f8f8;
   display: grid;
   align-items: center;
   grid-template-columns: 2fr 4fr;
-  padding: 1rem;
+  padding: 0 1rem;
   grid-column-gap: 1.2rem;
   grid-row-gap: 1.2rem;
 }
