@@ -2,7 +2,7 @@ import React from 'react';
 import { useGlobalContext } from '../../../context';
 
 import { Link } from 'react-router-dom';
-import { FiChevronLeft, FiShare } from 'react-icons/fi';
+import { FiChevronLeft, FiShare, FiBookmark } from 'react-icons/fi';
 
 import './DetailsNavi.css';
 
@@ -26,13 +26,19 @@ const DetailsNavi = (props) => {
               <div className='detailsNavi__contents'>
                 <p>{props.name}</p>
               </div>
-              <FiShare
+              {/* <FiShare
                 style={{
                   fontSize: '1.35rem',
                   color: '#454545',
                   marginTop: '0.35rem',
                   cursor: 'pointer',
                   strokeWidth: '2.5px',
+                }}
+              /> */}
+              <FiBookmark
+                style={{
+                  fontSize: '1.85rem',
+                  strokeWidth: '1.25px',
                 }}
               />
             </div>

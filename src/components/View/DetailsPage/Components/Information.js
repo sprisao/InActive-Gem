@@ -20,18 +20,11 @@ import './Information.css';
 const Information = (props) => {
   const [copied, setCopied] = useState(false);
 
-  // 전화걸기 기능
-
-  const openLink = () => {
-    const telNumber = props.phoneNumber;
-    const pageUrl = 'tel:' + telNumber;
-    document.location.href = pageUrl;
-  };
-
   const [isShowing, setIsShowing] = useState(false);
   const openModal = () => {
     setIsShowing(true);
   };
+
   useEffect(() => {
     if (isShowing) {
       const notiTimer = setTimeout(() => {
@@ -131,6 +124,34 @@ const Information = (props) => {
     }
   }
 
+  // 전화번호 필터링
+
+  let telephoneNumber;
+  if (props.phoneNumber) {
+    telephoneNumber = (
+      <div className='phoneNumber'>
+        <FiPhoneOutgoing
+          style={{ strokeWidth: '1px', color: '#a8a8a8' }}
+          className='details__icon'
+        />
+        <p>{props.phoneNumber}</p>
+
+        <CopyToClipboard
+          text={props.phoneNumber}
+          onCopy={() => setCopied(true)}
+        >
+          <button className='btn_container' type='button' onClick={openModal}>
+            <div className='copyBtn__container'>
+              <FiCopy style={{ fontSize: '1rem' }} />
+              <p>복사</p>
+            </div>
+
+            <div>{isShowing && <Modal />}</div>
+          </button>
+        </CopyToClipboard>
+      </div>
+    );
+  }
   return (
     <div className='details__Information'>
       <div className='details__section__header'>
@@ -164,27 +185,7 @@ const Information = (props) => {
           {/* {copied ? <span style={{ color: 'red' }}>Copied.</span> : null} */}
         </div>
         <hr />
-        <div className='phoneNumber'>
-          <FiPhoneOutgoing
-            style={{ strokeWidth: '1px', color: '#a8a8a8' }}
-            className='details__icon'
-          />
-          <p>{props.phoneNumber}</p>
-
-          <CopyToClipboard
-            text={props.phoneNumber}
-            onCopy={() => setCopied(true)}
-          >
-            <button className='btn_container' type='button' onClick={openModal}>
-              <div className='copyBtn__container'>
-                <FiCopy style={{ fontSize: '1rem' }} />
-                <p>복사</p>
-              </div>
-
-              <div>{isShowing && <Modal />}</div>
-            </button>
-          </CopyToClipboard>
-        </div>
+        {telephoneNumber}
       </div>
     </div>
   );

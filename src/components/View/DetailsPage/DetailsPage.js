@@ -58,6 +58,7 @@ const DetailsPage = ({ store }) => {
         breaktimeEnd={store.breaktimeEnd}
         breakDays={store.breakDays}
         fullAddress={store.fullAddress}
+        phoneNumber={store.phoneNumber}
       />
       <Separator />
       {menu}

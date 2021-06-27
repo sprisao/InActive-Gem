@@ -9,8 +9,8 @@
 }
 .menu__background {
   display: grid;
-  grid-row-gap: 0.25rem;
-  margin-top: 0.7rem;
+  grid-row-gap: 1.15rem;
+  margin-top: 1rem;
 }
 .menu__container {
   display: grid;

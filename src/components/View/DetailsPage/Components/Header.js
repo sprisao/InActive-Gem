@@ -1,6 +1,6 @@
 import React from 'react';
 import { HiBadgeCheck } from 'react-icons/hi';
-import { FiBookmark, FiPhoneCall } from 'react-icons/fi';
+import { FiPhoneCall } from 'react-icons/fi';
 import './Header.css';
 
 const url = 'https://www.instagram.com/';
@@ -42,17 +42,7 @@ const Header = (props) => {
     <div className='details__Header'>
       <div className='details__Header__Container'>
         <div className='details__shortDesc'>
-          <div
-            className='details__shortDesc__Placeholder'
-            style={{ width: '1.65rem' }}
-          ></div>
           <h4>{props.shortDescription}</h4>
-          <FiBookmark
-            style={{
-              fontSize: '1.85rem',
-              strokeWidth: '1.25px',
-            }}
-          />
         </div>
         <div className='details__name'>
           <h3>{props.name}</h3>
@@ -84,7 +74,7 @@ const Header = (props) => {
           className='details__Header__Naver'
           onClick={() => window.open(props.naverLink, '_parent')}
         >
-          <p>스마트 플레이스</p>
+          <p>네이버</p>
         </div>
       </div>
     </div>
