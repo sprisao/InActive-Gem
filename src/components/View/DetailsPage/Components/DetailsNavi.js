@@ -26,7 +26,7 @@ const DetailsNavi = (props) => {
                 style={{
                   fontSize: '1.35rem',
                   color: '#454545',
-                  marginBottom: '0.1rem',
+                  marginTop: '0.35rem',
                   cursor: 'pointer',
                 }}
               />

@@ -49,7 +49,7 @@ const Header = (props) => {
           <h4>{props.shortDescription}</h4>
           <FiBookmark
             style={{
-              fontSize: '1.65rem',
+              fontSize: '1.85rem',
               strokeWidth: '1.25px',
             }}
           />

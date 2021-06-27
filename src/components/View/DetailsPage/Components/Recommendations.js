@@ -27,6 +27,8 @@ const Recommendations = (props) => {
         length={7}
         categoryType='2'
       />
+      <br />
+      <br />
       <h2>✨ 이런 곳도 있어요!</h2>
       <DetailGrid
         filter={props.filter}
