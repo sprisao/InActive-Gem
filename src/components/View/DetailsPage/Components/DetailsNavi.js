@@ -14,7 +14,11 @@ const DetailsNavi = (props) => {
         if (category.firstCategory === props.categoryTitle) {
           return (
             <div className='detailsNavi__box'>
-              <Link key={category.id} to={`/category/${props.categoryTitle}`}>
+              <Link
+                key={category.id}
+                to={`/category/${props.categoryTitle}`}
+                style={{ marginLeft: '-0.375rem' }}
+              >
                 <FiChevronLeft
                   style={{ fontSize: '1.85rem', color: '#454545' }}
                 />
@@ -28,6 +32,7 @@ const DetailsNavi = (props) => {
                   color: '#454545',
                   marginTop: '0.35rem',
                   cursor: 'pointer',
+                  strokeWidth: '2.5px',
                 }}
               />
             </div>
