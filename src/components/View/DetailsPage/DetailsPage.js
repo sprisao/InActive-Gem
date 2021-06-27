@@ -46,6 +46,7 @@ const DetailsPage = ({ store }) => {
         storeVerified={store.storeVerified}
         naverLink={store.naverLink}
         branch={store.branch}
+        phoneNumber={store.phoneNumber}
       />
 
       <Separator />
@@ -56,7 +57,6 @@ const DetailsPage = ({ store }) => {
         breaktimeStart={store.breaktimeStart}
         breaktimeEnd={store.breaktimeEnd}
         breakDays={store.breakDays}
-        phoneNumber={store.phoneNumber}
         fullAddress={store.fullAddress}
       />
       <Separator />
