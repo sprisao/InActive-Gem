@@ -14,17 +14,15 @@ const DetailsNavi = (props) => {
         if (category.firstCategory === props.categoryTitle) {
           return (
             <div className='detailsNavi__box'>
-              <Link
-                key={category.id}
-                to={`/category/${props.categoryTitle}`}
-                style={{ marginLeft: '-0.375rem' }}
-              >
-                <FiChevronLeft
-                  style={{ fontSize: '1.85rem', color: '#454545' }}
-                />
+              <Link key={category.id} to={`/category/${props.categoryTitle}`}>
+                <div className='Details__Backward'>
+                  <FiChevronLeft
+                    style={{ fontSize: '1.85rem', color: '#454545' }}
+                  />
+                </div>
               </Link>
               <div className='detailsNavi__contents'>
-                <p>{props.name}</p>
+                <h3>{props.name}</h3>
               </div>
               {/* <FiShare
                 style={{
@@ -35,12 +33,14 @@ const DetailsNavi = (props) => {
                   strokeWidth: '2.5px',
                 }}
               /> */}
-              <FiBookmark
-                style={{
-                  fontSize: '1.85rem',
-                  strokeWidth: '1.25px',
-                }}
-              />
+              <div className='Details__Save'>
+                <FiBookmark
+                  style={{
+                    fontSize: '1.85rem',
+                    strokeWidth: '1.25px',
+                  }}
+                />
+              </div>
             </div>
           );
         }

@@ -119,7 +119,7 @@ const StoreProvider = ({ children }) => {
   useEffect(() => {
     storeBase('locationCategoryData')
       .select({
-        view: 'Grid view',
+        view: 'dropdown',
         pageSize: 30,
       })
       .eachPage(

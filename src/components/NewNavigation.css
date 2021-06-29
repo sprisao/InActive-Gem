@@ -20,7 +20,7 @@
 
 @media screen and (min-width: 350px) {
   .Navigation__Container {
-    grid-template-rows: 3.65fr 2fr 3fr 1.35fr;
+    grid-template-rows: 3.75fr 2fr 3fr 1.35fr;
   }
 }
 
