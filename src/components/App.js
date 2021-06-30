@@ -49,17 +49,12 @@ function App() {
           </Route>
           <Route path='/category/:firstCategory'>
             <Header />
-            {/* <Navigation /> */}
             <CategoryData />
           </Route>
           <Route path='/category/:firstCategory/:secondCategory'>
             <Header />
             <CategoryData />
           </Route>
-          {/* <Route path='/category/*'>
-            <Header />
-            <Ready />
-          </Route> */}
           <Route path='/store/:id'>
             <Header />
             <DetailsData />
