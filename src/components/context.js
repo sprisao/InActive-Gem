@@ -108,7 +108,7 @@ const StoreProvider = ({ children }) => {
     storeBase('stores')
       .select({
         view: 'cafes',
-        pageSize: 100,
+        pageSize: 50,
       })
       .eachPage(
         function page(records, fetchNextPage) {
@@ -118,13 +118,14 @@ const StoreProvider = ({ children }) => {
               ...record._rawJson.fields,
             });
           });
+          fetchNextPage();
           setCafes(cafe);
         },
         function done(err) {
           if (err) {
             console.error(err);
           } else {
-            console.log('업체데이터 불러오기 성공');
+            console.log('카페 불러오기 성공');
             setCafesLoading(false);
           }
         }
@@ -165,7 +166,7 @@ const StoreProvider = ({ children }) => {
     storeBase('secondCategoryData')
       .select({
         view: 'Grid view',
-        pageSize: 100,
+        pageSize: 50,
       })
       .eachPage(
         function page(records, fetchNextPage) {
@@ -193,7 +194,7 @@ const StoreProvider = ({ children }) => {
     storeBase('locationCategoryData')
       .select({
         view: 'dropdown',
-        pageSize: 100,
+        pageSize: 20,
       })
       .eachPage(
         function page(records, fetchNextPage) {
