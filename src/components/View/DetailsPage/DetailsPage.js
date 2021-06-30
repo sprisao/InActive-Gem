@@ -63,8 +63,8 @@ const DetailsPage = ({ store }) => {
       <Separator />
       {menu}
       <Recommendation
-        filter={store.firstCategory[0]}
-        filter2={store.secondCategory[0]}
+        filter={store.firstCategory}
+        filter2={store.secondCategory}
         self={store.id}
         emoji={store.secondEmoji}
         secondCategory={store.secondCategory}

@@ -42,7 +42,7 @@ const DetailGrid = (props) => {
       let randomNum = Math.floor(Math.random() * totalIndex);
 
       if (props.categoryType === '1') {
-        if (stores[randomNum].firstCategory[0] === props.filter) {
+        if (stores[randomNum].firstCategory === props.filter) {
           if (randomIndexArray.indexOf(randomNum) === -1) {
             randomIndexArray.push(randomNum);
           } else {
@@ -53,7 +53,7 @@ const DetailGrid = (props) => {
         }
       }
       if (props.categoryType === '2') {
-        if (stores[randomNum].secondCategory[0] === props.filter2) {
+        if (stores[randomNum].secondCategory === props.filter2) {
           if (randomIndexArray.indexOf(randomNum) === -1) {
             randomIndexArray.push(randomNum);
           } else {
@@ -65,8 +65,8 @@ const DetailGrid = (props) => {
       }
       if (props.categoryType === '3') {
         if (
-          stores[randomNum].firstCategory[0] === props.filter &&
-          stores[randomNum].secondCategory[0] !== props.filter2
+          stores[randomNum].firstCategory === props.filter &&
+          stores[randomNum].secondCategory !== props.filter2
         ) {
           if (randomIndexArray.indexOf(randomNum) === -1) {
             randomIndexArray.push(randomNum);

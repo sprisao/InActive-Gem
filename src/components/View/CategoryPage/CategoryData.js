@@ -2,20 +2,29 @@ import React from 'react';
 import { useGlobalContext } from '../../context';
 import { useParams } from 'react-router-dom';
 
-import CategoryPage from './CategoryPage';
+import Loading from '../../Loading';
+import CategoryComponent from './CategoryPageComponent/CategoryComponent';
+
 const CategoryData = () => {
   const { firstCategory } = useParams();
-  const { firstCategories, loading } = useGlobalContext();
+  const { firstCategories, loading, stores } = useGlobalContext();
+  console.log(stores);
+
+  if (loading) {
+    return <Loading />;
+  }
   return (
     <>
       {firstCategories.map((category) => {
         if (category.firstCategory === firstCategory) {
           return (
-            <CategoryPage
-              key={category.id}
-              category={category}
-              loading={loading}
-            ></CategoryPage>
+            <CategoryComponent
+              id={category.id}
+              category={firstCategory}
+              stores={stores.filter(
+                (store) => store.firstCategory[0] === firstCategory
+              )}
+            />
           );
         } else return null;
       })}

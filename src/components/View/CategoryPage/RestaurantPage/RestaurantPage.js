@@ -1,20 +1,19 @@
 import React from 'react';
 import CategoryComponent from '../CategoryPageComponent/CategoryComponent';
+import Loading from '../../../Loading';
 
 import { useGlobalContext } from '../../../context';
 
 const RestaurantPage = () => {
-  const { stores, loading } = useGlobalContext();
-  console.log(stores);
-  return (
-    <>
-      <CategoryComponent
-        category='맛집'
-        stores={stores.filter((store) => store.firstCategory[0] === '맛집')}
-        loading={loading}
-      />
-    </>
-  );
+  const { restaurants, restaurantLoading } = useGlobalContext();
+  if (restaurantLoading) {
+    return <Loading />;
+  } else
+    return (
+      <>
+        <CategoryComponent category='맛집' stores={restaurants} />
+      </>
+    );
 };
 
 export default RestaurantPage;

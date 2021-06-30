@@ -10,6 +10,7 @@ const Context = React.createContext();
 const StoreProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const [restaurantLoading, setRestaurantLoading] = useState(true);
+  const [cafesLoading, setCafesLoading] = useState(true);
   const [mainLoading, setMainLoading] = useState(true);
   const [navigationLoading, setNavigationLoading] = useState(true);
   const [secondLoading, setSecondLoading] = useState(true);
@@ -17,6 +18,13 @@ const StoreProvider = ({ children }) => {
 
   const [stores, setStores] = useState([]);
   const [restaurants, setRestaurants] = useState([]);
+  const [cafes, setCafes] = useState([]);
+  // const [pups, setPups] = useState([]);
+  // const [fitnesses, setFitnesses] = useState([]);
+  // const [beutyStores, setBeutyStores] = useState([]);
+  // const [studios, setStudios] = useState([]);
+  // const [entertainments, setEntertainments] = useState([]);
+
   const [firstCategories, setFirstCategories] = useState([]);
   const [secondCategories, setSecondCategories] = useState([]);
   const [locationCategories, setlocationCategories] = useState([]);
@@ -25,6 +33,12 @@ const StoreProvider = ({ children }) => {
 
   const store = [];
   const restaurant = [];
+  const cafe = [];
+  // const pub = [];
+  // const fitness = [];
+  // const beutyStore = [];
+  // const studio = [];
+  // const entertainment = [];
   const firstCategory = [];
   const secondCategory = [];
   const locationCategory = [];
@@ -35,8 +49,8 @@ const StoreProvider = ({ children }) => {
   useEffect(() => {
     storeBase('stores')
       .select({
-        view: 'Grid view',
-        pageSize: 20,
+        view: 'otherStores',
+        pageSize: 100,
       })
       .eachPage(
         function page(records, fetchNextPage) {
@@ -48,13 +62,13 @@ const StoreProvider = ({ children }) => {
           });
           fetchNextPage();
           setStores(store);
-          setLoading(false);
         },
         function done(err) {
           if (err) {
             console.error(err);
           } else {
-            console.log('업체데이터 불러오기 성공');
+            console.log('다른 업체들 불러오기 성공');
+            setLoading(false);
           }
         }
       );
@@ -65,7 +79,7 @@ const StoreProvider = ({ children }) => {
     storeBase('stores')
       .select({
         view: 'restaurants',
-        pageSize: 50,
+        pageSize: 100,
       })
       .eachPage(
         function page(records, fetchNextPage) {
@@ -77,13 +91,41 @@ const StoreProvider = ({ children }) => {
           });
           fetchNextPage();
           setRestaurants(restaurant);
-          setRestaurantLoading(false);
         },
         function done(err) {
           if (err) {
             console.error(err);
           } else {
             console.log('업체데이터 불러오기 성공');
+            setRestaurantLoading(false);
+          }
+        }
+      );
+  }, []);
+
+  // 카페 불러오기
+  useEffect(() => {
+    storeBase('stores')
+      .select({
+        view: 'cafes',
+        pageSize: 100,
+      })
+      .eachPage(
+        function page(records, fetchNextPage) {
+          records.forEach(function (record) {
+            cafe.push({
+              id: record.id,
+              ...record._rawJson.fields,
+            });
+          });
+          setCafes(cafe);
+        },
+        function done(err) {
+          if (err) {
+            console.error(err);
+          } else {
+            console.log('업체데이터 불러오기 성공');
+            setCafesLoading(false);
           }
         }
       );
@@ -94,7 +136,7 @@ const StoreProvider = ({ children }) => {
     storeBase('firstCategoryData')
       .select({
         view: 'Grid view',
-        pageSize: 50,
+        pageSize: 100,
       })
       .eachPage(
         function page(records, fetchNextPage) {
@@ -106,14 +148,13 @@ const StoreProvider = ({ children }) => {
           });
           fetchNextPage();
           setFirstCategories(firstCategory);
-
-          setNavigationLoading(false);
         },
         function done(err) {
           if (err) {
             console.error(err);
           } else {
             console.log('카테고리 데이터 불러오기 성공');
+            setNavigationLoading(false);
           }
         }
       );
@@ -124,7 +165,7 @@ const StoreProvider = ({ children }) => {
     storeBase('secondCategoryData')
       .select({
         view: 'Grid view',
-        pageSize: 30,
+        pageSize: 100,
       })
       .eachPage(
         function page(records, fetchNextPage) {
@@ -135,7 +176,6 @@ const StoreProvider = ({ children }) => {
             });
           });
           setSecondCategories(secondCategory);
-          setSecondLoading(false);
           fetchNextPage();
         },
         function done(err) {
@@ -143,6 +183,7 @@ const StoreProvider = ({ children }) => {
             console.error(err);
           } else {
             console.log('세컨드 카테고리 데이터 불러오기 성공');
+            setSecondLoading(false);
           }
         }
       );
@@ -152,7 +193,7 @@ const StoreProvider = ({ children }) => {
     storeBase('locationCategoryData')
       .select({
         view: 'dropdown',
-        pageSize: 30,
+        pageSize: 100,
       })
       .eachPage(
         function page(records, fetchNextPage) {
@@ -163,7 +204,6 @@ const StoreProvider = ({ children }) => {
             });
           });
           setlocationCategories(locationCategory);
-          setLocationLoading(false);
           fetchNextPage();
         },
         function done(err) {
@@ -171,6 +211,7 @@ const StoreProvider = ({ children }) => {
             console.error(err);
           } else {
             console.log('로케이션 카테고리 데이터 불러오기 성공');
+            setLocationLoading(false);
           }
         }
       );
@@ -196,7 +237,7 @@ const StoreProvider = ({ children }) => {
           fetchNextPage();
         },
         function done(err) {
-          console.log('메인 데이터 로딩 완료');
+          console.log('점심 추천 업체 데이터 로딩 완료');
           if (err) {
             console.error(err);
             return;
@@ -238,15 +279,17 @@ const StoreProvider = ({ children }) => {
       value={{
         loading,
         restaurantLoading,
+        cafesLoading,
         navigationLoading,
-        stores,
-        restaurants,
-        firstCategories,
-        secondCategories,
-        locationCategories,
         secondLoading,
         locationLoading,
         mainLoading,
+        stores,
+        restaurants,
+        cafes,
+        firstCategories,
+        secondCategories,
+        locationCategories,
         lunchRCCMD,
         cafeRCCMD,
       }}

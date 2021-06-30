@@ -4,7 +4,6 @@ import React, { useState } from 'react';
 import CategoryHeader from './CategoryHeader';
 import GridCard from '../../../Grid/GridCard';
 import SecondCategory from '../SecondCategory';
-import Loading from '../../../Loading';
 
 import './CategoryComponent.css';
 
@@ -31,56 +30,53 @@ const CategoryComponent = (props) => {
     setSecondCategory(value);
   };
 
-  if (props.loading) {
-    return <Loading></Loading>;
-  } else
-    return (
-      <>
-        <section className='CategoryComponent'>
-          <CategoryHeader
-            filterLocations={filterLocations}
-            category={props.category}
-          />
+  return (
+    <>
+      <section className='CategoryComponent'>
+        <CategoryHeader
+          filterLocations={filterLocations}
+          category={props.category}
+        />
 
-          <div className='SecondCategory__container'>
-            <SecondCategory
-              category={props.category}
-              getSecondCategory={getSecondCategory}
-            />
-          </div>
-          <div className='CategoryGrid'>
-            <section className='grid'>
-              <section className='grid__wrapper'>
-                {items.map((store) => {
-                  if (secondCategory === '전체') {
-                    return (
-                      <GridCard
-                        key={store.id}
-                        store={store}
-                        tags={store.tags}
-                        open={store.openHour}
-                        close={store.closeHour}
-                      ></GridCard>
-                    );
-                  }
-                  if (store.secondCategory[0] === secondCategory) {
-                    return (
-                      <GridCard
-                        key={store.id}
-                        store={store}
-                        tags={store.tags}
-                        open={store.openHour}
-                        close={store.closeHour}
-                      ></GridCard>
-                    );
-                  } else return null;
-                })}
-              </section>
+        <div className='SecondCategory__container'>
+          <SecondCategory
+            category={props.category}
+            getSecondCategory={getSecondCategory}
+          />
+        </div>
+        <div className='CategoryGrid'>
+          <section className='grid'>
+            <section className='grid__wrapper'>
+              {items.map((store) => {
+                if (secondCategory === '전체') {
+                  return (
+                    <GridCard
+                      key={store.id}
+                      store={store}
+                      tags={store.tags}
+                      open={store.openHour}
+                      close={store.closeHour}
+                    ></GridCard>
+                  );
+                }
+                if (store.secondCategory[0] === secondCategory) {
+                  return (
+                    <GridCard
+                      key={store.id}
+                      store={store}
+                      tags={store.tags}
+                      open={store.openHour}
+                      close={store.closeHour}
+                    ></GridCard>
+                  );
+                } else return null;
+              })}
             </section>
-          </div>
-        </section>
-      </>
-    );
+          </section>
+        </div>
+      </section>
+    </>
+  );
 };
 
 export default CategoryComponent;

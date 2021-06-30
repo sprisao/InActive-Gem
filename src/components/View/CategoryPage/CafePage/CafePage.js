@@ -1,17 +1,17 @@
 import React from 'react';
 import CategoryComponent from '../CategoryPageComponent/CategoryComponent';
-
+import Loading from '../../../Loading';
 import { useGlobalContext } from '../../../context';
 
 const CafePage = () => {
-  const { stores, loading } = useGlobalContext();
+  const { cafes, cafesLoading } = useGlobalContext();
+
+  if (cafesLoading) {
+    return <Loading />;
+  }
   return (
     <>
-      <CategoryComponent
-        category='카페'
-        stores={stores.filter((store) => store.firstCategory[0] === '카페')}
-        loading={loading}
-      />
+      <CategoryComponent category='카페' stores={cafes} />
     </>
   );
 };

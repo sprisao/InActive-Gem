@@ -5,7 +5,6 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import LandingPage from './View/LandingPage/LandingPage';
 import RestaurantPage from './View/CategoryPage/RestaurantPage/RestaurantPage';
 import CafePage from './View/CategoryPage/CafePage/CafePage';
-import EnterCityPage from './View/CategoryPage/EnterCityPage/EnterCityPage';
 import CategoryData from './View/CategoryPage/CategoryData';
 import DetailsData from './View/DetailsPage/DetailsData';
 import SearchPage from './View/SearchPage/SearchPage';
@@ -38,10 +37,6 @@ function App() {
           <Route exact path='/category/카페'>
             <Header />
             <CafePage />
-          </Route>
-          <Route exact path='/category/원주기업도시'>
-            <Header />
-            <EnterCityPage />
           </Route>
           <Route exact path='/search'>
             <SearchHeader />
