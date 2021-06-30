@@ -16,7 +16,7 @@ const Grid = ({ filter }) => {
       <section className='grid'>
         <section className='grid__wrapper'>
           {stores.map((store) => {
-            if (store.firstCategory[0] === filter) {
+            if (store.firstCategory === filter) {
               return (
                 <GridCard
                   key={store.id}
@@ -27,7 +27,7 @@ const Grid = ({ filter }) => {
                 ></GridCard>
               );
             }
-            if (store.secondCategory[0] === filter) {
+            if (store.secondCategory === filter) {
               return (
                 <GridCard
                   key={store.id}

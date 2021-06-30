@@ -13,24 +13,25 @@ const SecondCategory = (props) => {
   return (
     <section className='SeondCategory'>
       <div className='SeondCategory__container'>
+        <button
+          className='SeondCategory__item'
+          onClick={() => sendSecondCategory('전체')}
+        >
+          🅰️ 전체
+        </button>
         {secondCategories.map((secondCategory) => {
           if (
             props.category === secondCategory.firstCategory[0] &&
             secondCategory.isActive === true
           )
             return (
-              <Link
+              <button
                 key={secondCategory.id}
-                to={`/category/${secondCategory.firstCategory}/${secondCategory.title}`}
+                className='SeondCategory__item'
+                onClick={() => sendSecondCategory(secondCategory.title)}
               >
-                <button
-                  key={secondCategory.id}
-                  className='SeondCategory__item'
-                  onClick={() => sendSecondCategory(secondCategory.title)}
-                >
-                  {secondCategory.emoji}&nbsp;{secondCategory.title}
-                </button>
-              </Link>
+                {secondCategory.emoji}&nbsp;{secondCategory.title}
+              </button>
             );
           else return null;
         })}

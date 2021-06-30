@@ -9,12 +9,14 @@ const Context = React.createContext();
 
 const StoreProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
+  const [restaurantLoading, setRestaurantLoading] = useState(true);
   const [mainLoading, setMainLoading] = useState(true);
   const [navigationLoading, setNavigationLoading] = useState(true);
   const [secondLoading, setSecondLoading] = useState(true);
   const [locationLoading, setLocationLoading] = useState(true);
 
   const [stores, setStores] = useState([]);
+  const [restaurants, setRestaurants] = useState([]);
   const [firstCategories, setFirstCategories] = useState([]);
   const [secondCategories, setSecondCategories] = useState([]);
   const [locationCategories, setlocationCategories] = useState([]);
@@ -22,6 +24,7 @@ const StoreProvider = ({ children }) => {
   const [cafeRCCMD, setCafeRCCMD] = useState([]);
 
   const store = [];
+  const restaurant = [];
   const firstCategory = [];
   const secondCategory = [];
   const locationCategory = [];
@@ -46,6 +49,35 @@ const StoreProvider = ({ children }) => {
           fetchNextPage();
           setStores(store);
           setLoading(false);
+        },
+        function done(err) {
+          if (err) {
+            console.error(err);
+          } else {
+            console.log('업체데이터 불러오기 성공');
+          }
+        }
+      );
+  }, []);
+
+  // 맛집 불러오기
+  useEffect(() => {
+    storeBase('stores')
+      .select({
+        view: 'restaurants',
+        pageSize: 50,
+      })
+      .eachPage(
+        function page(records, fetchNextPage) {
+          records.forEach(function (record) {
+            restaurant.push({
+              id: record.id,
+              ...record._rawJson.fields,
+            });
+          });
+          fetchNextPage();
+          setRestaurants(restaurant);
+          setRestaurantLoading(false);
         },
         function done(err) {
           if (err) {
@@ -205,13 +237,16 @@ const StoreProvider = ({ children }) => {
     <Context.Provider
       value={{
         loading,
+        restaurantLoading,
         navigationLoading,
         stores,
+        restaurants,
         firstCategories,
         secondCategories,
         locationCategories,
         secondLoading,
         locationLoading,
+        mainLoading,
         lunchRCCMD,
         cafeRCCMD,
       }}

@@ -10,19 +10,19 @@ const DetailGrid = (props) => {
     let j = 0;
     for (let i = 0; i < stores.length; i++) {
       if (props.categoryType === '1') {
-        if (stores[i].firstCategory[0] === props.filter) {
+        if (stores[i].firstCategory === props.filter) {
           j++;
         }
       }
       if (props.categoryType === '2') {
-        if (stores[i].secondCategory[0] === props.filter2) {
+        if (stores[i].secondCategory === props.filter2) {
           j++;
         }
       }
       if (props.categoryType === '3') {
         if (
-          stores[i].firstCategory[0] === props.filter &&
-          stores[i].secondCategory[0] !== props.filter2
+          stores[i].firstCategory === props.filter &&
+          stores[i].secondCategory !== props.filter2
         ) {
           j++;
         }

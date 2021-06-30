@@ -5,12 +5,6 @@ import { FiClock } from 'react-icons/fi';
 
 import './GridCard.css';
 
-const now = new Date();
-const hours = now.getHours();
-const minutes = now.getMinutes();
-
-console.log('시간 : ', hours, minutes);
-
 const GridCard = ({ store, tags, open, close }) => {
   // 인증업체 필터
   let verfiedStore;
