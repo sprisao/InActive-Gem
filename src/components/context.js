@@ -15,6 +15,7 @@ const StoreProvider = ({ children }) => {
   const [navigationLoading, setNavigationLoading] = useState(true);
   const [secondLoading, setSecondLoading] = useState(true);
   const [locationLoading, setLocationLoading] = useState(true);
+  const [menuLoading, setMenuLoading] = useState(true);
 
   const [stores, setStores] = useState([]);
   const [restaurants, setRestaurants] = useState([]);
@@ -28,6 +29,7 @@ const StoreProvider = ({ children }) => {
   const [firstCategories, setFirstCategories] = useState([]);
   const [secondCategories, setSecondCategories] = useState([]);
   const [locationCategories, setlocationCategories] = useState([]);
+  const [menu, setMenu] = useState([]);
   const [lunchRCCMD, setLunchRCCMD] = useState([]);
   const [cafeRCCMD, setCafeRCCMD] = useState([]);
 
@@ -39,6 +41,7 @@ const StoreProvider = ({ children }) => {
   // const beutyStore = [];
   // const studio = [];
   // const entertainment = [];
+  const menuItem = [];
   const firstCategory = [];
   const secondCategory = [];
   const locationCategory = [];
@@ -218,6 +221,36 @@ const StoreProvider = ({ children }) => {
       );
   }, []);
 
+  // 메뉴 데이터 로딩
+
+  useEffect(() => {
+    storeBase('menu')
+      .select({
+        view: 'Grid view',
+        pageSize: 20,
+      })
+      .eachPage(
+        function page(records, fetchNextPage) {
+          records.forEach(function (record) {
+            menuItem.push({
+              id: record.id,
+              ...record._rawJson.fields,
+            });
+          });
+          fetchNextPage();
+          setMenu(menuItem);
+        },
+        function done(err) {
+          if (err) {
+            console.error(err);
+          } else {
+            console.log('로케이션 카테고리 데이터 불러오기 성공');
+            setMenuLoading(false);
+          }
+        }
+      );
+  }, []);
+
   useEffect(() => {
     storeBase('stores')
       .select({
@@ -284,10 +317,12 @@ const StoreProvider = ({ children }) => {
         navigationLoading,
         secondLoading,
         locationLoading,
+        menuLoading,
         mainLoading,
         stores,
         restaurants,
         cafes,
+        menu,
         firstCategories,
         secondCategories,
         locationCategories,

@@ -41,7 +41,7 @@ const CategoryHeader = ({ filterLocations, category }) => {
             </button>
             <nav
               ref={dropdownRef}
-              className={`menu ${isActive ? 'active' : 'inactive'}`}
+              className={`dropdownMenu ${isActive ? 'active' : 'inactive'}`}
             >
               <ul>
                 <li>

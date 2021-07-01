@@ -23,6 +23,7 @@ SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 const DetailsPage = ({ store }) => {
   let menu;
   if (store.isMenu === true) {
+    console.log(store.name);
     menu = (
       <>
         <Menu store={store.name} />

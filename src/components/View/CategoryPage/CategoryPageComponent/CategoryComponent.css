@@ -93,7 +93,7 @@
   }
 }
 
-.menu {
+.dropdownMenu {
   position: absolute;
   display: flex;
   justify-content: center;

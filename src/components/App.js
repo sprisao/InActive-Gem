@@ -31,11 +31,9 @@ function App() {
             <LandingPage />
           </Route>
           <Route exact path='/category/맛집'>
-            <Header />
             <RestaurantPage />
           </Route>
           <Route exact path='/category/카페'>
-            <Header />
             <CafePage />
           </Route>
           <Route exact path='/search'>
@@ -47,7 +45,6 @@ function App() {
             <CategoryData />
           </Route>
           <Route path='/category/:firstCategory/:secondCategory'>
-            <Header />
             <CategoryData />
           </Route>
           <Route path='/store/:id'>
