@@ -150,17 +150,30 @@ body {
   font-weight: 350;
   color: #222;
 }
-@media screen and (min-width: 320px) {
+@media screen and (min-width: 310px) {
+  html {
+    font-size: 11px;
+  }
+}
+
+@media screen and (min-width: 330px) {
   html {
     font-size: 12px;
   }
 }
 
-@media screen and (min-width: 350px) {
+@media screen and (min-width: 360px) {
+  html {
+    font-size: 13.5px;
+  }
+}
+
+@media screen and (min-width: 380px) {
   html {
     font-size: 14px;
   }
 }
+
 @media screen and (min-width: 780px) {
   html {
     font-size: 14px;
