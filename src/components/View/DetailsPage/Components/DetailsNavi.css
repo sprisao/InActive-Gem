@@ -19,6 +19,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 12rem;
+  height: 100%;
   font-size: 1.25rem;
   font-family: 'cookierun-regular';
 }
