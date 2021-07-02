@@ -24,7 +24,7 @@
 }
 
 .Details__Backward {
-  width: 8rem;
+  width: 3rem;
   display: flex;
   justify-content: flex-start;
   background-color: transparent;
@@ -34,6 +34,6 @@
 
 .Details__Save {
   display: flex;
-  width: 8rem;
+  width: 3rem;
   justify-content: flex-end;
 }
