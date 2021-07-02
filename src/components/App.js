@@ -31,9 +31,11 @@ function App() {
             <LandingPage />
           </Route>
           <Route exact path='/category/맛집'>
+            <Header />
             <RestaurantPage />
           </Route>
           <Route exact path='/category/카페'>
+            <Header />
             <CafePage />
           </Route>
           <Route exact path='/search'>

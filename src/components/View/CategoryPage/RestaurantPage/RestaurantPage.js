@@ -6,7 +6,6 @@ import { useGlobalContext } from '../../../context';
 
 const RestaurantPage = () => {
   const { restaurants, restaurantLoading } = useGlobalContext();
-  console.log(restaurants);
   if (restaurantLoading) {
     return <Loading />;
   } else
