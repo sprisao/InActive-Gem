@@ -43,7 +43,8 @@ const Navigation = () => {
               </div>
               <div className='Navigation__Item__Message'>
                 <p>
-                  원주의 거의 모든 카페를 <br /> 한 눈에!
+                  원주의 '거의'
+                  <br /> 모든 카페를 한 눈에!
                 </p>
               </div>
             </div>
