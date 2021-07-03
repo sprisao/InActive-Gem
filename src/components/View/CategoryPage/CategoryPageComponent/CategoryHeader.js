@@ -20,7 +20,7 @@ const CategoryHeader = ({ filterLocations, category }) => {
     <>
       <div className='Category__Header__Wrapper'>
         <div className='Category__Header'>
-          <Link to={`/category/홈`}>
+          <Link to={`/`}>
             <button className='Category__Backward'>
               <FiChevronLeft style={{ fontSize: '1.8rem' }} />
             </button>
