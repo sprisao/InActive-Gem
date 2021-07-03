@@ -1,12 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FiSend } from 'react-icons/fi';
 import './Header.css';
 
 function Header() {
   return (
     <section className='header'>
       <div className='header__wrapper'>
-        <div className="spaceholder"></div>
+        <div className='spaceholder'></div>
         <Link to='/'>
           <div className='logo__container'>
             <img
@@ -16,8 +17,15 @@ function Header() {
             />
           </div>
         </Link>
-        <div className="sharingGem__button">
-          <img src="https://res.cloudinary.com/diimwnnmj/image/upload/v1624590337/message_wnwz94.png" alt="share" />
+        <div className='sharingGem__button'>
+          {/* <img src="https://res.cloudinary.com/diimwnnmj/image/upload/v1624590337/message_wnwz94.png" alt="share" /> */}
+          <FiSend
+            style={{
+              fontSize: '1.35rem',
+              marginBottom: '0.25rem ',
+              strokeWidth: '1.75px',
+            }}
+          />
           <p>친구에게 알리기</p>
         </div>
       </div>

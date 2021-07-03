@@ -23,16 +23,12 @@ function App() {
       <ScrollToTop>
         <Switch>
           <Route exact path='/'>
-            <Header />
-            <LandingPage />
-          </Route>
-          <Route exact path='/category/홈'>
-            <Header />
             <LandingPage />
           </Route>
           <Route exact path='/category/맛집'>
             <Header />
             <RestaurantPage />
+            <Footer />
           </Route>
           <Route exact path='/category/카페'>
             <Header />
@@ -45,20 +41,23 @@ function App() {
           <Route path='/category/:firstCategory'>
             <Header />
             <CategoryData />
+            <Footer />
           </Route>
           <Route path='/category/:firstCategory/:secondCategory'>
             <CategoryData />
+            <Footer />
           </Route>
           <Route path='/store/:id'>
             <Header />
             <DetailsData />
+            <Footer />
           </Route>
           <Route path='*'>
             <Header />
             <Error />
+            <Footer />
           </Route>
         </Switch>
-        <Footer />
       </ScrollToTop>
     </Router>
   );

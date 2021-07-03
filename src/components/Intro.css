@@ -1,0 +1,21 @@
+.Intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+.intro-logo {
+  display: flex;
+  width: 60%;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+@media screen and (min-width: 480px) {
+  .intro-logo {
+    width: 20rem;
+  }
+}
