@@ -8,10 +8,10 @@
 
 .detailsNavi__box {
   display: flex;
-  width: var(--normalWidth);
-  padding: 0rem 1rem;
   justify-content: space-between;
   align-items: center;
+  width: var(--normalWidth);
+  padding: 0rem 1rem;
   width: 100%;
 }
 
@@ -19,10 +19,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 12rem;
-  height: 100%;
-  font-size: 1.45rem;
-  font-weight: 400;
+  width: 50%;
+  height: auto;
+  font-family: 'Cookierun-regular';
+  font-size: 1.5rem;
 }
 
 .Details__Backward {

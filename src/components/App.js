@@ -26,12 +26,10 @@ function App() {
             <LandingPage />
           </Route>
           <Route exact path='/category/맛집'>
-            <Header />
             <RestaurantPage />
             <Footer />
           </Route>
           <Route exact path='/category/카페'>
-            <Header />
             <CafePage />
           </Route>
           <Route exact path='/search'>
@@ -39,7 +37,6 @@ function App() {
             <SearchPage />
           </Route>
           <Route path='/category/:firstCategory'>
-            <Header />
             <CategoryData />
             <Footer />
           </Route>
@@ -48,7 +45,6 @@ function App() {
             <Footer />
           </Route>
           <Route path='/store/:id'>
-            <Header />
             <DetailsData />
             <Footer />
           </Route>

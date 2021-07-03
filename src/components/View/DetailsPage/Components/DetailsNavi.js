@@ -14,7 +14,9 @@ const DetailsNavi = (props) => {
             <FiChevronLeft style={{ fontSize: '1.85rem', color: '#454545' }} />
           </div>
         </Link>
-        <div className='detailsNavi__contents'>{/* <p>{props.name}</p> */}</div>
+        <div className='detailsNavi__contents'>
+          <p>{props.name}</p>
+        </div>
         <div className='Details__Save'>
           <FiBookmark
             style={{
