@@ -42,7 +42,7 @@ const NewNavigation = () => {
           </Link>
         </div>
         <div className='SecondGrid__Wrap'>
-          <Link to={`/category/홈`}>
+          <Link to={`/`}>
             <div className='SecondGrid__Item'>
               <div className='Navigation__Item__Header'>
                 <p>가볼만한 곳</p>
