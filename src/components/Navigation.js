@@ -3,9 +3,9 @@ import React from 'react';
 import { FiChevronRight } from 'react-icons/fi';
 
 import { Link } from 'react-router-dom';
-import './NewNavigation.css';
+import './Navigation.css';
 
-const NewNavigation = () => {
+const Navigation = () => {
   return (
     <section className='new__Navigation'>
       <div className='Navigation__Container'>
@@ -23,6 +23,9 @@ const NewNavigation = () => {
                   }}
                 />
               </div>
+              <div className='Navigation__Item__Message'>
+                <p>아직도 '원주 맛집' 검색하세요?</p>
+              </div>
             </div>
           </Link>
           <Link to={`/category/카페`}>
@@ -37,6 +40,11 @@ const NewNavigation = () => {
                     marginLeft: '0.3rem',
                   }}
                 />
+              </div>
+              <div className='Navigation__Item__Message'>
+                <p>
+                  원주의 거의 모든 카페를 <br /> 한 눈에!
+                </p>
               </div>
             </div>
           </Link>
@@ -54,6 +62,9 @@ const NewNavigation = () => {
                     marginLeft: '0.3rem',
                   }}
                 />
+              </div>
+              <div className='Navigation__Item__ComingSoon'>
+                <p>- Coming Soon -</p>
               </div>
             </div>
           </Link>
@@ -202,4 +213,4 @@ const NewNavigation = () => {
   );
 };
 
-export default NewNavigation;
+export default Navigation;

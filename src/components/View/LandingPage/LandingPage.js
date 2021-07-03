@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Header from '../../Header';
 import SearchBox from '../SearchPage/SearchBox';
 import SearchResults from '../SearchPage/SearchResults';
-import NewNavigation from '../../NewNavigation';
+import Navigation from '../../Navigation';
 import RCCMD from './Sections/RCCMD/RCCMD';
 import Footer from '../../Footer';
 
@@ -50,7 +50,7 @@ const LandingPage = () => {
         <>
           <Header />
           <SearchBox getUserInput={getUserInput} />
-          <NewNavigation />
+          <Navigation />
           <Separator />
           <RCCMD
             title='점심 메뉴 추천!'
