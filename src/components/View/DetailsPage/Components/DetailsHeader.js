@@ -1,11 +1,11 @@
 import React from 'react';
 import { HiBadgeCheck } from 'react-icons/hi';
 import { FiPhoneCall } from 'react-icons/fi';
-import './Header.css';
+import './DetailsHeader.css';
 
 const url = 'https://www.instagram.com/';
 
-const Header = (props) => {
+const DetailsHeader = (props) => {
   // 인증업체여부 필터링
   let verfiedStore;
   if (props.storeVerified === true) {
@@ -27,7 +27,7 @@ const Header = (props) => {
   } else
     instagramAcc = (
       <div className='details__Header__Instagram'>
-        <p>인스타그램</p>
+        <p style={{ color: '#c2c2c2' }}>인스타그램</p>
       </div>
     );
 
@@ -81,4 +81,4 @@ const Header = (props) => {
   );
 };
 
-export default Header;
+export default DetailsHeader;

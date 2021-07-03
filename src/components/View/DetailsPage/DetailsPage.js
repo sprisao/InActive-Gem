@@ -2,7 +2,7 @@ import React from 'react';
 
 import DetailsNavi from './Components/DetailsNavi';
 import ImageBox from './Components/Swiper';
-import Header from './Components/Header';
+import DetailsHeader from './Components/DetailsHeader';
 import Information from './Components/Information';
 import Menu from './Components/Menu/Menu';
 import Recommendation from './Components/Recommendations';
@@ -39,7 +39,7 @@ const DetailsPage = ({ store }) => {
         name={store.name}
       />
       <ImageBox img={store.images} name={store.name} />
-      <Header
+      <DetailsHeader
         name={store.name}
         shortDescription={store.shortDescription}
         tags={store.tags}
