@@ -1,11 +1,16 @@
 import React from 'react';
 import { useGlobalContext } from '../../context';
-import ResultGrid from './ResultGrid';
+import GridCard from '../../Grid/GridCard';
+import Noresults from './NoResults';
+
+import '../../Grid/Grid.css';
 
 const SearchResults = (props) => {
-  const { stores } = useGlobalContext();
+  const { stores, restaurants, cafes } = useGlobalContext();
 
-  const filterResult = stores.filter(
+  const allStores = stores.concat(restaurants, cafes);
+
+  const filterResult = allStores.filter(
     (result) =>
       result.name.includes(props.userInput) ||
       result.tags.includes(props.userInput) ||
@@ -14,16 +19,31 @@ const SearchResults = (props) => {
 
   let pageReturn;
   if (filterResult.length === 0) {
-    pageReturn = <h1>결과 없음!</h1>;
+    pageReturn = <Noresults />;
   } else {
     pageReturn = (
       <>
-        <ResultGrid filter={filterResult} />
+        {/* <ResultGrid filter={filterResult} /> */}
+        <section className='grid'>
+          <section className='grid__wrapper'>
+            {filterResult.map((store) => {
+              return (
+                <GridCard
+                  key={store.id}
+                  store={store}
+                  tags={store.tags}
+                  open={store.openHour}
+                  close={store.closeHour}
+                ></GridCard>
+              );
+            })}
+          </section>
+        </section>
       </>
     );
   }
 
-  console.log('검색결과', filterResult.length);
+  console.log('검색결과', filterResult);
   return <div>{pageReturn}</div>;
 };
 
