@@ -1,35 +1,27 @@
-import React from "react";
+import React from 'react';
 
-import DetailsNavi from "./Components/DetailsNavi";
-import ImageBox from "./Components/Swiper";
-import DetailsHeader from "./Components/DetailsHeader";
-import Information from "./Components/Information";
-import Menu from "./Components/Menu/Menu";
-import Recommendation from "./Components/Recommendations";
+import DetailsNavi from './Components/DetailsNavi';
+import ImageBox from './Components/Swiper';
+import DetailsHeader from './Components/DetailsHeader';
+import Information from './Components/Information';
+import Menu from './Components/Menu/Menu';
+import Recommendation from './Components/Recommendations';
 
-import Separator from "../../Separator";
+import Separator from '../../Separator';
 
 // Swiper 생성을 위한 Dependencies //
-import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from "swiper";
-import "swiper/swiper.scss";
-import "swiper/components/navigation/navigation.scss";
-import "swiper/components/pagination/pagination.scss";
+import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import 'swiper/swiper.scss';
+import 'swiper/components/navigation/navigation.scss';
+import 'swiper/components/pagination/pagination.scss';
 //////////////////////////////////
 
-import "./DetailsPage.css";
-
-import Meta from "../../../lib/meta";
+import './DetailsPage.css';
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
 const DetailsPage = ({ store }) => {
   let menu;
-  const imageUrl = store.images.map((item) => item.url);
-  const images = imageUrl;
-  const metaData = {
-    title: store.name,
-    image: imageUrl,
-  };
   if (store.isMenu === true) {
     console.log(store.name);
     menu = (
@@ -40,7 +32,7 @@ const DetailsPage = ({ store }) => {
     );
   }
   return (
-    <section className="detailsPage">
+    <section className='detailsPage'>
       <DetailsNavi
         categoryNumber={store.categoryNumber[0]}
         categoryTitle={store.firstCategory[0]}
@@ -79,7 +71,6 @@ const DetailsPage = ({ store }) => {
         secondCategory={store.secondCategory}
         firstCategory={store.firstCategory}
       />
-      <Meta data={metaData} />
     </section>
   );
 };
