@@ -19,14 +19,13 @@ function Header() {
         </Link>
         <div className='sharingGem__button'>
           {/* <img src="https://res.cloudinary.com/diimwnnmj/image/upload/v1624590337/message_wnwz94.png" alt="share" /> */}
-          <FiSend
+          {/* <FiSend
             style={{
-              fontSize: '1.35rem',
+              fontSize: '1.65rem',
               marginBottom: '0.25rem ',
               strokeWidth: '1.75px',
             }}
-          />
-          <p>친구에게 알리기</p>
+          /> */}
         </div>
       </div>
     </section>

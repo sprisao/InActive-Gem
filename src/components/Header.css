@@ -4,8 +4,7 @@ header
 ============
 */
 .header {
-  margin-top: 2rem;
-  padding: 1rem;
+  margin-top: 1rem;
 }
 
 .header__wrapper {
@@ -23,19 +22,7 @@ header
 .logo__container {
   display: flex;
   align-items: center;
-  width: 7rem;
-}
-
-@media screen and (min-width: 320px) {
-  .logo__container {
-    width: 6rem;
-  }
-}
-
-@media screen and (min-width: 350px) {
-  .logo__container {
-    width: 7rem;
-  }
+  width: 5.5rem;
 }
 
 .logo__container img {
@@ -45,16 +32,14 @@ header
 
 .sharingGem__button {
   display: flex;
-  flex-direction: column;
+  justify-content: flex-end;
   align-items: center;
   width: 6.5rem;
+  height: 100%;
+  margin-top: 0.45rem;
   cursor: pointer;
 }
 
-.sharingGem__button img {
-  width: 1.35rem;
-  margin: 0.25rem;
-}
 .sharingGem__button p {
   font-size: 0.85rem;
   font-family: 'CookieRun-Regular';
