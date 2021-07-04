@@ -2,7 +2,6 @@
   display: flex;
   height: 3.5rem;
   padding: 0 1rem;
-  margin-top: 1rem;
   background-color: #f5f5f5;
 }
 
@@ -38,15 +37,12 @@
   font-weight: 400;
 }
 
-.SecondCategory__container {
-}
-
 /* dropdownmenu */
 
 .Category__Menu__Container {
   width: 8rem;
   height: 100%;
-  margin-top: 0.2rem;
+  margin-top: 0.1rem;
   position: relative;
   display: flex;
   justify-content: flex-end;
