@@ -167,6 +167,7 @@
 
 .FourthGrid__Item {
   display: flex;
+  flex-direction: column;
   height: 100%;
   padding: 0.55rem;
   align-items: flex-start;
@@ -175,7 +176,7 @@
   background-color: #f5f5f5;
 }
 
-.FourthGrid__Item p {
+.Navigation__Item__Header p {
   font-family: 'CookieRunOTF-Bold';
   font-size: 1.2rem;
 }

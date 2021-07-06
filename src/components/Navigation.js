@@ -191,6 +191,9 @@ const Navigation = () => {
                   }}
                 />
               </div>
+              <div className='Navigation__Item__ComingSoon'>
+                <p>- Coming Soon -</p>
+              </div>
             </div>
           </Link>
           <Link to={`/`}>
@@ -205,6 +208,9 @@ const Navigation = () => {
                     marginLeft: '0.3rem',
                   }}
                 />
+              </div>
+              <div className='Navigation__Item__ComingSoon'>
+                <p>- Coming Soon -</p>
               </div>
             </div>
           </Link>
