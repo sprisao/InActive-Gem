@@ -26,6 +26,12 @@ const Navigation = () => {
               <div className='Navigation__Item__Message'>
                 <p>아직도 '원주 맛집' 검색하세요?</p>
               </div>
+              <div className='Navigtaion__FirstItem__Emoji'>
+                <img
+                  src='https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/285/bento-box_1f371.png'
+                  alt=''
+                />
+              </div>
             </div>
           </Link>
           <Link to={`/category/카페`}>
@@ -46,6 +52,12 @@ const Navigation = () => {
                   원주의 '거의'
                   <br /> 모든 카페를 한 눈에!
                 </p>
+              </div>
+              <div className='Navigtaion__FirstItem__Emoji'>
+                <img
+                  src='https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/285/hot-beverage_2615.png'
+                  alt=''
+                />
               </div>
             </div>
           </Link>
