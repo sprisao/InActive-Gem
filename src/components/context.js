@@ -8,6 +8,7 @@ const storeBase = new Airtable({ apiKey: 'key5AMdi7ejadTzUy' }).base(
 const Context = React.createContext();
 
 const StoreProvider = ({ children }) => {
+  // 1. useState 활용해서 Loading 변수 생성
   const [loading, setLoading] = useState(true);
   const [restaurantLoading, setRestaurantLoading] = useState(true);
   const [cafesLoading, setCafesLoading] = useState(true);
@@ -16,6 +17,7 @@ const StoreProvider = ({ children }) => {
   const [secondLoading, setSecondLoading] = useState(true);
   const [locationLoading, setLocationLoading] = useState(true);
   const [menuLoading, setMenuLoading] = useState(true);
+  const [newStoresLoading, setNewStoresLoading] = useState(true);
 
   const [stores, setStores] = useState([]);
   const [restaurants, setRestaurants] = useState([]);
@@ -26,13 +28,16 @@ const StoreProvider = ({ children }) => {
   // const [studios, setStudios] = useState([]);
   // const [entertainments, setEntertainments] = useState([]);
 
+  // 2. '복수' useState 활용해서 새롭게 불러올 데이터 패키지 함수명 지정
   const [firstCategories, setFirstCategories] = useState([]);
   const [secondCategories, setSecondCategories] = useState([]);
   const [locationCategories, setlocationCategories] = useState([]);
   const [menu, setMenu] = useState([]);
   const [lunchRCCMD, setLunchRCCMD] = useState([]);
   const [cafeRCCMD, setCafeRCCMD] = useState([]);
+  const [newStores, setNewStores] = useState([]);
 
+  // 3. '단수' 각각의 데이터패키지 내의 데이터가 들어올 Array 생성
   const store = [];
   const restaurant = [];
   const cafe = [];
@@ -47,6 +52,7 @@ const StoreProvider = ({ children }) => {
   const locationCategory = [];
   const lunchRCCMDstore = [];
   const cafeRCCMDstore = [];
+  const newStore = [];
 
   // 업체데이터 불러오기
   useEffect(() => {
@@ -308,6 +314,36 @@ const StoreProvider = ({ children }) => {
         }
       );
   }, []);
+
+  useEffect(() => {
+    storeBase('stores')
+      .select({
+        maxRecords: 15,
+        pageSize: 30,
+        view: 'new',
+      })
+      .eachPage(
+        function page(records, fetchNextPage) {
+          records.forEach(function (record) {
+            newStore.push({
+              id: record.id,
+              ...record._rawJson.fields,
+            });
+          });
+          setNewStores(newStore);
+          fetchNextPage();
+        },
+        function done(err) {
+          console.log('새로생긴 곳 데이터 로딩 완료');
+          setNewStoresLoading(false);
+          if (err) {
+            console.error(err);
+            return;
+          }
+        }
+      );
+  }, []);
+
   return (
     <Context.Provider
       value={{
@@ -319,6 +355,8 @@ const StoreProvider = ({ children }) => {
         locationLoading,
         menuLoading,
         mainLoading,
+        newStoresLoading,
+
         stores,
         restaurants,
         cafes,
@@ -328,6 +366,7 @@ const StoreProvider = ({ children }) => {
         locationCategories,
         lunchRCCMD,
         cafeRCCMD,
+        newStores,
       }}
     >
       {children}
