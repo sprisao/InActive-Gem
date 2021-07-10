@@ -10,7 +10,7 @@ header
 .header__wrapper {
   display: flex;
   max-width: var(--normalWidth);
-  padding: 0.9rem 1rem 0;
+  padding-top: 0.9rem;
   align-items: flex-end;
   margin: 0 auto;
 }
