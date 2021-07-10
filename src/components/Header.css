@@ -9,20 +9,17 @@ header
 
 .header__wrapper {
   display: flex;
-  justify-content: space-between;
   max-width: var(--normalWidth);
-  align-items: center;
+  padding: 0.9rem 1rem 0;
+  align-items: flex-end;
   margin: 0 auto;
-}
-
-.spaceholder {
-  width: 7.5rem;
 }
 
 .logo__container {
   display: flex;
   align-items: center;
-  width: 5.5rem;
+  width: 5.6rem;
+  padding: 0.1rem;
 }
 
 .logo__container img {
@@ -30,17 +27,7 @@ header
   stroke-width: 2.5px;
 }
 
-.sharingGem__button {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  width: 6.5rem;
-  height: 100%;
-  margin-top: 0.45rem;
-  cursor: pointer;
-}
-
-.sharingGem__button p {
-  font-size: 0.85rem;
-  font-family: 'CookieRun-Regular';
+.header__messages {
+  font-size: 1.05rem;
+  margin-left: 0.5rem;
 }

@@ -55,29 +55,9 @@ const Navigation = () => {
               </div>
               <div className='Navigtaion__FirstItem__Emoji'>
                 <img
-                  src='https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/285/hot-beverage_2615.png'
+                  src='https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/285/shaved-ice_1f367.png'
                   alt=''
                 />
-              </div>
-            </div>
-          </Link>
-        </div>
-        <div className='SecondGrid__Wrap'>
-          <Link to={`/`}>
-            <div className='SecondGrid__Item'>
-              <div className='Navigation__Item__Header'>
-                <p>가볼만한 곳</p>
-                <FiChevronRight
-                  style={{
-                    fontSize: '1.5rem',
-                    strokeWidth: '3px',
-                    color: '#c6c6c6',
-                    marginLeft: '0.3rem',
-                  }}
-                />
-              </div>
-              <div className='Navigation__Item__ComingSoon'>
-                <p>- Coming Soon -</p>
               </div>
             </div>
           </Link>
@@ -188,20 +168,40 @@ const Navigation = () => {
             </div>
           </Link>
         </div>
-        <div className='FourthGrid__Wrap'>
+        <div className='SecondGrid__Wrap'>
           <Link to={`/`}>
-            <div className='FourthGrid__Item'>
+            <div className='SecondGrid__Item'>
               <div className='Navigation__Item__Header'>
-                <p>원주혁신도시</p>
+                <p>가볼만한 곳</p>
                 <FiChevronRight
                   style={{
-                    fontSize: '1.5rem',
+                    fontSize: '1.35rem',
                     strokeWidth: '3px',
                     color: '#c6c6c6',
                     marginLeft: '0.3rem',
                   }}
                 />
               </div>
+              <div className='Navigation__Item__ComingSoon'>
+                <p>- Coming Soon -</p>
+              </div>
+            </div>
+          </Link>
+        </div>
+        {/* <div className='FourthGrid__Wrap'>
+          <Link to={`/`}>
+          <div className='FourthGrid__Item'>
+          <div className='Navigation__Item__Header'>
+          <p>원주혁신도시</p>
+          <FiChevronRight
+          style={{
+            fontSize: '1.5rem',
+            strokeWidth: '3px',
+            color: '#c6c6c6',
+            marginLeft: '0.3rem',
+          }}
+          />
+          </div>
               <div className='Navigation__Item__ComingSoon'>
                 <p>- Coming Soon -</p>
               </div>
@@ -225,7 +225,7 @@ const Navigation = () => {
               </div>
             </div>
           </Link>
-        </div>
+        </div> */}
       </div>
     </section>
   );

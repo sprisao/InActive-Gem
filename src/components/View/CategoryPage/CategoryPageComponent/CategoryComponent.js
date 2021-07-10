@@ -33,16 +33,18 @@ const CategoryComponent = (props) => {
   return (
     <>
       <section className='CategoryComponent'>
-        <CategoryHeader
-          filterLocations={filterLocations}
-          category={props.category}
-        />
-
-        <div className='SecondCategory__container'>
-          <SecondCategory
+        <div className='Category__Navi__Wrapper'>
+          <CategoryHeader
+            filterLocations={filterLocations}
             category={props.category}
-            getSecondCategory={getSecondCategory}
           />
+
+          <div className='SecondCategory__container'>
+            <SecondCategory
+              category={props.category}
+              getSecondCategory={getSecondCategory}
+            />
+          </div>
         </div>
         <div className='CategoryGrid'>
           <section className='grid'>

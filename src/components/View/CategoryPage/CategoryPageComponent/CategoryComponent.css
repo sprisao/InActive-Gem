@@ -1,3 +1,12 @@
+.Category__Navi__Wrapper {
+  position: fixed;
+  top: 0;
+  /* width: 100% */
+  left: 0;
+  right: 0;
+  background-color: white;
+}
+
 .Category__Header__Wrapper {
   display: flex;
   height: 3.5rem;
@@ -37,6 +46,9 @@
   font-weight: 400;
 }
 
+.CategoryGrid {
+  margin-top: 8rem;
+}
 /* dropdownmenu */
 
 .Category__Menu__Container {

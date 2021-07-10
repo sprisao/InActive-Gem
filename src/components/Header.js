@@ -7,7 +7,6 @@ function Header() {
   return (
     <section className='header'>
       <div className='header__wrapper'>
-        <div className='spaceholder'></div>
         <Link to='/'>
           <div className='logo__container'>
             <img
@@ -17,15 +16,8 @@ function Header() {
             />
           </div>
         </Link>
-        <div className='sharingGem__button'>
-          {/* <img src="https://res.cloudinary.com/diimwnnmj/image/upload/v1624590337/message_wnwz94.png" alt="share" /> */}
-          {/* <FiSend
-            style={{
-              fontSize: '1.65rem',
-              marginBottom: '0.25rem ',
-              strokeWidth: '1.75px',
-            }}
-          /> */}
+        <div className='header__messages'>
+          {/* <p>원주시 대표 로컬 플랫폼</p> */}
         </div>
       </div>
     </section>
