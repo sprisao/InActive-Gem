@@ -27,7 +27,6 @@ function App() {
           </Route>
           <Route exact path='/category/맛집'>
             <RestaurantPage />
-            <Footer />
           </Route>
           <Route exact path='/category/카페'>
             <CafePage />
@@ -46,7 +45,6 @@ function App() {
           </Route>
           <Route path='/store/:id'>
             <DetailsData />
-            <Footer />
           </Route>
           <Route path='*'>
             <Header />

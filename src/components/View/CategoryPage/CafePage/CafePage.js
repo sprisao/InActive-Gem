@@ -1,6 +1,7 @@
 import React from 'react';
 import CategoryComponent from '../CategoryPageComponent/CategoryComponent';
 import Loading from '../../../Loading';
+import Footer from '../../../Footer';
 
 import { useGlobalContext } from '../../../context';
 
@@ -13,6 +14,7 @@ const CafePage = () => {
     return (
       <>
         <CategoryComponent category='카페' stores={cafes} />
+        <Footer />
       </>
     );
 };
