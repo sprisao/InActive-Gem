@@ -10,8 +10,9 @@ header
 .header__wrapper {
   display: flex;
   max-width: var(--normalWidth);
+  justify-content: center;
   padding-top: 0.9rem;
-  align-items: flex-end;
+  align-items: center;
   margin: 0 auto;
 }
 

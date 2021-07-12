@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Header from '../../Header';
 import SearchBox from '../SearchPage/SearchBox';
 import SearchResults from '../SearchPage/SearchResults';
-import Navigation from '../../Navigation';
+import Home from '../../Home';
 import RCCMD from './Sections/RCCMD/RCCMD';
 import Footer from '../../Footer';
 
@@ -40,7 +40,7 @@ const LandingPage = () => {
         <>
           <Header />
           <SearchBox getUserInput={getUserInput} />
-          <Navigation />
+          <Home />
           <Separator />
           <RCCMD
             title='새로 등록된 곳'

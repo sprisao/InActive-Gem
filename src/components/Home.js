@@ -1,11 +1,23 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
+
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/swiper.min.css';
+import 'swiper/components/pagination/pagination.min.css';
+import 'swiper/components/navigation/navigation.min.css';
 
 import { FiChevronRight } from 'react-icons/fi';
 
 import { Link } from 'react-router-dom';
-import './Navigation.css';
+import './Home.css';
+import SwiperCore, { Pagination, Navigation } from 'swiper/core';
 
-const Navigation = () => {
+// install Swiper modules
+SwiperCore.use([Pagination, Navigation]);
+
+const Home = () => {
   return (
     <section className='new__Navigation'>
       <div className='Navigation__Container'>
@@ -30,6 +42,7 @@ const Navigation = () => {
                 <img
                   src='https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/285/bento-box_1f371.png'
                   alt=''
+                  className='Home__Slider__Image'
                 />
               </div>
             </div>
@@ -171,64 +184,44 @@ const Navigation = () => {
         <div className='SecondGrid__Wrap'>
           <Link to={`/`}>
             <div className='SecondGrid__Item'>
-              <div className='Navigation__Item__Header'>
-                <p>가볼만한 곳</p>
-                <FiChevronRight
-                  style={{
-                    fontSize: '1.35rem',
-                    strokeWidth: '3px',
-                    color: '#c6c6c6',
-                    marginLeft: '0.3rem',
-                  }}
-                />
-              </div>
-              <div className='Navigation__Item__ComingSoon'>
-                <p>- Coming Soon -</p>
-              </div>
+              <Swiper
+                pagination={{
+                  type: 'fraction',
+                }}
+                navigation={true}
+                className='mySwiper'
+              >
+                <SwiperSlide>
+                  <div className='Navigation__Item__Header'>
+                    <p>가볼만한 곳</p>
+                    <FiChevronRight
+                      style={{
+                        fontSize: '1.35rem',
+                        strokeWidth: '3px',
+                        color: '#c6c6c6',
+                        marginLeft: '0.3rem',
+                      }}
+                    />
+                  </div>
+                  {/* <div className='Navigation__Item__ComingSoon'>
+                    <p>- Coming Soon -</p>
+                  </div> */}
+                  <div className='Home__Slider__Article'>
+                    <p>매력적인 한옥의 감성과 모던함의 조화</p>
+                    <h3>훈콥스</h3>
+                  </div>
+                  <img
+                    src='https://dl.airtable.com/.attachments/6089828b87cf22f65fdd5b8e6e2154c0/a1844d8a/1.jpg'
+                    alt=''
+                  />
+                </SwiperSlide>
+              </Swiper>
             </div>
           </Link>
         </div>
-        {/* <div className='FourthGrid__Wrap'>
-          <Link to={`/`}>
-          <div className='FourthGrid__Item'>
-          <div className='Navigation__Item__Header'>
-          <p>원주혁신도시</p>
-          <FiChevronRight
-          style={{
-            fontSize: '1.5rem',
-            strokeWidth: '3px',
-            color: '#c6c6c6',
-            marginLeft: '0.3rem',
-          }}
-          />
-          </div>
-              <div className='Navigation__Item__ComingSoon'>
-                <p>- Coming Soon -</p>
-              </div>
-            </div>
-          </Link>
-          <Link to={`/`}>
-            <div className='FourthGrid__Item'>
-              <div className='Navigation__Item__Header'>
-                <p>원주기업도시</p>
-                <FiChevronRight
-                  style={{
-                    fontSize: '1.5rem',
-                    strokeWidth: '3px',
-                    color: '#c6c6c6',
-                    marginLeft: '0.3rem',
-                  }}
-                />
-              </div>
-              <div className='Navigation__Item__ComingSoon'>
-                <p>- Coming Soon -</p>
-              </div>
-            </div>
-          </Link>
-        </div> */}
       </div>
     </section>
   );
 };
 
-export default Navigation;
+export default Home;
