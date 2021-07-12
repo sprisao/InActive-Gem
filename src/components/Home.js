@@ -191,18 +191,18 @@ const Home = () => {
                 navigation={true}
                 className='mySwiper'
               >
+                <div className='Navigation__Item__Header'>
+                  <p>가볼만한 곳</p>
+                  <FiChevronRight
+                    style={{
+                      fontSize: '1.35rem',
+                      strokeWidth: '3px',
+                      color: '#c6c6c6',
+                      marginLeft: '0.3rem',
+                    }}
+                  />
+                </div>
                 <SwiperSlide>
-                  <div className='Navigation__Item__Header'>
-                    <p>가볼만한 곳</p>
-                    <FiChevronRight
-                      style={{
-                        fontSize: '1.35rem',
-                        strokeWidth: '3px',
-                        color: '#c6c6c6',
-                        marginLeft: '0.3rem',
-                      }}
-                    />
-                  </div>
                   {/* <div className='Navigation__Item__ComingSoon'>
                     <p>- Coming Soon -</p>
                   </div> */}
