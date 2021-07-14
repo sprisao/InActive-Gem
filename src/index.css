@@ -69,6 +69,9 @@
 
 html {
   font-size: 11px;
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
 }
 
 /* Display Width */
