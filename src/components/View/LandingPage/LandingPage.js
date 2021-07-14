@@ -9,6 +9,7 @@ import Footer from '../../Footer';
 
 import Separator from '../../Separator';
 import Intro from '../../Intro';
+import Loading from '../../Loading';
 import { useGlobalContext } from '../../context';
 
 import './LandingPage.css';
@@ -24,7 +25,7 @@ const LandingPage = () => {
   };
 
   if (loading) {
-    return <Intro />;
+    return <Loading />;
   } else {
     if (userInput) {
       return (
@@ -38,7 +39,6 @@ const LandingPage = () => {
     } else
       return (
         <>
-          <Header />
           <SearchBox getUserInput={getUserInput} />
           <Home />
           <Separator />
