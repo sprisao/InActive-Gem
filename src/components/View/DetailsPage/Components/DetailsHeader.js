@@ -19,7 +19,7 @@ const DetailsHeader = (props) => {
     instagramAcc = (
       <div
         className='details__Header__Instagram'
-        onClick={() => window.open(url + props.instagramAccount, '_parent')}
+        onClick={() => window.open(url + props.instagramAccount, '_blank')}
       >
         <p>인스타그램</p>
       </div>
@@ -72,7 +72,7 @@ const DetailsHeader = (props) => {
         {instagramAcc}
         <div
           className='details__Header__Naver'
-          onClick={() => window.open(props.naverLink, '_parent')}
+          onClick={() => window.open(props.naverLink, '_blank')}
         >
           <p>네이버</p>
         </div>
