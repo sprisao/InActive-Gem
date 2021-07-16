@@ -23,6 +23,7 @@
   height: auto;
   font-family: 'Cookierun-regular';
   font-size: 1.5rem;
+  white-space: nowrap;
 }
 
 .Details__Backward {
