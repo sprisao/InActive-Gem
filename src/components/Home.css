@@ -229,7 +229,7 @@
   align-items: center;
 }
 
-.SecondGrid__Item .swiper-slide img {
+.SecondGrid__Item .swiper-slide video {
   margin: 0;
   height: 100%;
   width: 100%;

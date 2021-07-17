@@ -210,10 +210,22 @@ const Home = () => {
                     <p>매력적인 한옥의 감성과 모던함의 조화</p>
                     <h3>훈콥스</h3>
                   </div>
-                  <img
-                    src='https://dl.airtable.com/.attachments/6089828b87cf22f65fdd5b8e6e2154c0/a1844d8a/1.jpg'
-                    alt=''
-                  />
+                  <video
+                    poster='https://dl.airtable.com/.attachments/6089828b87cf22f65fdd5b8e6e2154c0/a1844d8a/1.jpg'
+                    height='500px'
+                    loop='true'
+                    autoplay='autoplay'
+                    id='vid'
+                    muted
+                  >
+                    <source
+                      src='https://res.cloudinary.com/diimwnnmj/video/upload/v1626505066/2021-07-17_15_52_50_video_g6odlk.mp4'
+                      type='video/mp4'
+                    ></source>
+                    <strong>
+                      Your browser does not support the video tag.
+                    </strong>
+                  </video>
                 </SwiperSlide>
               </Swiper>
             </div>
