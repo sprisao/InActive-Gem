@@ -211,12 +211,12 @@ const Home = () => {
                     <h3>훈콥스</h3>
                   </div>
                   <video
-                    poster='https://dl.airtable.com/.attachments/6089828b87cf22f65fdd5b8e6e2154c0/a1844d8a/1.jpg'
                     height='500px'
                     loop='true'
                     autoplay='autoplay'
                     id='vid'
                     muted
+                    playsinline
                   >
                     <source
                       src='https://res.cloudinary.com/diimwnnmj/video/upload/v1626505066/2021-07-17_15_52_50_video_g6odlk.mp4'
