@@ -210,14 +210,7 @@ const Home = () => {
                     <p>매력적인 한옥의 감성과 모던함의 조화</p>
                     <h3>훈콥스</h3>
                   </div>
-                  <video
-                    height='500px'
-                    loop='true'
-                    autoplay='autoplay'
-                    id='vid'
-                    muted
-                    playsinline
-                  >
+                  <video loop autoplay muted playsinline>
                     <source
                       src='https://res.cloudinary.com/diimwnnmj/video/upload/v1626505066/2021-07-17_15_52_50_video_g6odlk.mp4'
                       type='video/mp4'
