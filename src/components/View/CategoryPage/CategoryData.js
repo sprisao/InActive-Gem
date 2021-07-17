@@ -20,6 +20,7 @@ const CategoryData = () => {
           if (category.firstCategory === firstCategory) {
             return (
               <CategoryComponent
+                key={category.id}
                 id={category.id}
                 category={firstCategory}
                 stores={stores.filter(

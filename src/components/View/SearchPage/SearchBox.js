@@ -1,8 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-import { FiSearch, FiX } from 'react-icons/fi';
-import SearchResults from './SearchResults';
-
+import { FiSearch } from 'react-icons/fi';
 import './SearchBox.css';
 
 const SearchBox = (props) => {

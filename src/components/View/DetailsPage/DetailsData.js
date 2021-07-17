@@ -6,7 +6,7 @@ import Footer from '../../Footer';
 
 import DetailsPage from './DetailsPage';
 
-const DetailsData = () => {
+const DetailsData = ({ history }) => {
   const { cafes, restaurants, loading, stores } = useGlobalContext();
   const { id } = useParams();
 
@@ -19,7 +19,13 @@ const DetailsData = () => {
     <>
       {allStores.map((store) => {
         if (store.id === id) {
-          return <DetailsPage key={store.id} store={store}></DetailsPage>;
+          return (
+            <DetailsPage
+              key={store.id}
+              store={store}
+              history={history}
+            ></DetailsPage>
+          );
         } else return null;
       })}
 

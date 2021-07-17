@@ -22,35 +22,16 @@ function App() {
     <Router>
       <ScrollToTop>
         <Switch>
-          <Route exact path='/'>
-            <LandingPage />
-          </Route>
-          <Route exact path='/category/맛집'>
-            <RestaurantPage />
-          </Route>
-          <Route exact path='/category/카페'>
-            <CafePage />
-          </Route>
-          <Route exact path='/search'>
-            <SearchHeader />
-            <SearchPage />
-          </Route>
-          <Route path='/category/:firstCategory'>
-            <CategoryData />
-            <Footer />
-          </Route>
-          <Route path='/category/:firstCategory/:secondCategory'>
-            <CategoryData />
-            <Footer />
-          </Route>
-          <Route path='/store/:id'>
-            <DetailsData />
-          </Route>
-          <Route path='*'>
-            <Header />
-            <Error />
-            <Footer />
-          </Route>
+          <Route exact path='/' component={LandingPage} />
+          <Route exact path='/category/맛집' component={RestaurantPage} />
+          <Route exact path='/category/카페' component={CafePage} />
+          <Route path='/category/:firstCategory' component={CategoryData} />
+          <Route
+            path='/category/:firstCategory/:secondCategory'
+            component={CategoryData}
+          />
+          <Route path='/store/:id' component={DetailsData} />
+          <Route path='*' component={Error} />
         </Switch>
       </ScrollToTop>
     </Router>

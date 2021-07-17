@@ -20,7 +20,7 @@ import './DetailsPage.css';
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
-const DetailsPage = ({ store }) => {
+const DetailsPage = ({ store, history }) => {
   let menu;
   if (store.isMenu === true) {
     console.log(store.name);
@@ -33,11 +33,7 @@ const DetailsPage = ({ store }) => {
   }
   return (
     <section className='detailsPage'>
-      <DetailsNavi
-        categoryNumber={store.categoryNumber[0]}
-        categoryTitle={store.firstCategory[0]}
-        name={store.name}
-      />
+      <DetailsNavi name={store.name} history={history} />
       <ImageBox img={store.images} name={store.name} />
       <DetailsHeader
         name={store.name}

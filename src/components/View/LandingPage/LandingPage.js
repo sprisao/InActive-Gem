@@ -21,6 +21,7 @@ const LandingPage = () => {
 
   const getUserInput = (e) => {
     const { value } = e.target;
+    console.log('입력받은 값', value);
     setUserInput(value);
   };
 
@@ -30,7 +31,6 @@ const LandingPage = () => {
     if (userInput) {
       return (
         <>
-          <Header />
           <SearchBox getUserInput={getUserInput} />
           <SearchResults userInput={userInput} />
           <Footer />
