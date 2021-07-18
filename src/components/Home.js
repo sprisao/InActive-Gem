@@ -218,13 +218,12 @@ const Home = () => {
                         <p>매력적인 한옥의 감성과 모던함의 조화</p>
                         <h3>훈콥스</h3>
                       </div>
-                      <video
-                        src={item.promotionMedia[0].url}
-                        loop
-                        autoplay
-                        muted
-                        playsinline
-                      >
+
+                      <video muted autoPlay loop playsInline>
+                        <source
+                          src={item.promotionMedia[0].url}
+                          type='video/mp4'
+                        />
                         <strong>
                           Your browser does not support the video tag.
                         </strong>
