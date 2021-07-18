@@ -42,7 +42,11 @@ const Home = () => {
                 />
               </div>
               <div className='Navigation__Item__Message'>
-                <p>아직도 '원주 맛집' 검색하세요?</p>
+                <p>
+                  검색없이 바로찾는
+                  <br />
+                  원주맛집!
+                </p>
               </div>
               <div className='Navigtaion__FirstItem__Emoji'>
                 <img
