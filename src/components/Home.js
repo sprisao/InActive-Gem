@@ -221,9 +221,9 @@ const Home = () => {
                       <video
                         src={item.promotionMedia[0].url}
                         loop
-                        autoPlay
+                        autoplay
                         muted
-                        playsInline
+                        playsinline
                       >
                         <strong>
                           Your browser does not support the video tag.
