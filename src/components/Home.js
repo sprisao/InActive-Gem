@@ -219,7 +219,14 @@ const Home = () => {
                         <h3>훈콥스</h3>
                       </div>
 
-                      <video muted loop controls>
+                      <video
+                        autoPlay={true}
+                        loop={true}
+                        controls={false}
+                        playsInline
+                        muted
+                        type='video/mp4'
+                      >
                         <source
                           src={item.promotionMedia[0].url}
                           type='video/mp4'
