@@ -219,7 +219,7 @@ const Home = () => {
                         <h3>훈콥스</h3>
                       </div>
 
-                      <video muted loop playsInline controls>
+                      <video muted loop controls>
                         <source
                           src={item.promotionMedia[0].url}
                           type='video/mp4'
