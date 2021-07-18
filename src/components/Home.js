@@ -188,53 +188,53 @@ const Home = () => {
           </Link>
         </div>
         <div className='SecondGrid__Wrap'>
-          <Link to={`/`}>
-            <div className='SecondGrid__Item'>
-              <Swiper
-                pagination={{
-                  type: 'fraction',
-                }}
-                navigation={true}
-                className='mySwiper'
-              >
-                <div className='Navigation__Item__Header'>
-                  <p>가볼만한 곳</p>
-                  <FiChevronRight
-                    style={{
-                      fontSize: '1.35rem',
-                      strokeWidth: '3px',
-                      color: '#c6c6c6',
-                      marginLeft: '0.3rem',
-                    }}
-                  />
-                </div>
-                {allStores.map((item) => {
-                  {
-                    console.log(item.promotionMedia);
-                  }
-                  if (item.isPromotion === true) {
-                    return (
-                      <SwiperSlide key={item.id}>
-                        <div className='Home__Slider__Article'>
-                          <p>매력적인 한옥의 감성과 모던함의 조화</p>
-                          <h3>훈콥스</h3>
-                        </div>
-                        <video loop autoPlay muted playsInline>
-                          <source
-                            src={item.promotionMedia[0].url}
-                            type='video/mp4'
-                          ></source>
-                          <strong>
-                            Your browser does not support the video tag.
-                          </strong>
-                        </video>
-                      </SwiperSlide>
-                    );
-                  } else return null;
-                })}
-              </Swiper>
-            </div>
-          </Link>
+          <div className='SecondGrid__Item'>
+            <Swiper
+              pagination={{
+                type: 'fraction',
+              }}
+              navigation={true}
+              className='mySwiper'
+            >
+              <div className='Navigation__Item__Header'>
+                <p>가볼만한 곳</p>
+                <FiChevronRight
+                  style={{
+                    fontSize: '1.35rem',
+                    strokeWidth: '3px',
+                    color: '#c6c6c6',
+                    marginLeft: '0.3rem',
+                  }}
+                />
+              </div>
+              {allStores.map((item) => {
+                {
+                  console.log(item.promotionMedia);
+                }
+                if (item.isPromotion === true) {
+                  return (
+                    <SwiperSlide key={item.id}>
+                      <div className='Home__Slider__Article'>
+                        <p>매력적인 한옥의 감성과 모던함의 조화</p>
+                        <h3>훈콥스</h3>
+                      </div>
+                      <video
+                        src={item.promotionMedia[0].url}
+                        loop
+                        autoPlay
+                        muted
+                        playsInline
+                      >
+                        <strong>
+                          Your browser does not support the video tag.
+                        </strong>
+                      </video>
+                    </SwiperSlide>
+                  );
+                } else return null;
+              })}
+            </Swiper>
+          </div>
         </div>
       </div>
     </section>
