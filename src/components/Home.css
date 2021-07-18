@@ -229,7 +229,7 @@
   align-items: center;
 }
 
-.SecondGrid__Item .swiper-slide video {
+.SecondGrid__Item video {
   margin: 0;
   height: 100%;
   width: 100%;
@@ -239,7 +239,7 @@
 
 .Home__Slider__Article {
   position: absolute;
-  z-index: 3;
+  z-index: 5;
   width: 100%;
   height: 100%;
   display: flex;

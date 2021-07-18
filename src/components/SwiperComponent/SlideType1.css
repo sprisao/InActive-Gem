@@ -1,7 +1,7 @@
 .SlideType1 {
   margin-right: 0.75rem;
-  width: 13.5rem;
-  height: 16rem;
+  width: 14.5rem;
+  height: 14.5rem;
   border-radius: 0.7rem;
   background-size: cover;
   background-position: center center;
@@ -24,16 +24,11 @@
 }
 
 .SlideType1__articleContainer {
-  margin-top: 8.5rem;
+  margin-top: 7.5rem;
   display: flex;
   flex-direction: column;
   text-align: right;
   z-index: 1;
-}
-
-.SlideType1__Tags span {
-  font-size: 0.95rem;
-  font-weight: 600;
 }
 
 .SlideType1__articleContainer p {
@@ -46,7 +41,7 @@
 }
 .SlideType1__articleContainer span {
   color: white;
-  font-weight: 300;
+  font-weight: 600;
 }
 
 .SlideType1__storeName {

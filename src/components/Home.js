@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React from 'react';
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -14,10 +14,16 @@ import { Link } from 'react-router-dom';
 import './Home.css';
 import SwiperCore, { Pagination, Navigation } from 'swiper/core';
 
+import { useGlobalContext } from './context';
+
 // install Swiper modules
 SwiperCore.use([Pagination, Navigation]);
 
 const Home = () => {
+  const { cafes, restaurants, stores } = useGlobalContext();
+
+  const allStores = stores.concat(restaurants, cafes);
+
   return (
     <section className='new__Navigation'>
       <div className='Navigation__Container'>
@@ -202,24 +208,30 @@ const Home = () => {
                     }}
                   />
                 </div>
-                <SwiperSlide>
-                  {/* <div className='Navigation__Item__ComingSoon'>
-                    <p>- Coming Soon -</p>
-                  </div> */}
-                  <div className='Home__Slider__Article'>
-                    <p>매력적인 한옥의 감성과 모던함의 조화</p>
-                    <h3>훈콥스</h3>
-                  </div>
-                  <video loop autoplay muted playsinline>
-                    <source
-                      src='https://res.cloudinary.com/diimwnnmj/video/upload/v1626505066/2021-07-17_15_52_50_video_g6odlk.mp4'
-                      type='video/mp4'
-                    ></source>
-                    <strong>
-                      Your browser does not support the video tag.
-                    </strong>
-                  </video>
-                </SwiperSlide>
+                {allStores.map((item) => {
+                  {
+                    console.log(item.promotionMedia);
+                  }
+                  if (item.isPromotion === true) {
+                    return (
+                      <SwiperSlide key={item.id}>
+                        <div className='Home__Slider__Article'>
+                          <p>매력적인 한옥의 감성과 모던함의 조화</p>
+                          <h3>훈콥스</h3>
+                        </div>
+                        <video loop autoPlay muted playsInline>
+                          <source
+                            src={item.promotionMedia[0].url}
+                            type='video/mp4'
+                          ></source>
+                          <strong>
+                            Your browser does not support the video tag.
+                          </strong>
+                        </video>
+                      </SwiperSlide>
+                    );
+                  } else return null;
+                })}
               </Swiper>
             </div>
           </Link>

@@ -12,7 +12,7 @@ const SlideType1 = ({ store }) => {
   //   );
   // }
   return (
-    <Link to={`/store/${store.id}`} className=''>
+    <Link to={`/store/${store.id}`}>
       <div
         className='SlideType1'
         style={{
