@@ -89,7 +89,7 @@ const Home = () => {
           <Link to={`/category/호프・주점`}>
             <div className='ThirdGrid__Item'>
               <div className='Navigation__Item__Header'>
-                <p>호프・주점</p>
+                <p>호프·주점</p>
               </div>
               <div className='Navigation__Item__Emoji__Container'>
                 <img
@@ -102,7 +102,7 @@ const Home = () => {
           <Link to={`/category/운동・헬스`}>
             <div className='ThirdGrid__Item'>
               <div className='Navigation__Item__Header'>
-                <p>운동・헬스</p>
+                <p>운동·헬스</p>
               </div>
               <div className='Navigation__Item__Emoji__Container'>
                 <img
@@ -115,7 +115,7 @@ const Home = () => {
           <Link to={`/category/미용・뷰티`}>
             <div className='ThirdGrid__Item'>
               <div className='Navigation__Item__Header'>
-                <p>미용・뷰티</p>
+                <p>미용·뷰티</p>
               </div>
               <div className='Navigation__Item__Emoji__Container'>
                 <img
@@ -141,7 +141,7 @@ const Home = () => {
           <Link to={`/category/게임・노래`}>
             <div className='ThirdGrid__Item'>
               <div className='Navigation__Item__Header'>
-                <p>게임・노래</p>
+                <p>게임·노래</p>
               </div>
               <div className='Navigation__Item__Emoji__Container'>
                 <img
