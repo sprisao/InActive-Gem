@@ -1,6 +1,6 @@
 Privacy Policy
 
-JongHyeck Choe built the FrenchVoca app as a Free app. This SERVICE is provided by JongHyeck Choe at no cost and is intended for use as is.
+JongHyeck Choe built the '젬' app as a Free app. This SERVICE is provided by JongHyeck Choe at no cost and is intended for use as is.
 
 This page is used to inform visitors regarding my policies with the collection, use, and disclosure of Personal Information if anyone decided to use my Service.
 
