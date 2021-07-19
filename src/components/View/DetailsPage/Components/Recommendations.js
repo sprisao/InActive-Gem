@@ -73,8 +73,6 @@ const Recommendations = (props) => {
           length={7}
           categoryType="2"
         />
-        <br />
-        <br />
       </section>
     );
   }
