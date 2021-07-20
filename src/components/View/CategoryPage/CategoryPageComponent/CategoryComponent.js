@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 // dropdown
 import CategoryHeader from './CategoryHeader';
@@ -9,10 +9,9 @@ import './CategoryComponent.css';
 
 const CategoryComponent = (props) => {
   const [items, setItems] = useState(props.stores);
-
-  // 드롭다운메뉴에서 로케이션 선택
-
-  const [secondCategory, setSecondCategory] = useState('전체');
+  const [secondCategory, setSecondCategory] = useState(
+    () => JSON.parse(window.localStorage.getItem('secondCategory')) || '전체'
+  );
 
   // 로케이션 필터링
   const filterLocations = (location) => {
@@ -26,6 +25,15 @@ const CategoryComponent = (props) => {
     setItems(newItems);
   };
 
+  // 세컨드카테고리 값 로컬스토리지에 저장
+  useEffect(() => {
+    window.localStorage.setItem(
+      'secondCategory',
+      JSON.stringify(secondCategory)
+    );
+  }, [secondCategory, items]);
+
+  // 버튼을 통해 두번째 카테고리 가져오기
   const getSecondCategory = (value) => {
     setSecondCategory(value);
   };

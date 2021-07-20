@@ -19,7 +19,7 @@ const DetailsHeader = (props) => {
     instagramAcc = (
       <div
         className='details__Header__Instagram'
-        onClick={() => window.open(url + props.instagramAccount, '_blank')}
+        onClick={() => window.open(url + props.instagramAccount, '_parent')}
       >
         <p>인스타그램</p>
       </div>
