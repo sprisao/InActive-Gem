@@ -5,18 +5,19 @@ import { FiChevronLeft, FiBookmark } from 'react-icons/fi';
 
 import './DetailsNavi.css';
 
-const DetailsNavi = ({ name, history }) => {
-  const goBack = () => {
-    history.goBack();
-  };
+const DetailsNavi = (props) => {
   return (
     <section className='detailsNavi'>
       <div className='detailsNavi__box'>
-        <div className='Details__Backward' onClick={goBack}>
-          <FiChevronLeft style={{ fontSize: '1.85rem', color: '#454545' }} />
-        </div>
+        <Link
+          to={`/category/${props.category}/${props.locationCategory}/${props.secondCategory}`}
+        >
+          <div className='Details__Backward'>
+            <FiChevronLeft style={{ fontSize: '1.85rem', color: '#454545' }} />
+          </div>
+        </Link>
         <div className='detailsNavi__contents'>
-          <p>{name}</p>
+          <p>{props.name}</p>
         </div>
         <div className='Details__Save'>
           <FiBookmark

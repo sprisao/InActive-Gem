@@ -1,6 +1,8 @@
 .detailsPage {
   max-width: var(--normalWidth);
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .mainInfo h2 {
