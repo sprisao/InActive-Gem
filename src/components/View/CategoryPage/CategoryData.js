@@ -7,9 +7,10 @@ import Footer from '../../Footer';
 import CategoryComponent from './CategoryPageComponent/CategoryComponent';
 
 const CategoryData = () => {
-  const { firstCategory } = useParams();
+  const { firstCategory, secondCategory } = useParams();
   const { firstCategories, loading, stores } = useGlobalContext();
-  console.log(stores);
+
+  console.log(secondCategory);
 
   if (loading) {
     return <Loading />;
@@ -23,6 +24,8 @@ const CategoryData = () => {
                 key={category.id}
                 id={category.id}
                 category={firstCategory}
+                secondCategory={secondCategory}
+                locationCategory={[]}
                 stores={stores.filter(
                   (store) => store.firstCategory[0] === firstCategory
                 )}
@@ -30,7 +33,7 @@ const CategoryData = () => {
             );
           } else return null;
         })}
-        <footer />
+        <Footer />
       </>
     );
 };

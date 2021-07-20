@@ -12,20 +12,26 @@ import Error from './View/ErrorPage/Error';
 
 import ScrollToTop from './ScrollToTop';
 
-// import components
-import Header from './Header';
-import SearchHeader from './View/SearchPage/SearchHeader';
-import Footer from './Footer';
-
 function App() {
   return (
     <Router>
       <ScrollToTop>
         <Switch>
           <Route exact path='/' component={LandingPage} />
-          <Route exact path='/category/맛집' component={RestaurantPage} />
-          <Route exact path='/category/카페' component={CafePage} />
-          <Route path='/category/:firstCategory' component={CategoryData} />
+          <Route
+            exact
+            path='/category/맛집/:locationCateogry/:secondCategory'
+            component={RestaurantPage}
+          />
+          <Route
+            exact
+            path='/category/카페/:locationCategory/:secondCategory'
+            component={CafePage}
+          />
+          <Route
+            path='/category/:firstCategory/:locationCategory/:secondCategory'
+            component={CategoryData}
+          />
           <Route
             path='/category/:firstCategory/:secondCategory'
             component={CategoryData}

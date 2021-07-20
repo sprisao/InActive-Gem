@@ -8,12 +8,8 @@ import SecondCategory from '../SecondCategory';
 import './CategoryComponent.css';
 
 const CategoryComponent = (props) => {
+  console.log(props);
   const [items, setItems] = useState(props.stores);
-  const [secondCategory, setSecondCategory] = useState(
-    () => JSON.parse(window.localStorage.getItem('secondCategory')) || '전체'
-  );
-
-  // 로케이션 필터링
   const filterLocations = (location) => {
     if (location === '전체') {
       setItems(props.stores);
@@ -23,19 +19,6 @@ const CategoryComponent = (props) => {
       (store) => store.eupmyeondongRi === location
     );
     setItems(newItems);
-  };
-
-  // 세컨드카테고리 값 로컬스토리지에 저장
-  useEffect(() => {
-    window.localStorage.setItem(
-      'secondCategory',
-      JSON.stringify(secondCategory)
-    );
-  }, [secondCategory, items]);
-
-  // 버튼을 통해 두번째 카테고리 가져오기
-  const getSecondCategory = (value) => {
-    setSecondCategory(value);
   };
 
   return (
@@ -48,17 +31,14 @@ const CategoryComponent = (props) => {
           />
 
           <div className='SecondCategory__container'>
-            <SecondCategory
-              category={props.category}
-              getSecondCategory={getSecondCategory}
-            />
+            <SecondCategory category={props.category} />
           </div>
         </div>
         <div className='CategoryGrid'>
           <section className='grid'>
             <section className='grid__wrapper'>
               {items.map((store) => {
-                if (secondCategory === '전체') {
+                if (props.secondCategory === '전체') {
                   return (
                     <GridCard
                       key={store.id}
@@ -69,7 +49,7 @@ const CategoryComponent = (props) => {
                     ></GridCard>
                   );
                 }
-                if (store.secondCategory[0] === secondCategory) {
+                if (store.secondCategory[0] === props.secondCategory) {
                   return (
                     <GridCard
                       key={store.id}

@@ -6,32 +6,26 @@ import './SecondCategory.css';
 
 const SecondCategory = (props) => {
   const { secondCategories } = useGlobalContext();
-  const sendSecondCategory = (text) => {
-    props.getSecondCategory(text);
-  };
 
   return (
     <section className='SeondCategory'>
       <div className='SeondCategory__container'>
-        <button
-          className='SeondCategory__item'
-          onClick={() => sendSecondCategory('전체')}
-        >
-          🅰️ 전체
-        </button>
+        <Link to={`/category/${props.category}/${props.locationCategory}/전체`}>
+          <button className='SeondCategory__item'>🅰️ 전체</button>
+        </Link>
         {secondCategories.map((secondCategory) => {
           if (
             props.category === secondCategory.firstCategory[0] &&
             secondCategory.isActive === true
           )
             return (
-              <button
-                key={secondCategory.id}
-                className='SeondCategory__item'
-                onClick={() => sendSecondCategory(secondCategory.title)}
+              <Link
+                to={`/category/${props.category}/${props.locationCategory}/${secondCategory.title}`}
               >
-                {secondCategory.emoji}&nbsp;{secondCategory.title}
-              </button>
+                <button key={secondCategory.id} className='SeondCategory__item'>
+                  {secondCategory.emoji}&nbsp;{secondCategory.title}
+                </button>
+              </Link>
             );
           else return null;
         })}

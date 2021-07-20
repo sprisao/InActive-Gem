@@ -28,7 +28,7 @@ const Home = () => {
     <section className='new__Navigation'>
       <div className='Navigation__Container'>
         <div className='FirstGrid__Wrap'>
-          <Link to={`/category/맛집`}>
+          <Link to={`/category/맛집/전체/전체`}>
             <div className='FirstGrid__Item'>
               <div className='Navigation__Item__Header'>
                 <p>맛집</p>
@@ -57,7 +57,7 @@ const Home = () => {
               </div>
             </div>
           </Link>
-          <Link to={`/category/카페`}>
+          <Link to={`/category/카페/전체/전체`}>
             <div className='FirstGrid__Item'>
               <div className='Navigation__Item__Header'>
                 <p>카페</p>
@@ -86,7 +86,7 @@ const Home = () => {
           </Link>
         </div>
         <div className='ThirdGrid__Wrap'>
-          <Link to={`/category/호프・주점`}>
+          <Link to={`/category/호프・주점/전체/전체`}>
             <div className='ThirdGrid__Item'>
               <div className='Navigation__Item__Header'>
                 <p>호프·주점</p>
@@ -99,7 +99,7 @@ const Home = () => {
               </div>
             </div>
           </Link>
-          <Link to={`/category/운동・헬스`}>
+          <Link to={`/category/운동・헬스/전체/전체`}>
             <div className='ThirdGrid__Item'>
               <div className='Navigation__Item__Header'>
                 <p>운동·헬스</p>
@@ -112,7 +112,7 @@ const Home = () => {
               </div>
             </div>
           </Link>
-          <Link to={`/category/미용・뷰티`}>
+          <Link to={`/category/미용・뷰티/전체/전체`}>
             <div className='ThirdGrid__Item'>
               <div className='Navigation__Item__Header'>
                 <p>미용·뷰티</p>
@@ -125,7 +125,7 @@ const Home = () => {
               </div>
             </div>
           </Link>
-          <Link to={`/category/스튜디오`}>
+          <Link to={`/category/스튜디오/전체/전체`}>
             <div className='ThirdGrid__Item'>
               <div className='Navigation__Item__Header'>
                 <p>스튜디오</p>
@@ -138,7 +138,7 @@ const Home = () => {
               </div>
             </div>
           </Link>
-          <Link to={`/category/게임・노래`}>
+          <Link to={`/category/게임・노래/전체/전체`}>
             <div className='ThirdGrid__Item'>
               <div className='Navigation__Item__Header'>
                 <p>게임·노래</p>
@@ -151,7 +151,7 @@ const Home = () => {
               </div>
             </div>
           </Link>
-          <Link to={`/category/꽃`}>
+          <Link to={`/category/꽃/전체/전체`}>
             <div className='ThirdGrid__Item'>
               <div className='Navigation__Item__Header'>
                 <p>꽃</p>
@@ -164,7 +164,7 @@ const Home = () => {
               </div>
             </div>
           </Link>
-          <Link to={`/category/키즈`}>
+          <Link to={`/category/키즈/전체/전체`}>
             <div className='ThirdGrid__Item'>
               <div className='Navigation__Item__Header'>
                 <p>키즈</p>
@@ -177,7 +177,7 @@ const Home = () => {
               </div>
             </div>
           </Link>
-          <Link to={`/category/캠핑장`}>
+          <Link to={`/category/캠핑장/전체/전체`}>
             <div className='ThirdGrid__Item'>
               <div className='Navigation__Item__Header'>
                 <p>캠핑장</p>
@@ -212,9 +212,6 @@ const Home = () => {
                 />
               </div>
               {allStores.map((item) => {
-                {
-                  console.log(item.promotionMedia);
-                }
                 if (item.isPromotion === true) {
                   return (
                     <SwiperSlide key={item.id}>

@@ -25,7 +25,7 @@ const CategoryHeader = ({ filterLocations, category }) => {
               <FiChevronLeft style={{ fontSize: '1.8rem' }} />
             </button>
           </Link>
-          <Link to={`/category/맛집`}>
+          <Link to={`/category/맛집/전체/전체`}>
             <div className='Category__Title'>
               <h3>{category}</h3>
             </div>
