@@ -20,6 +20,7 @@ const SecondCategory = (props) => {
           )
             return (
               <Link
+                key={secondCategory.id}
                 to={`/category/${props.category}/${props.locationCategory}/${secondCategory.title}`}
               >
                 <button key={secondCategory.id} className='SeondCategory__item'>
