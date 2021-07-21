@@ -34,7 +34,12 @@ const SecondCategory = (props) => {
                 key={secondCategory.id}
                 to={`/category/${props.category}/${props.locationCategory}/${secondCategory.title}`}
               >
-                <button key={secondCategory.id} className='SeondCategory__item'>
+                <button
+                  key={secondCategory.id}
+                  className='SeondCategory__item'
+                  ref={buttonRef}
+                  onClick={handleFocus}
+                >
                   {secondCategory.emoji}&nbsp;{secondCategory.title}
                 </button>
               </Link>
