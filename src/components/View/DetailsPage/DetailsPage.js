@@ -78,34 +78,3 @@ const DetailsPage = ({ store, history }) => {
 };
 
 export default DetailsPage;
-
-// name;
-// shortDescription;
-// ownerMessage;
-// phoneNumber;
-// categoryTitle;
-// secondCategory;
-// mainMenu;
-// tags;
-// fullAddress;
-// sigunGu;
-// eupmyeondongRi;
-// streetName;
-// streetNumber;
-// buildingNumber;
-// openHour;
-// closeHour;
-// breaktimeStart;
-// breaktimeEnd;
-// breakDays;
-// instagramAccount;
-// naverLink;
-// images;
-// productImage;
-// storeImage;
-// ownerImage;
-// storeVerified;
-// ownerVerfied;
-// createdTime;
-// ourRating;
-// recordId;

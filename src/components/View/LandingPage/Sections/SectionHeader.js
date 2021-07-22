@@ -11,7 +11,7 @@ const SectionHeader = (props) => {
       <div className='Section__Title'>
         <p>{props.title}</p>
       </div>
-      <Link to={`/category/${props.category}`}>
+      <Link to={`/category/${props.category}/전체/전체`}>
         <div className='Section__More'>
           <p>더 보기</p>
           <FiChevronRight />
