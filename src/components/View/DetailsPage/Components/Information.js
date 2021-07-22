@@ -113,7 +113,7 @@ const Information = (props) => {
               className='details__icon'
             />
             {props.breakDays.map((breakDay) => (
-              <p>{breakDay}&nbsp;</p>
+              <p key={breakDay.id}>{breakDay}&nbsp;</p>
             ))}
             <span style={{ color: 'black' }}>휴무</span>
           </div>
@@ -181,7 +181,6 @@ const Information = (props) => {
               <div>{isShowing && <Modal />}</div>
             </button>
           </CopyToClipboard>
-          {/* {copied ? <span style={{ color: 'red' }}>Copied.</span> : null} */}
         </div>
         <hr />
         {telephoneNumber}

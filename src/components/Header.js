@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FiSend } from 'react-icons/fi';
 import './Header.css';
 
 function Header() {

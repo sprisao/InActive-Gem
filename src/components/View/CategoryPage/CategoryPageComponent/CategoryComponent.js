@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 // dropdown
 import CategoryHeader from './CategoryHeader';
@@ -8,57 +8,73 @@ import SecondCategory from '../SecondCategory';
 import './CategoryComponent.css';
 
 const CategoryComponent = (props) => {
-  console.log(props);
-  const [items, setItems] = useState(props.stores);
-  const filterLocations = (location) => {
-    if (location === '전체') {
-      setItems(props.stores);
-      return;
-    }
-    const newItems = props.stores.filter(
-      (store) => store.eupmyeondongRi === location
-    );
-    setItems(newItems);
-  };
-
   return (
     <>
       <section className='CategoryComponent'>
         <div className='Category__Navi__Wrapper'>
           <CategoryHeader
-            filterLocations={filterLocations}
             category={props.category}
+            secondCategory={props.secondCategory}
           />
 
           <div className='SecondCategory__container'>
-            <SecondCategory category={props.category} />
+            <SecondCategory
+              category={props.category}
+              locationCategory={props.locationCategory}
+            />
           </div>
         </div>
         <div className='CategoryGrid'>
           <section className='grid'>
             <section className='grid__wrapper'>
-              {items.map((store) => {
-                if (props.secondCategory === '전체') {
-                  return (
-                    <GridCard
-                      key={store.id}
-                      store={store}
-                      tags={store.tags}
-                      open={store.openHour}
-                      close={store.closeHour}
-                    ></GridCard>
-                  );
+              {props.stores.map((store) => {
+                if (props.locationCategory === '전체') {
+                  if (props.secondCategory === '전체') {
+                    return (
+                      <GridCard
+                        key={store.id}
+                        store={store}
+                        tags={store.tags}
+                        open={store.openHour}
+                        close={store.closeHour}
+                      ></GridCard>
+                    );
+                  }
+                  if (store.secondCategory[0] === props.secondCategory) {
+                    return (
+                      <GridCard
+                        key={store.id}
+                        store={store}
+                        tags={store.tags}
+                        open={store.openHour}
+                        close={store.closeHour}
+                      ></GridCard>
+                    );
+                  }
                 }
-                if (store.secondCategory[0] === props.secondCategory) {
-                  return (
-                    <GridCard
-                      key={store.id}
-                      store={store}
-                      tags={store.tags}
-                      open={store.openHour}
-                      close={store.closeHour}
-                    ></GridCard>
-                  );
+                if (store.eupmyeondongRi === props.locationCategory) {
+                  if (props.secondCategory === '전체') {
+                    return (
+                      <GridCard
+                        key={store.id}
+                        store={store}
+                        tags={store.tags}
+                        open={store.openHour}
+                        close={store.closeHour}
+                      ></GridCard>
+                    );
+                  }
+                  if (store.secondCategory[0] === props.secondCategory) {
+                    return (
+                      <GridCard
+                        key={store.id}
+                        store={store}
+                        tags={store.tags}
+                        open={store.openHour}
+                        close={store.closeHour}
+                      ></GridCard>
+                    );
+                  }
                 } else return null;
               })}
             </section>

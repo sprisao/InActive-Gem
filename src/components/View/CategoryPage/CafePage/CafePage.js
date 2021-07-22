@@ -6,9 +6,8 @@ import { useParams } from 'react-router-dom';
 import { useGlobalContext } from '../../../context';
 
 const CafePage = () => {
-  const { firstCategory, secondCategory } = useParams();
+  const { locationCategory, secondCategory } = useParams();
   const { cafes, cafesLoading } = useGlobalContext();
-  console.log(cafes);
   if (cafesLoading) {
     return <Loading />;
   } else
@@ -18,7 +17,7 @@ const CafePage = () => {
           category='카페'
           stores={cafes}
           secondCategory={secondCategory}
-          locationCategory={[]}
+          locationCategory={locationCategory}
         />
         <Footer />
       </>

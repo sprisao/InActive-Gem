@@ -7,7 +7,6 @@ import RestaurantPage from './View/CategoryPage/RestaurantPage/RestaurantPage';
 import CafePage from './View/CategoryPage/CafePage/CafePage';
 import CategoryData from './View/CategoryPage/CategoryData';
 import DetailsData from './View/DetailsPage/DetailsData';
-import SearchPage from './View/SearchPage/SearchPage';
 import Error from './View/ErrorPage/Error';
 
 import ScrollToTop from './ScrollToTop';
@@ -20,7 +19,7 @@ function App() {
           <Route exact path='/' component={LandingPage} />
           <Route
             exact
-            path='/category/맛집/:locationCateogry/:secondCategory'
+            path='/category/맛집/:locationCategory/:secondCategory'
             component={RestaurantPage}
           />
           <Route

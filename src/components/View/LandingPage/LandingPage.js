@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
-import Header from '../../Header';
 import SearchBox from '../SearchPage/SearchBox';
 import SearchResults from '../SearchPage/SearchResults';
 import Home from '../../Home';
@@ -8,7 +7,6 @@ import RCCMD from './Sections/RCCMD/RCCMD';
 import Footer from '../../Footer';
 
 import Separator from '../../Separator';
-import Intro from '../../Intro';
 import Loading from '../../Loading';
 import { useGlobalContext } from '../../context';
 

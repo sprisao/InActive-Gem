@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import SearchResults from './SearchResults';
-import { GoSearch } from 'react-icons/go';
 
 import './SearchPage.css';
 

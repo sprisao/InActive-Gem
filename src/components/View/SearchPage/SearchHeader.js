@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { GoSearch } from 'react-icons/go';
 import './SearchHeader.css';
 
 function Header() {

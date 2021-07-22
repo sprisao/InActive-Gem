@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 
 import { FiChevronLeft, FiChevronDown } from 'react-icons/fi';
 
-const CategoryHeader = ({ filterLocations, category }) => {
+const CategoryHeader = ({ category, secondCategory }) => {
   const { locationCategories } = useGlobalContext();
 
   // 드롭다운 메뉴
@@ -25,7 +25,7 @@ const CategoryHeader = ({ filterLocations, category }) => {
               <FiChevronLeft style={{ fontSize: '1.8rem' }} />
             </button>
           </Link>
-          <Link to={`/category/맛집/전체/전체`}>
+          <Link to={`/category/${category}/전체/전체`}>
             <div className='Category__Title'>
               <h3>{category}</h3>
             </div>
@@ -45,27 +45,31 @@ const CategoryHeader = ({ filterLocations, category }) => {
             >
               <ul>
                 <li>
-                  <button
-                    onClick={() => {
-                      setLocationCategory('전체');
-                      filterLocations('전체');
-                      setisActive(!isActive);
-                    }}
-                  >
-                    전체
-                  </button>
+                  <Link to={`/category/${category}/전체/${secondCategory}`}>
+                    <button
+                      onClick={() => {
+                        setLocationCategory('전체');
+                        setisActive(!isActive);
+                      }}
+                    >
+                      전체
+                    </button>
+                  </Link>
                 </li>
                 {locationCategories.map((location) => (
                   <li key={location.id}>
-                    <button
-                      onClick={() => {
-                        setLocationCategory(location.location);
-                        setisActive(!isActive);
-                        filterLocations(location.location);
-                      }}
+                    <Link
+                      to={`/category/${category}/${location.location}/${secondCategory}`}
                     >
-                      {location.location}
-                    </button>
+                      <button
+                        onClick={() => {
+                          setLocationCategory(location.location);
+                          setisActive(!isActive);
+                        }}
+                      >
+                        {location.location}
+                      </button>
+                    </Link>
                   </li>
                 ))}
               </ul>

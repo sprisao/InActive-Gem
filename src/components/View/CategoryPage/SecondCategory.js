@@ -1,10 +1,11 @@
-import React, { useRef, useEffect } from 'react';
+import React from 'react';
 
 import { Link } from 'react-router-dom';
 import { useGlobalContext } from '../../context';
 import './SecondCategory.css';
 
 const SecondCategory = (props) => {
+  console.log(props);
   const { secondCategories } = useGlobalContext();
 
   return (
