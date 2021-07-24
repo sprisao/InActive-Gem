@@ -1,21 +1,22 @@
 import React from 'react';
 
-import { Link } from 'react-router-dom';
 import { FiChevronLeft, FiBookmark } from 'react-icons/fi';
 
 import './DetailsNavi.css';
 
 const DetailsNavi = (props) => {
+  const history = props.history;
+
+  const goBack = () => {
+    history.goBack();
+  };
+
   return (
     <section className='detailsNavi'>
       <div className='detailsNavi__box'>
-        <Link
-          to={`/category/${props.category}/${props.locationCategory}/${props.secondCategory}`}
-        >
-          <div className='Details__Backward'>
-            <FiChevronLeft style={{ fontSize: '1.85rem', color: '#454545' }} />
-          </div>
-        </Link>
+        <div className='Details__Backward' onClick={goBack}>
+          <FiChevronLeft style={{ fontSize: '1.85rem', color: '#454545' }} />
+        </div>
         <div className='detailsNavi__contents'>
           <p>{props.name}</p>
         </div>

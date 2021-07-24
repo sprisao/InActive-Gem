@@ -23,7 +23,6 @@ SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 const DetailsPage = ({ store, history }) => {
   let menu;
   if (store.isMenu === true) {
-    console.log(store.name);
     menu = (
       <>
         <Menu store={store.name} />
@@ -37,7 +36,7 @@ const DetailsPage = ({ store, history }) => {
         name={store.name}
         history={history}
         category={store.firstCategory}
-        locationCategory={'전체'}
+        locationCategory={store.eupmyeondongRi}
         secondCategory={store.secondCategory[0]}
       />
       <ImageBox img={store.images} name={store.name} />

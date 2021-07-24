@@ -11,8 +11,8 @@ const DetailSwiper = (props) => {
       slidesPerView={1}
       navigation
       pagination={{ clickable: true }}
-      onSwiper={(swiper) => console.log(swiper)}
-      onSlideChange={() => console.log('slide change')}
+      // onSwiper={(swiper) => console.log(swiper)}
+      // onSlideChange={() => console.log('slide change')}
     >
       {props.img &&
         props.img.map((item) => {

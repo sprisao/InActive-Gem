@@ -5,7 +5,6 @@ import { useGlobalContext } from '../../context';
 import './SecondCategory.css';
 
 const SecondCategory = (props) => {
-  console.log(props);
   const { secondCategories } = useGlobalContext();
 
   return (
