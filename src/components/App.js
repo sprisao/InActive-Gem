@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 // import pages
 import LandingPage from './View/LandingPage/LandingPage';
+import PromotionPage from './View/PromotionPage/PromotionPage';
 import RestaurantPage from './View/CategoryPage/RestaurantPage/RestaurantPage';
 import CafePage from './View/CategoryPage/CafePage/CafePage';
 import CategoryData from './View/CategoryPage/CategoryData';
@@ -17,6 +18,7 @@ function App() {
       <ScrollToTop>
         <Switch>
           <Route exact path='/' component={LandingPage} />
+          <Route exact path='/trending/:id' component={PromotionPage} />
           <Route
             exact
             path='/category/맛집/:locationCategory/:secondCategory'

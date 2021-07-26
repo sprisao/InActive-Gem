@@ -12,7 +12,7 @@ import { useGlobalContext } from '../../context';
 
 import './LandingPage.css';
 
-const LandingPage = () => {
+const LandingPage = (history) => {
   const { loading } = useGlobalContext();
 
   const [userInput, setUserInput] = useState('');
@@ -38,7 +38,7 @@ const LandingPage = () => {
       return (
         <>
           <SearchBox getUserInput={getUserInput} />
-          <Home />
+          <Home history={history} />
           <Separator />
           <RCCMD
             title='새로 등록된 곳'

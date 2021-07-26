@@ -7,22 +7,24 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper.min.css';
 import 'swiper/components/pagination/pagination.min.css';
 import 'swiper/components/navigation/navigation.min.css';
+import SwiperCore, { Pagination, Navigation } from 'swiper/core';
 
 import { FiChevronRight } from 'react-icons/fi';
 
 import { Link } from 'react-router-dom';
 import './Home.css';
-import SwiperCore, { Pagination, Navigation } from 'swiper/core';
 
 import { useGlobalContext } from './context';
 
 // install Swiper modules
 SwiperCore.use([Pagination, Navigation]);
 
-const Home = () => {
+const Home = ({ history }) => {
   const { cafes, restaurants, stores } = useGlobalContext();
 
   const allStores = stores.concat(restaurants, cafes);
+
+  console.log(history);
 
   return (
     <section className='new__Navigation'>
@@ -193,13 +195,7 @@ const Home = () => {
         </div>
         <div className='SecondGrid__Wrap'>
           <div className='SecondGrid__Item'>
-            <Swiper
-              pagination={{
-                type: 'fraction',
-              }}
-              navigation={true}
-              className='mySwiper'
-            >
+            <Swiper navigation={true} className='mySwiper'>
               <div className='Navigation__Item__Header'>
                 <p>가볼만한 곳</p>
                 <FiChevronRight
@@ -214,7 +210,13 @@ const Home = () => {
               {allStores.map((item) => {
                 if (item.isPromotion === true) {
                   return (
-                    <SwiperSlide key={item.id}>
+                    <SwiperSlide
+                      className='swiper-slide'
+                      key={item.id}
+                      onClick={() =>
+                        history.history.push(`/trending/${item.id}`)
+                      }
+                    >
                       <div className='Home__Slider__Article'>
                         <p>매력적인 한옥의 감성과 모던함의 조화</p>
                         <h3>훈콥스</h3>

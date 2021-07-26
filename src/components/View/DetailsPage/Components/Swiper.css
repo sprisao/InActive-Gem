@@ -10,17 +10,17 @@
   width: 100% !important;
 }
 
-.swiper-slide img {
+.Details-Swiper .swiper-slide img {
   object-fit: cover;
   height: 30rem;
   width: 100%;
   margin-bottom: 2.45rem;
 }
 
-.swiper-button-prev,
-.swiper-button-next {
-  height: 1rem !important;
-  color: white !important;
+.Details-Swiper .swiper-button-prev,
+.Details-Swiper .swiper-button-next {
+  height: 1rem;
+  color: white;
 }
 
 .swiper-button-prev:after,

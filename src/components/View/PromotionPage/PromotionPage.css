@@ -1,0 +1,147 @@
+.PromotionPage {
+  max-width: var(--normalWidth);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.Promotion--Header {
+  width: 100%;
+  height: 35rem;
+}
+
+.Promotion--Header--Background {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  filter: brightness(70%);
+}
+
+.Promotion--Header--Background img {
+  width: 100%;
+  height: 100%;
+}
+
+.Promotion--Header--Contents {
+  position: absolute;
+  top: 0;
+  width: var(--normalWidth);
+  height: 35rem;
+}
+
+.Promotion--Navi {
+  color: white;
+  padding: 1rem;
+}
+
+.Promotion--Title--Article {
+  padding: 1rem;
+  color: white;
+}
+
+.Promotion--Title--Article p {
+  font-size: 1.1rem;
+}
+
+.Promotion--Title--Article h3 {
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+
+.Promotion--Title--Article h4 {
+  font-size: 1.3rem;
+  font-weight: 300;
+}
+.Promotion--Menu--Container {
+  position: absolute;
+  bottom: 1rem;
+  padding: 1rem 1.5rem;
+  height: 9.5rem;
+}
+
+.Promotion--Menu--Container .swiper-button-prev,
+.Promotion--Menu--Container .swiper-button-next {
+  color: white;
+}
+.Promotion--Menu--Item--Wrapper {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-column-gap: 1rem;
+  background-color: white;
+  border-radius: 0.75rem;
+  padding: 0.75rem 0.85rem;
+}
+
+.Promotion--Menu--ImageContainer {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-slide .Promotion--Menu--ImageContainer img {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  border-radius: 0.75rem;
+  object-fit: cover;
+}
+
+.Promotion--Menu--Article {
+  height: 100%;
+}
+
+.Promotion--Menu--Article h4 {
+  margin: 0.25rem 0;
+  font-size: 1.15rem;
+  font-weight: 500;
+}
+.Promotion--Menu--Article p {
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+}
+
+.Promotion--Article__Container {
+  padding: 0 0.75rem;
+}
+.Promotion--Article__Container img {
+  width: 100%;
+  height: 23rem;
+  object-fit: cover;
+}
+
+.Promotion--Article__Section {
+  display: grid;
+  grid-row-gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+.Promotion--Article__Section h3 {
+  font-size: 1.35rem;
+}
+.Promotion--Article__Section p {
+  font-size: 1.1rem;
+  word-break: keep-all;
+}
+
+.Visit-Button--Container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: var(--normalWidth);
+  padding: 0 0.75rem;
+  height: 3rem;
+  margin: 2rem auto 0;
+}
+
+.Visit-Button {
+  width: 75%;
+  border-radius: 0.75rem;
+  height: 100%;
+  font-family: 'Cookierun-Regular';
+  background-color: #f5f5f5;
+  border: solid 1.25px #dfdfdf;
+  cursor: pointer;
+}
