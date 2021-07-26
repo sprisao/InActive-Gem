@@ -9,9 +9,7 @@ const Separator = () => {
         backgroundColor: '#f3f3f3',
         margin: '0.75rem 0',
       }}
-    >
-      {' '}
-    </div>
+    ></div>
   );
 };
 
