@@ -46,20 +46,7 @@ const LandingPage = (history) => {
             view='newStores'
             category='맛집'
           />
-          <Separator />
-          <RCCMD
-            title='점심 메뉴 추천!'
-            slideType='type1'
-            view='LunchRCCMD'
-            category='맛집'
-          />
-          <Separator />
-          <RCCMD
-            title='빠르게 인기 카페 확인~'
-            slideType='type2'
-            view='CafeRCCMD'
-            category='카페'
-          />
+
           <Footer />
         </>
       );

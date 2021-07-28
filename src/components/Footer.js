@@ -5,6 +5,10 @@ import './Footer.css';
 
 const url = 'https://www.gogogem.io';
 
+const appstoreUrl = 'https://apps.apple.com/kr/app/gem%EC%A0%AC/id1576464783';
+const playstoreUrl =
+  'https://play.google.com/store/apps/details?id=com.brucecompany.gem&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1';
+
 const Footer = () => {
   const [copied, setCopied] = useState(false);
   const [isShowing, setIsShowing] = useState(false);
@@ -61,23 +65,39 @@ const Footer = () => {
       </div>
       <hr></hr>
       <div className='footer__container'>
+        <div className='App-Download-Links'>
+          <div
+            className='Appstore'
+            onClick={() => window.open(appstoreUrl, '_blank')}
+          >
+            <img
+              alt='다운로드하기 AppStore'
+              src='https://res.cloudinary.com/diimwnnmj/image/upload/v1627439864/Download_on_the_App_Store_Badge_KR_RGB_blk_100317_ls5wuh.svg'
+            />
+          </div>
+          <div
+            className='Playstore'
+            onClick={() => window.open(playstoreUrl, '_blank')}
+          >
+            <img
+              alt='다운로드하기 Google Play'
+              src='https://res.cloudinary.com/diimwnnmj/image/upload/v1627440252/ko_badge_web_generic_hud1u7.png'
+            />
+          </div>
+        </div>
         <div className='legal__info'>
-          <p>'젬'에서 직접 촬영한 모든 이미지의 저작권은 '젬'에게 있습니다.</p>
+          <p>・ 젬에서 직접 촬영한 모든 이미지의 저작권은 젬에게 있습니다.</p>
           <p>
-            '젬'에서 직접 촬영한 이미지를 제외한 모든 이미지의 저작권은 각
+            ・ 젬에서 직접 촬영한 이미지를 제외한 모든 업체의 이미지 저작권은 각
             업체에게 있습니다.
           </p>
           <p>
-            '젬'은 해당 업체의 홍보 목적 외에 그 어떤 용도로도 이미지를 사용하지
-            않습니다.
+            ・ 젬은 해당 업체의 홍보 목적 외에 그 어떤 용도로도 이미지를
+            사용하지 않습니다.
           </p>
-          <p>게시를 원치 않으실 경우 '내 가게 문의하기'로 문의 바랍니다.</p>
+          <p>・ 홍보를 원치 않으실 경우 '내 가게 문의하기'로 문의 바랍니다.</p>
         </div>
         <div className='Copyrights'>
-          <img
-            src='https://res.cloudinary.com/diimwnnmj/image/upload/v1622384476/gem/%E1%84%80%E1%85%A9%E1%84%80%E1%85%A9%E1%84%8C%E1%85%A6%E1%86%B7BI2_z0ghml.png'
-            alt='footer-logo'
-          />
           <p>Copyright © 2020 GEM All rights reserved.</p>
         </div>
       </div>
