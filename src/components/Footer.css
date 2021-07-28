@@ -42,6 +42,7 @@
   text-align: left;
   color: rgb(26, 26, 26);
   font-size: 10px;
+  word-break: keep-all;
 }
 
 .Copyrights {
@@ -68,16 +69,16 @@
 .Appstore {
   width: 35%;
   cursor: pointer;
+  margin-right: 0.75rem;
 }
 
 .Appstore img {
   width: 100%;
-  padding: 0.7rem 0;
   margin: 0;
 }
 
 .Playstore {
-  width: 42%;
+  width: 35%;
   cursor: pointer;
 }
 

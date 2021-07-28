@@ -68,21 +68,25 @@ const Footer = () => {
         <div className='App-Download-Links'>
           <div
             className='Appstore'
-            onClick={() => window.open(appstoreUrl, '_parent')}
+            // onClick={() => window.open(appstoreUrl, '_parent')}
           >
-            <img
-              alt='다운로드하기 AppStore'
-              src='https://res.cloudinary.com/diimwnnmj/image/upload/v1627439864/Download_on_the_App_Store_Badge_KR_RGB_blk_100317_ls5wuh.svg'
-            />
+            <a href='https://apps.apple.com/us/app/gem%EC%A0%AC/id1576464783'>
+              <img
+                alt='다운로드하기 AppStore'
+                src='https://res.cloudinary.com/diimwnnmj/image/upload/v1627439864/Download_on_the_App_Store_Badge_KR_RGB_blk_100317_ls5wuh.svg'
+              />
+            </a>
           </div>
           <div
             className='Playstore'
-            onClick={() => window.open(playstoreUrl, '_blank')}
+            // onClick={() => window.open(playstoreUrl, '_blank')}
           >
-            <img
-              alt='다운로드하기 Google Play'
-              src='https://res.cloudinary.com/diimwnnmj/image/upload/v1627440252/ko_badge_web_generic_hud1u7.png'
-            />
+            <a href='https://play.google.com/store/apps/details?id=com.brucecompany.gem&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>
+              <img
+                alt='다운로드하기 Google Play'
+                src='https://res.cloudinary.com/diimwnnmj/image/upload/v1627442024/ko_badge_web_generic_hud1u7.png'
+              />
+            </a>
           </div>
         </div>
         <div className='legal__info'>
