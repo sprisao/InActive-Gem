@@ -5,7 +5,7 @@ import './Footer.css';
 
 const url = 'https://www.gogogem.io';
 
-const appstoreUrl = 'https://apps.apple.com/kr/app/gem%EC%A0%AC/id1576464783';
+const appstoreUrl = 'https://apps.apple.com/us/app/gem%EC%A0%AC/id1576464783';
 const playstoreUrl =
   'https://play.google.com/store/apps/details?id=com.brucecompany.gem&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1';
 
@@ -68,7 +68,7 @@ const Footer = () => {
         <div className='App-Download-Links'>
           <div
             className='Appstore'
-            onClick={() => window.open(appstoreUrl, '_blank')}
+            onClick={() => window.open(appstoreUrl, '_parent')}
           >
             <img
               alt='다운로드하기 AppStore'
