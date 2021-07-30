@@ -7,14 +7,15 @@ import { Link } from 'react-router-dom';
 
 import { FiChevronLeft, FiChevronDown } from 'react-icons/fi';
 
-const CategoryHeader = ({ category, secondCategory }) => {
+const CategoryHeader = ({ category, secondCategory, currentLocation }) => {
   const { locationCategories } = useGlobalContext();
 
   // 드롭다운 메뉴
   const dropdownRef = useRef(null);
   const [isActive, setisActive] = useDetectOutsideClick(dropdownRef, false);
   const onClick = () => setisActive(!isActive);
-  const [locationCategory, setLocationCategory] = useState('전체');
+  const [locationCategory, setLocationCategory] = useState(currentLocation);
+  console.log(currentLocation);
 
   return (
     <>

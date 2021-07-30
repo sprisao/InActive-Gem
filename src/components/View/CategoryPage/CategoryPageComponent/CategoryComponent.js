@@ -8,6 +8,7 @@ import SecondCategory from '../SecondCategory';
 import './CategoryComponent.css';
 
 const CategoryComponent = (props) => {
+  console.log(props.locationCategory);
   return (
     <>
       <section className='CategoryComponent'>
@@ -15,6 +16,7 @@ const CategoryComponent = (props) => {
           <CategoryHeader
             category={props.category}
             secondCategory={props.secondCategory}
+            currentLocation={props.locationCategory}
           />
 
           <div className='SecondCategory__container'>
