@@ -8,7 +8,7 @@ import SecondCategory from '../SecondCategory';
 import './CategoryComponent.css';
 
 const CategoryComponent = (props) => {
-  console.log(props.locationCategory);
+  console.log(props.secondCategory);
   return (
     <>
       <section className='CategoryComponent'>
@@ -22,6 +22,7 @@ const CategoryComponent = (props) => {
           <div className='SecondCategory__container'>
             <SecondCategory
               category={props.category}
+              secondCategory={props.secondCategory}
               locationCategory={props.locationCategory}
             />
           </div>

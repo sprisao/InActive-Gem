@@ -15,7 +15,6 @@ const CategoryHeader = ({ category, secondCategory, currentLocation }) => {
   const [isActive, setisActive] = useDetectOutsideClick(dropdownRef, false);
   const onClick = () => setisActive(!isActive);
   const [locationCategory, setLocationCategory] = useState(currentLocation);
-  console.log(currentLocation);
 
   return (
     <>
