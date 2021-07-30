@@ -2,21 +2,22 @@ import React, { useState, useEffect } from 'react';
 
 import { Link } from 'react-router-dom';
 import { useGlobalContext } from '../../context';
+import { useParams } from 'react-router-dom';
 import './SecondCategory.css';
 
 const SecondCategory = (props) => {
+  const { secondCategory, locationCategory } = useParams();
   const { secondCategories } = useGlobalContext();
-  const defaultSecondCategory = props.secondCategory;
-  const [focused, setFocused] = useState(defaultSecondCategory);
+  const [focused, setFocused] = useState(secondCategory);
 
-  const onFocus = (id) => {
-    setFocused(id);
-  };
+  useEffect(() => {
+    setFocused(secondCategory);
+  }, [secondCategory]);
 
   return (
     <section className='SeondCategory'>
       <div className='SeondCategory__container'>
-        <Link to={`/category/${props.category}/${props.locationCategory}/전체`}>
+        <Link to={`/category/${props.category}/${locationCategory}/전체`}>
           <button
             className={
               focused === '전체'
@@ -24,7 +25,7 @@ const SecondCategory = (props) => {
                 : 'SeondCategory__item'
             }
             tabIndex='0'
-            onClick={() => onFocus('전체')}
+            // onClick={() => onFocus('전체')}
           >
             🅰️ 전체
           </button>
@@ -38,7 +39,7 @@ const SecondCategory = (props) => {
             return (
               <Link
                 key={secondCategory.id}
-                to={`/category/${props.category}/${props.locationCategory}/${secondCategory.title}`}
+                to={`/category/${props.category}/${locationCategory}/${secondCategory.title}`}
               >
                 <button
                   tabIndex='0'
@@ -48,7 +49,7 @@ const SecondCategory = (props) => {
                       ? 'SeondCategory__item__clicked'
                       : 'SeondCategory__item'
                   }
-                  onClick={() => onFocus(secondCategory.title)}
+                  // onClick={() => onFocus(secondCategory.title)}
                 >
                   {secondCategory.emoji}&nbsp;{secondCategory.title}
                 </button>

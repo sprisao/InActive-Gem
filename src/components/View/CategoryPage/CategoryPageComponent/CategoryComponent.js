@@ -22,7 +22,6 @@ const CategoryComponent = (props) => {
           <div className='SecondCategory__container'>
             <SecondCategory
               category={props.category}
-              secondCategory={props.secondCategory}
               locationCategory={props.locationCategory}
             />
           </div>
