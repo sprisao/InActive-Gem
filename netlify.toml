@@ -1,2 +1,5 @@
 [build]
 functions = "./functions"
+
+[build.environment]
+  REACT_APP_AIRTABLE_API_KEY = "keyMAHxu7TwPnz4sZ"
