@@ -65,7 +65,7 @@ const Footer = () => {
       </div>
       <hr></hr>
       <div className='footer__container'>
-        <div className='App-Download-Links'>
+        {/* <div className='App-Download-Links'>
           <div
             className='Appstore'
             // onClick={() => window.open(appstoreUrl, '_parent')}
@@ -88,7 +88,7 @@ const Footer = () => {
               />
             </a>
           </div>
-        </div>
+        </div> */}
         <div className='legal__info'>
           <p>・ 젬에서 직접 촬영한 모든 이미지의 저작권은 젬에게 있습니다.</p>
           <p>
