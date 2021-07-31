@@ -1,9 +1,10 @@
 import React, { useState, useContext, useEffect } from 'react';
 import Airtable from 'airtable';
 
-const storeBase = new Airtable({ apiKey: 'key5AMdi7ejadTzUy' }).base(
-  'app0tAUATUh8jBxX4'
-);
+require('dotenv').config();
+const storeBase = new Airtable({
+  apiKey: process.env.REACT_APP_AIRTABLE_API_KEY,
+}).base('app0tAUATUh8jBxX4');
 
 const Context = React.createContext();
 
