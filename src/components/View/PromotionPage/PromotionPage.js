@@ -54,7 +54,12 @@ const PromotionPage = ({ history }) => {
                 <h4>Hoon-Corps</h4>
               </div>
               <div className='Promotion--Menu--Container'>
-                <Swiper navigation={true} className='Promotion-Menu-Swiper'>
+                <Swiper
+                  spaceBetween={0}
+                  slidesPerView={1}
+                  navigation={true}
+                  className='Promotion-Menu-Swiper'
+                >
                   {menu.map((item) => {
                     console.log(item);
                     if (item.store[0] === id) {

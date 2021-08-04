@@ -60,12 +60,21 @@
   height: 9.5rem;
 }
 
-.Promotion--Menu--Container .swiper-button-prev,
 .Promotion--Menu--Container .swiper-button-next {
-  color: white;
+  font-size: 0.4rem;
 }
+.Promotion--Menu--Container .swiper-button-next::after {
+  font-size: 1rem;
+  color: white;
+  margin-left: 2.5rem;
+}
+
+.Promotion--Menu--Container .swiper-button-prev {
+  opacity: 0;
+}
+
 .Promotion--Menu--Item--Wrapper {
-  width: 100%;
+  width: 95%;
   height: 100%;
   display: grid;
   grid-template-columns: 1fr 3fr;
@@ -79,6 +88,10 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.Promotion--Menu--ImageContainer {
+  width: 100%;
 }
 
 .swiper-slide .Promotion--Menu--ImageContainer img {
