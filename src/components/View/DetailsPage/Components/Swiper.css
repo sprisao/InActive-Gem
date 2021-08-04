@@ -1,26 +1,22 @@
+.Details-Swiper {
+  margin-top: 48px;
+}
+
 .detailsPage .swiper-container {
-  margin-top: 3.5rem;
   width: 100%;
+  height: 30rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
+.Details-Swiper .swiper-slide {
+  height: 100%;
+}
 
 .Details-Swiper .swiper-slide img {
   object-fit: cover;
-  height: 30rem;
+  height: 100%;
   width: 100%;
-}
-
-.Details-Swiper .swiper-button-prev,
-.Details-Swiper .swiper-button-next {
-  height: 1rem;
-  color: white;
-}
-
-.Details-Swiper .swiper-button-prev:after,
-.Details-Swiper .swiper-button-next:after {
-  font-size: 1.5rem !important;
 }
 
 .Details-Swiper .swiper-pagination-bullet {
