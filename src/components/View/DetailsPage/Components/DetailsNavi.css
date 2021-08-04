@@ -14,8 +14,8 @@
   justify-content: space-between;
   align-items: center;
   width: var(--normalWidth);
+  height: 100%;
   padding: 0rem 1rem;
-  width: 100%;
 }
 
 .detailsNavi__contents {
@@ -23,10 +23,14 @@
   justify-content: center;
   align-items: center;
   width: 50%;
-  height: auto;
-  font-family: 'Cookierun-regular';
-  font-size: 1.5rem;
+  height: 100%;
   white-space: nowrap;
+}
+
+.detailsNavi__contents h3 {
+  font-family: 'Cookierun-Regular';
+  font-weight: 600;
+  margin-top: 0.1rem;
 }
 
 .Details__Backward {

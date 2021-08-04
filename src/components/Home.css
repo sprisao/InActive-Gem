@@ -257,13 +257,3 @@
 .SecondGrid__Item .swiper-button-next:after {
   font-size: 1rem !important;
 }
-
-.swiper-pagination-fraction,
-.swiper-pagination-custom {
-  position: absolute !important;
-  color: white;
-  top: 1.65rem !important;
-  left: 11rem !important;
-  font-size: 1rem;
-  font-weight: 500;
-}

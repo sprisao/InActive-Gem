@@ -6,15 +6,10 @@
   justify-content: space-between;
 }
 
-.swiper-slide {
-  width: 100% !important;
-}
-
 .Details-Swiper .swiper-slide img {
   object-fit: cover;
   height: 30rem;
   width: 100%;
-  margin-bottom: 2.45rem;
 }
 
 .Details-Swiper .swiper-button-prev,
@@ -23,7 +18,21 @@
   color: white;
 }
 
-.swiper-button-prev:after,
-.swiper-button-next:after {
+.Details-Swiper .swiper-button-prev:after,
+.Details-Swiper .swiper-button-next:after {
   font-size: 1.5rem !important;
+}
+
+.Details-Swiper .swiper-pagination-bullet {
+  width: 0.6rem;
+  height: 0.6rem;
+  text-align: center;
+  color: #000;
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.Details-Swiper .swiper-pagination-bullet-active {
+  color: #fff;
+  background: #007aff;
 }

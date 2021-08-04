@@ -10,10 +10,9 @@ const DetailSwiper = (props) => {
       <Swiper
         spaceBetween={0}
         slidesPerView={1}
-        navigation
-        pagination={{ clickable: true }}
-        // onSwiper={(swiper) => console.log(swiper)}
-        // onSlideChange={() => console.log('slide change')}
+        pagination={{
+          dynamicBullets: true,
+        }}
       >
         {props.img &&
           props.img.map((item) => {
