@@ -12,7 +12,6 @@ const SearchResults = (props) => {
   const filterResult = allStores.filter(
     (result) =>
       result.name.includes(props.userInput) ||
-      result.tags.includes(props.userInput) ||
       result.Search.includes(props.userInput) ||
       result.firstCategory[0].includes(props.userInput)
   );
