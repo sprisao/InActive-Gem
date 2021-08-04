@@ -42,7 +42,6 @@ const SearchResults = (props) => {
     );
   }
 
-  console.log('검색결과', filterResult);
   return <div>{pageReturn}</div>;
 };
 
