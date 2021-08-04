@@ -16,13 +16,13 @@ const SecondCategory = (props) => {
 
   return (
     <section className='SeondCategory'>
-      <div className='SeondCategory__container'>
+      <div className='SecondCategory__container'>
         <Link to={`/category/${props.category}/${locationCategory}/전체`}>
           <button
             className={
               focused === '전체'
-                ? 'SeondCategory__item__clicked'
-                : 'SeondCategory__item'
+                ? 'SecondCategory__item__clicked'
+                : 'SecondCategory__item'
             }
             tabIndex='0'
             // onClick={() => onFocus('전체')}
@@ -46,8 +46,8 @@ const SecondCategory = (props) => {
                   key={secondCategory.id}
                   className={
                     focused === secondCategory.title
-                      ? 'SeondCategory__item__clicked'
-                      : 'SeondCategory__item'
+                      ? 'SecondCategory__item__clicked'
+                      : 'SecondCategory__item'
                   }
                   // onClick={() => onFocus(secondCategory.title)}
                 >

@@ -3,17 +3,17 @@
   margin: 0 auto;
   margin-top: 0.35rem;
 }
-.SeondCategory {
+.SecondCategory {
   display: block;
   overflow-x: scroll;
   margin: 0.2rem;
 }
 
-.SeondCategory__container::-webkit-scrollbar {
+.SecondCategory__container::-webkit-scrollbar {
   display: none !important;
 }
 
-.SeondCategory__container {
+.SecondCategory__container {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -22,7 +22,7 @@
   padding: 0.2rem 0;
 }
 
-.SeondCategory__item {
+.SecondCategory__item {
   display: flex;
   align-items: center;
   padding: 0.4rem 0.85rem;
@@ -35,7 +35,7 @@
   text-decoration: none;
   color: #707070;
 }
-.SeondCategory__item__clicked {
+.SecondCategory__item__clicked {
   display: flex;
   align-items: center;
   padding: 0.4rem 0.85rem;
