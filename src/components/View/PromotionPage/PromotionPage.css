@@ -19,6 +19,7 @@
 }
 
 .Promotion--Header--Background img {
+  object-fit: cover;
   width: 100%;
   height: 100%;
 }
@@ -79,11 +80,21 @@
 .Promotion--Article__Section h3 {
   font-size: 1.35rem;
 }
+
+.Promotion--Article__Section .right__header {
+  font-size: 1.35rem;
+  text-align: start;
+}
+
 .Promotion--Article__Section p {
   font-size: 1.1rem;
   word-break: keep-all;
 }
 
+.Promotion--Article__Section .caption {
+  font-size: 0.85rem;
+  word-break: keep-all;
+}
 .Visit-Button--Container {
   display: flex;
   justify-content: center;
