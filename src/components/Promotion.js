@@ -49,7 +49,7 @@ const Promotion = ({ history }) => {
           if (err) {
             console.error(err);
           } else {
-            console.log('업체데이터 불러오기 성공');
+            console.log('프로모션 데이터 불러옴');
             setPromoLoading(false);
           }
         }
@@ -59,50 +59,58 @@ const Promotion = ({ history }) => {
   return (
     <div className='SecondGrid__Wrap'>
       <div className='SecondGrid__Item'>
-        <Swiper navigation={true} className='mySwiper'>
-          <div className='Navigation__Item__Header'>
-            <p>요즘 핫한 곳</p>{' '}
-            <FiChevronRight
-              style={{
-                fontSize: '1.35rem',
-                strokeWidth: '3px',
-                color: '#c6c6c6',
-                marginLeft: '0.3rem',
-              }}
-            />
-          </div>
-          {promo.map((item) => {
-            console.log(item);
-            if (item.isPromotion[0] === true) {
-              return (
-                <SwiperSlide
-                  className='swiper-slide'
-                  key={item.id}
-                  onClick={() => history.history.push(`/promotion/${item.id}`)}
-                >
-                  <div className='Home__Slider__Article'>
-                    <p>{item.mainCopy}</p>
-                    <h3>{item.name}</h3>
-                  </div>
-
-                  <video
-                    autoPlay={true}
-                    loop={true}
-                    controls={false}
-                    playsInline
-                    muted
-                    type='video/mp4'
+        {promoLoading === true ? (
+          <p style={{ marginTop: '6.5rem' }}>Loading...</p>
+        ) : (
+          <Swiper navigation={true} className='mySwiper'>
+            <div className='Navigation__Item__Header'>
+              <p>요즘 핫한 곳</p>
+              <FiChevronRight
+                style={{
+                  fontSize: '1.35rem',
+                  strokeWidth: '3px',
+                  color: '#c6c6c6',
+                  marginLeft: '0.3rem',
+                }}
+              />
+            </div>
+            {promo.map((item) => {
+              if (item.isPromotion[0] === true) {
+                return (
+                  <SwiperSlide
+                    className='swiper-slide'
+                    key={item.id}
+                    onClick={() =>
+                      history.history.push(`/promotion/${item.id}`)
+                    }
                   >
-                    <source src={item.promotionMedia[0].url} type='video/mp4' />
-                    <strong>
-                      Your browser does not support the video tag.
-                    </strong>
-                  </video>
-                </SwiperSlide>
-              );
-            } else return null;
-          })}
-        </Swiper>
+                    <div className='Home__Slider__Article'>
+                      <p>{item.mainCopy}</p>
+                      <h3>{item.name}</h3>
+                    </div>
+
+                    <video
+                      autoPlay={true}
+                      loop={true}
+                      controls={false}
+                      playsInline
+                      muted
+                      type='video/mp4'
+                    >
+                      <source
+                        src={item.promotionMedia[0].url}
+                        type='video/mp4'
+                      />
+                      <strong>
+                        Your browser does not support the video tag.
+                      </strong>
+                    </video>
+                  </SwiperSlide>
+                );
+              } else return null;
+            })}
+          </Swiper>
+        )}
       </div>
     </div>
   );

@@ -60,8 +60,7 @@ const PromotionPage = ({ history }) => {
                   className='Promotion-Menu-Swiper'
                 >
                   {menu.map((item) => {
-                    console.log(item);
-                    if (item.store[0] === name) {
+                    if (item.storeName[0] === name) {
                       return (
                         <SwiperSlide
                           className='Promotion-Menu-Slider'
