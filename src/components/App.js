@@ -19,8 +19,8 @@ function App() {
       <ScrollToTop>
         <Switch>
           <Route exact path='/' component={LandingPage} />
-          <Route exact path='/trending/:id' component={PromotionPage} />
-          <Route path='/promotion/test' component={PromotionTest} />
+          <Route exact path='/promotion/훈콥스' component={PromotionPage} />
+          <Route path='/promotion/레제푸' component={PromotionTest} />
           <Route
             exact
             path='/category/맛집/:locationCategory/:secondCategory'

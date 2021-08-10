@@ -77,11 +77,13 @@ const Promotion = ({ history }) => {
                 <SwiperSlide
                   className='swiper-slide'
                   key={item.id}
-                  onClick={() => history.history.push(`/trending/${item.id}`)}
+                  onClick={() =>
+                    history.history.push(`/promotion/${item.name}`)
+                  }
                 >
                   <div className='Home__Slider__Article'>
                     <p>{item.mainCopy}</p>
-                    <h3>{item.Name}</h3>
+                    <h3>{item.name}</h3>
                   </div>
 
                   <video

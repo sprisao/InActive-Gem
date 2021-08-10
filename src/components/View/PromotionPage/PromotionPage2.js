@@ -1,7 +1,6 @@
 import React from 'react';
 import Footer from '../../Footer';
 import Seperator from '../../Separator';
-// import { useParams } from 'react-router-dom';
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -23,7 +22,7 @@ SwiperCore.use([Pagination, Navigation]);
 
 const PromotionPage = ({ history }) => {
   const { menu } = useGlobalContext();
-  // const { id } = useParams();
+  const name = '레제푸';
   const goBack = () => {
     history.goBack();
   };
@@ -60,9 +59,10 @@ const PromotionPage = ({ history }) => {
                   navigation={true}
                   className='Promotion-Menu-Swiper'
                 >
-                  {/* {menu.map((item) => {
-                    console.log(item);
-                    if (item.store[0] === id) {
+                  {menu.map((item) => {
+                    console.log(item.storeName);
+                    console.log(name);
+                    if (item.storeName[0] === name) {
                       return (
                         <SwiperSlide
                           className='Promotion-Menu-Slider'
@@ -80,7 +80,7 @@ const PromotionPage = ({ history }) => {
                         </SwiperSlide>
                       );
                     } else return null;
-                  })} */}
+                  })}
                 </Swiper>
               </div>
             </div>
@@ -182,11 +182,13 @@ const PromotionPage = ({ history }) => {
             </p>
           </div>
         </div>
-        <Seperator />
         <div className='Visit-Button--Container'>
           <button
             className='Visit-Button'
-            // onClick={() => history.push(`/store/${id}`)}
+            onClick={() =>
+              history.push(`/store/recHxDywvzNR8zZKA
+`)
+            }
           >
             방문하기
           </button>
