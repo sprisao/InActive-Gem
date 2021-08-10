@@ -68,7 +68,6 @@ const Home = ({ history }) => {
             </div>
           </Link>
         </div>
-        <Promotion history={history}></Promotion>
         <div className='ThirdGrid__Wrap'>
           <Link to={`/category/호프・주점/전체/전체`}>
             <div className='ThirdGrid__Item'>
@@ -175,6 +174,7 @@ const Home = ({ history }) => {
             </div>
           </Link>
         </div>
+        <Promotion history={history}></Promotion>
       </div>
     </section>
   );
