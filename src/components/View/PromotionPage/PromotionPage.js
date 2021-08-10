@@ -14,7 +14,6 @@ import SwiperCore, { Pagination, Navigation } from 'swiper/core';
 import './PromotionPage.css';
 
 import { FiChevronLeft } from 'react-icons/fi';
-import { useParams } from 'react-router';
 
 import { useGlobalContext } from '../../context';
 
@@ -23,7 +22,7 @@ SwiperCore.use([Pagination, Navigation]);
 
 const PromotionPage = ({ history }) => {
   const { menu } = useGlobalContext();
-  const { id } = useParams;
+  const name = '훈콥스';
   const goBack = () => {
     history.goBack();
   };
@@ -62,7 +61,7 @@ const PromotionPage = ({ history }) => {
                 >
                   {menu.map((item) => {
                     console.log(item);
-                    if (item.store[0] === id) {
+                    if (item.store[0] === name) {
                       return (
                         <SwiperSlide
                           className='Promotion-Menu-Slider'
@@ -175,7 +174,7 @@ const PromotionPage = ({ history }) => {
         <div className='Visit-Button--Container'>
           <button
             className='Visit-Button'
-            onClick={() => history.push(`/store/${id}`)}
+            onClick={() => history.push(`/store/rec5MqOFysQIPnf4d`)}
           >
             방문하기
           </button>

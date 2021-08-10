@@ -21,7 +21,7 @@ function App() {
           <Route exact path='/' component={LandingPage} />
           <Route
             exact
-            path='/promotion/rec5MqOFysQIPnf4d'
+            path='/promotion/recY9GN6sHLzpLsHQ'
             component={PromotionPage}
           />
           <Route
