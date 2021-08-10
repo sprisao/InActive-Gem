@@ -48,7 +48,7 @@ const PromotionPage = ({ history }) => {
             </div>
             <div className='Promotion--Title'>
               <div className='Promotion--Title--Article'>
-                <p>오랜시간 일상을 공유하는 파리의 카페처럼</p>
+                <p>오랜시간 일상을 공유하는 편안함</p>
                 <h3>레제푸</h3>
                 <h4>Les époux</h4>
               </div>
@@ -60,8 +60,6 @@ const PromotionPage = ({ history }) => {
                   className='Promotion-Menu-Swiper'
                 >
                   {menu.map((item) => {
-                    console.log(item.storeName);
-                    console.log(name);
                     if (item.storeName[0] === name) {
                       return (
                         <SwiperSlide
@@ -185,10 +183,7 @@ const PromotionPage = ({ history }) => {
         <div className='Visit-Button--Container'>
           <button
             className='Visit-Button'
-            onClick={() =>
-              history.push(`/store/recHxDywvzNR8zZKA
-`)
-            }
+            onClick={() => history.push(`/store/recHxDywvzNR8zZKA`)}
           >
             방문하기
           </button>

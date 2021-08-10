@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
+import Loading from './Loading';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -60,7 +61,7 @@ const Promotion = ({ history }) => {
       <div className='SecondGrid__Item'>
         <Swiper navigation={true} className='mySwiper'>
           <div className='Navigation__Item__Header'>
-            <p>가볼만한 곳</p>
+            <p>요즘 핫한 곳</p>{' '}
             <FiChevronRight
               style={{
                 fontSize: '1.35rem',
@@ -77,9 +78,7 @@ const Promotion = ({ history }) => {
                 <SwiperSlide
                   className='swiper-slide'
                   key={item.id}
-                  onClick={() =>
-                    history.history.push(`/promotion/${item.name}`)
-                  }
+                  onClick={() => history.history.push(`/promotion/${item.id}`)}
                 >
                   <div className='Home__Slider__Article'>
                     <p>{item.mainCopy}</p>
