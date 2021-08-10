@@ -104,10 +104,10 @@ const PromotionPage = ({ history }) => {
               DEUX MAGOTS'. 헤밍웨이, 피카소, 사르트르 등 유명한 작가와 예술가,
               철학가들이 자주 들려 일상을 즐긴 카페로 유명하다.
             </p>
-            <h3 style={{ textAlign: 'end' }} className='right__header'>
-              적당한 백색소음 <br></br>따뜻한 햇살 <br></br>고소한 커피향
+            <h3 className='right__header'>
+              적당한 백색소음 <br></br>들어오는 햇살 <br></br>고소한 커피향
             </h3>
-            <p style={{ textAlign: 'end' }}>
+            <p>
               유럽의 카페는 편안하면서도 일상적인 분위기로 <br></br>생각을
               정리하고 친구와 일상을 공유하는 휴식공간을 떠올리게 한다.
               <br></br>레제푸도 유럽 카페의 그런 모습들을 닮았다.
@@ -155,9 +155,9 @@ const PromotionPage = ({ history }) => {
               src='https://res.cloudinary.com/diimwnnmj/image/upload/v1628481856/%EB%A0%88%EC%A0%9C%ED%91%B8/les_epoux_226578124_1680415222142966_768095356627785075_n_d7kvmr.jpg'
               alt=''
             />
-            <p style={{ textAlign: 'end' }}>
-              능숙하게 내려진 커피와 정성이 듬뿍 들어간 디저트가 함께라면
-              여유로움에 더 큰 만족도를 더해준다.
+            <p style={{ textAlign: 'center' }}>
+              능숙하게 내려진 커피와 정성스럽게 구워진 디저트가 여유로움을 한껏
+              더해준다.
             </p>
             <img
               src='https://res.cloudinary.com/diimwnnmj/image/upload/v1628486917/%EB%A0%88%EC%A0%9C%ED%91%B8/211481117_165179859005876_3302095591726026327_n_kdlafy.jpg'
@@ -169,12 +169,12 @@ const PromotionPage = ({ history }) => {
             />
           </div>
           <div className='Promotion--Article__Section'>
-            <h3 style={{ textAlign: 'end' }}>
-              오랜시간 함께 <br></br>일상을 공유하고 싶은 장소
+            <h3>
+              오랜시간 함께 <br></br>일상을 공유하고 싶은 장소, 레제푸
             </h3>
-            <p style={{ textAlign: 'end' }}>
-              한적한 오후. 혼자서, 혹은 친구와 따뜻한 햇살과 편안한 분위기
-              속에서 창밖을 지나는 차와 사람들을 바라보며 여유로운 시간을 보내고
+            <p>
+              한적한 오후. 혼자서, 혹은 친구와 따뜻한 햇살과 편안한 분위기 속
+              창밖을 지나는 차와 사람들을 바라보며 여유로운 시간을 보내고
               싶다면.
               <br></br>레제푸를 한번 방문해 보면 어떨까?
             </p>
