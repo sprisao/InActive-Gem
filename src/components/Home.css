@@ -66,7 +66,7 @@
 .SecondGrid__Item {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  max-width: var(--normalWidth);
   height: 15rem;
   align-items: flex-start;
   border-radius: 0.65rem;

@@ -219,7 +219,7 @@ const Home = ({ history }) => {
                     >
                       <div className='Home__Slider__Article'>
                         <p>매력적인 한옥의 감성과 모던함의 조화</p>
-                        <h3>훈콥스</h3>
+                        <h3>{item.name}</h3>
                       </div>
 
                       <video
