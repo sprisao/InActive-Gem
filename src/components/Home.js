@@ -33,8 +33,8 @@ const Home = ({ history }) => {
               </div>
               <div className='Navigtaion__FirstItem__Emoji'>
                 <img
-                  src='https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/285/bento-box_1f371.png'
-                  alt=''
+                  src='https://res.cloudinary.com/diimwnnmj/image/upload/v1628679629/icons/u1F363_czigul.png'
+                  alt='맛집'
                   className='Home__Slider__Image'
                 />
               </div>
@@ -61,8 +61,8 @@ const Home = ({ history }) => {
               </div>
               <div className='Navigtaion__FirstItem__Emoji'>
                 <img
-                  src='https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/285/shaved-ice_1f367.png'
-                  alt=''
+                  src='https://res.cloudinary.com/diimwnnmj/image/upload/v1628679629/icons/u1F367_phraji.png'
+                  alt='카페'
                 />
               </div>
             </div>

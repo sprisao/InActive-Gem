@@ -59,7 +59,9 @@
 }
 
 .Navigation__Item__Header p {
-  font-family: 'CookieRunOTF-Bold';
+  font-family: 'ONE-Mobile-POP';
+  color: #333;
+  font-weight: 100;
   font-size: 1.75rem;
 }
 
@@ -102,19 +104,22 @@
 }
 
 .ThirdGrid__Item p {
-  font-family: 'CookieRunOTF-Bold';
+  font-family: 'ONE-Mobile-POP';
+  color: #333;
+  font-weight: 300;
   font-size: 0.95rem;
+  white-space: nowrap;
 }
 
 @media screen and (min-width: 320px) {
   .ThirdGrid__Item p {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 }
 
 @media screen and (min-width: 375px) {
   .ThirdGrid__Item p {
-    font-size: 0.95rem;
+    font-size: 1.05rem;
   }
 }
 
@@ -152,7 +157,8 @@
 }
 
 .FourthGrid__Item .Navigation__Item__Header p {
-  font-family: 'CookieRunOTF-Bold';
+  font-family: 'ONE-Mobile-POP';
+  color: #333;
   font-size: 1.2rem;
 }
 

@@ -67,6 +67,14 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'ONE-Mobile-POP';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/ONE-Mobile-POP.woff')
+    format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 html {
   font-size: 11px;
 
@@ -147,7 +155,7 @@ body {
   margin: 0 auto;
   font-family: 'Noto Sans CJK KR', '맑은 고딕', 'malgun gothic',
     'Apple SD Gothic Neo', 'Apple SD 산돌고딕 Neo', 'Microsoft NeoGothic',
-    'Droid sans';
+    'Droid sans', 'ONE-Mobile-POP';
   line-height: 1.4;
   font-weight: 350;
   color: #222;
@@ -194,13 +202,19 @@ h6 {
   margin-top: 0;
 }
 
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+  letter-spacing: -0.05rem;
+}
+
 h1 {
-  font-family: 'CookieRun-Regular';
+  font-family: 'ONE-Mobile-POP';
   font-size: 1.65rem;
 }
 
 h2 {
-  font-family: 'CookieRun-Regular';
+  font-family: 'ONE-Mobile-POP';
   font-size: 1.35rem;
 }
 
