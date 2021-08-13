@@ -127,8 +127,7 @@ const PromotionPage = ({ history }) => {
             </h3>
             <p>
               북적이고 소란스러운 곳 보단 한적하고 편안한 분위기를 찾게 되는
-              요즘. 그래서 레제푸의 분위기는 오히려 계속해서 발걸음을 향하게
-              하는 매력적인 요소이지 않을까?
+              요즘. 그래서 더 레제푸를 찾게 된다.
             </p>
             <img
               src='https://res.cloudinary.com/diimwnnmj/image/upload/v1628481857/%EB%A0%88%EC%A0%9C%ED%91%B8/les_epoux_207726819_263993568856911_1332086580473376569_n_ut7xgh.jpg'
@@ -147,8 +146,8 @@ const PromotionPage = ({ history }) => {
             <h3 style={{ textAlign: 'start' }}>Les époux : 그 부부</h3>
             <p style={{ textAlign: 'start' }}>
               레제푸에서 더욱 친근한 감성이 느껴지는 이유는 아마 부부가 함께
-              운영하기 때문일 수도 있다. 14년 커피 경력의 남편이 커피를 내리고
-              부인이 디저트를 굽는다. 그래서 이름도 '그 부부'를 뜻하는 불어인
+              운영하기 때문일 수도 있다. 7년차 커피 경력의 남편이 커피를 내리고
+              부인이 디저트를 굽는다. 그래서 카페 이름도 '그 부부'를 뜻하는 불어
               'Les époux'로 지었다고 한다.
             </p>
             <img
