@@ -3,6 +3,9 @@
   padding: 0 1rem;
 }
 
+.recommendation h2 {
+  font-family: 'Cookierun-regular';
+}
 .details__secition__header {
   display: flex;
   justify-content: space-between;

@@ -7,6 +7,10 @@
   justify-content: space-between;
   padding: 0 1rem;
 }
+
+.details__section__menu__header h2 {
+  font-family: 'Cookierun-regular';
+}
 .menu__background {
   display: grid;
   grid-row-gap: 1.15rem;

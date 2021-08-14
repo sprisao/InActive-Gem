@@ -18,6 +18,10 @@
   justify-content: space-between;
 }
 
+.details__section__header h2 {
+  font-family: 'Cookierun-regular';
+}
+
 .details__Information__wrapper {
   padding: 1rem 0;
 }
