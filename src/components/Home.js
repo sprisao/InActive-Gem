@@ -121,15 +121,15 @@ const Home = ({ history }) => {
               </div>
             </div>
           </Link>
-          <Link to={`/category/게임・노래/전체/전체`}>
+          <Link to={`/category/반려동물/전체/전체`}>
             <div className='ThirdGrid__Item'>
               <div className='Navigation__Item__Header'>
-                <p>게임·노래</p>
+                <p>반려동물</p>
               </div>
               <div className='Navigation__Item__Emoji__Container'>
                 <img
-                  src='https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/285/video-game_1f3ae.png'
-                  alt=''
+                  src='https://res.cloudinary.com/diimwnnmj/image/upload/v1629118440/icons/u1F415_u1F9BA_axnyeq.png'
+                  alt='반려동물'
                 />
               </div>
             </div>
