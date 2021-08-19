@@ -1,15 +1,14 @@
 .Details-Swiper {
-  margin-top: 48px;
 }
 
 .detailsPage .swiper-container {
   width: 100%;
-  height: 30rem;
+  height: 33rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.Details-Swiper .swiper-slide {
+.Details-Swiper .swiper-slide-active {
   height: 100%;
 }
 
@@ -20,8 +19,8 @@
 }
 
 .Details-Swiper .swiper-pagination-bullet {
-  width: 0.6rem;
-  height: 0.6rem;
+  width: 0.5rem;
+  height: 0.5rem;
   text-align: center;
   color: #000;
   opacity: 1;
@@ -30,5 +29,5 @@
 
 .Details-Swiper .swiper-pagination-bullet-active {
   color: #fff;
-  background: #007aff;
+  background: #fff;
 }
