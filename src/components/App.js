@@ -4,7 +4,8 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 // import pages
 import LandingPage from './View/LandingPage/LandingPage';
 import PromotionPage from './View/PromotionPage/PromotionPage';
-import PromotionTest from './View/PromotionPage/PromotionPage2';
+import PromotionPage2 from './View/PromotionPage/PromotionPage2';
+import PromotionPage3 from './View/PromotionPage/PromotionPage3';
 import RestaurantPage from './View/CategoryPage/RestaurantPage/RestaurantPage';
 import CafePage from './View/CategoryPage/CafePage/CafePage';
 import CategoryData from './View/CategoryPage/CategoryData';
@@ -26,7 +27,11 @@ function App() {
           />
           <Route
             path='/promotion/recsHZU4F59Zp66cK'
-            component={PromotionTest}
+            component={PromotionPage2}
+          />
+          <Route
+            path='/promotion/recFnGZNSKZBAYb66'
+            component={PromotionPage3}
           />
           <Route
             exact
