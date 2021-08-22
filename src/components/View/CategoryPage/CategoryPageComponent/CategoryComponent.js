@@ -8,7 +8,13 @@ import SecondCategory from '../SecondCategory';
 import './CategoryComponent.css';
 
 const CategoryComponent = (props) => {
-  console.log(props.secondCategory);
+  let gridFormatHandler;
+  if (props.category === '카페') {
+    gridFormatHandler = 'grid__wrapper2';
+  } else {
+    gridFormatHandler = 'grid__wrapper';
+  }
+
   return (
     <>
       <section className='CategoryComponent'>
@@ -28,7 +34,7 @@ const CategoryComponent = (props) => {
         </div>
         <div className='CategoryGrid'>
           <section className='grid'>
-            <section className='grid__wrapper'>
+            <section className={gridFormatHandler}>
               {props.stores.map((store) => {
                 if (props.locationCategory === '전체') {
                   if (props.secondCategory === '전체') {
