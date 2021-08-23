@@ -65,32 +65,29 @@ const Footer = () => {
       </div>
       <hr></hr>
       <div className='footer__container'>
-        {/* <div className='App-Download-Links'>
-          <div
-            className='Appstore'
-            // onClick={() => window.open(appstoreUrl, '_parent')}
+        <div className='companyName'>
+          <span
+            style={{
+              fontWeight: '700',
+              fontSize: '15px',
+              letterSpacing: '-1px',
+            }}
           >
-            <a href='https://apps.apple.com/us/app/gem%EC%A0%AC/id1576464783'>
-              <img
-                alt='다운로드하기 AppStore'
-                src='https://res.cloudinary.com/diimwnnmj/image/upload/v1627439864/Download_on_the_App_Store_Badge_KR_RGB_blk_100317_ls5wuh.svg'
-              />
-            </a>
-          </div>
-          <div
-            className='Playstore'
-            // onClick={() => window.open(playstoreUrl, '_blank')}
-          >
-            <a href='https://play.google.com/store/apps/details?id=com.brucecompany.gem&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>
-              <img
-                alt='다운로드하기 Google Play'
-                src='https://res.cloudinary.com/diimwnnmj/image/upload/v1627442024/ko_badge_web_generic_hud1u7.png'
-              />
-            </a>
-          </div>
-        </div> */}
+            BRUCE CORPORATION
+          </span>
+        </div>
+
         <div className='legal__info'>
-          <p>・ 젬에서 직접 촬영한 모든 이미지의 저작권은 젬에게 있습니다.</p>
+          <span>
+            브루스 코퍼레이션 | 대표: 최종혁
+            <br />
+            사업자등록번호:103-28-01020 | 통신판매업: 2020-강원원주-00664
+            <br />
+            주소: 강원도 원주시 봉대길 5-2
+            <br />
+            메일: sprisao@naver.com
+          </span>
+          {/* <p>・ 젬에서 직접 촬영한 모든 이미지의 저작권은 젬에게 있습니다.</p>
           <p>
             ・ 젬에서 직접 촬영한 이미지를 제외한 모든 업체의 이미지 저작권은 각
             업체에게 있습니다.
@@ -99,10 +96,17 @@ const Footer = () => {
             ・ 젬은 해당 업체의 홍보 목적 외에 그 어떤 용도로도 이미지를
             사용하지 않습니다.
           </p>
-          <p>・ 홍보를 원치 않으실 경우 '내 가게 문의하기'로 문의 바랍니다.</p>
+          <p>・ 홍보를 원치 않으실 경우 '내 가게 문의하기'로 문의 바랍니다.</p> */}
         </div>
         <div className='Copyrights'>
-          <p>Copyright © 2020 GEM All rights reserved.</p>
+          <p>Copyright © 2020 Bruce Corp. All rights reserved.</p>
+        </div>
+        <div className='Policies'>
+          <a>이용약관</a>
+          <span> ・ </span>
+          <a href='https://brucechoe.notion.site/c924064d29b94f428e15997a90c4ea34'>
+            개인정보취급방침
+          </a>
         </div>
       </div>
     </section>
