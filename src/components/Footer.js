@@ -68,9 +68,10 @@ const Footer = () => {
         <div className='companyName'>
           <span
             style={{
-              fontWeight: '700',
+              fontWeight: '600',
               fontSize: '15px',
-              letterSpacing: '-1px',
+              letterSpacing: '-0.75px',
+              color: '#555',
             }}
           >
             BRUCE CORPORATION
@@ -78,7 +79,7 @@ const Footer = () => {
         </div>
 
         <div className='legal__info'>
-          <span>
+          <span style={{ color: '#555' }}>
             브루스 코퍼레이션 | 대표: 최종혁
             <br />
             사업자등록번호:103-28-01020 | 통신판매업: 2020-강원원주-00664
@@ -110,9 +111,7 @@ const Footer = () => {
             업체이용약관
           </a>
           <span> ・ </span>
-          <a href='https://brucechoe.notion.site/c924064d29b94f428e15997a90c4ea34'>
-            개인정보취급방침
-          </a>
+          <a href='/privacy'>개인정보취급방침</a>
         </div>
       </div>
     </section>
