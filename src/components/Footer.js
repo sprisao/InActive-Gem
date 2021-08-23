@@ -102,7 +102,13 @@ const Footer = () => {
           <p>Copyright © 2020 Bruce Corp. All rights reserved.</p>
         </div>
         <div className='Policies'>
-          <a>이용약관</a>
+          <a href='https://brucechoe.notion.site/a3367ae56d514cc99c40e0c944facb5b'>
+            이용약관
+          </a>
+          <span> ・ </span>
+          <a href='https://brucechoe.notion.site/3ccaffa352ec406db81d697135bcb5ef'>
+            업체이용약관
+          </a>
           <span> ・ </span>
           <a href='https://brucechoe.notion.site/c924064d29b94f428e15997a90c4ea34'>
             개인정보취급방침
