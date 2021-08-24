@@ -10,6 +10,9 @@ import RestaurantPage from './View/CategoryPage/RestaurantPage/RestaurantPage';
 import CafePage from './View/CategoryPage/CafePage/CafePage';
 import CategoryData from './View/CategoryPage/CategoryData';
 import DetailsData from './View/DetailsPage/DetailsData';
+import Privacy from './Privacy';
+import UserAgreements from './UserAgreements';
+import StoreAgreements from './StoreAgreements';
 import Error from './View/ErrorPage/Error';
 
 import ScrollToTop from './ScrollToTop';
@@ -51,6 +54,10 @@ function App() {
             path='/category/:firstCategory/:secondCategory'
             component={CategoryData}
           />
+          <Route exact path='/privacy' component={Privacy} />
+          <Route exact path='/useragreements' component={UserAgreements} />
+          <Route exact path='/storeagreements' component={StoreAgreements} />
+
           <Route path='/store/:id' component={DetailsData} />
           <Route path='*' component={Error} />
         </Switch>
