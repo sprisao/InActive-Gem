@@ -19,7 +19,8 @@
 }
 
 .details__section__header h2 {
-  font-family: 'Cookierun-regular';
+  font-family: 'Noto Sans CJK KR';
+  font-weight: 600;
 }
 
 .details__Information__wrapper {
@@ -49,6 +50,9 @@
   height: 1.9rem;
 }
 
+.location button {
+  all: unset;
+}
 .location__fullAddress {
   display: flex;
   max-width: 73%;
@@ -66,6 +70,9 @@
   align-items: center;
 }
 
+.phoneNumber button {
+  all: unset;
+}
 .copyBtn__container {
   display: flex;
   cursor: pointer;
@@ -73,13 +80,24 @@
   color: #f21d73;
   margin-left: 0.85rem;
 }
+
+.callBtn__container {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  color: #f21d73;
+  margin-left: 0.85rem;
+}
+
 .copyBtn__container p {
   margin-top: 0.1rem;
   align-items: center;
   font-size: 1.2rem;
   margin-left: 0.15rem;
 }
-
-.btn_container {
-  all: unset;
+.callBtn__container p {
+  margin-top: 0.1rem;
+  align-items: center;
+  font-size: 1.2rem;
+  margin-left: 0.15rem;
 }

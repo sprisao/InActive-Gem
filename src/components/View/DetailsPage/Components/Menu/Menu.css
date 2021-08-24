@@ -9,7 +9,8 @@
 }
 
 .details__section__menu__header h2 {
-  font-family: 'Cookierun-regular';
+  font-family: 'Noto Sans CJK KR';
+  font-weight: 600;
 }
 .menu__background {
   display: grid;

@@ -43,16 +43,10 @@ const DetailsPage = ({ store, history }) => {
       <DetailsHeader
         name={store.name}
         shortDescription={store.shortDescription}
-        tags={store.tags}
-        instagramAccount={store.instagramAccount}
+        locationCategory={store.eupmyeondongRi}
         storeVerified={store.storeVerified}
-        naverLink={store.naverLink}
         branch={store.branch}
-        phoneNumber={store.phoneNumber}
       />
-
-      <Separator />
-
       <Information
         openHour={store.openHour}
         closeHour={store.closeHour}
@@ -61,6 +55,8 @@ const DetailsPage = ({ store, history }) => {
         breakDays={store.breakDays}
         fullAddress={store.fullAddress}
         phoneNumber={store.phoneNumber}
+        instagramAccount={store.instagramAccount}
+        naverLink={store.naverLink}
       />
       <Separator />
       {menu}

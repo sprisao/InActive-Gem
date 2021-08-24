@@ -6,16 +6,21 @@ import {
   FiPhoneOutgoing,
   FiCopy,
   FiChevronDown,
+  FiPhoneCall,
+  FiInstagram,
+  FiLogOut,
+  FiLink2,
 } from 'react-icons/fi';
 
 import { CopyToClipboard } from 'react-copy-to-clipboard';
+
+import Separator from '../../../Separator';
 
 import Modal from './Modal';
 
 import './Information.css';
 
-// 문제 : 특정 데이터 값이 없을경우 아이콘도 함께 표시되지 않았으면 좋겠다
-// 특정 필드에 데이터가 있을 경우에만 그 필드가 속한 'div'가 표시되면 좋겠다.
+const url = 'https://www.instagram.com/';
 
 const Information = (props) => {
   const [copied, setCopied] = useState(false);
@@ -123,6 +128,13 @@ const Information = (props) => {
     }
   }
 
+  // 전화걸기
+  const openLink = () => {
+    const telNumber = props.phoneNumber;
+    const pageUrl = 'tel:' + telNumber;
+    document.location.href = pageUrl;
+  };
+
   // 전화번호 필터링
 
   let telephoneNumber;
@@ -139,7 +151,7 @@ const Information = (props) => {
           text={props.phoneNumber}
           onCopy={() => setCopied(true)}
         >
-          <button className='btn_container' type='button' onClick={openModal}>
+          <button type='button' onClick={openModal}>
             <div className='copyBtn__container'>
               <FiCopy style={{ fontSize: '1rem' }} />
               <p>복사</p>
@@ -148,7 +160,47 @@ const Information = (props) => {
             <div>{isShowing && <Modal />}</div>
           </button>
         </CopyToClipboard>
+
+        <button type='button' onClick={openLink}>
+          <div className='copyBtn__container'>
+            <FiPhoneCall style={{ fontSize: '1rem' }} />
+            <p>통화하기</p>
+          </div>
+        </button>
       </div>
+    );
+  }
+
+  // 인스타그램 필터링
+
+  let instagram;
+  if (props.instagramAccount) {
+    instagram = (
+      <>
+        <hr />
+        <div className='phoneNumber'>
+          <FiInstagram
+            style={{ strokeWidth: '1px', color: '#a8a8a8' }}
+            className='details__icon'
+          />
+          <p
+            style={{ cursor: 'pointer' }}
+            onClick={() => window.open(url + props.instagramAccount, '_parent')}
+          >
+            @{props.instagramAccount}
+          </p>
+
+          <button
+            type='button'
+            onClick={() => window.open(url + props.instagramAccount, '_parent')}
+          >
+            <div className='copyBtn__container'>
+              <FiLogOut style={{ fontSize: '1rem' }} />
+              <p>보기</p>
+            </div>
+          </button>
+        </div>
+      </>
     );
   }
   return (
@@ -184,6 +236,31 @@ const Information = (props) => {
         </div>
         <hr />
         {telephoneNumber}
+        {instagram}
+        <hr />
+        <div className='location'>
+          <FiLink2
+            style={{ strokeWidth: '1px', color: '#a8a8a8' }}
+            className='details__icon'
+          />
+          <div className='location__fullAddress'>
+            <p
+              style={{ cursor: 'pointer' }}
+              onClick={() => window.open(props.naverLink, '_parent')}
+            >
+              {props.naverLink}
+            </p>
+          </div>
+          <button
+            type='button'
+            onClick={() => window.open(props.naverLink, '_parent')}
+          >
+            <div className='copyBtn__container'>
+              <FiLogOut style={{ fontSize: '1rem' }} />
+              <p>보기</p>
+            </div>
+          </button>
+        </div>
       </div>
     </div>
   );

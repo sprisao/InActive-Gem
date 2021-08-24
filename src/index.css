@@ -90,7 +90,7 @@ html {
   --fullWidth: 100%;
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 430px) {
   :root {
     --width: 100%;
     --smallWidth: 85vw;

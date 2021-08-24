@@ -1,11 +1,11 @@
-import React from "react";
-import DetailGrid from "./DetailGrid";
-import { FiChevronRight } from "react-icons/fi";
-import { useGlobalContext } from "../../../context";
+import React from 'react';
+import DetailGrid from './DetailGrid';
+import { FiChevronRight } from 'react-icons/fi';
+import { useGlobalContext } from '../../../context';
 
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
-import "./Recommendations.css";
+import './Recommendations.css';
 
 const Recommendations = (props) => {
   const { stores, restaurants, cafes } = useGlobalContext();
@@ -21,15 +21,15 @@ const Recommendations = (props) => {
   }
   if (j > 0) {
     return (
-      <section className="recommendation">
-        <div className="details__secition__header">
+      <section className='recommendation'>
+        <div className='details__secition__header'>
           <h2>
-            {props.emoji} {props.secondCategory} {props.firstCategory}
+            {props.emoji} 다른 {props.secondCategory} {props.firstCategory}
           </h2>
           <Link to={`/category/${props.firstCategory}/${props.secondCategory}`}>
-            <div className="details__section__header__more">
+            <div className='details__section__header__more'>
               <p>더 보기</p>
-              <FiChevronRight style={{ fontSize: "1.3rem" }} />
+              <FiChevronRight style={{ fontSize: '1.3rem' }} />
             </div>
           </Link>
         </div>
@@ -38,7 +38,7 @@ const Recommendations = (props) => {
           filter2={props.filter2}
           self={props.self}
           length={7}
-          categoryType="2"
+          categoryType='2'
         />
         <br />
         <br />
@@ -48,21 +48,21 @@ const Recommendations = (props) => {
           filter2={props.filter2}
           self={props.self}
           length={10}
-          categoryType="3"
+          categoryType='3'
         />
       </section>
     );
   } else {
     return (
-      <section className="recommendation">
-        <div className="details__secition__header">
+      <section className='recommendation'>
+        <div className='details__secition__header'>
           <h2>
             {props.emoji} {props.secondCategory} {props.firstCategory}
           </h2>
           <Link to={`/category/${props.firstCategory}/${props.secondCategory}`}>
-            <div className="details__section__header__more">
+            <div className='details__section__header__more'>
               <p>더 보기</p>
-              <FiChevronRight style={{ fontSize: "1.3rem" }} />
+              <FiChevronRight style={{ fontSize: '1.3rem' }} />
             </div>
           </Link>
         </div>
@@ -71,7 +71,7 @@ const Recommendations = (props) => {
           filter2={props.filter2}
           self={props.self}
           length={7}
-          categoryType="2"
+          categoryType='2'
         />
       </section>
     );
