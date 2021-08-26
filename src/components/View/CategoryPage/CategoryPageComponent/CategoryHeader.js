@@ -31,14 +31,12 @@ const CategoryHeader = ({ category, secondCategory, currentLocation }) => {
             </div>
           </Link>
           <div className='Category__Menu__Container'>
-            <button onClick={onClick} className='menu-trigger'>
-              <div className='Category__Menu__Trigger__SpanContainer'>
-                <span>{locationCategory}</span>
-              </div>
+            <div onClick={onClick} className='menu-trigger'>
+              <span>{locationCategory}</span>
               <FiChevronDown
                 style={{ fontSize: '1rem', marginRight: '-0.25rem' }}
               />
-            </button>
+            </div>
             <nav
               ref={dropdownRef}
               className={`dropdownMenu ${isActive ? 'active' : 'inactive'}`}
