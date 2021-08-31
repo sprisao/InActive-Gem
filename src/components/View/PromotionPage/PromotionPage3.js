@@ -87,7 +87,7 @@ const PromotionPage = ({ history }) => {
         <div className='Promotion--Article__Container'>
           <div className='Promotion__Article__Image'>
             <img
-              src='https://res.cloudinary.com/diimwnnmj/image/upload/v1629967505/12512240-f0315ba1a770e053241ce30db86452ce_o8pugn.png'
+              src='https://res.cloudinary.com/diimwnnmj/image/upload/v1630413388/KakaoTalk_Photo_2021-08-31-21-33-21_zwdlzf.png'
               alt=''
               style={{ height: '100%', marginTop: '3rem' }}
             />
