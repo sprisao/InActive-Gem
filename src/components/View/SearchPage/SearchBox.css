@@ -1,9 +1,12 @@
+.top {
+  width: var(--normalWidth);
+  margin: 40px auto 1rem;
+}
+
 .SearchBox {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: var(--width);
-  margin: 40px 1rem 1rem;
 }
 
 .SearchBox__Container {
