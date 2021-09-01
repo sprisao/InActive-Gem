@@ -1,14 +1,16 @@
 .SearchBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: var(--width);
-  padding: 1rem;
+  margin: 40px 1rem 1rem;
 }
 
 .SearchBox__Container {
-  max-width: var(--normalWidth);
+  width: 100%;
   height: 3.75rem;
   display: flex;
   align-items: center;
-  margin: 0 auto;
   padding: 1rem;
   background-color: #f5f5f5;
   border-radius: 0.8rem;

@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { FiSearch } from 'react-icons/fi';
+import { FaUserCircle, FaBell } from 'react-icons/fa';
 import './SearchBox.css';
 
 const SearchBox = (props) => {
@@ -20,6 +21,8 @@ const SearchBox = (props) => {
           onChange={sendUserInput}
         />
       </div>
+      {/* <FaBell style={{ fontSize: '2rem', color: '#888888' }} />
+      <FaUserCircle style={{ fontSize: '2.5rem', color: '#888888' }} /> */}
     </section>
   );
 };
