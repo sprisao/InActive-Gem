@@ -26,16 +26,17 @@
 
 .Promotion--Header--Contents {
   position: absolute;
-  top: 0;
+  top: 47px;
   width: var(--normalWidth);
-  height: 35rem;
 }
 
 .Promotion--Navi {
   width: 100%;
-  height: 10%;
+  height: 34px;
+  display: flex;
+  align-items: center;
   color: white;
-  padding: 1rem;
+  padding: 0 1rem;
 }
 
 .Promotion--Title {
@@ -119,7 +120,7 @@
 .Promotion--Menu--Container {
   width: 100%;
   position: absolute;
-  bottom: 1rem;
+  top: 22rem;
   padding: 1rem 1.5rem;
   height: 9.5rem;
 }
