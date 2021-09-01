@@ -1,9 +1,13 @@
 .top {
-  width: var(--normalWidth);
-  margin: 45px auto 1rem;
+  width: var(--width);
+  padding: 0 1rem;
+  padding-top: 47px;
 }
 
 .SearchBox {
+  max-width: var(--normalWidth);
+  margin: 0 auto;
+  margin-bottom: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
