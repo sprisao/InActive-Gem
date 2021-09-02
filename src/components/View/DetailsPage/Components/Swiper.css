@@ -4,7 +4,7 @@
 
 .detailsPage .swiper-container {
   width: 100%;
-  height: calc(28.5rem * 1.25);
+  height: calc(28.5rem * 1.3);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
