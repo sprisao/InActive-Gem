@@ -92,7 +92,7 @@ html {
 
 @media screen and (min-width: 430px) {
   :root {
-    --width: 100%;
+    --width: 100vw;
     --smallWidth: 85vw;
     --normalWidth: 28.5rem;
     --maxWidth: 100%;
@@ -101,7 +101,7 @@ html {
 }
 @media screen and (min-width: 760px) {
   :root {
-    --width: 100%;
+    --width: 100vw;
     --smallWidth: 85vw;
     --normalWidth: 28.5rem;
     --maxWidth: 100%;
@@ -110,7 +110,7 @@ html {
 }
 @media screen and (min-width: 900px) {
   :root {
-    --width: 100%;
+    --width: 100vw;
     --smallWidth: 85vw;
     --normalWidth: 28.5rem;
     --maxWidth: 900px;

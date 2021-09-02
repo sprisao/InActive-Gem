@@ -1,0 +1,22 @@
+.EventsPage__Wrapper {
+  width: var(--width);
+  height: 75vh;
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+
+.EventsPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: var(--maxWidth);
+  height: 80%;
+  margin: 0 auto;
+}
+
+.EventsPage__Header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
