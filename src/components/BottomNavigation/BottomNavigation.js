@@ -23,9 +23,9 @@ const BottomNavigation = (props) => {
         >
           <FiHome
             style={{
-              fontSize: '1.2rem',
-              marginRight: '0.55rem',
-              marginBottom: '0.15rem',
+              fontSize: '1.35rem',
+              marginRight: '0.75rem',
+              marginBottom: '0.1rem',
             }}
             className='BottomNavi-ButtonIcon'
           />
@@ -41,9 +41,9 @@ const BottomNavigation = (props) => {
         >
           <BsFillLightningFill
             style={{
-              fontSize: '1.2rem',
-              marginRight: '0.55rem',
-              marginBottom: '0.15rem',
+              fontSize: '1.35rem',
+              marginRight: '0.65rem',
+              marginBottom: '0.1rem',
             }}
             className='BottomNavi-ButtonIcon-Event'
           />
