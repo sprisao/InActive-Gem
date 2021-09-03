@@ -30,7 +30,7 @@
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  padding: 1rem 1rem;
+  padding: 1rem 1rem 7.5rem;
   align-items: flex-start;
 }
 .legal__info {
@@ -52,6 +52,7 @@
   padding: 0.25rem 0;
   align-items: flex-start;
   font-size: 10.5px;
+  text-align: left;
 }
 .footer__container img {
   width: 4rem;
