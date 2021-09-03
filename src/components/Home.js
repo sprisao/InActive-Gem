@@ -160,19 +160,61 @@ const Home = ({ history }) => {
               </div>
             </div>
           </Link>
-          <Link to={`/category/캠핑장/전체/전체`}>
-            <div className='ThirdGrid__Item'>
-              <div className='Navigation__Item__Header'>
-                <p>캠핑장</p>
-              </div>
-              <div className='Navigation__Item__Emoji__Container'>
-                <img
-                  src='https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/285/camping_1f3d5-fe0f.png'
-                  alt=''
-                />
-              </div>
+          {/* <Link to={`/category/교육·학원/전체/전체`}> */}
+          <div className='ThirdGrid__Item'>
+            <div
+              className='Navigation__Item__Header'
+              style={{ opacity: '0.5' }}
+            >
+              <p>교육·학원</p>
             </div>
-          </Link>
+            <div
+              className='Navigation__Item__Emoji__Container'
+              style={{ opacity: '0.5' }}
+            >
+              <img
+                src='https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/285/open-book_1f4d6.png'
+                alt=''
+              />
+            </div>
+          </div>
+          {/* </Link> */}
+        </div>
+        <div className='HOEX__Wrap'>
+          <div className='HOEX-Button'>
+            <div
+              className='Navigation__Item__Header'
+              style={{ opacity: '0.5' }}
+            >
+              <p>병원·약국</p>
+            </div>
+            <div
+              className='Navigation__Item__Emoji__Container'
+              style={{ opacity: '0.5' }}
+            >
+              <img
+                src='https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/285/face-with-thermometer_1f912.png'
+                alt=''
+              />
+            </div>
+          </div>
+          <div className='HOEX-Button'>
+            <div
+              className='Navigation__Item__Header'
+              style={{ opacity: '0.5' }}
+            >
+              <p>전문가</p>
+            </div>
+            <div
+              className='Navigation__Item__Emoji__Container'
+              style={{ opacity: '0.5' }}
+            >
+              <img
+                src='https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/285/woman-office-worker-light-skin-tone_1f469-1f3fb-200d-1f4bc.png'
+                alt=''
+              />
+            </div>
+          </div>
         </div>
         <Promotion history={history}></Promotion>
       </div>
