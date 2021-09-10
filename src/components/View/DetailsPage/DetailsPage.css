@@ -21,3 +21,38 @@ hr {
   background-color: D3D3D3;
   height: 0.1px;
 }
+
+.swiper-container.mySwiper {
+  display: flex;
+  height: auto;
+}
+.mySwiper .swiper-pagination {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1.8px solid #a3a3a3;
+  bottom: 0;
+}
+.mySwiper .swiper-pagination-bullet {
+  border-radius: 0;
+  width: 20%;
+  height: 3rem;
+  text-align: center;
+  line-height: 3.1rem;
+  font-size: 1rem;
+  color: #000;
+  opacity: 0.8;
+  background: transparent;
+  margin: 0 0.5rem !important;
+}
+.mySwiper .swiper-pagination-bullet-active {
+  font-weight: 500;
+  opacity: 1;
+}
+
+.mySwiper .swiper-slide {
+  /* display: flex; */
+  /* justify-content: center;
+  align-items: center; */
+}

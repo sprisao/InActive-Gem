@@ -42,7 +42,6 @@ const EventsPage = () => {
               </div>
               <div className='EventsWrapper'>
                 {events.map((item) => {
-                  console.log(item);
                   return (
                     <Link to={`/store/${item.stores[0]}`} className=''>
                       <div className='EventsCard' key={item.id}>
