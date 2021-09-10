@@ -19,10 +19,8 @@ const StoreProvider = ({ children }) => {
   const [locationLoading, setLocationLoading] = useState(true);
   const [menuLoading, setMenuLoading] = useState(true);
   const [newStoresLoading, setNewStoresLoading] = useState(true);
+  const [eventsLoading, setEventsLoading] = useState(true);
 
-  const [stores, setStores] = useState([]);
-  const [restaurants, setRestaurants] = useState([]);
-  const [cafes, setCafes] = useState([]);
   // const [pups, setPups] = useState([]);
   // const [fitnesses, setFitnesses] = useState([]);
   // const [beutyStores, setBeutyStores] = useState([]);
@@ -30,6 +28,9 @@ const StoreProvider = ({ children }) => {
   // const [entertainments, setEntertainments] = useState([]);
 
   // 2. '복수' useState 활용해서 새롭게 불러올 데이터 패키지 함수명 지정
+  const [stores, setStores] = useState([]);
+  const [restaurants, setRestaurants] = useState([]);
+  const [cafes, setCafes] = useState([]);
   const [firstCategories, setFirstCategories] = useState([]);
   const [secondCategories, setSecondCategories] = useState([]);
   const [locationCategories, setlocationCategories] = useState([]);
@@ -37,11 +38,13 @@ const StoreProvider = ({ children }) => {
   const [lunchRCCMD, setLunchRCCMD] = useState([]);
   const [cafeRCCMD, setCafeRCCMD] = useState([]);
   const [newStores, setNewStores] = useState([]);
+  const [events, setEvents] = useState([]);
 
   // 3. '단수' 각각의 데이터패키지 내의 데이터가 들어올 Array 생성
   const store = [];
   const restaurant = [];
   const cafe = [];
+  const event = [];
   // const pub = [];
   // const fitness = [];
   // const beutyStore = [];
@@ -142,6 +145,34 @@ const StoreProvider = ({ children }) => {
       );
   }, []);
 
+  // 이벤트 불러오기
+  useEffect(() => {
+    storeBase('events')
+      .select({
+        view: 'online',
+        pageSize: 100,
+      })
+      .eachPage(
+        function page(records, fetchNextPage) {
+          records.forEach(function (record) {
+            event.push({
+              id: record.id,
+              ...record._rawJson.fields,
+            });
+          });
+          fetchNextPage();
+          setEvents(event);
+        },
+        function done(err) {
+          if (err) {
+            console.error(err);
+          } else {
+            console.log('이벤트 불러오기 성공');
+            setEventsLoading(false);
+          }
+        }
+      );
+  }, []);
   // 카테고리 데이터 불러오기
   useEffect(() => {
     storeBase('firstCategoryData')
@@ -357,11 +388,13 @@ const StoreProvider = ({ children }) => {
         menuLoading,
         mainLoading,
         newStoresLoading,
+        eventsLoading,
 
         stores,
         restaurants,
         cafes,
         menu,
+        events,
         firstCategories,
         secondCategories,
         locationCategories,

@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 // import pages
 import LandingPage from './View/LandingPage/LandingPage';
+import EventsPage from './View/EventsPage/EventsPage';
 import PromotionPage from './View/PromotionPage/PromotionPage';
 import PromotionPage2 from './View/PromotionPage/PromotionPage2';
 import PromotionPage3 from './View/PromotionPage/PromotionPage3';
@@ -23,6 +24,7 @@ function App() {
       <ScrollToTop>
         <Switch>
           <Route exact path='/' component={LandingPage} />
+          <Route exact path='/events' component={EventsPage} />
           <Route
             exact
             path='/promotion/recY9GN6sHLzpLsHQ'

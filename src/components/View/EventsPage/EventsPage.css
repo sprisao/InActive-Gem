@@ -1,22 +1,39 @@
 .EventsPage__Wrapper {
   width: var(--width);
-  height: 75vh;
   padding: 0 1rem;
   margin: 0 auto;
 }
 
 .EventsPage {
+  max-width: var(--normalWidth);
   display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: var(--maxWidth);
-  height: 80%;
+  flex-direction: column;
   margin: 0 auto;
 }
 
 .EventsPage__Header {
   display: flex;
   flex-direction: column;
+  margin: 0 0.5rem;
+}
+
+.EventsWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.5rem;
+}
+
+.EventsCard {
+  display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+}
+
+.EventsCard img {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
 }

@@ -26,10 +26,6 @@ const LandingPage = (history) => {
     setUserInput(value);
   };
 
-  const getViewStatus = (value) => {
-    setViewStatus(value);
-  };
-
   if (loading) {
     return <Loading />;
   } else {
@@ -42,40 +38,22 @@ const LandingPage = (history) => {
         </>
       );
     } else {
-      if (viewStatus === 'home') {
-        return (
-          <>
-            <SearchBox getUserInput={getUserInput} />
-            <BottomNavigation
-              activatedButton={'home'}
-              getViewStatus={getViewStatus}
-            />
-            <Home history={history} />
-            <Separator />
-            <RCCMD
-              title='새로 등록된 곳'
-              slideType='type2'
-              view='newStores'
-              category='맛집'
-            />
+      return (
+        <>
+          <SearchBox getUserInput={getUserInput} />
+          <BottomNavigation activatedButton={'home'} />
+          <Home history={history} />
+          <Separator />
+          <RCCMD
+            title='새로 등록된 곳'
+            slideType='type2'
+            view='newStores'
+            category='맛집'
+          />
 
-            <Footer />
-          </>
-        );
-      }
-      if (viewStatus === 'events') {
-        return (
-          <>
-            <SearchBox getUserInput={getUserInput} />
-            <BottomNavigation
-              activatedButton={'events'}
-              getViewStatus={getViewStatus}
-            />
-            <EventsPage />
-            <Footer />
-          </>
-        );
-      }
+          <Footer />
+        </>
+      );
     }
   }
 };
