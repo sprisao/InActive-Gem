@@ -4,6 +4,7 @@ import React from 'react';
 import CategoryHeader from './CategoryHeader';
 import GridCard from '../../../Grid/GridCard';
 import SecondCategory from '../SecondCategory';
+import BottomNavigation from '../../../BottomNavigation/BottomNavigation';
 
 import './CategoryComponent.css';
 
@@ -17,6 +18,7 @@ const CategoryComponent = (props) => {
 
   return (
     <>
+      <BottomNavigation />
       <section className='CategoryComponent'>
         <div className='Category__Navi__Wrapper'>
           <CategoryHeader
