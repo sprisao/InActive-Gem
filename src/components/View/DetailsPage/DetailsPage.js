@@ -1,7 +1,7 @@
 import React from 'react';
 
 import DetailsNavi from './Components/DetailsNavi';
-import ImageBox from './Components/Swiper';
+import ImageBox from './Components/DetailsImages';
 import DetailsHeader from './Components/DetailsHeader';
 import Information from './Components/Information';
 import Menu from './Components/Menu/Menu';
@@ -9,17 +9,7 @@ import Recommendation from './Components/Recommendations';
 
 import Separator from '../../Separator';
 
-// Swiper 생성을 위한 Dependencies //
-import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
-import 'swiper/swiper.scss';
-import 'swiper/components/navigation/navigation.scss';
-import 'swiper/components/pagination/pagination.scss';
-//////////////////////////////////
-
 import './DetailsPage.css';
-
-SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
-
 const DetailsPage = ({ store, history }) => {
   let menu;
   if (store.isMenu === true) {

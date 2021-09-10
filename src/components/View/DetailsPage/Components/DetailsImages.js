@@ -1,10 +1,9 @@
 import React from 'react';
-
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-import './Swiper.css';
+import './DetailsImages.css';
 
-const DetailSwiper = (props) => {
+const DetailsImages = (props) => {
   return (
     <div className='Details-Swiper'>
       <Swiper
@@ -13,6 +12,8 @@ const DetailSwiper = (props) => {
         pagination={{
           dynamicBullets: true,
         }}
+        onSwiper={(swiper) => console.log(swiper)}
+        onSlideChange={() => console.log('slide change')}
       >
         {props.img &&
           props.img.map((item) => {
@@ -27,4 +28,4 @@ const DetailSwiper = (props) => {
   );
 };
 
-export default DetailSwiper;
+export default DetailsImages;

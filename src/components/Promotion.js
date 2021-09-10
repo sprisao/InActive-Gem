@@ -1,22 +1,11 @@
 import React, { useState, useEffect } from 'react';
 
-import Loading from './Loading';
-// Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
-
-// Import Swiper styles
-import 'swiper/swiper.min.css';
-import 'swiper/components/pagination/pagination.min.css';
-import 'swiper/components/navigation/navigation.min.css';
-import SwiperCore, { Pagination, Navigation } from 'swiper/core';
 
 import { FiChevronRight } from 'react-icons/fi';
 
 import Airtable from 'airtable';
 import './Promotion.css';
-
-// install Swiper modules
-SwiperCore.use([Pagination, Navigation]);
 
 require('dotenv').config();
 const storeBase = new Airtable({
@@ -62,7 +51,11 @@ const Promotion = ({ history }) => {
         {promoLoading === true ? (
           <p style={{ marginTop: '6.5rem' }}>Loading...</p>
         ) : (
-          <Swiper navigation={true} className='mySwiper'>
+          <Swiper
+            navigation={true}
+            onSwiper={(swiper) => console.log(swiper)}
+            onSlideChange={() => console.log('slide change')}
+          >
             <div className='Navigation__Item__Header'>
               <p>요즘 핫한 곳</p>
               <FiChevronRight

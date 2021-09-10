@@ -5,20 +5,11 @@ import Seperator from '../../Separator';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-// Import Swiper styles
-import 'swiper/swiper.min.css';
-import 'swiper/components/pagination/pagination.min.css';
-import 'swiper/components/navigation/navigation.min.css';
-import SwiperCore, { Pagination, Navigation } from 'swiper/core';
-
 import './PromotionPage.css';
 
 import { FiChevronLeft } from 'react-icons/fi';
 
 import { useGlobalContext } from '../../context';
-
-// install Swiper modules
-SwiperCore.use([Pagination, Navigation]);
 
 const PromotionPage = ({ history }) => {
   const { menu } = useGlobalContext();
