@@ -10,7 +10,7 @@
   white-space: wrap;
   max-width: var(--maxWidth);
   margin: 1rem 0 auto;
-  grid-gap: 1rem;
+  grid-gap: 0.75rem;
   grid-template-columns: repeat(2, minmax(10rem, 1fr));
 }
 
@@ -19,8 +19,8 @@
   white-space: wrap;
   max-width: var(--maxWidth);
   margin: 1rem 0 auto;
-  grid-gap: 1rem;
-  grid-template-columns: repeat(1, minmax(10rem, 1fr));
+  grid-gap: 0.75rem;
+  grid-template-columns: repeat(2, minmax(10rem, 1fr));
 }
 
 @media screen and (min-width: 430px) {

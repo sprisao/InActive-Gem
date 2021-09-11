@@ -36,9 +36,9 @@ const GridCard = ({ store, tags, open, close }) => {
         </div>
         <div className='gridCard__articleContainer'>
           <div className='tags'>
-            {tags.map((tag) => {
+            {/* {tags.map((tag) => {
               return <span key={tag}>#{tag} </span>;
-            })}
+            })} */}
           </div>
           <div className='storeName'>
             <h3>{store.name}</h3>
