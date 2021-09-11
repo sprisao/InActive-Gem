@@ -29,14 +29,15 @@ hr {
 .mySwiper .swiper-pagination {
   position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  border-bottom: 1.8px solid #a3a3a3;
+  border-bottom: 1px solid #a3a3a3;
   bottom: 0;
+  padding: 0 1rem;
 }
 .mySwiper .swiper-pagination-bullet {
   border-radius: 0;
-  width: 20%;
+  width: 60%;
   height: 3rem;
   text-align: center;
   line-height: 3.1rem;
