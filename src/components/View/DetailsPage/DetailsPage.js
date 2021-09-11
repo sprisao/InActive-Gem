@@ -32,7 +32,16 @@ const DetailsPage = ({ store, history }) => {
     );
   }
 
-  const tab = ['큐레이션', '정보', '이벤트'];
+  let tab = ['정보'];
+  // if (store.isPromotion) {
+  //   tab = ['소개', '정보'];
+  // }
+  if (store.events) {
+    tab = ['정보', '이벤트'];
+  }
+  if (store.isPromotion && store.events) {
+    tab = ['소개', '정보', '이벤트'];
+  }
 
   const pagination = {
     clickable: true,
@@ -62,12 +71,15 @@ const DetailsPage = ({ store, history }) => {
         spaceBetween={0}
         slidesPerView={1}
         pagination={pagination}
+        hashNavigation={true}
         className='mySwiper'
         onSlideChange={() => console.log('slide change')}
         onSwiper={(swiper) => console.log(swiper)}
       >
-        <SwiperSlide>소개</SwiperSlide>
-        <SwiperSlide>
+        {/* {store.isPromotion ? (
+          <SwiperSlide data-hash='storeCuration'>큐레이션 정보</SwiperSlide>
+        ) : null} */}
+        <SwiperSlide data-hash='storeInfo'>
           <Information
             openHour={store.openHour}
             closeHour={store.closeHour}
@@ -80,13 +92,11 @@ const DetailsPage = ({ store, history }) => {
             naverLink={store.naverLink}
           />
         </SwiperSlide>
-        <SwiperSlide>
-          {store.events ? (
+        {store.events ? (
+          <SwiperSlide data-hash='storeEvents'>
             <DetailsEventsList eventItems={store.events} />
-          ) : (
-            <p>아직 진행중인 이벤트가 없습니다!</p>
-          )}
-        </SwiperSlide>
+          </SwiperSlide>
+        ) : null}
       </Swiper>
 
       <Separator />

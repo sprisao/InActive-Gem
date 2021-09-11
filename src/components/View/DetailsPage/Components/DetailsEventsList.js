@@ -9,6 +9,7 @@ const DetailsEventsList = (props) => {
 
   return (
     <div className='EventsPage__Wrapper'>
+      <h3 style={{ marginTop: '1rem', fontSize: '1.4rem' }}>진행중인 이벤트</h3>
       <div className='EventsWrapper'>
         {events.map((item) => {
           if (item.id === props.eventItems[0])
