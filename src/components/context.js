@@ -20,6 +20,7 @@ const StoreProvider = ({ children }) => {
   const [menuLoading, setMenuLoading] = useState(true);
   const [newStoresLoading, setNewStoresLoading] = useState(true);
   const [eventsLoading, setEventsLoading] = useState(true);
+  const [promoLoading, setPromoLoading] = useState(true);
 
   // const [pups, setPups] = useState([]);
   // const [fitnesses, setFitnesses] = useState([]);
@@ -39,17 +40,13 @@ const StoreProvider = ({ children }) => {
   const [cafeRCCMD, setCafeRCCMD] = useState([]);
   const [newStores, setNewStores] = useState([]);
   const [events, setEvents] = useState([]);
-
+  const [promotions, setPromotions] = useState([]);
   // 3. '단수' 각각의 데이터패키지 내의 데이터가 들어올 Array 생성
   const store = [];
   const restaurant = [];
   const cafe = [];
   const event = [];
-  // const pub = [];
-  // const fitness = [];
-  // const beutyStore = [];
-  // const studio = [];
-  // const entertainment = [];
+  const promotion = [];
   const menuItem = [];
   const firstCategory = [];
   const secondCategory = [];
@@ -173,6 +170,36 @@ const StoreProvider = ({ children }) => {
         }
       );
   }, []);
+
+  // 프로모션 불러오기
+  useEffect(() => {
+    storeBase('promotions')
+      .select({
+        view: 'online',
+        pageSize: 10,
+      })
+      .eachPage(
+        function page(records, fetchNextPage) {
+          records.forEach(function (record) {
+            promotion.push({
+              id: record.id,
+              ...record._rawJson.fields,
+            });
+          });
+          fetchNextPage();
+          setPromotions(promotion);
+        },
+        function done(err) {
+          if (err) {
+            console.error(err);
+          } else {
+            console.log('프로모션 불러오기 성공');
+            setPromoLoading(false);
+          }
+        }
+      );
+  }, []);
+
   // 카테고리 데이터 불러오기
   useEffect(() => {
     storeBase('firstCategoryData')
@@ -389,6 +416,7 @@ const StoreProvider = ({ children }) => {
         mainLoading,
         newStoresLoading,
         eventsLoading,
+        promoLoading,
 
         stores,
         restaurants,
@@ -401,6 +429,7 @@ const StoreProvider = ({ children }) => {
         lunchRCCMD,
         cafeRCCMD,
         newStores,
+        promotions,
       }}
     >
       {children}
