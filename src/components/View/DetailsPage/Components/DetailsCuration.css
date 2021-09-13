@@ -1,0 +1,8 @@
+.detailsCuration {
+  width: var(--normalWidth);
+  margin-bottom: 10rem;
+}
+
+.detailsCuration img {
+  width: 100%;
+}

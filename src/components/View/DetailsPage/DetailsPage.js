@@ -3,6 +3,7 @@ import React from 'react';
 import DetailsNavi from './Components/DetailsNavi';
 import ImageBox from './Components/DetailsImages';
 import DetailsHeader from './Components/DetailsHeader';
+import DetailsCuration from './Components/DetailsCuration';
 import Information from './Components/Information';
 import DetailsEventsList from './Components/DetailsEventsList';
 import Menu from './Components/Menu/Menu';
@@ -33,14 +34,14 @@ const DetailsPage = ({ store, history }) => {
   }
 
   let tab = ['정보'];
-  // if (store.isPromotion) {
-  //   tab = ['소개', '정보'];
-  // }
+  if (store.isPromotion) {
+    tab = ['큐레이션', '정보'];
+  }
   if (store.events) {
     tab = ['정보', '이벤트'];
   }
   if (store.isPromotion && store.events) {
-    tab = ['소개', '정보', '이벤트'];
+    tab = ['큐레이션', '정보', '이벤트'];
   }
 
   const pagination = {
@@ -75,10 +76,32 @@ const DetailsPage = ({ store, history }) => {
         className='mySwiper'
         onSlideChange={() => console.log('slide change')}
         onSwiper={(swiper) => console.log(swiper)}
+        initialSlide={0}
+        autoHeight={true}
       >
-        {/* {store.isPromotion ? (
-          <SwiperSlide data-hash='storeCuration'>큐레이션 정보</SwiperSlide>
-        ) : null} */}
+        {store.isPromotion ? (
+          <SwiperSlide data-hash='storeCuration'>
+            {store.curation ? (
+              <DetailsCuration
+                introVideo={store.promotionMedia[0].url}
+                curation={store.curation[0].url}
+              />
+            ) : (
+              <div
+                className='comingsoon'
+                style={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  width: '100%',
+                  height: '30%',
+                }}
+              >
+                <h4 style={{ margin: '8rem 0' }}>Coming Soon!</h4>
+              </div>
+            )}
+          </SwiperSlide>
+        ) : null}
         <SwiperSlide data-hash='storeInfo'>
           <Information
             openHour={store.openHour}
