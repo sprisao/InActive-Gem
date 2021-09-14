@@ -13,7 +13,6 @@ const StoreProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const [restaurantLoading, setRestaurantLoading] = useState(true);
   const [cafesLoading, setCafesLoading] = useState(true);
-  const [mainLoading, setMainLoading] = useState(true);
   const [navigationLoading, setNavigationLoading] = useState(true);
   const [secondLoading, setSecondLoading] = useState(true);
   const [locationLoading, setLocationLoading] = useState(true);
@@ -21,12 +20,6 @@ const StoreProvider = ({ children }) => {
   const [newStoresLoading, setNewStoresLoading] = useState(true);
   const [eventsLoading, setEventsLoading] = useState(true);
   const [promoLoading, setPromoLoading] = useState(true);
-
-  // const [pups, setPups] = useState([]);
-  // const [fitnesses, setFitnesses] = useState([]);
-  // const [beutyStores, setBeutyStores] = useState([]);
-  // const [studios, setStudios] = useState([]);
-  // const [entertainments, setEntertainments] = useState([]);
 
   // 2. '복수' useState 활용해서 새롭게 불러올 데이터 패키지 함수명 지정
   const [stores, setStores] = useState([]);
@@ -36,8 +29,6 @@ const StoreProvider = ({ children }) => {
   const [secondCategories, setSecondCategories] = useState([]);
   const [locationCategories, setlocationCategories] = useState([]);
   const [menu, setMenu] = useState([]);
-  const [lunchRCCMD, setLunchRCCMD] = useState([]);
-  const [cafeRCCMD, setCafeRCCMD] = useState([]);
   const [newStores, setNewStores] = useState([]);
   const [events, setEvents] = useState([]);
   const [promotions, setPromotions] = useState([]);
@@ -51,8 +42,6 @@ const StoreProvider = ({ children }) => {
   const firstCategory = [];
   const secondCategory = [];
   const locationCategory = [];
-  const lunchRCCMDstore = [];
-  const cafeRCCMDstore = [];
   const newStore = [];
 
   // 업체데이터 불러오기
@@ -118,7 +107,7 @@ const StoreProvider = ({ children }) => {
     storeBase('stores')
       .select({
         view: 'cafes',
-        pageSize: 50,
+        pageSize: 100,
       })
       .eachPage(
         function page(records, fetchNextPage) {
@@ -319,64 +308,6 @@ const StoreProvider = ({ children }) => {
   useEffect(() => {
     storeBase('stores')
       .select({
-        maxRecords: 30,
-        pageSize: 30,
-        view: 'LunchRCCMD',
-      })
-      .eachPage(
-        function page(records, fetchNextPage) {
-          records.forEach(function (record) {
-            lunchRCCMDstore.push({
-              id: record.id,
-              ...record._rawJson.fields,
-            });
-          });
-          setLunchRCCMD(lunchRCCMDstore);
-          setMainLoading(false);
-          fetchNextPage();
-        },
-        function done(err) {
-          console.log('점심 추천 업체 데이터 로딩 완료');
-          if (err) {
-            console.error(err);
-            return;
-          }
-        }
-      );
-  }, []);
-
-  useEffect(() => {
-    storeBase('stores')
-      .select({
-        maxRecords: 30,
-        pageSize: 30,
-        view: 'CafeRCCMD',
-      })
-      .eachPage(
-        function page(records, fetchNextPage) {
-          records.forEach(function (record) {
-            cafeRCCMDstore.push({
-              id: record.id,
-              ...record._rawJson.fields,
-            });
-          });
-          setCafeRCCMD(cafeRCCMDstore);
-          setMainLoading(false);
-          fetchNextPage();
-        },
-        function done(err) {
-          console.log('메인 데이터 로딩 완료');
-          if (err) {
-            console.error(err);
-            return;
-          }
-        }
-      );
-  }, []);
-
-  useEffect(() => {
-    storeBase('stores')
-      .select({
         maxRecords: 15,
         pageSize: 30,
         view: 'new',
@@ -413,7 +344,6 @@ const StoreProvider = ({ children }) => {
         secondLoading,
         locationLoading,
         menuLoading,
-        mainLoading,
         newStoresLoading,
         eventsLoading,
         promoLoading,
@@ -426,8 +356,6 @@ const StoreProvider = ({ children }) => {
         firstCategories,
         secondCategories,
         locationCategories,
-        lunchRCCMD,
-        cafeRCCMD,
         newStores,
         promotions,
       }}

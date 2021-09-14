@@ -15,10 +15,9 @@ import { useGlobalContext } from '../../context';
 import './LandingPage.css';
 
 const LandingPage = (history) => {
-  const { loading } = useGlobalContext();
+  const { promoLoading } = useGlobalContext();
 
   const [userInput, setUserInput] = useState('');
-  const [viewStatus, setViewStatus] = useState('home');
 
   const getUserInput = (e) => {
     const { value } = e.target;
@@ -26,7 +25,7 @@ const LandingPage = (history) => {
     setUserInput(value);
   };
 
-  if (loading) {
+  if (promoLoading) {
     return <Loading />;
   } else {
     if (userInput) {
