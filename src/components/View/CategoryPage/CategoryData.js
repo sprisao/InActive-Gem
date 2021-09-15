@@ -9,8 +9,6 @@ import CategoryComponent from './CategoryPageComponent/CategoryComponent';
 const CategoryData = () => {
   const { firstCategory, secondCategory, locationCategory } = useParams();
   const { firstCategories, loading, stores } = useGlobalContext();
-  console.log(firstCategory);
-  console.log(secondCategory);
 
   if (loading) {
     return <Loading />;
