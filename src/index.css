@@ -190,6 +190,20 @@ body {
   }
 }
 
+ol,
+ul {
+  margin: 0px;
+  padding: 0px;
+  margin-top: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+li {
+  list-style-position: inside;
+  text-indent: -0.5rem;
+  padding-left: 0.5rem;
+}
+
 h1,
 h2,
 h3,
