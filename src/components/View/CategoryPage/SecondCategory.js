@@ -25,7 +25,6 @@ const SecondCategory = (props) => {
                 : 'SecondCategory__item'
             }
             tabIndex='0'
-            // onClick={() => onFocus('전체')}
           >
             🅰️ 전체
           </button>

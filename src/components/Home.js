@@ -160,49 +160,36 @@ const Home = ({ history }) => {
               </div>
             </div>
           </Link>
-          {/* <Link to={`/category/교육·학원/전체/전체`}> */}
-          <div className='ThirdGrid__Item'>
-            <div
-              className='Navigation__Item__Header'
-              style={{ opacity: '0.5' }}
-            >
-              <p>교육·학원</p>
+          <Link to={`/category/교육・학원/전체/전체`}>
+            <div className='ThirdGrid__Item'>
+              <div className='Navigation__Item__Header'>
+                <p>교육·학원</p>
+              </div>
+              <div className='Navigation__Item__Emoji__Container'>
+                <img
+                  src='https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/285/open-book_1f4d6.png'
+                  alt=''
+                />
+              </div>
             </div>
-            <div
-              className='Navigation__Item__Emoji__Container'
-              style={{ opacity: '0.5' }}
-            >
-              <img
-                src='https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/285/open-book_1f4d6.png'
-                alt=''
-              />
-            </div>
-          </div>
-          {/* </Link> */}
+          </Link>
         </div>
         <div className='HOEX__Wrap'>
-          <div className='HOEX-Button'>
-            <div
-              className='Navigation__Item__Header'
-              style={{ opacity: '0.5' }}
-            >
-              <p>병원·약국</p>
+          <Link to={`/category/병원・약국/전체/전체`}>
+            <div className='HOEX-Button'>
+              <div className='Navigation__Item__Header'>
+                <p>병원·약국</p>
+              </div>
+              <div className='Navigation__Item__Emoji__Container'>
+                <img
+                  src='https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/285/face-with-thermometer_1f912.png'
+                  alt='병원・약국'
+                />
+              </div>
             </div>
-            <div
-              className='Navigation__Item__Emoji__Container'
-              style={{ opacity: '0.5' }}
-            >
-              <img
-                src='https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/285/face-with-thermometer_1f912.png'
-                alt=''
-              />
-            </div>
-          </div>
+          </Link>
           <div className='HOEX-Button'>
-            <div
-              className='Navigation__Item__Header'
-              style={{ opacity: '0.5' }}
-            >
+            <div className='Navigation__Item__Header'>
               <p>전문가</p>
             </div>
             <div

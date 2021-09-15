@@ -9,6 +9,7 @@ import BottomNavigation from '../../../BottomNavigation/BottomNavigation';
 import './CategoryComponent.css';
 
 const CategoryComponent = (props) => {
+  console.log(props);
   let gridFormatHandler;
   if (props.category === '카페') {
     gridFormatHandler = 'grid__wrapper2';
