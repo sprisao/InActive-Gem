@@ -6,7 +6,6 @@ import './DetailsEventsList.css';
 
 const DetailsEventsList = (props) => {
   const { loading, events } = useGlobalContext();
-  console.log(events);
   console.log(props.eventItems[0]);
   return (
     <div className='EventsPage__Wrapper'>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { useLocation } from 'react-router';
 
 import DetailsNavi from './Components/DetailsNavi';
 import ImageBox from './Components/DetailsImages';
@@ -8,20 +9,21 @@ import Information from './Components/Information';
 import DetailsEventsList from './Components/DetailsEventsList';
 import Menu from './Components/Menu/Menu';
 import Recommendation from './Components/Recommendations';
-
 import Separator from '../../Separator';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 // import Swiper core and required modules
-import SwiperCore, { Pagination } from 'swiper';
+import SwiperCore, { Pagination, History } from 'swiper';
 import './DetailsPage.css';
 
 // install Swiper modules
-SwiperCore.use([Pagination]);
+SwiperCore.use([Pagination, History]);
 
 const DetailsPage = ({ store, history }) => {
-  console.log(store);
+  // const location = useLocation();
+  // const backPoint = location.state.userCell;
+  // console.log('uselocation', backPoint);
 
   let menu;
   if (store.isMenu === true) {
@@ -74,13 +76,16 @@ const DetailsPage = ({ store, history }) => {
         pagination={pagination}
         hashNavigation={true}
         className='mySwiper'
-        onSlideChange={() => console.log('slide change')}
-        onSwiper={(swiper) => console.log(swiper)}
+        // onSlideChange={() => console.log('slide change')}
+        // onSwiper={(swiper) => console.log(swiper)}
         initialSlide={0}
         autoHeight={true}
+        history={{
+          key: 'details',
+        }}
       >
         {store.isPromotion ? (
-          <SwiperSlide data-hash='storeCuration'>
+          <SwiperSlide data-history='Curation'>
             {store.curation ? (
               <DetailsCuration
                 introVideo={store.promotionMedia[0].url}
@@ -102,7 +107,7 @@ const DetailsPage = ({ store, history }) => {
             )}
           </SwiperSlide>
         ) : null}
-        <SwiperSlide data-hash='storeInfo'>
+        <SwiperSlide data-history='Info'>
           <Information
             openHour={store.openHour}
             closeHour={store.closeHour}
@@ -116,7 +121,7 @@ const DetailsPage = ({ store, history }) => {
           />
         </SwiperSlide>
         {store.events ? (
-          <SwiperSlide data-hash='storeEvents'>
+          <SwiperSlide data-history='Events'>
             <DetailsEventsList eventItems={store.events} />
           </SwiperSlide>
         ) : null}

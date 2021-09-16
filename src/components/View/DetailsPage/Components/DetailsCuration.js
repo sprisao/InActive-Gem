@@ -3,7 +3,6 @@ import React from 'react';
 import './DetailsCuration.css';
 
 const DetailsCuration = (props) => {
-  console.log(props);
   return (
     <div className='detailsCuration'>
       <video

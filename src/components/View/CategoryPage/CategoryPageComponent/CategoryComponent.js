@@ -9,7 +9,6 @@ import BottomNavigation from '../../../BottomNavigation/BottomNavigation';
 import './CategoryComponent.css';
 
 const CategoryComponent = (props) => {
-  console.log(props);
   let gridFormatHandler;
   if (props.category === '카페') {
     gridFormatHandler = 'grid__wrapper2';
@@ -32,6 +31,7 @@ const CategoryComponent = (props) => {
             <SecondCategory
               category={props.category}
               locationCategory={props.locationCategory}
+              history={props.history}
             />
           </div>
         </div>
@@ -48,6 +48,7 @@ const CategoryComponent = (props) => {
                         tags={store.tags}
                         open={store.openHour}
                         close={store.closeHour}
+                        history={props.history}
                       ></GridCard>
                     );
                   }
@@ -59,6 +60,7 @@ const CategoryComponent = (props) => {
                         tags={store.tags}
                         open={store.openHour}
                         close={store.closeHour}
+                        history={props.history}
                       ></GridCard>
                     );
                   }
@@ -72,6 +74,7 @@ const CategoryComponent = (props) => {
                         tags={store.tags}
                         open={store.openHour}
                         close={store.closeHour}
+                        history={props.history}
                       ></GridCard>
                     );
                   }
@@ -83,6 +86,7 @@ const CategoryComponent = (props) => {
                         tags={store.tags}
                         open={store.openHour}
                         close={store.closeHour}
+                        history={props.history}
                       ></GridCard>
                     );
                   }

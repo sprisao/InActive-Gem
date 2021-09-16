@@ -24,7 +24,6 @@ const url = 'https://www.instagram.com/';
 
 const Information = (props) => {
   const [copied, setCopied] = useState(false);
-
   const [isShowing, setIsShowing] = useState(false);
   const openModal = () => {
     setIsShowing(true);
