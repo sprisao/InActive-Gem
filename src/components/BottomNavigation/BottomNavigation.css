@@ -2,9 +2,7 @@
   width: 100vw;
   position: fixed;
   bottom: 0;
-  padding: 0 1rem;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  /* padding: 0 1rem; */
   z-index: 10;
 }
 
@@ -12,11 +10,11 @@
   max-width: var(--normalWidth);
   display: flex;
   margin: 0 auto;
-  height: 4rem;
+  height: 4.75rem;
   justify-content: space-between;
   background-color: #f6f6f6;
-  border-radius: 0.85rem;
-  box-shadow: 0 0 0.5rem rgb(141, 141, 141);
+  box-shadow: 0 0 1rem rgb(168, 168, 168);
+  padding-bottom: 0.25rem;
 }
 
 .BottomNavi-wrapper__ButtonContainer.active button {
