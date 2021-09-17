@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
+// Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { FiChevronRight } from 'react-icons/fi';
 
@@ -7,6 +8,14 @@ import { useGlobalContext } from './context';
 
 import './Promotion.css';
 
+// Import Swiper styles
+import 'swiper/swiper.min.css';
+import 'swiper/components/pagination/pagination.min.css';
+import 'swiper/components/navigation/navigation.min.css';
+import SwiperCore, { Pagination, Navigation } from 'swiper/core';
+
+// install Swiper modules
+SwiperCore.use([Pagination, Navigation]);
 const Promotion = ({ history }) => {
   const { promotions } = useGlobalContext();
 
