@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react';
 import SearchBox from '../SearchPage/SearchBox';
 import SearchResults from '../SearchPage/SearchResults';
 import Home from '../../Home';
-import EventsPage from '../EventsPage/EventsPage';
 import RCCMD from './Sections/RCCMD/RCCMD';
 import BottomNavigation from '../../BottomNavigation/BottomNavigation';
 import Footer from '../../Footer';

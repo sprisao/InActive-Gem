@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 import './DetailsPagination.css';
 
 const DetailsPagination = ({ storeId }) => {
-  console.log(storeId);
   return (
     <>
       <section className='DetailsPagination'>
