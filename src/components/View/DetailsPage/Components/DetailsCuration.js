@@ -8,13 +8,12 @@ const DetailsCuration = (props) => {
       <video
         autoPlay={true}
         loop={true}
-        controls={true}
+        controls={false}
         playsInline
         muted
         type='video/mp4'
         style={{
           maxWidth: 'var(--normalWidth',
-          padding: '1rem 0 0',
         }}
       >
         <source src={props.introVideo} type='video/mp4' />
