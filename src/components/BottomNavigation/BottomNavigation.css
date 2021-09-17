@@ -7,14 +7,15 @@
 }
 
 .BottomNavi-wrapper {
-  max-width: var(--normalWidth);
+  width: 100vw;
   display: flex;
   margin: 0 auto;
-  height: 5.75rem;
+  height: 7.25rem;
   justify-content: space-between;
   background-color: #f6f6f6;
-  box-shadow: 0 0 1rem rgb(168, 168, 168);
+  box-shadow: 0 0 0.35rem rgb(168, 168, 168);
   padding-bottom: 0.75rem;
+  border-radius: 3rem 3rem 0 0;
 }
 
 .BottomNavi-wrapper__ButtonContainer.active button {
@@ -33,7 +34,7 @@
   cursor: pointer;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  padding-top: 2rem;
   background-color: transparent;
   border: none;
   font-size: 1.15rem;
