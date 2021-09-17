@@ -15,8 +15,8 @@ const Promotion = ({ history }) => {
       <div className='SecondGrid__Item'>
         <Swiper
           navigation={true}
-          onSwiper={(swiper) => console.log(swiper)}
-          onSlideChange={() => console.log('slide change')}
+          // onSwiper={(swiper) => console.log(swiper)}
+          // onSlideChange={() => console.log('slide change')}
         >
           <div className='Navigation__Item__Header'>
             <p>젬 추천 공간</p>
@@ -30,12 +30,15 @@ const Promotion = ({ history }) => {
             />
           </div>
           {promotions.map((item) => {
-            console.log(item);
             return (
               <SwiperSlide
                 className='swiper-slide'
                 key={item.id}
-                onClick={() => history.history.push(`/store/${item.store[0]}`)}
+                onClick={() =>
+                  history.history.push(
+                    `/store/${item.store[0]}/details/Curation`
+                  )
+                }
               >
                 <div className='Home__Slider__Article'>
                   -<p>{item.mainCopy}</p>

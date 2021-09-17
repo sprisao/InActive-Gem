@@ -43,7 +43,11 @@ const EventsPage = () => {
               <div className='EventsWrapper'>
                 {events.map((item) => {
                   return (
-                    <Link to={`/store/${item.stores[0]}`} className=''>
+                    <Link
+                      to={`/store/${item.stores[0]}/details/Events`}
+                      className=''
+                      key={item.id}
+                    >
                       <div className='EventsCard' key={item.id}>
                         <img src={item.image[0].url} alt='' />
                       </div>

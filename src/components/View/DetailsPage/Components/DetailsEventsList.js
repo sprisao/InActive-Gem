@@ -5,8 +5,8 @@ import { useGlobalContext } from '../../../context';
 import './DetailsEventsList.css';
 
 const DetailsEventsList = (props) => {
-  const { loading, events } = useGlobalContext();
-  console.log(props.eventItems[0]);
+  const { events } = useGlobalContext();
+
   return (
     <div className='EventsPage__Wrapper'>
       <section className='Details-EventsList'>
@@ -15,11 +15,10 @@ const DetailsEventsList = (props) => {
         </h3>
         <div className='EventsWrapper'>
           {events.map((item) => {
-            console.log(item.id);
             if (item.id === props.eventItems[0])
               return (
-                <>
-                  <div className='EventsCard' key={item.id}>
+                <div className='Event' key={item.id}>
+                  <div className='EventsCard'>
                     <img src={item.image[0].url} alt='' />
                   </div>
                   <div className='EventDetails'>
@@ -52,7 +51,7 @@ const DetailsEventsList = (props) => {
                         <h4>혜택</h4>
                         <div className='EventDetail-ItemWrapper'>
                           {item.benefits.map((benefit) => (
-                            <div className='EventDetail-Item'>
+                            <div className='EventDetail-Item' key={benefit.id}>
                               <p>{benefit}</p>
                             </div>
                           ))}
@@ -68,8 +67,9 @@ const DetailsEventsList = (props) => {
                       </div>
                     </div>
                   </div>
-                </>
+                </div>
               );
+            else return null;
           })}
         </div>
       </section>

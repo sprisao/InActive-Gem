@@ -74,7 +74,7 @@ const DetailsPage = ({ store, history }) => {
         spaceBetween={0}
         slidesPerView={1}
         pagination={pagination}
-        hashNavigation={true}
+        // hashNavigation={true}
         className='mySwiper'
         // onSlideChange={() => console.log('slide change')}
         // onSwiper={(swiper) => console.log(swiper)}
@@ -82,6 +82,7 @@ const DetailsPage = ({ store, history }) => {
         autoHeight={true}
         history={{
           key: 'details',
+          replaceState: true,
         }}
       >
         {store.isPromotion ? (
