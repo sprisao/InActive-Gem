@@ -17,24 +17,16 @@
   border-radius: 2rem 2rem 0 0;
 }
 
-.BottomNavi-wrapper .iPhone {
-  height: 6.25;
+.BottomNavi-wrapper.iPhone {
+  height: 6.25rem;
 }
 
-.BottomNavi-wrapper .Android {
-  height: 5.25;
+.BottomNavi-wrapper.Android {
+  height: 5.25rem;
 }
 
-.BottomNavi-wrapper .Web {
-  max-width: 42rem;
-  display: flex;
-  margin: 0 auto;
-  justify-content: space-between;
-  background-color: #f6f6f6;
-  box-shadow: 0 0 0.35rem rgb(168, 168, 168);
-  padding-bottom: 0.75rem;
-  border-radius: 2rem 2rem 0 0;
-  height: 4.25rem;
+.BottomNavi-wrapper.Web {
+  height: 4.75rem;
 }
 
 .BottomNavi-wrapper__ButtonContainer.active button {
