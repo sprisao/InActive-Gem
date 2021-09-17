@@ -25,26 +25,36 @@ const DetailsPage = ({ store, history }) => {
   // const backPoint = location.state.userCell;
   // console.log('uselocation', backPoint);
 
-  let menu;
-  if (store.isMenu === true) {
-    menu = (
-      <>
-        <Menu store={store.name} />
-        <Separator />
-      </>
-    );
-  }
+  // let menu;
+  // if (store.isMenu === true) {
+  //   menu = (
+  //     <>
+  //       <Menu store={store.name} />
+  //       <Separator />
+  //     </>
+  //   );
+  // }
 
   let tab = ['정보'];
+  let addPromo = [];
+  let addMenu = [];
+  let addEvents = [];
+
+  if (store.isMenu) {
+    addMenu = ['메뉴'];
+    tab = addMenu.concat(tab);
+  }
   if (store.isPromotion) {
-    tab = ['큐레이션', '정보'];
+    addPromo = ['큐레이션'];
+    tab = addPromo.concat(tab);
   }
   if (store.events) {
-    tab = ['정보', '이벤트'];
+    addEvents = ['이벤트'];
+    tab = tab.concat(addEvents);
   }
-  if (store.isPromotion && store.events) {
-    tab = ['큐레이션', '정보', '이벤트'];
-  }
+  // if (store.isPromotion && store.events) {
+  //   tab = ['큐레이션', '정보', '이벤트'];
+  // }
 
   const pagination = {
     clickable: true,
@@ -108,6 +118,11 @@ const DetailsPage = ({ store, history }) => {
             )}
           </SwiperSlide>
         ) : null}
+        {store.isMenu ? (
+          <SwiperSlide data-history='Menu'>
+            <Menu store={store.name} />
+          </SwiperSlide>
+        ) : null}
         <SwiperSlide data-history='Info'>
           <Information
             openHour={store.openHour}
@@ -129,7 +144,7 @@ const DetailsPage = ({ store, history }) => {
       </Swiper>
 
       <Separator />
-      {menu}
+      {/* {menu} */}
       <Recommendation
         filter={store.firstCategory[0]}
         filter2={store.secondCategory[0]}
