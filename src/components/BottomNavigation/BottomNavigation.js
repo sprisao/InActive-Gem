@@ -7,9 +7,29 @@ import { Link } from 'react-router-dom';
 import './BottomNavigation.css';
 
 const BottomNavigation = (props) => {
+  var IorA = navigator.userAgent.toLowerCase();
+  console.log(IorA);
+  if (IorA.indexOf('android') !== -1) {
+    console.log('안드로이드네');
+  } else if (IorA.indexOf('iphone') !== -1) {
+    console.log('아이폰이네');
+  } else {
+    console.log('웹이네');
+  }
+
   return (
     <div className='BottomNavigation'>
-      <div className='BottomNavi-wrapper'>
+      <div
+        className={`BottomNavi-wrapper ${
+          IorA.indexOf('android') !== -1
+            ? 'Android'
+            : IorA.indexOf('iphone') !== -1
+            ? 'iPhone '
+            : 'Web'
+        }
+        
+        `}
+      >
         <Link
           to='/'
           className={`BottomNavi-wrapper__ButtonContainer 
