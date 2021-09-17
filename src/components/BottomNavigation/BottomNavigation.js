@@ -20,13 +20,13 @@ const BottomNavigation = (props) => {
           <button className='BottomNavi-Button'>
             <FiHome
               style={{
-                fontSize: '1.35rem',
+                fontSize: '1.55rem',
                 marginRight: '0.75rem',
                 marginBottom: '0.15rem',
               }}
               className='BottomNavi-ButtonIcon'
             />
-            홈
+            <span>홈</span>
           </button>
         </Link>
         <Link
@@ -37,13 +37,13 @@ const BottomNavigation = (props) => {
           <button className='BottomNavi-Button'>
             <BsFillLightningFill
               style={{
-                fontSize: '1.35rem',
+                fontSize: '1.55rem',
                 marginRight: '0.65rem',
                 marginBottom: '0.1rem',
               }}
               className='BottomNavi-ButtonIcon-Event'
             />
-            이벤트&할인
+            <span>이벤트&할인</span>
           </button>
         </Link>
       </div>
