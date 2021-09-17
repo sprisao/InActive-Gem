@@ -10,11 +10,11 @@
   max-width: var(--normalWidth);
   display: flex;
   margin: 0 auto;
-  height: 4.75rem;
+  height: 5.75rem;
   justify-content: space-between;
   background-color: #f6f6f6;
   box-shadow: 0 0 1rem rgb(168, 168, 168);
-  padding-bottom: 0.25rem;
+  padding-bottom: 0.5rem;
 }
 
 .BottomNavi-wrapper__ButtonContainer.active button {
