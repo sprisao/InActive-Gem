@@ -14,7 +14,7 @@
   overflow-x: scroll;
   white-space: nowrap;
   position: relative;
-  justify-content: space-between;
+  justify-content: start;
   align-items: center;
   bottom: 0;
   padding: 0.85rem 0;

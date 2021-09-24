@@ -20,21 +20,28 @@ const NewCategoryPage = ({ history }) => {
   const { loading, secondCategories, restaurants, cafes, stores } =
     useGlobalContext();
 
-  const [swiper, setSwiper] = useState(null);
-  const [isActive, setIsActive] = useState('추천');
+  let stateInit;
+  if (
+    firstCategory === '맛집' ||
+    firstCategory === '카페' ||
+    firstCategory === '호프・주점'
+  ) {
+    stateInit = '추천';
+  } else {
+    stateInit = '전체';
+  }
 
-  console.log('param', firstCategory);
-  console.log('param', locationCategory);
+  const [swiper, setSwiper] = useState(null);
+  const [isActive, setIsActive] = useState(stateInit);
+
   // Store Data 필터링
   let storeData;
   if (firstCategory === '맛집') {
-    console.log('이거잖아');
     storeData = restaurants;
   } else if (firstCategory === '카페') {
     storeData = cafes;
   } else {
     storeData = stores;
-    console.log('이거아니고');
   }
 
   // FirstCategory 필터링
@@ -85,7 +92,6 @@ const NewCategoryPage = ({ history }) => {
   // 스와이프시 스크롤 이동
 
   const swipeHandler = (e) => {
-    console.log(e);
     setIsActive(tabFilter[e.activeIndex].title);
     const refLeftSpace = activeRef.current.offsetLeft;
     const refTabWidth = activeRef.current.offsetWidth / 2;
@@ -101,7 +107,6 @@ const NewCategoryPage = ({ history }) => {
 
     if (refLeftToMiddleSpace < viewWidth) {
       refPos = 0;
-      console.log('작동하니?');
     } else if (wrapperWidth - refLeftToMiddleSpace < viewWidth) {
       refPos = wrapperWidth;
     } else {
