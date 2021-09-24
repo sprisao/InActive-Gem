@@ -8,14 +8,6 @@ import './BottomNavigation.css';
 
 const BottomNavigation = (props) => {
   var IorA = navigator.userAgent.toLowerCase();
-  console.log(IorA);
-  if (IorA.indexOf('android') !== -1) {
-    console.log('안드로이드네');
-  } else if (IorA.indexOf('iphone') !== -1) {
-    console.log('아이폰이네');
-  } else {
-    console.log('웹이네');
-  }
 
   return (
     <div className='BottomNavigation'>
