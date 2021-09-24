@@ -1,39 +1,45 @@
 import React, { useRef, useState, useEffect } from 'react';
 import BottomNavigation from '../../BottomNavigation/BottomNavigation';
 import CategoryHeader from './CategoryPageComponent/CategoryHeader';
+import GridCard from '../../Grid/GridCard';
 import Loading from '../../Loading';
+import RecommendPage from './RecommendPage';
+import AllStoresPage from './AllStoresPage';
 
 import { useGlobalContext } from '../../context';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
+import SwiperCore, { Pagination, History } from 'swiper';
 
-import { Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import './NewCategoryPage.css';
 
+SwiperCore.use([Pagination, History]);
 const NewCategoryPage = ({ history }) => {
-  const {
-    loading,
-    firstCategories,
-    secondCategories,
-    locationCagegory,
-    restaurants,
-    cafes,
-    stores,
-  } = useGlobalContext();
+  const { firstCategory, locationCategory } = useParams();
+  const { loading, secondCategories, restaurants, cafes, stores } =
+    useGlobalContext();
 
-  console.log(
-    '이거 왜 안나오냐',
-    secondCategories.filter(
-      (secondCategory) => secondCategory.firstCategory[0] === '맛집'
-    )
-  );
-
-  const [isActive, setIsActive] = useState('추천');
   const [swiper, setSwiper] = useState(null);
+  const [isActive, setIsActive] = useState('추천');
+
+  console.log('param', firstCategory);
+  console.log('param', locationCategory);
+  // Store Data 필터링
+  let storeData;
+  if (firstCategory === '맛집') {
+    console.log('이거잖아');
+    storeData = restaurants;
+  } else if (firstCategory === '카페') {
+    storeData = cafes;
+  } else {
+    storeData = stores;
+    console.log('이거아니고');
+  }
 
   // FirstCategory 필터링
   const tabFilter = secondCategories.filter(
-    (secondCategory) => secondCategory.firstCategory[0] === '맛집'
+    (secondCategory) => secondCategory.firstCategory[0] === firstCategory
   );
 
   const wrapperRef = useRef();
@@ -42,7 +48,8 @@ const NewCategoryPage = ({ history }) => {
   // 카테고리 클릭시 스크롤 이동
   const clickHandler = (params, e) => {
     setIsActive(params);
-    swiper.slideTo(tabFilter.indexOf(params));
+    const indexTab = tabFilter.map((item) => item.title);
+    swiper.slideTo(indexTab.indexOf(params));
 
     let whichTarget;
     if (e.target.localName === 'span') {
@@ -55,23 +62,18 @@ const NewCategoryPage = ({ history }) => {
     const leftSpace = whichTarget.offsetLeft;
     const tabWidth = whichTarget.offsetWidth / 2;
     const leftToMiddleSpace = leftSpace + tabWidth;
-    console.log(leftToMiddleSpace);
+
     // 타겟요소를 감싸고있는 부모요소의 스크롤영역을 포함한 넓이
     const wrapperWidth = wrapperRef.current.scrollWidth;
-    console.log(wrapperWidth);
 
     // 화면의 중앙가지의 거리
     const viewWidth = wrapperRef.current.clientWidth / 2;
-    console.log('viewWidth', viewWidth);
     let pos = 0;
 
     if (leftToMiddleSpace < viewWidth) {
       pos = 0;
-      console.log('맨 외쪽으로 스와이프', pos);
-    }
-    if (wrapperWidth - leftSpace < viewWidth) {
+    } else if (wrapperWidth - leftSpace < viewWidth) {
       pos = wrapperWidth;
-      console.log('맨 오른 쪽으로 스와이프', pos);
     } else {
       pos = leftToMiddleSpace - viewWidth;
     }
@@ -83,8 +85,8 @@ const NewCategoryPage = ({ history }) => {
   // 스와이프시 스크롤 이동
 
   const swipeHandler = (e) => {
+    console.log(e);
     setIsActive(tabFilter[e.activeIndex].title);
-
     const refLeftSpace = activeRef.current.offsetLeft;
     const refTabWidth = activeRef.current.offsetWidth / 2;
     const refLeftToMiddleSpace = refLeftSpace + refTabWidth;
@@ -99,13 +101,16 @@ const NewCategoryPage = ({ history }) => {
 
     if (refLeftToMiddleSpace < viewWidth) {
       refPos = 0;
-    }
-    if (wrapperWidth - refLeftToMiddleSpace < viewWidth) {
+      console.log('작동하니?');
+    } else if (wrapperWidth - refLeftToMiddleSpace < viewWidth) {
       refPos = wrapperWidth;
     } else {
       refPos = refLeftToMiddleSpace - viewWidth;
     }
 
+    window.scrollTo({
+      top: 0,
+    });
     wrapperRef.current.scrollTo({ left: refPos, behavior: 'smooth' });
   };
 
@@ -116,9 +121,9 @@ const NewCategoryPage = ({ history }) => {
       <>
         <BottomNavigation />
         <CategoryHeader
-          category={'맛집'}
-          secondCategory={'맛집'}
-          currentLocation={'전체'}
+          category={firstCategory}
+          secondCategory={firstCategory}
+          currentLocation={locationCategory}
         />
         <section className='SecondCategory-Container'>
           <div className='SecondCategory-Wrapper' ref={wrapperRef}>
@@ -156,20 +161,62 @@ const NewCategoryPage = ({ history }) => {
           </div>
         </section>
         <Swiper
-          spaceBetween={50}
+          initialSlide={0}
+          history={{
+            key: `/newcategorytest/${firstCategory}/${locationCategory}`,
+            replaceState: true,
+          }}
           slidesPerView={1}
+          speed={600}
           onSlideChange={(e) => swipeHandler(e)}
           onSwiper={(swiper) => setSwiper(swiper)}
+          autoHeight={true}
           className='CategorySwiper'
-          history={{
-            key: 'newcategorytest/categories',
-          }}
         >
           {tabFilter.map((item) => {
             return (
-              <SwiperSlide data-history={item.title} key={item.id}>
-                {item.title === '추천' ? <h3>This is 추천페이지</h3> : null}
-                {item.title}
+              <SwiperSlide data-history={item.id} key={item.id}>
+                <div className='CategoryGrid' style={{ margin: '0' }}>
+                  <section className='grid'>
+                    {item.title === '추천' ? (
+                      <RecommendPage />
+                    ) : item.title === '전체' ? (
+                      <AllStoresPage />
+                    ) : (
+                      <div className='grid__wrapper'>
+                        {storeData.map((store) => {
+                          if (locationCategory === '전체') {
+                            if (store.secondCategory[0] === item.title)
+                              return (
+                                <GridCard
+                                  key={store.id}
+                                  store={store}
+                                  tags={store.tags}
+                                  open={store.openHour}
+                                  close={store.closeHour}
+                                ></GridCard>
+                              );
+                            else return null;
+                          } else if (
+                            store.eupmyeondongRi === locationCategory
+                          ) {
+                            if (store.secondCategory[0] === item.title)
+                              return (
+                                <GridCard
+                                  key={store.id}
+                                  store={store}
+                                  tags={store.tags}
+                                  open={store.openHour}
+                                  close={store.closeHour}
+                                ></GridCard>
+                              );
+                            else return null;
+                          } else return null;
+                        })}
+                      </div>
+                    )}
+                  </section>
+                </div>
               </SwiperSlide>
             );
           })}

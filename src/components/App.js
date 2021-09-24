@@ -37,7 +37,10 @@ function App() {
             path='/category/:firstCategory/:locationCategory/:secondCategory'
             component={CategoryData}
           />
-          <Route path='/newcategorytest' component={NewCategoryPage} />
+          <Route
+            path='/newcategorytest/:firstCategory/:locationCategory'
+            component={NewCategoryPage}
+          />
           <Route
             path='/category/:firstCategory/:secondCategory'
             component={CategoryData}

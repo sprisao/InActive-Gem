@@ -1,11 +1,11 @@
 .CategorySwiper {
-  height: 50rem;
+  min-height: 50vh;
 }
 
 .swiper-container.CategorySwiper {
   display: flex;
   flex-direction: column;
-  height: 50rem;
+  min-height: 50rem;
 }
 
 .SecondCategory-Wrapper,
