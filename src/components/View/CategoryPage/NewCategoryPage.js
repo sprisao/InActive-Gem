@@ -12,10 +12,15 @@ import { useGlobalContext } from '../../context';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Pagination, History } from 'swiper';
 
+import smoothscroll from 'smoothscroll-polyfill';
+
 import { useParams } from 'react-router-dom';
 import './NewCategoryPage.css';
 
 SwiperCore.use([Pagination, History]);
+
+smoothscroll.polyfill();
+
 const NewCategoryPage = ({ history }) => {
   const { firstCategory, locationCategory } = useParams();
   const { loading, secondCategories, restaurants, cafes, stores } =
