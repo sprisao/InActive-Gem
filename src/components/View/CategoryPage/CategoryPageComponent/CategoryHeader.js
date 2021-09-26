@@ -7,6 +7,8 @@ import { Link } from 'react-router-dom';
 
 import { FiChevronLeft, FiChevronDown } from 'react-icons/fi';
 
+import './CategoryHeader.css';
+
 const CategoryHeader = ({ category, secondCategory, currentLocation }) => {
   const { locationCategories } = useGlobalContext();
 

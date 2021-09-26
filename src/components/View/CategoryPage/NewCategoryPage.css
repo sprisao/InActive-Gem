@@ -1,5 +1,7 @@
 .CategorySwiper {
   min-height: 50vh;
+  margin-top: 11rem;
+  margin-bottom: 7.5rem;
 }
 
 .swiper-container.CategorySwiper {

@@ -5,6 +5,7 @@ import GridCard from '../../Grid/GridCard';
 import Loading from '../../Loading';
 import RecommendPage from './RecommendPage';
 import AllStoresPage from './AllStoresPage';
+import Footer from './../../Footer';
 
 import { useGlobalContext } from '../../context';
 
@@ -124,47 +125,50 @@ const NewCategoryPage = ({ history }) => {
   } else
     return (
       <>
-        <BottomNavigation />
-        <CategoryHeader
-          category={firstCategory}
-          secondCategory={firstCategory}
-          currentLocation={locationCategory}
-        />
-        <section className='SecondCategory-Container'>
-          <div className='SecondCategory-Wrapper' ref={wrapperRef}>
-            {tabFilter.map((item) => {
-              if (isActive === item.title) {
-                return (
-                  <div
-                    className='SecondCategory-Item Active'
-                    key={item.id}
-                    onClick={(e) => {
-                      clickHandler(item.title, e);
-                    }}
-                    ref={activeRef}
-                  >
-                    <span>
-                      {item.emoji} {item.title}
-                    </span>
-                  </div>
-                );
-              } else
-                return (
-                  <div
-                    className='SecondCategory-Item'
-                    key={item.id}
-                    onClick={(e) => {
-                      clickHandler(item.title, e);
-                    }}
-                  >
-                    <span>
-                      {item.emoji} {item.title}
-                    </span>
-                  </div>
-                );
-            })}
+        <div className='CategoryPage--Header--Container'>
+          <div className='Header--Fix--Box'>
+            <CategoryHeader
+              category={firstCategory}
+              secondCategory={firstCategory}
+              currentLocation={locationCategory}
+            />
+            <section className='SecondCategory-Container'>
+              <div className='SecondCategory-Wrapper' ref={wrapperRef}>
+                {tabFilter.map((item) => {
+                  if (isActive === item.title) {
+                    return (
+                      <div
+                        className='SecondCategory-Item Active'
+                        key={item.id}
+                        onClick={(e) => {
+                          clickHandler(item.title, e);
+                        }}
+                        ref={activeRef}
+                      >
+                        <span>
+                          {item.emoji} {item.title}
+                        </span>
+                      </div>
+                    );
+                  } else
+                    return (
+                      <div
+                        className='SecondCategory-Item'
+                        key={item.id}
+                        onClick={(e) => {
+                          clickHandler(item.title, e);
+                        }}
+                      >
+                        <span>
+                          {item.emoji} {item.title}
+                        </span>
+                      </div>
+                    );
+                })}
+              </div>
+            </section>
           </div>
-        </section>
+        </div>
         <Swiper
           initialSlide={0}
           history={{
@@ -230,6 +234,7 @@ const NewCategoryPage = ({ history }) => {
             );
           })}
         </Swiper>
+        <Footer />
       </>
     );
 };
