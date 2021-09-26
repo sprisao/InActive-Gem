@@ -1,9 +1,9 @@
 .RecommendPage {
   display: flex;
+  height: 45vh;
+  width: 100%;
   justify-content: center;
   align-items: center;
-  height: 45vh;
-  width: var(--normalWidth);
 }
 
 .Recommend--ArticleBox {
