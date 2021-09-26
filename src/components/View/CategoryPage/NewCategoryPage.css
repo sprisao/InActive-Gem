@@ -1,0 +1,58 @@
+.CategorySwiper {
+  min-height: 50vh;
+}
+
+.swiper-container.CategorySwiper {
+  display: flex;
+  flex-direction: column;
+  min-height: 50rem;
+}
+
+.SecondCategory-Wrapper,
+.CategorySwiper .swiper-pagination {
+  display: flex;
+  overflow-x: scroll;
+  white-space: nowrap;
+  position: relative;
+  justify-content: start;
+  align-items: center;
+  bottom: 0;
+  padding: 0.85rem 0;
+}
+
+.SecondCategory-Item,
+.CategorySwiper .swiper-pagination-bullet {
+  display: flex;
+  width: auto;
+  height: auto;
+  cursor: pointer;
+  border-radius: 1.5rem;
+  border: 0.5px solid rgba(236, 236, 236, 0.938);
+  padding: 0.6rem 1rem;
+  background-color: white;
+  text-align: center;
+  font-size: 1.25rem;
+  opacity: 1;
+  margin: 0 0 0 0.6rem !important;
+  font-family: 'Noto Sans';
+}
+/* 
+.CategorySwiper .swiper-pagination-bullet p {
+  width: 100%;
+  height: auto;
+} */
+
+.SecondCategory-Item.Active,
+.CategorySwiper .swiper-pagination-bullet-active {
+  background-color: #f21d73;
+  border: 0.5px solid #f21d73;
+  color: white;
+  font-weight: 400;
+  opacity: 1;
+}
+
+.CategorySwiper .swiper-slide {
+  /* display: flex; */
+  /* justify-content: center;
+  align-items: center; */
+}

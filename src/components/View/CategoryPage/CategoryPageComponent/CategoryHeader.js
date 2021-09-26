@@ -25,7 +25,7 @@ const CategoryHeader = ({ category, secondCategory, currentLocation }) => {
               <FiChevronLeft style={{ fontSize: '1.8rem' }} />
             </button>
           </Link>
-          <Link to={`/category/${category}/전체/전체`}>
+          <Link to={`/newcategorytest/${category}/전체/전체`}>
             <div className='Category__Title'>
               <h3>{category}</h3>
             </div>
@@ -43,7 +43,7 @@ const CategoryHeader = ({ category, secondCategory, currentLocation }) => {
             >
               <ul>
                 <li>
-                  <Link to={`/category/${category}/전체/${secondCategory}`}>
+                  <Link to={`/newcategorytest/${category}/전체`}>
                     <button
                       onClick={() => {
                         setLocationCategory('전체');
@@ -57,7 +57,7 @@ const CategoryHeader = ({ category, secondCategory, currentLocation }) => {
                 {locationCategories.map((location) => (
                   <li key={location.id}>
                     <Link
-                      to={`/category/${category}/${location.location}/${secondCategory}`}
+                      to={`/newcategorytest/${category}/${location.location}`}
                     >
                       <button
                         onClick={() => {

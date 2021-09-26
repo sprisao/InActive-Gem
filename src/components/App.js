@@ -7,6 +7,7 @@ import EventsPage from './View/EventsPage/EventsPage';
 import RestaurantPage from './View/CategoryPage/RestaurantPage/RestaurantPage';
 import CafePage from './View/CategoryPage/CafePage/CafePage';
 import CategoryData from './View/CategoryPage/CategoryData';
+import NewCategoryPage from './View/CategoryPage/NewCategoryPage';
 import DetailsData from './View/DetailsPage/DetailsData';
 import Privacy from './Privacy';
 import UserAgreements from './UserAgreements';
@@ -35,6 +36,10 @@ function App() {
           <Route
             path='/category/:firstCategory/:locationCategory/:secondCategory'
             component={CategoryData}
+          />
+          <Route
+            path='/newcategorytest/:firstCategory/:locationCategory'
+            component={NewCategoryPage}
           />
           <Route
             path='/category/:firstCategory/:secondCategory'

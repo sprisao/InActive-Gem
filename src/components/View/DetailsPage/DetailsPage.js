@@ -1,5 +1,4 @@
 import React from 'react';
-import { useLocation } from 'react-router';
 
 import DetailsNavi from './Components/DetailsNavi';
 import ImageBox from './Components/DetailsImages';
