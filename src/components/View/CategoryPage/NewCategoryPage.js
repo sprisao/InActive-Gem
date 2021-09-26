@@ -184,7 +184,7 @@ const NewCategoryPage = ({ history }) => {
                 <div className='CategoryGrid' style={{ margin: '0' }}>
                   <section className='grid'>
                     {item.title === '추천' ? (
-                      <RecommendPage />
+                      <RecommendPage firstCategory={firstCategory} />
                     ) : item.title === '전체' ? (
                       <AllStoresPage
                         stores={storeData}

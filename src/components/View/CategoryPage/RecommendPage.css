@@ -8,7 +8,7 @@
 
 .Recommend--ArticleBox {
   display: flex;
-  height: 13vh;
+  height: 17vh;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
@@ -18,5 +18,6 @@
   width: 50px;
 }
 .Recommend--ArticleBox p {
+  text-align: center;
   font-size: 1.1rem;
 }
