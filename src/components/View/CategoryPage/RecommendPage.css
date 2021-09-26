@@ -1,0 +1,22 @@
+.RecommendPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45vh;
+  width: var(--normalWidth);
+}
+
+.Recommend--ArticleBox {
+  display: flex;
+  height: 13vh;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Recommend--ArticleBox img {
+  width: 50px;
+}
+.Recommend--ArticleBox p {
+  font-size: 1.1rem;
+}

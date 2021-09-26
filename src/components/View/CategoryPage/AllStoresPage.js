@@ -1,9 +1,36 @@
 import React from 'react';
+import GridCard from '../../Grid/GridCard';
 
-const AllStoresPage = () => {
+const AllStoresPage = (props) => {
+  console.log(props);
   return (
-    <div>
-      <h1>모든 업체를 보여주는 페이지 입니다!</h1>
+    <div className='grid__wrapper'>
+      {props.stores.map((store) => {
+        if (
+          props.firstCategory === store.firstCategory[0] &&
+          props.locationCategory === '전체'
+        ) {
+          return (
+            <GridCard
+              key={store.id}
+              store={store}
+              tags={store.tags}
+              open={store.openHour}
+              close={store.closeHour}
+            ></GridCard>
+          );
+        } else if (store.eupmyeondongRi === props.locationCategory) {
+          return (
+            <GridCard
+              key={store.id}
+              store={store}
+              tags={store.tags}
+              open={store.openHour}
+              close={store.closeHour}
+            ></GridCard>
+          );
+        } else return null;
+      })}
     </div>
   );
 };

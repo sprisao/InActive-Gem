@@ -186,7 +186,11 @@ const NewCategoryPage = ({ history }) => {
                     {item.title === '추천' ? (
                       <RecommendPage />
                     ) : item.title === '전체' ? (
-                      <AllStoresPage />
+                      <AllStoresPage
+                        stores={storeData}
+                        locationCategory={locationCategory}
+                        firstCategory={firstCategory}
+                      />
                     ) : (
                       <div className='grid__wrapper'>
                         {storeData.map((store) => {
