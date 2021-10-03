@@ -19,7 +19,10 @@ const AllStoresPage = (props) => {
               close={store.closeHour}
             ></GridCard>
           );
-        } else if (store.eupmyeondongRi === props.locationCategory) {
+        } else if (
+          store.eupmyeondongRi === props.locationCategory &&
+          store.firstCategory[0] === props.firstCategory
+        ) {
           return (
             <GridCard
               key={store.id}
