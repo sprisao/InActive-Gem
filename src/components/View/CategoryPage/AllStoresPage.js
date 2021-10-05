@@ -2,7 +2,6 @@ import React from 'react';
 import GridCard from '../../Grid/GridCard';
 
 const AllStoresPage = (props) => {
-  console.log(props);
   return (
     <div className='grid__wrapper'>
       {props.stores.map((store) => {

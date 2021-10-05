@@ -7,6 +7,8 @@ import RecommendPage from './RecommendPage';
 import AllStoresPage from './AllStoresPage';
 import Footer from './../../Footer';
 
+import { HiBadgeCheck } from 'react-icons/hi';
+
 import { useGlobalContext } from '../../context';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -137,6 +139,7 @@ const NewCategoryPage = ({ history }) => {
               secondCategory={firstCategory}
               currentLocation={locationCategory}
             />
+
             <section className='SecondCategory-Container'>
               <div className='SecondCategory-Wrapper' ref={wrapperRef}>
                 {tabFilter.map((item) => {
@@ -191,6 +194,27 @@ const NewCategoryPage = ({ history }) => {
             return (
               <SwiperSlide data-history={item.id} key={item.id}>
                 <div className='CategoryGrid' style={{ margin: '0' }}>
+                  <div className='notice'>
+                    <span>
+                      <HiBadgeCheck
+                        style={{
+                          alignItems: 'center',
+                          color: '#f21d73',
+                          fontSize: '1.15rem',
+                        }}
+                      />
+                      는 젬에서 인증한{' '}
+                      <span
+                        style={{
+                          background:
+                            'linear-gradient(to top, #FFE400 50%, transparent 50% )',
+                        }}
+                      >
+                        로컬젬(지역명소)
+                      </span>{' '}
+                      표시입니다.
+                    </span>
+                  </div>
                   <section className='grid'>
                     {item.title === '추천' ? (
                       <RecommendPage firstCategory={firstCategory} />
@@ -209,7 +233,6 @@ const NewCategoryPage = ({ history }) => {
                                 <GridCard
                                   key={store.id}
                                   store={store}
-                                  tags={store.tags}
                                   open={store.openHour}
                                   close={store.closeHour}
                                 ></GridCard>
@@ -223,7 +246,6 @@ const NewCategoryPage = ({ history }) => {
                                 <GridCard
                                   key={store.id}
                                   store={store}
-                                  tags={store.tags}
                                   open={store.openHour}
                                   close={store.closeHour}
                                 ></GridCard>

@@ -1,9 +1,19 @@
 .CategorySwiper {
   min-height: 50vh;
-  margin-top: 11rem;
+  margin-top: 12rem;
   margin-bottom: 7.5rem;
 }
 
+.notice {
+  display: flex;
+  justify-content: end;
+  margin: 0 1rem;
+  font-size: 0.9rem;
+}
+
+.grid__wrapper {
+  margin-top: 0.5rem;
+}
 .swiper-container.CategorySwiper {
   display: flex;
   flex-direction: column;

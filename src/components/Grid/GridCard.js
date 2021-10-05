@@ -5,8 +5,19 @@ import { FiClock } from 'react-icons/fi';
 
 import './GridCard.css';
 
-const GridCard = ({ store, tags, open, close }) => {
+const GridCard = ({ store }) => {
   // 인증업체 필터
+  console.log(store.preRating);
+
+  let preRank;
+  if (store.preRating > 8) {
+    preRank = <span>🏅🏅🏅</span>;
+  } else if (store.preRating > 6) {
+    preRank = <span>🏅🏅</span>;
+  } else if (store.preRating > 3) {
+    preRank = <span>🏅</span>;
+  } else preRank = null;
+
   let verfiedStore;
   if (store.storeVerified === true) {
     verfiedStore = <HiBadgeCheck />;
@@ -14,11 +25,11 @@ const GridCard = ({ store, tags, open, close }) => {
 
   // 영업시간 필터
   let businessHour;
-  if (open) {
+  if (store.openHour) {
     businessHour = (
       <div className='quickInfos__businessHours'>
         <FiClock />
-        &nbsp;{open} ~ {close}
+        &nbsp;{store.openHour} ~ {store.closeHour}
       </div>
     );
   }
@@ -45,6 +56,7 @@ const GridCard = ({ store, tags, open, close }) => {
             {verfiedStore}
           </div>
           <div className='quickInfos'>
+            <div className='rating'>{preRank}</div>
             <div className='quickInfos__location'>
               <span>{store.miniAddress}</span>
               {branch}
