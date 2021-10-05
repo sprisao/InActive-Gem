@@ -245,14 +245,14 @@ const Information = (props) => {
           <div className='location__fullAddress'>
             <p
               style={{ cursor: 'pointer' }}
-              onClick={() => window.open(props.naverLink, '_parent')}
+              onClick={() => window.open(props.naverLink, '_blank')}
             >
               {props.naverLink}
             </p>
           </div>
           <button
             type='button'
-            onClick={() => window.open(props.naverLink, '_parent')}
+            onClick={() => window.open(props.naverLink, '_blank')}
           >
             <div className='copyBtn__container'>
               <FiLogOut style={{ fontSize: '1rem' }} />
