@@ -203,14 +203,14 @@ const NewCategoryPage = ({ history }) => {
                       }}
                     />
                     <span>
-                      는 젬에서 인증한{' '}
+                      는 젬에서 인증하는{' '}
                       <span
                         style={{
                           background:
                             'linear-gradient(to top, #FFE400 50%, transparent 50% )',
                         }}
                       >
-                        로컬젬(지역명소)
+                        지역명소(로컬젬)
                       </span>
                       입니다.
                     </span>
