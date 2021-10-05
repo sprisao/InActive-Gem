@@ -195,14 +195,14 @@ const NewCategoryPage = ({ history }) => {
               <SwiperSlide data-history={item.id} key={item.id}>
                 <div className='CategoryGrid' style={{ margin: '0' }}>
                   <div className='notice'>
+                    <HiBadgeCheck
+                      style={{
+                        alignItems: 'center',
+                        color: '#f21d73',
+                        fontSize: '1.15rem',
+                      }}
+                    />
                     <span>
-                      <HiBadgeCheck
-                        style={{
-                          alignItems: 'center',
-                          color: '#f21d73',
-                          fontSize: '1.15rem',
-                        }}
-                      />
                       는 젬에서 인증한{' '}
                       <span
                         style={{
@@ -211,8 +211,8 @@ const NewCategoryPage = ({ history }) => {
                         }}
                       >
                         로컬젬(지역명소)
-                      </span>{' '}
-                      표시입니다.
+                      </span>
+                      입니다.
                     </span>
                   </div>
                   <section className='grid'>
