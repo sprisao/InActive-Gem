@@ -184,14 +184,14 @@ const Information = (props) => {
           />
           <p
             style={{ cursor: 'pointer' }}
-            onClick={() => window.open(url + props.instagramAccount, '_blank')}
+            onClick={() => window.open(url + props.instagramAccount, '_parent')}
           >
             @{props.instagramAccount}
           </p>
 
           <button
             type='button'
-            onClick={() => window.open(url + props.instagramAccount, '_blank')}
+            onClick={() => window.open(url + props.instagramAccount, '_parent')}
           >
             <div className='copyBtn__container'>
               <FiLogOut style={{ fontSize: '1rem' }} />
