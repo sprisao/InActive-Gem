@@ -24,7 +24,7 @@ const CategoryHeader = ({ category, secondCategory, currentLocation }) => {
         <div className='Category__Header'>
           <Link to={`/`}>
             <button className='Category__Backward'>
-              <FiChevronLeft style={{ fontSize: '1.8rem' }} />
+              <FiChevronLeft style={{ fontSize: '1.8rem', color: '#000' }} />
             </button>
           </Link>
           <Link to={`/newcategorytest/${category}/전체/전체`}>
