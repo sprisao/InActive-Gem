@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
+import Header from '../../Header';
 import SearchBox from '../SearchPage/SearchBox';
 import SearchResults from '../SearchPage/SearchResults';
 import Home from '../../Home';
@@ -16,44 +17,28 @@ import './LandingPage.css';
 const LandingPage = (history) => {
   const { promoLoading } = useGlobalContext();
 
-  const [userInput, setUserInput] = useState('');
-
-  const getUserInput = (e) => {
-    const { value } = e.target;
-    console.log('입력받은 값', value);
-    setUserInput(value);
-  };
-
   if (promoLoading) {
     return <Loading />;
   } else {
-    if (userInput) {
-      return (
-        <>
-          <SearchBox getUserInput={getUserInput} />
-          <SearchResults userInput={userInput} />
-          <Footer />
-        </>
-      );
-    } else {
-      return (
-        <>
-          <SearchBox getUserInput={getUserInput} />
-          <BottomNavigation activatedButton={'home'} />
-          <Home history={history} />
-          <Separator />
-          <RCCMD
-            title='새로 등록된 곳'
-            slideType='type2'
-            view='newStores'
-            category='맛집'
-          />
+    return (
+      <>
+        <SearchBox history={history} />
+        {/* <Header /> */}
+        <BottomNavigation activatedButton={'home'} />
+        <Home history={history} />
+        <Separator />
+        <RCCMD
+          title='새로 등록된 곳'
+          slideType='type2'
+          view='newStores'
+          category='맛집'
+        />
 
-          <Footer />
-        </>
-      );
-    }
+        <Footer />
+      </>
+    );
   }
+  // }
 };
 
 export default LandingPage;

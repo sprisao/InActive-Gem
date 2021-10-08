@@ -135,7 +135,7 @@ html {
 
 *:focus {
   -webkit-tap-highlight-color: transparent;
-  outline: none;
+  outline-color: aqua;
   -ms-touch-action: manipulation;
   touch-action: manipulation;
 }

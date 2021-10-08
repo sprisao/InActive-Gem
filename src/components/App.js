@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 // import pages
 import LandingPage from './View/LandingPage/LandingPage';
 import EventsPage from './View/EventsPage/EventsPage';
+import SearchPage from './View/SearchPage/SearchPage';
 import NewCategoryPage from './View/CategoryPage/NewCategoryPage';
 import DetailsData from './View/DetailsPage/DetailsData';
 import Privacy from './Privacy';
@@ -20,6 +21,7 @@ function App() {
         <Switch>
           <Route exact path='/' component={LandingPage} />
           <Route exact path='/events' component={EventsPage} />
+          <Route exact path='/search/:input' component={SearchPage} /> =
           <Route
             path='/newcategorytest/:firstCategory/:locationCategory'
             component={NewCategoryPage}
@@ -27,7 +29,6 @@ function App() {
           <Route exact path='/privacy' component={Privacy} />
           <Route exact path='/useragreements' component={UserAgreements} />
           <Route exact path='/storeagreements' component={StoreAgreements} />
-
           <Route path='/store/:id' component={DetailsData} />
           <Route path='*' component={Error} />
         </Switch>

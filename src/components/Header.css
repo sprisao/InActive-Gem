@@ -4,13 +4,17 @@ header
 ============
 */
 .header {
-  margin-top: 1rem;
+  width: var(--width);
+  padding: 0 1rem;
+  padding-top: 47px;
+  background-color: aqua;
+  margin-bottom: 1rem;
 }
 
 .header__wrapper {
   display: flex;
   max-width: var(--normalWidth);
-  justify-content: center;
+  justify-content: space-between;
   padding-top: 0.9rem;
   align-items: center;
   margin: 0 auto;

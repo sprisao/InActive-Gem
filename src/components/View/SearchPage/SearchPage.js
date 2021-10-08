@@ -1,31 +1,17 @@
-import React, { useState } from 'react';
+import React from 'react';
+import SearchBox from './SearchBox';
 import SearchResults from './SearchResults';
+import BottomNavigation from '../../BottomNavigation/BottomNavigation';
+import { useParams } from 'react-router-dom';
 
-import './SearchPage.css';
-
-const SearchPage = () => {
-  const [userInput, setUserInput] = useState('');
-
-  const handleChange = (e) => {
-    const { value } = e.target;
-    setUserInput(value);
-  };
-
-  console.log(userInput);
-
+const SearchPage = (history) => {
+  const { input } = useParams();
   return (
-    <section className='searchPage'>
-      <div className='searchBox__container'>
-        <input
-          className='searchBox'
-          type='search'
-          name='search'
-          placeholder='가게이름 또는 메뉴를 검색해보세요! (예: 까치둥지, 알탕)'
-          onChange={handleChange}
-        />
-      </div>
-      <SearchResults userInput={userInput} />
-    </section>
+    <>
+      <BottomNavigation />
+      <SearchBox history={history} />
+      <SearchResults userInput={input} />
+    </>
   );
 };
 
