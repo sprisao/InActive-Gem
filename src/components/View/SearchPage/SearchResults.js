@@ -2,6 +2,7 @@ import React from 'react';
 import { useGlobalContext } from '../../context';
 import GridCard from '../../Grid/GridCard';
 import Noresults from './NoResults';
+import Footer from '../../Footer';
 
 import '../../Grid/Grid.css';
 
@@ -38,6 +39,7 @@ const SearchResults = (props) => {
             })}
           </section>
         </section>
+        <Footer />
       </>
     );
   }

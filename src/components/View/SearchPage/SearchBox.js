@@ -37,7 +37,9 @@ const SearchBox = ({ history }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    history.history.push(`/search/${userInput}`);
+    if (userInput) {
+      history.history.push(`/search/${userInput}`);
+    }
   };
   return (
     <section className='top'>
@@ -53,7 +55,8 @@ const SearchBox = ({ history }) => {
             ref={inputRef}
           />
           <div className='SubmitButtonCase' onClick={handleSubmit}>
-            <FiSearch style={{ fontSize: '1.5rem', strokeWidth: '2.75px' }} />
+            <span>검색</span>
+            {/* <FiSearch style={{ fontSize: '1.5rem', strokeWidth: '2.75px' }} /> */}
           </div>
           {/* <input type='submit' value='검색' /> */}
         </form>
