@@ -28,16 +28,18 @@ const NewCategoryPage = ({ history }) => {
   const { loading, secondCategories, restaurants, cafes, stores } =
     useGlobalContext();
 
-  let stateInit;
-  if (
-    firstCategory === '맛집' ||
-    firstCategory === '카페' ||
-    firstCategory === '호프・주점'
-  ) {
-    stateInit = '추천';
-  } else {
-    stateInit = '전체';
-  }
+  const [stateInit, setstateInit] = useState('전체');
+
+  // let stateInit;
+  // if (
+  //   firstCategory === '맛집' ||
+  //   firstCategory === '카페' ||
+  //   firstCategory === '호프・주점'
+  // ) {
+  //   stateInit = '추천';
+  // } else {
+  //   stateInit = '전체';
+  // }
 
   const [swiper, setSwiper] = useState(null);
   const [isActive, setIsActive] = useState(stateInit);
