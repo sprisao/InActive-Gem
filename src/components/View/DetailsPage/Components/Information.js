@@ -14,8 +14,6 @@ import {
 
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 
-import Separator from '../../../Separator';
-
 import Modal from './Modal';
 
 import './Information.css';

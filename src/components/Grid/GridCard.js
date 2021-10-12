@@ -44,7 +44,7 @@ const GridCard = ({ store }) => {
   }
 
   return (
-    <Link to={`/store/${store.id}/details/Info`} className=''>
+    <Link to={`/store/${store.id}/details`} className=''>
       <div className='gridCard'>
         <div className='gridCard__imageContainer'>
           <img src={store.images[0].url} alt={store.name} />

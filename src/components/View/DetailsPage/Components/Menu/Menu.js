@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Airtable from 'airtable';
+import Loading from './../../../../Loading';
 import './Menu.css';
 
 import { FiChevronDown } from 'react-icons/fi';
@@ -11,6 +12,7 @@ const base = new Airtable({
 
 const Menu = (props) => {
   const [menu, setMenu] = useState([]);
+  const [menuLoading, setMenuLoading] = useState(true);
   const item = [];
 
   useEffect(() => {
@@ -31,6 +33,7 @@ const Menu = (props) => {
           setMenu(item);
         },
         function done(err) {
+          setMenuLoading(false);
           if (err) {
             console.error(err);
             return;
@@ -45,37 +48,41 @@ const Menu = (props) => {
         <h2>대표메뉴</h2>
         <FiChevronDown style={{ fontSize: '1.5rem' }} />
       </div>
-      <div className='menu__background'>
-        {menu.map((item) => {
-          let englishName;
-          if (item.engMenu) {
-            englishName = (
-              <div className='english__menu__name'>
-                <p>{item.engMenu}</p>
+      {menuLoading ? (
+        <Loading />
+      ) : (
+        <div className='menu__background'>
+          {menu.map((item) => {
+            let englishName;
+            if (item.engMenu) {
+              englishName = (
+                <div className='english__menu__name'>
+                  <p>{item.engMenu}</p>
+                </div>
+              );
+            }
+            return (
+              <div className='menu__container' key={item.id}>
+                <div className='image__container'>
+                  <img src={item.menuImage[0].url} alt={item.menu} />
+                </div>
+                <div className='article__container'>
+                  <div className='menu__name'>
+                    <h4>{item.menu}</h4>
+                  </div>
+                  {englishName}
+                  <div className='menu__intro'>
+                    <p>{item.menuDesc}</p>
+                  </div>
+                  <div className='menu__price'>
+                    <span>{item.price}</span>
+                  </div>
+                </div>
               </div>
             );
-          }
-          return (
-            <div className='menu__container' key={item.id}>
-              <div className='image__container'>
-                <img src={item.menuImage[0].url} alt={item.menu} />
-              </div>
-              <div className='article__container'>
-                <div className='menu__name'>
-                  <h4>{item.menu}</h4>
-                </div>
-                {englishName}
-                <div className='menu__intro'>
-                  <p>{item.menuDesc}</p>
-                </div>
-                <div className='menu__price'>
-                  <span>{item.price}</span>
-                </div>
-              </div>
-            </div>
-          );
-        })}
-      </div>
+          })}
+        </div>
+      )}
     </section>
   );
 };

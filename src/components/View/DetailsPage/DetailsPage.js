@@ -12,7 +12,6 @@ import Separator from '../../Separator';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-// import Swiper core and required modules
 import SwiperCore, { Pagination, History } from 'swiper';
 import './DetailsPage.css';
 
@@ -20,20 +19,6 @@ import './DetailsPage.css';
 SwiperCore.use([Pagination, History]);
 
 const DetailsPage = ({ store, history }) => {
-  // const location = useLocation();
-  // const backPoint = location.state.userCell;
-  // console.log('uselocation', backPoint);
-
-  // let menu;
-  // if (store.isMenu === true) {
-  //   menu = (
-  //     <>
-  //       <Menu store={store.name} />
-  //       <Separator />
-  //     </>
-  //   );
-  // }
-
   let tab = ['정보'];
   let addPromo = [];
   let addMenu = [];
@@ -51,9 +36,6 @@ const DetailsPage = ({ store, history }) => {
     addEvents = ['이벤트'];
     tab = tab.concat(addEvents);
   }
-  // if (store.isPromotion && store.events) {
-  //   tab = ['큐레이션', '정보', '이벤트'];
-  // }
 
   const pagination = {
     clickable: true,
@@ -80,14 +62,13 @@ const DetailsPage = ({ store, history }) => {
         branch={store.branch}
       />
       <Swiper
+        initialSlide={0}
         spaceBetween={0}
         slidesPerView={1}
         pagination={pagination}
-        // hashNavigation={true}
         className='mySwiper'
         // onSlideChange={() => console.log('slide change')}
-        // onSwiper={(swiper) => console.log(swiper)}
-        initialSlide={0}
+        onSwiper={(swiper) => console.log(swiper)}
         autoHeight={true}
         history={{
           key: 'details',

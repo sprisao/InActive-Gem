@@ -43,6 +43,8 @@
 
 .CategoryGrid {
   margin-top: calc(8rem + 47px);
+  display: flex;
+  flex-direction: column;
 }
 /* dropdownmenu */
 
