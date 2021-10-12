@@ -25,8 +25,15 @@ smoothscroll.polyfill();
 
 const NewCategoryPage = ({ history }) => {
   const { firstCategory, locationCategory } = useParams();
-  const { loading, secondCategories, restaurants, cafes, stores } =
-    useGlobalContext();
+  const {
+    loading,
+    secondCategories,
+    restaurants,
+    cafes,
+    stores,
+    restaurantLoading,
+    cafesLoading,
+  } = useGlobalContext();
 
   const [stateInit, setstateInit] = useState('전체');
 
@@ -46,12 +53,17 @@ const NewCategoryPage = ({ history }) => {
 
   // Store Data 필터링
   let storeData;
+  let loadingCategory;
+
   if (firstCategory === '맛집') {
     storeData = restaurants;
+    loadingCategory = restaurantLoading;
   } else if (firstCategory === '카페') {
     storeData = cafes;
+    loadingCategory = cafesLoading;
   } else {
     storeData = stores;
+    loadingCategory = loading;
   }
 
   // FirstCategory 필터링
@@ -129,7 +141,10 @@ const NewCategoryPage = ({ history }) => {
     wrapperRef.current.scrollTo({ left: refPos, behavior: 'smooth' });
   };
 
-  if (loading) {
+  // 각 카테고리별 로딩 중인지 체크
+  //
+
+  if (loadingCategory) {
     return <Loading />;
   } else
     return (

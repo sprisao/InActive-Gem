@@ -2,12 +2,16 @@ import React from 'react';
 import { HiBadgeCheck } from 'react-icons/hi';
 import { Link } from 'react-router-dom';
 import { FiClock } from 'react-icons/fi';
+import { BiWon } from 'react-icons/bi';
 
 import './GridCard.css';
 
 const GridCard = ({ store }) => {
   // 인증업체 필터
-  console.log(store.preRating);
+
+  const onePersonPriceWon = (store.onePersonPrice * 1000).toLocaleString(
+    'ko-KR'
+  );
 
   let preRank;
   if (store.preRating > 8) {
@@ -51,15 +55,19 @@ const GridCard = ({ store }) => {
               return <span key={tag}>#{tag} </span>;
             })} */}
           </div>
+          <div className='quickInfos__location'>
+            <span>{store.miniAddress}</span>
+            {branch}
+          </div>
           <div className='storeName'>
             <h3>{store.name}</h3>
             {verfiedStore}
           </div>
           <div className='quickInfos'>
             <div className='rating'>{preRank}</div>
-            <div className='quickInfos__location'>
-              <span>{store.miniAddress}</span>
-              {branch}
+            <div className='onePersonPrice'>
+              <BiWon style={{ marginRight: '0.2rem', fontSize: '1..25rem' }} />
+              <span>{onePersonPriceWon} ~</span>
             </div>
             {businessHour}
           </div>
