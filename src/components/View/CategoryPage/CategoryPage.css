@@ -6,7 +6,7 @@
 
 .notice {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   margin: 0 1rem;
   font-size: 0.9rem;
 }
@@ -26,7 +26,7 @@
   overflow-x: scroll;
   white-space: nowrap;
   position: relative;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   bottom: 0;
   padding: 0.85rem 0;

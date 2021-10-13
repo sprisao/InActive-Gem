@@ -2,10 +2,12 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 // import pages
+import LoginPage from './View/LoginPage/LoginPage';
+import RegisterPage from './View/LoginPage/RegisterPage';
 import LandingPage from './View/LandingPage/LandingPage';
 import EventsPage from './View/EventsPage/EventsPage';
 import SearchPage from './View/SearchPage/SearchPage';
-import NewCategoryPage from './View/CategoryPage/NewCategoryPage';
+import CategoryPage from './View/CategoryPage/CategoryPage';
 import DetailsData from './View/DetailsPage/DetailsData';
 import Privacy from './Privacy';
 import UserAgreements from './UserAgreements';
@@ -20,11 +22,13 @@ function App() {
       <ScrollToTop>
         <Switch>
           <Route exact path='/' component={LandingPage} />
+          <Route exact path='/login' component={LoginPage} />
+          <Route exact path='/register' component={RegisterPage} />
           <Route exact path='/events' component={EventsPage} />
           <Route exact path='/search/:input' component={SearchPage} /> =
           <Route
-            path='/newcategorytest/:firstCategory/:locationCategory'
-            component={NewCategoryPage}
+            path='/category/:firstCategory/:locationCategory'
+            component={CategoryPage}
           />
           <Route exact path='/privacy' component={Privacy} />
           <Route exact path='/useragreements' component={UserAgreements} />

@@ -11,7 +11,7 @@ const Home = ({ history }) => {
     <section className='new__Navigation'>
       <div className='Navigation__Container'>
         <div className='FirstGrid__Wrap'>
-          <Link to={`/newcategorytest/맛집/전체/전체`}>
+          <Link to={`/category/맛집/전체/전체`}>
             <div className='FirstGrid__Item'>
               <div className='Navigation__Item__Header'>
                 <p>맛집</p>
@@ -40,7 +40,7 @@ const Home = ({ history }) => {
               </div>
             </div>
           </Link>
-          <Link to={`/newcategorytest/카페/전체/전체`}>
+          <Link to={`/category/카페/전체/전체`}>
             <div className='FirstGrid__Item'>
               <div className='Navigation__Item__Header'>
                 <p>카페</p>
@@ -69,7 +69,7 @@ const Home = ({ history }) => {
           </Link>
         </div>
         <div className='ThirdGrid__Wrap'>
-          <Link to={`/newcategorytest/호프・주점/전체`}>
+          <Link to={`/category/호프・주점/전체`}>
             <div className='ThirdGrid__Item'>
               <div className='Navigation__Item__Header'>
                 <p>호프·주점</p>
@@ -82,7 +82,7 @@ const Home = ({ history }) => {
               </div>
             </div>
           </Link>
-          <Link to={`/newcategorytest/운동・헬스/전체`}>
+          <Link to={`/category/운동・헬스/전체`}>
             <div className='ThirdGrid__Item'>
               <div className='Navigation__Item__Header'>
                 <p>운동·헬스</p>
@@ -95,7 +95,7 @@ const Home = ({ history }) => {
               </div>
             </div>
           </Link>
-          <Link to={`/newcategorytest/미용・뷰티/전체`}>
+          <Link to={`/category/미용・뷰티/전체`}>
             <div className='ThirdGrid__Item'>
               <div className='Navigation__Item__Header'>
                 <p>미용·뷰티</p>
@@ -108,7 +108,7 @@ const Home = ({ history }) => {
               </div>
             </div>
           </Link>
-          <Link to={`/newcategorytest/스튜디오/전체`}>
+          <Link to={`/category/스튜디오/전체`}>
             <div className='ThirdGrid__Item'>
               <div className='Navigation__Item__Header'>
                 <p>스튜디오</p>
@@ -121,7 +121,7 @@ const Home = ({ history }) => {
               </div>
             </div>
           </Link>
-          <Link to={`/newcategorytest/반려동물/전체`}>
+          <Link to={`/category/반려동물/전체`}>
             <div className='ThirdGrid__Item'>
               <div className='Navigation__Item__Header'>
                 <p>반려동물</p>
@@ -134,7 +134,7 @@ const Home = ({ history }) => {
               </div>
             </div>
           </Link>
-          <Link to={`/newcategorytest/꽃/전체`}>
+          <Link to={`/category/꽃/전체`}>
             <div className='ThirdGrid__Item'>
               <div className='Navigation__Item__Header'>
                 <p>꽃</p>
@@ -147,7 +147,7 @@ const Home = ({ history }) => {
               </div>
             </div>
           </Link>
-          <Link to={`/newcategorytest/키즈/전체`}>
+          <Link to={`/category/키즈/전체`}>
             <div className='ThirdGrid__Item'>
               <div className='Navigation__Item__Header'>
                 <p>키즈</p>
@@ -160,7 +160,7 @@ const Home = ({ history }) => {
               </div>
             </div>
           </Link>
-          <Link to={`/newcategorytest/교육・학원/전체`}>
+          <Link to={`/category/교육・학원/전체`}>
             <div className='ThirdGrid__Item'>
               <div className='Navigation__Item__Header'>
                 <p>교육·학원</p>
@@ -175,7 +175,7 @@ const Home = ({ history }) => {
           </Link>
         </div>
         <div className='HOEX__Wrap'>
-          <Link to={`/newcategorytest/병원・약국/전체/전체`}>
+          <Link to={`/category/병원・약국/전체/전체`}>
             <div className='HOEX-Button'>
               <div className='Navigation__Item__Header'>
                 <p>병원·약국</p>

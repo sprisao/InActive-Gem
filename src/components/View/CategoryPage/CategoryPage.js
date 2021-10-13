@@ -1,11 +1,10 @@
-import React, { useRef, useState, useEffect } from 'react';
-import BottomNavigation from '../../BottomNavigation/BottomNavigation';
+import React, { useRef, useState } from 'react';
 import CategoryHeader from './CategoryPageComponent/CategoryHeader';
 import GridCard from '../../Grid/GridCard';
 import Loading from '../../Loading';
 import RecommendPage from './RecommendPage';
 import AllStoresPage from './AllStoresPage';
-import Footer from './../../Footer';
+import Footer from '../../Footer';
 
 import { HiBadgeCheck } from 'react-icons/hi';
 
@@ -17,13 +16,13 @@ import SwiperCore, { Pagination, History } from 'swiper';
 import smoothscroll from 'smoothscroll-polyfill';
 
 import { useParams } from 'react-router-dom';
-import './NewCategoryPage.css';
+import './CategoryPage.css';
 
 SwiperCore.use([Pagination, History]);
 
 smoothscroll.polyfill();
 
-const NewCategoryPage = ({ history }) => {
+const CategoryPage = ({ history }) => {
   const { firstCategory, locationCategory } = useParams();
   const {
     loading,
@@ -283,4 +282,4 @@ const NewCategoryPage = ({ history }) => {
     );
 };
 
-export default NewCategoryPage;
+export default CategoryPage;

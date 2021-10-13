@@ -48,7 +48,6 @@ const SecondCategory = (props) => {
                       ? 'SecondCategory__item__clicked'
                       : 'SecondCategory__item'
                   }
-                  // onClick={() => onFocus(secondCategory.title)}
                 >
                   {secondCategory.emoji}&nbsp;{secondCategory.title}
                 </button>
