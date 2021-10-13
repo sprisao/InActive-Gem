@@ -1,8 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
-import Header from '../../Header';
 import SearchBox from '../SearchPage/SearchBox';
-import SearchResults from '../SearchPage/SearchResults';
 import Home from '../../Home';
 import RCCMD from './Sections/RCCMD/RCCMD';
 import BottomNavigation from '../../BottomNavigation/BottomNavigation';
