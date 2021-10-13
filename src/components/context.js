@@ -12,12 +12,12 @@ require('dotenv').config();
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
-  authDomain: 'gem-web-app.firebaseapp.com',
-  projectId: 'gem-web-app',
-  storageBucket: 'gem-web-app.appspot.com',
-  messagingSenderId: '244888179912',
-  appId: '1:244888179912:web:89f9c3d98c9accb0d701fd',
-  measurementId: 'G-B6WV89H0L0',
+  authDomain: process.env.REACT_APP_FIREBASE_AUTHDOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECTID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGEBUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGINGSENDERID,
+  appId: process.env.REACT_APP_FIREBASE_APPID,
+  measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENTID,
 };
 
 // Initialize Firebase
