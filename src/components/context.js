@@ -5,6 +5,7 @@ import Airtable from 'airtable';
 import { initializeApp } from 'firebase/app';
 import { getAnalytics } from 'firebase/analytics';
 import { getDatabase } from 'firebase/database';
+
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -13,6 +14,8 @@ import { getDatabase } from 'firebase/database';
 const firebaseConfig = {
   apiKey: 'AIzaSyBG5blnL2Sg_YMV71JAjzkUKm1a9T52Fz8',
   authDomain: 'gem-web-app.firebaseapp.com',
+  databaseURL:
+    'https://gem-web-app-default-rtdb.asia-southeast1.firebasedatabase.app',
   projectId: 'gem-web-app',
   storageBucket: 'gem-web-app.appspot.com',
   messagingSenderId: '244888179912',

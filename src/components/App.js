@@ -1,5 +1,10 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  useHistory,
+} from 'react-router-dom';
 
 // import pages
 import LoginPage from './View/LoginPage/LoginPage';
@@ -13,12 +18,38 @@ import Privacy from './Privacy';
 import UserAgreements from './UserAgreements';
 import StoreAgreements from './StoreAgreements';
 import Error from './View/ErrorPage/Error';
+import Loading from './Loading';
 
 import ScrollToTop from './ScrollToTop';
 
+import { getAuth } from 'firebase/auth';
+import { useDispatch, useSelector } from 'react-redux';
+import { setUser, clearUser } from '../redux/actions/user_actions';
+
+const auth = getAuth();
 function App() {
-  return (
-    <Router>
+  let dispatch = useDispatch();
+  let history = useHistory();
+
+  const isLoading = useSelector((state) => state.user.isLoading);
+  console.log(history);
+  useEffect(() => {
+    auth.onAuthStateChanged((user) => {
+      // 로그인 상태를 Redux로 이동
+      if (user) {
+        history.push('/');
+        dispatch(setUser(user));
+      } else {
+        history.push('/login');
+        dispatch(clearUser(user));
+      }
+    });
+  }, []);
+
+  if (isLoading) {
+    return <Loading />;
+  } else
+    return (
       <ScrollToTop>
         <Switch>
           <Route exact path='/' component={LandingPage} />
@@ -37,8 +68,7 @@ function App() {
           <Route path='*' component={Error} />
         </Switch>
       </ScrollToTop>
-    </Router>
-  );
+    );
 }
 
 export default App;

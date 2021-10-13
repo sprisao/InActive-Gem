@@ -13,7 +13,6 @@ const LoginPage = () => {
   const [loading, setLoading] = useState(false);
 
   const onSubmit = (data) => {
-    console.log(data);
     const auth = getAuth();
     signInWithEmailAndPassword(auth, data.email, data.password)
       .then((userCredential) => {

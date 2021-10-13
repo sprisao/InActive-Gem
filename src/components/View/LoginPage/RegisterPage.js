@@ -20,57 +20,50 @@ const RegisterPage = () => {
     handleSubmit,
   } = useForm({ mode: 'onChange' });
   const [loading, setLoading] = useState(false);
-  const [createdUser, setCreatedUser] = useState('');
 
   const password = useRef();
   password.current = watch('password');
 
   const onSubmit = async (data) => {
     setLoading(true);
-
     // 인증 진행
     const auth = getAuth();
-    createUserWithEmailAndPassword(auth, data.email, data.password)
+    await createUserWithEmailAndPassword(auth, data.email, data.password)
       .then((userCredential) => {
-        setLoading(false);
         // Signed in
-        setCreatedUser(userCredential.user);
-        console.log('사용자', createdUser);
+        const user = userCredential.user;
+        console.log(user);
         // ...
+        updateProfile(auth.currentUser, {
+          displayName: user.name,
+          photoURL:
+            'https://www.nicepng.com/png/full/136-1366211_group-of-10-guys-login-user-icon-png.png',
+        })
+          .then(() => {
+            console.log('profile updated!!');
+          })
+          .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            // ..
+            console.log(errorCode);
+            console.log(errorMessage);
+          });
+
+        const db = getDatabase();
+        set(ref(db, 'users/' + user.uid), {
+          username: data.name,
+          email: data.email,
+          profile_picture: user.photoURL,
+        });
       })
       .catch((error) => {
-        setLoading(false);
         const errorCode = error.code;
         const errorMessage = error.message;
         // ..
-        console.log(errorCode);
-        console.log(errorMessage);
       });
 
     // 추가 정보 업데이트
-
-    updateProfile(auth.currentUser, {
-      displayName: data.name,
-      photoURL:
-        'https://www.nicepng.com/png/full/136-1366211_group-of-10-guys-login-user-icon-png.png',
-    })
-      .then(() => {
-        console.log('profile updated!!');
-      })
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        // ..
-        console.log(errorCode);
-        console.log(errorMessage);
-      });
-
-    const db = getDatabase();
-    set(ref(db, 'users/' + createdUser.uid), {
-      username: data.name,
-      email: data.email,
-      profile_picture: createdUser.photoURL,
-    });
   };
   return (
     <div className='auth-wrapper'>
