@@ -5,10 +5,6 @@ import './Footer.css';
 
 const url = 'https://www.gogogem.io';
 
-const appstoreUrl = 'https://apps.apple.com/us/app/gem%EC%A0%AC/id1576464783';
-const playstoreUrl =
-  'https://play.google.com/store/apps/details?id=com.brucecompany.gem&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1';
-
 const Footer = () => {
   const [copied, setCopied] = useState(false);
   const [isShowing, setIsShowing] = useState(false);

@@ -1,7 +1,140 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { useForm } from 'react-hook-form';
+
+import './RegisterPage.css';
+
+// Import the functions you need from the SDKs you need
+import {
+  getAuth,
+  createUserWithEmailAndPassword,
+  updateProfile,
+} from 'firebase/auth';
+import { getDatabase, ref, set } from 'firebase/database';
 
 const RegisterPage = () => {
-  return <div>RegisterPage</div>;
+  const {
+    register,
+    watch,
+    formState: { errors },
+    handleSubmit,
+  } = useForm({ mode: 'onChange' });
+  const [loading, setLoading] = useState(false);
+  const [createdUser, setCreatedUser] = useState('');
+
+  const password = useRef();
+  password.current = watch('password');
+
+  const onSubmit = async (data) => {
+    setLoading(true);
+
+    // 인증 진행
+    const auth = getAuth();
+    createUserWithEmailAndPassword(auth, data.email, data.password)
+      .then((userCredential) => {
+        setLoading(false);
+        // Signed in
+        setCreatedUser(userCredential.user);
+        console.log('사용자', createdUser);
+        // ...
+      })
+      .catch((error) => {
+        setLoading(false);
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        // ..
+        console.log(errorCode);
+        console.log(errorMessage);
+      });
+
+    // 추가 정보 업데이트
+
+    updateProfile(auth.currentUser, {
+      displayName: data.name,
+      photoURL:
+        'https://www.nicepng.com/png/full/136-1366211_group-of-10-guys-login-user-icon-png.png',
+    })
+      .then(() => {
+        console.log('profile updated!!');
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        // ..
+        console.log(errorCode);
+        console.log(errorMessage);
+      });
+
+    const db = getDatabase();
+    set(ref(db, 'users/' + createdUser.uid), {
+      username: data.name,
+      email: data.email,
+      profile_picture: createdUser.photoURL,
+    });
+  };
+  return (
+    <div className='auth-wrapper'>
+      <div style={{ textAlign: 'center' }}>
+        <h3>가입하기</h3>
+      </div>
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <label>Email</label>
+        <input
+          name='email'
+          type='email'
+          {...register('email', { required: true, pattern: /^\S+@\S+$/i })}
+        />
+        {errors.email && <p>이메일은 필수입력 사항입니다.</p>}
+
+        <label>Name</label>
+        <input
+          name='name'
+          type='name'
+          {...register('name', { required: true, maxLength: 7 })}
+        />
+        {errors.name && errors.name.type === 'required' && (
+          <p>이름은 필수입력 사항입니다.</p>
+        )}
+        {errors.name && errors.name.type === 'maxLength' && (
+          <p>이름은 7자 이상 사용하실 수 없습니다.</p>
+        )}
+        {errors.name === 'maxLength' && <p>Your input exceed maximum length</p>}
+
+        <label>Password</label>
+        <input
+          name='password'
+          type='password'
+          {...register('password', { required: true, minLength: 6 })}
+        />
+        {errors.password && errors.password.type === 'required' && (
+          <p>비밀번호는 필수입력 사항입니다.</p>
+        )}
+        {errors.password && errors.password.type === 'minLength' && (
+          <p>Password must have at least 6 Len</p>
+        )}
+
+        <label>Password Confirm</label>
+        <input
+          name='password_confirm'
+          type='password'
+          {...register('password_confirm', {
+            required: true,
+            validate: (value) => value === password.current,
+          })}
+        />
+        {errors.password_confirm &&
+          errors.password_confirm.type === 'required' && (
+            <p>비밀번호는 필수입력 사항입니다.</p>
+          )}
+        {errors.password_confirm &&
+          errors.password_confirm.type === 'validate' && (
+            <p>입력하신 비밀번호와 일치하지 않습니다</p>
+          )}
+        <input type='submit' disabled={loading} />
+        <Link to='login'>이미 아이디가 있다면</Link>
+      </form>
+    </div>
+  );
 };
 
 export default RegisterPage;
