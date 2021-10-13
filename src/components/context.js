@@ -1,7 +1,29 @@
 import React, { useState, useContext, useEffect } from 'react';
 import Airtable from 'airtable';
 
+// Import the functions you need from the SDKs you need
+import { initializeApp } from 'firebase/app';
+import { getAnalytics } from 'firebase/analytics';
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
 require('dotenv').config();
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: 'gem-web-app.firebaseapp.com',
+  projectId: 'gem-web-app',
+  storageBucket: 'gem-web-app.appspot.com',
+  messagingSenderId: '244888179912',
+  appId: '1:244888179912:web:89f9c3d98c9accb0d701fd',
+  measurementId: 'G-B6WV89H0L0',
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+
 const storeBase = new Airtable({
   apiKey: process.env.REACT_APP_AIRTABLE_API_KEY,
 }).base('app0tAUATUh8jBxX4');
