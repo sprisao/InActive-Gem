@@ -7,23 +7,23 @@ import { getAnalytics } from 'firebase/analytics';
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
-require('dotenv').config();
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
-  authDomain: process.env.REACT_APP_FIREBASE_AUTHDOMAIN,
-  projectId: process.env.REACT_APP_FIREBASE_PROJECTID,
-  storageBucket: process.env.REACT_APP_FIREBASE_STORAGEBUCKET,
-  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGINGSENDERID,
-  appId: process.env.REACT_APP_FIREBASE_APPID,
-  measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENTID,
+  apiKey: 'AIzaSyBG5blnL2Sg_YMV71JAjzkUKm1a9T52Fz8',
+  authDomain: 'gem-web-app.firebaseapp.com',
+  projectId: 'gem-web-app',
+  storageBucket: 'gem-web-app.appspot.com',
+  messagingSenderId: '244888179912',
+  appId: '1:244888179912:web:89f9c3d98c9accb0d701fd',
+  measurementId: 'G-B6WV89H0L0',
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 
+require('dotenv').config();
 const storeBase = new Airtable({
   apiKey: process.env.REACT_APP_AIRTABLE_API_KEY,
 }).base('app0tAUATUh8jBxX4');
