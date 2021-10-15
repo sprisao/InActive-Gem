@@ -4,24 +4,11 @@ import { FiHome } from 'react-icons/fi';
 import { BsFillLightningFill } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 
-import { getAuth, signOut } from 'firebase/auth';
-
 import './BottomNavigation.css';
 
 const BottomNavigation = (props) => {
   var IorA = navigator.userAgent.toLowerCase();
 
-  const handleLogout = () => {
-    const auth = getAuth();
-    signOut(auth)
-      .then(() => {
-        // Sign-out successful.ㅇ
-        console.log('로그아웃 되었습니다');
-      })
-      .catch((error) => {
-        // An error happened.
-      });
-  };
   return (
     <div className='BottomNavigation'>
       <div
@@ -59,7 +46,7 @@ const BottomNavigation = (props) => {
           className={`BottomNavi-wrapper__ButtonContainer activatedButton
         ${props.activatedButton === 'events' ? 'active' : null}`}
         >
-          <button className='BottomNavi-Button' onClick={handleLogout}>
+          <button className='BottomNavi-Button'>
             <BsFillLightningFill
               style={{
                 fontSize: '1.55rem',
