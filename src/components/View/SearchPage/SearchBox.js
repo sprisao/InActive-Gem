@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import { useGlobalContext } from '../../context';
+
+import { FaUserCircle, FaBell } from 'react-icons/fa';
+import { RiSearchLine } from 'react-icons/ri';
 import './SearchBox.css';
 
 const SearchBox = ({ history }) => {
@@ -19,20 +22,26 @@ const SearchBox = ({ history }) => {
     }
   };
   return (
-    <section className='top'>
-      <div className='SearchBox'>
-        <form className='SearchBox__Container' onSubmit={handleSubmit}>
+    <section className='SearchBox-Wrapper'>
+      <div className='SearchBox__Container'>
+        <form className='SearchBox' onSubmit={handleSubmit}>
           <input
             className='inputBox'
             type='search'
             name='search'
-            placeholder='가게이름 또는 메뉴를 검색해보세요!'
+            placeholder='가게이름 또는 메뉴로 검색'
             onChange={sendUserInput}
           />
           <div className='SubmitButtonCase' onClick={handleSubmit}>
-            <span>검색</span>
+            <RiSearchLine />
           </div>
         </form>
+      </div>
+      <div className='Notification_Button'>
+        <FaBell />
+      </div>
+      <div className='Profile_Button'>
+        <FaUserCircle />
       </div>
     </section>
   );
