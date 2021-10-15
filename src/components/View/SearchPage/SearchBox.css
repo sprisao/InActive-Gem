@@ -40,6 +40,7 @@
   font-size: 2.5rem;
   padding: 0 1.25rem;
   justify-content: flex-end;
+  cursor: pointer;
 }
 
 .Profile_Button {
@@ -49,6 +50,15 @@
   color: #a7a7a7;
   font-size: 3rem;
   position: relative;
+  cursor: pointer;
+}
+
+.Notification_Button:hover {
+  color: #2a2a2a;
+}
+
+.Profile_Button:hover {
+  color: #2a2a2a;
 }
 
 .inputBox {
@@ -142,5 +152,5 @@ input::placeholder {
 }
 
 .Profile_Drop_Menu li button:hover {
-  color: #838383;
+  color: #161616;
 }

@@ -26,44 +26,37 @@ const RegisterPage = () => {
 
   const onSubmit = async (data) => {
     setLoading(true);
-    // 인증 진행
+
     const auth = getAuth();
     await createUserWithEmailAndPassword(auth, data.email, data.password)
       .then((userCredential) => {
         // Signed in
         const user = userCredential.user;
-        console.log(user);
-        // ...
-        updateProfile(auth.currentUser, {
-          displayName: user.name,
-          photoURL:
-            'https://www.nicepng.com/png/full/136-1366211_group-of-10-guys-login-user-icon-png.png',
-        })
-          .then(() => {
-            console.log('profile updated!!');
-          })
-          .catch((error) => {
-            const errorCode = error.code;
-            const errorMessage = error.message;
-            // ..
-            console.log(errorCode);
-            console.log(errorMessage);
-          });
-
-        const db = getDatabase();
-        set(ref(db, 'users/' + user.uid), {
-          username: data.name,
-          email: data.email,
-          profile_picture: user.photoURL,
-        });
       })
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
-        // ..
       });
 
-    // 추가 정보 업데이트
+    await updateProfile(auth.currentUser, {
+      displayName: data.name,
+      photoURL: 'https://example.com/jane-q-user/profile.jpg',
+    })
+      .then(() => {
+        // Profile updated!
+      })
+      .catch((error) => {
+        // An error occurred
+        // ...
+      });
+
+    const user = auth.currentUser;
+    const db = getDatabase();
+    await set(ref(db, 'users/' + user.uid), {
+      username: user.displayName,
+      email: user.email,
+      profile_picture: user.photoURL,
+    });
   };
   return (
     <div className='auth-wrapper'>
