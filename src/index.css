@@ -88,6 +88,7 @@ html {
   --normalWidth: 100%;
   --maxWidth: 100%;
   --fullWidth: 100%;
+  --activeColor: #f21d73;
 }
 
 @media screen and (min-width: 430px) {

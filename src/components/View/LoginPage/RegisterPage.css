@@ -1,8 +1,10 @@
 .auth-wrapper {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  width: var(--width);
   justify-content: center;
+  padding: 0 1.25rem;
+  margin-top: 100px;
 }
 
 .auth-wrapper body {
@@ -13,7 +15,7 @@
 }
 
 .auth-wrapper form {
-  width: 375px;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -21,7 +23,7 @@
   font-weight: 100;
   text-align: center;
   padding-bottom: 10px;
-  border-bottom: 1px solid rgb(79, 98, 148);
+  border-bottom: 1px solid rgb(255, 27, 114);
 }
 
 .auth-wrapper .form {
@@ -31,7 +33,7 @@
 }
 
 .auth-wrapper p {
-  color: #bf1650;
+  color: var(--activeColor);
 }
 
 .auth-wrapper p::before {
@@ -43,15 +45,17 @@
   display: block;
   box-sizing: border-box;
   width: 100%;
-  border-radius: 4px;
-  border: 1px solid rgb(32, 32, 32);
-  padding: 10px 15px;
-  margin-bottom: 10px;
+  border-radius: 0.5rem;
+  border: 1px solid #0e101c;
+  padding: 1rem 1rem;
+  margin-bottom: 0.25rem;
   font-size: 14px;
 }
 
 .auth-wrapper label {
   line-height: 2;
+  margin-top: 1rem;
+  margin-left: 0.25rem;
   text-align: left;
   display: block;
 
@@ -61,7 +65,7 @@
 
 .auth-wrapper button[type='submit'],
 input[type='submit'] {
-  background: #7a84eb;
+  background: var(--activeColor);
   color: white;
   text-transform: uppercase;
   border: none;
@@ -74,7 +78,7 @@ input[type='submit'] {
 
 .auth-wrapper button[type='submit']:hover,
 input[type='submit']:hover {
-  background: #5f69df;
+  background: #ff008c;
 }
 
 .auth-wrapper button[type='submit']:active,
@@ -124,4 +128,12 @@ input[type='submit'] {
   text-transform: uppercase;
   padding: 10px 20px;
   border-radius: 4px;
+}
+
+.agreement-check {
+  display: flex;
+}
+
+input#checkbox-input {
+  width: 3rem;
 }
