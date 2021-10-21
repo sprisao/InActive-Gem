@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 import DetailsNavi from './Components/DetailsNavi';
 import ImageBox from './Components/DetailsImages';
@@ -13,12 +13,16 @@ import Separator from '../../Separator';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import SwiperCore, { Pagination, History } from 'swiper';
+import { getFirestore, doc, getDoc } from 'firebase/firestore';
+import { getAuth } from 'firebase/auth';
 import './DetailsPage.css';
 
 // install Swiper modules
 SwiperCore.use([Pagination, History]);
 
 const DetailsPage = ({ store, history }) => {
+  const [bookmarked, setBookmarked] = useState(false);
+
   let tab = ['정보'];
   let addPromo = [];
   let addMenu = [];
@@ -44,6 +48,28 @@ const DetailsPage = ({ store, history }) => {
     },
   };
 
+  const db = getFirestore();
+  const auth = getAuth();
+  const user = auth.currentUser;
+  const docRef = doc(db, 'users', user.uid);
+
+  useEffect(() => {
+    getDoc(doc(db, 'users', user.uid)).then((docSnap) => {
+      if (docSnap.exists()) {
+        docSnap.data().bookmarks.includes(store.id)
+          ? setBookmarked(true)
+          : setBookmarked(false);
+        console.log(docSnap.data().bookmarks);
+      } else {
+        console.log('No such document!');
+      }
+    });
+  }, [bookmarked]);
+
+  const getBookmarkClick = (value) => {
+    setBookmarked(value);
+  };
+
   return (
     <section className='detailsPage'>
       <DetailsNavi
@@ -61,6 +87,8 @@ const DetailsPage = ({ store, history }) => {
         locationCategory={store.eupmyeondongRi}
         storeVerified={store.storeVerified}
         branch={store.branch}
+        bookmark={bookmarked}
+        getBookmarkClick={getBookmarkClick}
       />
       <Swiper
         initialSlide={0}

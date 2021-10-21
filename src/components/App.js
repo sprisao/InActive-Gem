@@ -27,12 +27,14 @@ import { useDispatch, useSelector } from 'react-redux';
 import { setUser, clearUser } from '../redux/actions/user_actions';
 
 const auth = getAuth();
+const user = auth.currentUser;
+
 function App() {
   let dispatch = useDispatch();
   let history = useHistory();
 
   const isLoading = useSelector((state) => state.user.isLoading);
-  console.log(history);
+
   useEffect(() => {
     auth.onAuthStateChanged((user) => {
       // 로그인 상태를 Redux로 이동
