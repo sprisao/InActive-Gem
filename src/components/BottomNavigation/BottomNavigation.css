@@ -13,20 +13,20 @@
   justify-content: space-between;
   background-color: #f6f6f6;
   box-shadow: 0 0 0.35rem rgb(168, 168, 168);
-  padding-bottom: 0.75rem;
+  padding: 0 0.3rem 0.75rem;
   border-radius: 2rem 2rem 0 0;
 }
 
 .BottomNavi-wrapper.iPhone {
-  height: 6.25rem;
+  height: 8.25rem;
 }
 
 .BottomNavi-wrapper.Android {
-  height: 5.25rem;
+  height: 8.25rem;
 }
 
 .BottomNavi-wrapper.Web {
-  height: 4.75rem;
+  height: 7.75rem;
 }
 
 .BottomNavi-wrapper__ButtonContainer.active button {
@@ -47,6 +47,7 @@
   cursor: pointer;
   display: flex;
   justify-content: center;
+  align-items: flex-start;
   padding-top: 1.5rem;
   background-color: transparent;
   border: none;
@@ -57,4 +58,19 @@
 
 .BottomNavi-wrapper__ButtonContainer.active .BottomNavi-ButtonIcon-Event {
   color: #f4bb00;
+}
+.BottomNavi-wrapper__ButtonContainer.active .BottomNavi-ButtonIcon-Bookmarks {
+  color: var(--activeColor);
+}
+
+.Button-Wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Button-Wrapper span {
+  margin-top: 0.5rem;
+  font-size: 1.15rem;
 }

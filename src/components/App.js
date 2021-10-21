@@ -11,6 +11,7 @@ import LoginPage from './View/LoginPage/LoginPage';
 import RegisterPage from './View/LoginPage/RegisterPage';
 import LandingPage from './View/LandingPage/LandingPage';
 import EventsPage from './View/EventsPage/EventsPage';
+import BookmarkPage from './View/BookmarkPage/BookmarkPage';
 import SearchPage from './View/SearchPage/SearchPage';
 import CategoryPage from './View/CategoryPage/CategoryPage';
 import DetailsData from './View/DetailsPage/DetailsData';
@@ -58,6 +59,7 @@ function App() {
           <Route exact path='/login' component={LoginPage} />
           <Route exact path='/register' component={RegisterPage} />
           <Route exact path='/events' component={EventsPage} />
+          <Route exact path='/bookmarks' component={BookmarkPage} />
           <Route exact path='/search/:input' component={SearchPage} /> =
           <Route
             path='/category/:firstCategory/:locationCategory'

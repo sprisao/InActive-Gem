@@ -50,11 +50,7 @@ const GridCard = ({ store }) => {
           <img src={store.images[0].url} alt={store.name} />
         </div>
         <div className='gridCard__articleContainer'>
-          <div className='tags'>
-            {/* {tags.map((tag) => {
-              return <span key={tag}>#{tag} </span>;
-            })} */}
-          </div>
+          <div className='tags'></div>
           <div className='quickInfos__location'>
             <span>{store.miniAddress}</span>
             {branch}

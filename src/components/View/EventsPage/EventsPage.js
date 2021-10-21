@@ -49,7 +49,6 @@ const EventsPage = (history) => {
           </section>
         </div>
         <BottomNavigation activatedButton={'events'} />
-        <Footer />
       </>
     );
   }

@@ -1,7 +1,12 @@
 import React from 'react';
 
 import { FiHome } from 'react-icons/fi';
-import { BsFillLightningFill } from 'react-icons/bs';
+import {
+  BsBookmark,
+  BsBookmarkFill,
+  BsLightningFill,
+  BsFillHouseDoorFill,
+} from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 
 import './BottomNavigation.css';
@@ -30,32 +35,49 @@ const BottomNavigation = (props) => {
         `}
         >
           <button className='BottomNavi-Button'>
-            <FiHome
-              style={{
-                fontSize: '1.55rem',
-                marginRight: '0.75rem',
-                marginBottom: '0.15rem',
-              }}
-              className='BottomNavi-ButtonIcon'
-            />
-            <span>홈</span>
+            <div className='Button-Wrapper'>
+              <BsFillHouseDoorFill
+                style={{
+                  fontSize: '1.75rem',
+                }}
+                className='BottomNavi-ButtonIcon'
+              />
+              <span>홈</span>
+            </div>
           </button>
         </Link>
         <Link
           to='/events'
           className={`BottomNavi-wrapper__ButtonContainer activatedButton
-        ${props.activatedButton === 'events' ? 'active' : null}`}
+          ${props.activatedButton === 'events' ? 'active' : null}`}
         >
           <button className='BottomNavi-Button'>
-            <BsFillLightningFill
-              style={{
-                fontSize: '1.55rem',
-                marginRight: '0.65rem',
-                marginBottom: '0.1rem',
-              }}
-              className='BottomNavi-ButtonIcon-Event'
-            />
-            <span>이벤트&할인</span>
+            <div className='Button-Wrapper'>
+              <BsLightningFill
+                style={{
+                  fontSize: '1.85rem',
+                }}
+                className='BottomNavi-ButtonIcon-Event'
+              />
+              <span>이벤트&할인</span>
+            </div>
+          </button>
+        </Link>
+        <Link
+          to='/bookmarks'
+          className={`BottomNavi-wrapper__ButtonContainer activatedButton
+        ${props.activatedButton === 'bookmarks' ? 'active' : null}`}
+        >
+          <button className='BottomNavi-Button'>
+            <div className='Button-Wrapper'>
+              <BsBookmarkFill
+                style={{
+                  fontSize: '1.85rem',
+                }}
+                className='BottomNavi-ButtonIcon-Bookmarks'
+              />
+              <span>저장</span>
+            </div>
           </button>
         </Link>
       </div>
