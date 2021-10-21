@@ -10,7 +10,13 @@ import {
   createUserWithEmailAndPassword,
   updateProfile,
 } from 'firebase/auth';
-import { getDatabase, ref, set } from 'firebase/database';
+import {
+  getFirestore,
+  collection,
+  addDoc,
+  setDoc,
+  doc,
+} from 'firebase/firestore';
 
 const RegisterPage = () => {
   const {
@@ -20,6 +26,7 @@ const RegisterPage = () => {
     handleSubmit,
     getValues,
   } = useForm({ mode: 'onChange' });
+  const db = getFirestore();
   const [loading, setLoading] = useState(false);
 
   const password = useRef();
@@ -29,41 +36,25 @@ const RegisterPage = () => {
     setLoading(true);
 
     const auth = getAuth();
+
     await createUserWithEmailAndPassword(auth, data.email, data.password)
       .then((userCredential) => {
+        console.log(userCredential.user);
+        updateProfile(auth.currentUser, {
+          displayName: data.name,
+          photoURL: 'https://example.com/jane-q-user/profile.jpg',
+        }).then(console.log('프로필 업데이트 완료'));
+        setDoc(doc(db, 'users', userCredential.user.uid), {
+          username: data.name,
+          email: userCredential.user.email,
+          photoURL: 'https://example.com/jane-q-user/profile.jpg',
+        }).then(console.log('저장완료'));
         // Signed in
-        const user = userCredential.user;
       })
       .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
+        console.log('아이디 생성중 에러발생', error);
       });
-
-    await updateProfile(auth.currentUser, {
-      displayName: data.name,
-      photoURL: 'https://example.com/jane-q-user/profile.jpg',
-    })
-      .then(() => {
-        // Profile updated!
-      })
-      .catch((error) => {
-        // An error occurred
-        // ...
-      });
-
-    const user = auth.currentUser;
-    const db = getDatabase();
-    await set(ref(db, 'users/' + user.uid), {
-      username: user.displayName,
-      email: user.email,
-      profile_picture: user.photoURL,
-    });
-
-    alert('SUCCESS!! :-)\n\n' + JSON.stringify(data, null, 4));
   };
-
-  const atLeastOne = () =>
-    getValues('test').length ? true : 'Please tell me if this is too hard.';
 
   return (
     <div className='auth-wrapper'>

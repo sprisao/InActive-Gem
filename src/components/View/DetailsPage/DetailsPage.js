@@ -56,6 +56,7 @@ const DetailsPage = ({ store, history }) => {
       <ImageBox img={store.images} name={store.name} />
       <DetailsHeader
         name={store.name}
+        id={store.id}
         shortDescription={store.shortDescription}
         locationCategory={store.eupmyeondongRi}
         storeVerified={store.storeVerified}
