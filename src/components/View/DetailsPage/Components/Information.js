@@ -115,7 +115,7 @@ const Information = (props) => {
               className='details__icon'
             />
             {props.breakDays.map((breakDay) => (
-              <p key={breakDay.id}>{breakDay}&nbsp;</p>
+              <p key={breakDay.toString()}>{breakDay}&nbsp;</p>
             ))}
             <span style={{ color: 'black' }}>휴무</span>
           </div>

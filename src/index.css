@@ -161,6 +161,10 @@ body {
   line-height: 1.4;
   font-weight: 350;
   color: #222;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 @media screen and (min-width: 310px) {
   html {
