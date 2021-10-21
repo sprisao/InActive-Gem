@@ -76,7 +76,7 @@ const BottomNavigation = (props) => {
                 }}
                 className='BottomNavi-ButtonIcon-Bookmarks'
               />
-              <span>저장</span>
+              <span>찜</span>
             </div>
           </button>
         </Link>

@@ -55,7 +55,7 @@ const DetailsPage = ({ store, history }) => {
 
   useEffect(() => {
     getDoc(doc(db, 'users', user.uid)).then((docSnap) => {
-      if (docSnap.exists()) {
+      if (docSnap.data().bookmarks) {
         docSnap.data().bookmarks.includes(store.id)
           ? setBookmarked(true)
           : setBookmarked(false);

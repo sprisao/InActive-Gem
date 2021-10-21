@@ -40,10 +40,10 @@ function App() {
     auth.onAuthStateChanged((user) => {
       // 로그인 상태를 Redux로 이동
       if (!user) {
-        // history.push('/login');
+        history.push('/login');
         dispatch(clearUser(user));
       } else {
-        // history.push('/');
+        history.push('/');
         dispatch(setUser(user));
       }
     });
