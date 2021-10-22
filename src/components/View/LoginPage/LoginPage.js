@@ -24,25 +24,36 @@ const LoginPage = () => {
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
+        console.log(error);
+        console.log(errorCode);
+        console.log(errorMessage);
+        if (error) alert('에러');
       });
   };
 
   return (
     <div className='auth-wrapper'>
-      <div style={{ textAlign: 'center' }}>
-        <h3>Login</h3>
+      <div className='auth-logobox'>
+        <img
+          src='https://res.cloudinary.com/diimwnnmj/image/upload/v1634865910/%E1%84%8C%E1%85%A6%E1%86%B7-%E1%84%8B%E1%85%A2%E1%86%B81395_ytiiul.png'
+          alt='logo'
+          className='auth-logo'
+        />
+      </div>
+      <div style={{ padding: '1rem 0.5rem ' }}>
+        <h1>로그인</h1>
       </div>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <label>Email</label>
         <input
+          placeholder='이메일 주소'
           name='email'
           type='email'
           {...register('email', { required: true, pattern: /^\S+@\S+$/i })}
         />
-        {errors.email && <p>이메일은 필수입력 사항입니다.</p>}
+        {errors.email && <p>가입하신 이메일 주소를 입력해주세요.</p>}
 
-        <label>Password</label>
         <input
+          placeholder='비밀번호'
           name='password'
           type='password'
           {...register('password', { required: true, minLength: 6 })}
@@ -51,10 +62,13 @@ const LoginPage = () => {
           <p>비밀번호는 필수입력 사항입니다.</p>
         )}
         {errors.password && errors.password.type === 'minLength' && (
-          <p>Password must have at least 6 Len</p>
+          <p>비밀번호는</p>
         )}
-        <input type='submit' disabled={loading} />
-        <Link to='/register'>아직 아이디가 없다면</Link>
+
+        <button type='submit' disabled={loading}>
+          로그인
+        </button>
+        <Link to='/register'>아직 아이디가 없다면?</Link>
       </form>
     </div>
   );
