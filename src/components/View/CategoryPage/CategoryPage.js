@@ -22,7 +22,7 @@ SwiperCore.use([Pagination, History]);
 
 smoothscroll.polyfill();
 
-const CategoryPage = ({ history }) => {
+const CategoryPage = () => {
   const { firstCategory, locationCategory } = useParams();
   const {
     loading,
@@ -42,6 +42,8 @@ const CategoryPage = ({ history }) => {
   // Store Data 필터링
   let storeData;
   let loadingCategory;
+
+  const locationTaker = locationCategory;
 
   if (firstCategory === '맛집') {
     storeData = restaurants;
@@ -103,6 +105,8 @@ const CategoryPage = ({ history }) => {
 
   const swipeHandler = (e) => {
     setIsActive(tabFilter[e.activeIndex].title);
+    console.log(locationCategory);
+    console.log(e.activeIndex);
     const refLeftSpace = activeRef.current.offsetLeft;
     const refTabWidth = activeRef.current.offsetWidth / 2;
     const refLeftToMiddleSpace = refLeftSpace + refTabWidth;
@@ -185,7 +189,7 @@ const CategoryPage = ({ history }) => {
         <Swiper
           initialSlide={0}
           history={{
-            key: `/newcategorytest/${firstCategory}/${locationCategory}`,
+            key: `/category/${firstCategory}/${locationTaker}`,
             replaceState: true,
           }}
           slidesPerView={1}
@@ -195,6 +199,7 @@ const CategoryPage = ({ history }) => {
           autoHeight={true}
           className='CategorySwiper'
         >
+          {console.log(locationCategory)}
           {tabFilter.map((item) => {
             return (
               <SwiperSlide data-history={item.id} key={item.id}>

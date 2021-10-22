@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 
@@ -17,8 +17,6 @@ const LoginPage = () => {
     signInWithEmailAndPassword(auth, data.email, data.password)
       .then((userCredential) => {
         // Signed in
-        console.log('로그인 되었다');
-        const user = userCredential.user;
         // ...
       })
       .catch((error) => {
@@ -68,7 +66,7 @@ const LoginPage = () => {
         <button type='submit' disabled={loading}>
           Login
         </button>
-        <Link to='/register'>아직 아이디가 없다면?</Link>
+        <Link to='/register'>아직 아이디가 없다면 {'>'}</Link>
       </form>
     </div>
   );

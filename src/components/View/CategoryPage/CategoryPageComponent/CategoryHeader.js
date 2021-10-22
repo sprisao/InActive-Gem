@@ -27,11 +27,9 @@ const CategoryHeader = ({ category, secondCategory, currentLocation }) => {
               <FiChevronLeft style={{ fontSize: '1.8rem', color: '#000' }} />
             </button>
           </Link>
-          <Link to={`/category/${category}/전체/전체`}>
-            <div className='Category__Title'>
-              <h3>{category}</h3>
-            </div>
-          </Link>
+          <div className='Category__Title'>
+            <h3>{category}</h3>
+          </div>
           <div className='Category__Menu__Container'>
             <div onClick={onClick} className='menu-trigger'>
               <span>{locationCategory}</span>

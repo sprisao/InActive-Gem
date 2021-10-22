@@ -40,7 +40,6 @@ const RegisterPage = () => {
   password.current = watch('password');
 
   const auth = getAuth();
-  const user = auth.currentUser;
   const onSubmit = async (data) => {
     setLoading(true);
 
@@ -210,7 +209,7 @@ const RegisterPage = () => {
             확인
           </button>
         </form>
-        <Link to='login'>이미 아이디가 있다면 ></Link>
+        <Link to='login'>이미 아이디가 있다면 {'>'}</Link>
       </div>
       <div className={`Usage-Modal ${usageShow ? 'active' : 'inactive'}`}>
         <div className='Modal-Header'>
