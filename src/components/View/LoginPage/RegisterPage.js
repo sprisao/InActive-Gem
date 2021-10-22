@@ -11,13 +11,7 @@ import {
   createUserWithEmailAndPassword,
   updateProfile,
 } from 'firebase/auth';
-import {
-  getFirestore,
-  collection,
-  addDoc,
-  setDoc,
-  doc,
-} from 'firebase/firestore';
+import { getFirestore, setDoc, doc } from 'firebase/firestore';
 
 const RegisterPage = () => {
   const {
@@ -25,7 +19,6 @@ const RegisterPage = () => {
     watch,
     formState: { errors },
     handleSubmit,
-    getValues,
   } = useForm({ mode: 'onChange' });
   const db = getFirestore();
   const [loading, setLoading] = useState(false);
@@ -46,10 +39,10 @@ const RegisterPage = () => {
   const password = useRef();
   password.current = watch('password');
 
+  const auth = getAuth();
+  const user = auth.currentUser;
   const onSubmit = async (data) => {
     setLoading(true);
-
-    const auth = getAuth();
 
     await createUserWithEmailAndPassword(auth, data.email, data.password)
       .then((userCredential) => {
@@ -57,12 +50,15 @@ const RegisterPage = () => {
         updateProfile(auth.currentUser, {
           displayName: data.name,
           photoURL: 'https://example.com/jane-q-user/profile.jpg',
+          marketing: data.marketingAgreement,
         }).then(console.log('프로필 업데이트 완료'));
         setDoc(doc(db, 'users', userCredential.user.uid), {
           username: data.name,
           email: userCredential.user.email,
           photoURL: 'https://example.com/jane-q-user/profile.jpg',
+          marketing: data.marketingAgreement,
         }).then(console.log('저장완료'));
+
         // Signed in
       })
       .catch((error) => {
@@ -143,7 +139,7 @@ const RegisterPage = () => {
                   id='checkbox-input'
                   value={true}
                   type='checkbox'
-                  {...register('agreement', { required: true })}
+                  {...register('userAgreement', { required: true })}
                 ></input>
                 <span
                   style={{ margin: '0 0.25rem', color: 'var(--activeColor)' }}
@@ -168,7 +164,7 @@ const RegisterPage = () => {
                   id='checkbox-input'
                   value={true}
                   type='checkbox'
-                  {...register('agreement', { required: true })}
+                  {...register('privacyAgreement', { required: true })}
                 ></input>
                 <span
                   style={{ margin: '0 0.25rem', color: 'var(--activeColor)' }}
@@ -196,7 +192,7 @@ const RegisterPage = () => {
                   id='checkbox-input'
                   value={true}
                   type='checkbox'
-                  {...register('agreement', { required: false })}
+                  {...register('marketingAgreement', { required: false })}
                 ></input>
                 <span style={{ margin: '0 0.25rem', color: '#3069d3' }}>
                   [선택]
@@ -252,30 +248,6 @@ const RegisterPage = () => {
           />
         </div>
       </div>
-      {/* <Modal show={usageShow} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>서비스 이용약관</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <img
-            src='https://res.cloudinary.com/diimwnnmj/image/upload/v1629782306/%E1%84%8B%E1%85%B5%E1%84%8B%E1%85%AD%E1%86%BC%E1%84%8B%E1%85%A3%E1%86%A8%E1%84%80%E1%85%AA%E1%86%AB_zhlkoa.jpg'
-            alt='이용 약관'
-            style={{ width: '100%' }}
-          />
-        </Modal.Body>
-      </Modal>
-      <Modal show={privacyShow} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>개인정보 취급방침</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <img
-            src='https://res.cloudinary.com/diimwnnmj/image/upload/v1629781258/PrivacyPolicy_homwh9.jpg'
-            alt='개인정보취급방침'
-            style={{ width: '100%' }}
-          />
-        </Modal.Body>
-      </Modal> */}
     </>
   );
 };

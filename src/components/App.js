@@ -34,6 +34,8 @@ function App() {
   let dispatch = useDispatch();
   let history = useHistory();
 
+  console.log(user);
+
   const isLoading = useSelector((state) => state.user.isLoading);
 
   useEffect(() => {

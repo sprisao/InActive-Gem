@@ -66,7 +66,7 @@ const LoginPage = () => {
         )}
 
         <button type='submit' disabled={loading}>
-          로그인
+          Login
         </button>
         <Link to='/register'>아직 아이디가 없다면?</Link>
       </form>
