@@ -7,7 +7,9 @@ import { useGlobalContext } from '../../context';
 import { getFirestore, doc, getDoc } from 'firebase/firestore';
 import { getAuth } from 'firebase/auth';
 
-const BookmarkPage = () => {
+import './BookmarkPage.css';
+
+const BookmarkPage = (history) => {
   const {
     loading,
     secondCategories,
@@ -25,14 +27,18 @@ const BookmarkPage = () => {
   const user = auth.currentUser;
 
   useEffect(() => {
-    getDoc(doc(db, 'users', user.uid)).then((docSnap) => {
-      if (docSnap.data().bookmarks.length > 0) {
-        setBookmarkedStores(docSnap.data().bookmarks);
-        setLeerChecker(false);
-      } else {
-        console.log('No such document!');
-      }
-    });
+    if (!user) {
+      history.history.push('/login');
+    } else {
+      getDoc(doc(db, 'users', user.uid)).then((docSnap) => {
+        if (docSnap.data().bookmarks) {
+          setBookmarkedStores(docSnap.data().bookmarks);
+          setLeerChecker(false);
+        } else {
+          console.log('No such document!');
+        }
+      });
+    }
   }, []);
 
   return (
@@ -41,8 +47,11 @@ const BookmarkPage = () => {
       {restaurantLoading || cafesLoading || loading ? (
         <Loading />
       ) : leerChecker ? (
-        <section className='gird'>
-          <h1>아직 찜한 업체가 없네요!</h1>
+        <section className='BookmarkPage'>
+          <div className='BookmarkPage-wrapper'>
+            <h1>아직 찜한 업체가 없네요!</h1>
+            <h4>자주가거나 가보고 싶은 장소를 찜 해보세요!</h4>
+          </div>
         </section>
       ) : (
         <section className='grid' style={{ marginBottom: '10rem' }}>
@@ -94,5 +103,4 @@ const BookmarkPage = () => {
     </>
   );
 };
-
 export default BookmarkPage;

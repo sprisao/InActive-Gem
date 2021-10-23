@@ -54,18 +54,22 @@ const DetailsHeader = (props) => {
 
   // 클릭 이벤트
   const clickHandler = () => {
-    if (!props.bookmark) {
-      props.getBookmarkClick(true);
-      updateDoc(doc(db, 'users', user.uid), {
-        bookmarks: arrayUnion(props.id),
-      });
+    if (!user) {
+      props.history.push('/login');
     } else {
-      props.getBookmarkClick(false);
-      updateDoc(doc(db, 'users', user.uid), {
-        bookmarks: arrayRemove(props.id),
-      });
+      if (!props.bookmark) {
+        props.getBookmarkClick(true);
+        updateDoc(doc(db, 'users', user.uid), {
+          bookmarks: arrayUnion(props.id),
+        });
+      } else {
+        props.getBookmarkClick(false);
+        updateDoc(doc(db, 'users', user.uid), {
+          bookmarks: arrayRemove(props.id),
+        });
+      }
+      console.log(props.id);
     }
-    console.log(props.id);
   };
 
   return (

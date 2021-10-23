@@ -51,6 +51,7 @@
   font-size: 3rem;
   position: relative;
   cursor: pointer;
+  padding-left: 1.35rem;
 }
 
 .Notification_Button:hover {

@@ -64,9 +64,9 @@ const SearchBox = ({ history }) => {
             </div>
           </form>
         </div>
-        <div className='Notification_Button'>
+        {/* <div className='Notification_Button'>
           <FaBell />
-        </div>
+        </div> */}
         <div className='Profile_Button' onClick={dropHandler}>
           <FaUserCircle />
           <nav
@@ -78,9 +78,6 @@ const SearchBox = ({ history }) => {
             <ul>
               {user ? (
                 <>
-                  <li>
-                    <button>프로필</button>
-                  </li>
                   <li>
                     <button onClick={handleLogout}>로그아웃</button>
                   </li>

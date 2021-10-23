@@ -1,0 +1,14 @@
+.BookmarkPage {
+  width: var(--Width);
+  padding: 0 1rem;
+}
+
+.BookmarkPage-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: var(--normalWidth);
+  min-height: 25rem;
+  margin: 0 auto;
+}

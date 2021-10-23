@@ -51,19 +51,22 @@ const DetailsPage = ({ store, history }) => {
   const db = getFirestore();
   const auth = getAuth();
   const user = auth.currentUser;
-  const docRef = doc(db, 'users', user.uid);
 
   useEffect(() => {
-    getDoc(doc(db, 'users', user.uid)).then((docSnap) => {
-      if (docSnap.data().bookmarks) {
-        docSnap.data().bookmarks.includes(store.id)
-          ? setBookmarked(true)
-          : setBookmarked(false);
-        console.log(docSnap.data().bookmarks);
-      } else {
-        console.log('No such document!');
-      }
-    });
+    if (!user) {
+      setBookmarked(false);
+    } else {
+      getDoc(doc(db, 'users', user.uid)).then((docSnap) => {
+        if (docSnap.data().bookmarks) {
+          docSnap.data().bookmarks.includes(store.id)
+            ? setBookmarked(true)
+            : setBookmarked(false);
+          console.log(docSnap.data().bookmarks);
+        } else {
+          console.log('No such document!');
+        }
+      });
+    }
   }, [bookmarked]);
 
   const getBookmarkClick = (value) => {
@@ -89,6 +92,7 @@ const DetailsPage = ({ store, history }) => {
         branch={store.branch}
         bookmark={bookmarked}
         getBookmarkClick={getBookmarkClick}
+        history={history}
       />
       <Swiper
         initialSlide={0}
