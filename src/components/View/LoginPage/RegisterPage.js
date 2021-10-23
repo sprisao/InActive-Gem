@@ -13,7 +13,7 @@ import {
 } from 'firebase/auth';
 import { getFirestore, setDoc, doc } from 'firebase/firestore';
 
-const RegisterPage = () => {
+const RegisterPage = (history) => {
   const {
     register,
     watch,
@@ -58,6 +58,7 @@ const RegisterPage = () => {
           marketing: data.marketingAgreement,
         }).then(console.log('저장완료'));
         // Signed in
+        history.history.push('/');
       })
       .catch((error) => {
         console.log('아이디 생성중 에러발생', error);
