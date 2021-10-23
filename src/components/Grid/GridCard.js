@@ -61,7 +61,7 @@ const GridCard = ({ store }) => {
           </div>
           <div className='quickInfos'>
             <div className='rating'>{preRank}</div>
-            {!onePersonPriceWon || onePersonPriceWon !== 0 ? null : (
+            {!store.onePersonPrice || store.onePersonPrice === 0 ? null : (
               <div className='onePersonPrice'>
                 <BiWon
                   style={{ marginRight: '0.2rem', fontSize: '1..25rem' }}
