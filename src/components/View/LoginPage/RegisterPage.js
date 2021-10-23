@@ -57,7 +57,6 @@ const RegisterPage = () => {
           photoURL: 'https://example.com/jane-q-user/profile.jpg',
           marketing: data.marketingAgreement,
         }).then(console.log('저장완료'));
-
         // Signed in
       })
       .catch((error) => {
@@ -147,7 +146,10 @@ const RegisterPage = () => {
                 </span>
                 <span>서비스 이용약관에 동의합니다.</span>
               </div>
-              <span onClick={handleUsageShow} style={{ color: '#43caa2' }}>
+              <span
+                onClick={handleUsageShow}
+                style={{ color: '#43caa2', cursor: 'pointer' }}
+              >
                 전문보기
               </span>
             </div>
@@ -172,7 +174,10 @@ const RegisterPage = () => {
                 </span>
                 <span>개인정보 취급방침에 동의합니다.</span>
               </div>
-              <span onClick={handlePrivacyShow} style={{ color: '#43caa2' }}>
+              <span
+                onClick={handlePrivacyShow}
+                style={{ color: '#43caa2', cursor: 'pointer' }}
+              >
                 전문보기
               </span>
             </div>

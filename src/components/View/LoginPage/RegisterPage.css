@@ -1,5 +1,12 @@
+.Auth {
+  width: var(--Width);
+  background-color: rgba(245, 245, 245, 0.837);
+}
+
 .auth-wrapper {
   min-height: 100vh;
+  max-width: var(--normalWidth);
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   width: var(--width);
@@ -7,7 +14,6 @@
   padding: 0 2rem;
   padding-top: 5rem;
   padding-bottom: 5rem;
-  background-color: rgba(245, 245, 245, 0.837);
 }
 
 .auth-logobox {
@@ -196,6 +202,8 @@ input[type='checkbox'] {
 }
 
 .Usage-Modal {
+  position: absolute;
+  width: var(--normalWidth);
   max-height: 85vh;
   padding: 1rem;
   margin: 0 1rem;
@@ -206,11 +214,10 @@ input[type='checkbox'] {
   align-items: center;
   opacity: 0;
   z-index: 20;
-  transform: translateY(-10px);
+  top: 150px;
+
   transition: opacity 0.1s ease, transform 0.1s ease, visibility 0.1s;
   visibility: hidden;
-  position: absolute;
-  top: 150px;
   background-color: white;
   border-radius: 1rem;
   box-shadow: 0 3px 12px rgba(41, 41, 41, 0.5);
@@ -220,7 +227,6 @@ input[type='checkbox'] {
   word-break: keep-all;
   opacity: 1;
   visibility: visible;
-  transform: translateY(0);
 }
 
 .Modal-Header {

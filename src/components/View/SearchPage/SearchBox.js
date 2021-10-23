@@ -1,5 +1,7 @@
 import React, { useState, useRef } from 'react';
 
+import { Link } from 'react-router-dom';
+
 import { useDetectOutsideClick } from '../CategoryPage/CategoryPageComponent/useDetectOutsideClick';
 
 import { FaUserCircle, FaBell } from 'react-icons/fa';
@@ -13,9 +15,14 @@ const SearchBox = ({ history }) => {
   const [dropActive, setDropActive] = useDetectOutsideClick(dropdownRef, false);
 
   const [userInput, setUserInput] = useState('');
+  const auth = getAuth();
+  const user = auth.currentUser;
+
+  const handlePush = () => {
+    history.history.push('/login');
+  };
 
   const handleLogout = () => {
-    const auth = getAuth();
     signOut(auth)
       .then(() => {
         // Sign-out successful.ㅇ
@@ -69,12 +76,22 @@ const SearchBox = ({ history }) => {
             }`}
           >
             <ul>
-              <li>
-                <button>프로필</button>
-              </li>
-              <li>
-                <button onClick={handleLogout}>로그아웃</button>
-              </li>
+              {user ? (
+                <>
+                  <li>
+                    <button>프로필</button>
+                  </li>
+                  <li>
+                    <button onClick={handleLogout}>로그아웃</button>
+                  </li>
+                </>
+              ) : (
+                <>
+                  <li>
+                    <button onClick={handlePush}>로그인</button>
+                  </li>
+                </>
+              )}
             </ul>
           </nav>
         </div>
