@@ -22,11 +22,11 @@
 }
 
 .BottomNavi-wrapper.Android {
-  height: 8.25rem;
+  height: 6.25rem;
 }
 
 .BottomNavi-wrapper.Web {
-  height: 7.75rem;
+  height: 6.75rem;
 }
 
 .BottomNavi-wrapper__ButtonContainer.active button {
