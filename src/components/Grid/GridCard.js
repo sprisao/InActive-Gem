@@ -9,7 +9,7 @@ import './GridCard.css';
 const GridCard = ({ store }) => {
   // 인증업체 필터
 
-  const onePersonPriceWon = (store.onePersonPrice * 1000).toLocaleString(
+  const onePersonPriceWon = (store.mainMenuPrice * 1000).toLocaleString(
     'ko-KR'
   );
 
