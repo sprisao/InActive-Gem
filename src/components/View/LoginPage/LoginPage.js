@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
+import logo from '../../../components/images/logo/젬-앱1395.png';
 
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 
@@ -35,11 +36,7 @@ const LoginPage = (history) => {
       <section className='Auth'>
         <div className='auth-wrapper'>
           <div className='auth-logobox'>
-            <img
-              src='https://res.cloudinary.com/diimwnnmj/image/upload/v1634865910/%E1%84%8C%E1%85%A6%E1%86%B7-%E1%84%8B%E1%85%A2%E1%86%B81395_ytiiul.png'
-              alt='logo'
-              className='auth-logo'
-            />
+            <img src={logo} alt='logo' className='auth-logo' />
           </div>
           <div style={{ padding: '1rem 0.5rem ' }}>
             <h1>로그인</h1>
