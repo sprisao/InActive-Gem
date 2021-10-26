@@ -9,6 +9,7 @@ import {
 // import pages
 import LoginPage from './View/LoginPage/LoginPage';
 import RegisterPage from './View/LoginPage/RegisterPage';
+import PwresetPage from './View/LoginPage/PwresetPage';
 import LandingPage from './View/LandingPage/LandingPage';
 import EventsPage from './View/EventsPage/EventsPage';
 import BookmarkPage from './View/BookmarkPage/BookmarkPage';
@@ -43,7 +44,7 @@ function App() {
         // history.push('/login');
         dispatch(clearUser(user));
       } else {
-        history.push('/');
+        // history.push('/');
         dispatch(setUser(user));
       }
     });
@@ -57,6 +58,7 @@ function App() {
         <Switch>
           <Route exact path='/' component={LandingPage} />
           <Route exact path='/login' component={LoginPage} />
+          <Route exact path='/pwreset' component={PwresetPage} />
           <Route exact path='/register' component={RegisterPage} />
           <Route exact path='/events' component={EventsPage} />
           <Route exact path='/bookmarks' component={BookmarkPage} />

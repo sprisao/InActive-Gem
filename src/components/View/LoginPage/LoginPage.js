@@ -62,10 +62,16 @@ const LoginPage = (history) => {
             <button type='submit' disabled={loading}>
               Login
             </button>
-            <Link to='/register'>
-              {'  '}
-              이메일로 3초만에 가입하기 {'>'}
-            </Link>
+            <div className='pwReset-Wrapper'>
+              <Link to='/register'>
+                {'  '}
+                이메일로 <b>3초만에</b> 가입하기 {'>'}
+              </Link>
+              <Link to='/pwreset'>
+                {'  '}
+                비밀번호 재설정 {'>'}
+              </Link>
+            </div>
           </form>
         </div>
       </section>

@@ -241,3 +241,10 @@ input#checkbox-input {
   border: none;
   font-size: 2rem;
 }
+
+.pwReset-Wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  align-items: center;
+}
