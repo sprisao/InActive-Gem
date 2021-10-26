@@ -26,7 +26,7 @@ const LoginPage = (history) => {
         console.log(error);
         console.log(errorCode);
         console.log(errorMessage);
-        if (error) alert('아이디와 비밀번호가 일치하지 않습니다.');
+        if (error) alert('이메일 또는 비밀번호가 일치하지 않습니다.');
       });
   };
 
@@ -51,7 +51,7 @@ const LoginPage = (history) => {
               type='email'
               {...register('email', { required: true, pattern: /^\S+@\S+$/i })}
             />
-            {errors.email && <p>가입하신 이메일 주소를 입력해주세요.</p>}
+            {errors.email && <p>이메일 주소를 다시한번 확인해보세요.</p>}
 
             <input
               placeholder='비밀번호'
@@ -60,12 +60,8 @@ const LoginPage = (history) => {
               {...register('password', { required: true, minLength: 6 })}
             />
             {errors.password && errors.password.type === 'required' && (
-              <p>비밀번호는 필수입력 사항입니다.</p>
+              <p>비밀번호를 입력해주세요.</p>
             )}
-            {errors.password && errors.password.type === 'minLength' && (
-              <p>비밀번호는</p>
-            )}
-
             <button type='submit' disabled={loading}>
               Login
             </button>
