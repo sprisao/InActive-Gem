@@ -7,7 +7,8 @@ import Footer from '../../Footer';
 import DetailsPage from './DetailsPage';
 
 const DetailsData = ({ history }) => {
-  const { cafes, restaurants, loading, stores } = useGlobalContext();
+  const { cafes, restaurants, loading, stores, menu, menuLoading } =
+    useGlobalContext();
   const { id } = useParams();
 
   const allStores = stores.concat(restaurants, cafes);
@@ -24,6 +25,8 @@ const DetailsData = ({ history }) => {
               key={store.id}
               store={store}
               history={history}
+              menu={menu}
+              menuLoading={menuLoading}
             ></DetailsPage>
           );
         } else return null;

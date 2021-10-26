@@ -1,9 +1,8 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import CategoryHeader from './CategoryPageComponent/CategoryHeader';
 import GridCard from '../../Grid/GridCard';
 import Loading from '../../Loading';
 import RecommendPage from './RecommendPage';
-import AllStoresPage from './AllStoresPage';
 import Footer from '../../Footer';
 
 import { HiBadgeCheck } from 'react-icons/hi';
@@ -38,7 +37,6 @@ const CategoryPage = () => {
 
   const [swiper, setSwiper] = useState(null);
   const [isActive, setIsActive] = useState(stateInit);
-
   // Store Data 필터링
   let storeData;
   let loadingCategory;
@@ -136,56 +134,72 @@ const CategoryPage = () => {
   // 각 카테고리별 로딩 중인지 체크
   //
 
-  if (loadingCategory) {
-    return <Loading />;
-  } else
-    return (
-      <>
-        <div className='CategoryPage--Header--Container'>
-          <div className='Header--Fix--Box'>
-            <CategoryHeader
-              category={firstCategory}
-              secondCategory={firstCategory}
-              currentLocation={locationCategory}
-            />
+  const onScroll = () => {
+    if (
+      window.scrollY + document.documentElement.clientHeight >
+      document.documentElement.scrollHeight - 100
+    ) {
+      console.log('hit the bottom');
+    }
+  };
 
-            <section className='SecondCategory-Container'>
-              <div className='SecondCategory-Wrapper' ref={wrapperRef}>
-                {tabFilter.map((item) => {
-                  if (isActive === item.title) {
-                    return (
-                      <div
-                        className='SecondCategory-Item Active'
-                        key={item.id}
-                        onClick={(e) => {
-                          clickHandler(item.title, e);
-                        }}
-                        ref={activeRef}
-                      >
-                        <span>
-                          {item.emoji} {item.title}
-                        </span>
-                      </div>
-                    );
-                  } else
-                    return (
-                      <div
-                        className='SecondCategory-Item'
-                        key={item.id}
-                        onClick={(e) => {
-                          clickHandler(item.title, e);
-                        }}
-                      >
-                        <span>
-                          {item.emoji} {item.title}
-                        </span>
-                      </div>
-                    );
-                })}
-              </div>
-            </section>
-          </div>
+  useEffect(() => {
+    window.addEventListener('scroll', onScroll);
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+    };
+  }, []);
+
+  return (
+    <>
+      <div className='CategoryPage--Header--Container'>
+        <div className='Header--Fix--Box'>
+          <CategoryHeader
+            category={firstCategory}
+            secondCategory={firstCategory}
+            currentLocation={locationCategory}
+          />
+
+          <section className='SecondCategory-Container'>
+            <div className='SecondCategory-Wrapper' ref={wrapperRef}>
+              {tabFilter.map((item) => {
+                if (isActive === item.title) {
+                  return (
+                    <div
+                      className='SecondCategory-Item Active'
+                      key={item.id}
+                      onClick={(e) => {
+                        clickHandler(item.title, e);
+                      }}
+                      ref={activeRef}
+                    >
+                      <span>
+                        {item.emoji} {item.title}
+                      </span>
+                    </div>
+                  );
+                } else
+                  return (
+                    <div
+                      className='SecondCategory-Item'
+                      key={item.id}
+                      onClick={(e) => {
+                        clickHandler(item.title, e);
+                      }}
+                    >
+                      <span>
+                        {item.emoji} {item.title}
+                      </span>
+                    </div>
+                  );
+              })}
+            </div>
+          </section>
         </div>
+      </div>
+      {loadingCategory ? (
+        <Loading />
+      ) : (
         <Swiper
           initialSlide={0}
           history={{
@@ -199,7 +213,6 @@ const CategoryPage = () => {
           autoHeight={true}
           className='CategorySwiper'
         >
-          {console.log(locationCategory)}
           {tabFilter.map((item) => {
             return (
               <SwiperSlide data-history={item.id} key={item.id}>
@@ -229,11 +242,31 @@ const CategoryPage = () => {
                     {item.title === '추천' ? (
                       <RecommendPage firstCategory={firstCategory} />
                     ) : item.title === '전체' ? (
-                      <AllStoresPage
-                        stores={storeData}
-                        locationCategory={locationCategory}
-                        firstCategory={firstCategory}
-                      />
+                      <div className='grid__wrapper'>
+                        {storeData.map((store) => {
+                          if (locationCategory === '전체') {
+                            return (
+                              <GridCard
+                                key={store.id}
+                                store={store}
+                                open={store.openHour}
+                                close={store.closeHour}
+                              ></GridCard>
+                            );
+                          } else if (
+                            store.eupmyeondongRi === locationCategory
+                          ) {
+                            return (
+                              <GridCard
+                                key={store.id}
+                                store={store}
+                                open={store.openHour}
+                                close={store.closeHour}
+                              ></GridCard>
+                            );
+                          } else return null;
+                        })}
+                      </div>
                     ) : (
                       <div className='grid__wrapper'>
                         {storeData.map((store) => {
@@ -271,9 +304,10 @@ const CategoryPage = () => {
             );
           })}
         </Swiper>
-        <Footer />
-      </>
-    );
+      )}
+      <Footer />
+    </>
+  );
 };
 
 export default CategoryPage;
