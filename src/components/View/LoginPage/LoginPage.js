@@ -19,7 +19,8 @@ const LoginPage = (history) => {
     signInWithEmailAndPassword(auth, data.email, data.password)
       .then((userCredential) => {
         // Signed in
-        // ...
+
+        history.history.push('/');
       })
       .catch((error) => {
         const errorCode = error.code;
