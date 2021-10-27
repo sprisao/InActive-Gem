@@ -39,9 +39,19 @@ const Context = React.createContext();
 
 const StoreProvider = ({ children }) => {
   // 1. useState 활용해서 Loading 변수 생성
-  const [loading, setLoading] = useState(true);
+
   const [restaurantLoading, setRestaurantLoading] = useState(true);
   const [cafesLoading, setCafesLoading] = useState(true);
+  const [barsLoading, setBarsLoading] = useState(true);
+  const [beautyShopsLoading, setBeautyShopsLoading] = useState(true);
+  const [studiosLoading, setStudiosLoading] = useState(true);
+  const [petShopsLoading, setPetShopsLoading] = useState(true);
+  const [gymsLoading, setGymsLoading] = useState(true);
+  const [academiesLoading, setAcademiesLoading] = useState(true);
+  const [pharmaciesLoading, setPharmaciesLoading] = useState(true);
+  const [kidShopsLoading, setKidShopsLoading] = useState(true);
+  const [flowerShopsLoading, setFlowerShopsLoading] = useState(true);
+
   const [navigationLoading, setNavigationLoading] = useState(true);
   const [secondLoading, setSecondLoading] = useState(true);
   const [locationLoading, setLocationLoading] = useState(true);
@@ -51,20 +61,40 @@ const StoreProvider = ({ children }) => {
   const [promoLoading, setPromoLoading] = useState(true);
 
   // 2. '복수' useState 활용해서 새롭게 불러올 데이터 패키지 함수명 지정
-  const [stores, setStores] = useState([]);
   const [restaurants, setRestaurants] = useState([]);
   const [cafes, setCafes] = useState([]);
+  const [bars, setBars] = useState([]);
+  const [beautyShops, setBeautyShops] = useState([]);
+  const [studios, setStudios] = useState([]);
+  const [petShops, setPetShops] = useState([]);
+  const [gyms, setGyms] = useState([]);
+  const [academies, setAcademies] = useState([]);
+  const [pharmacies, setPharmacies] = useState([]);
+  const [kidShops, setKidShops] = useState([]);
+  const [flowerShops, setFlowerShops] = useState([]);
+
+  const [newStores, setNewStores] = useState([]);
+
   const [firstCategories, setFirstCategories] = useState([]);
   const [secondCategories, setSecondCategories] = useState([]);
   const [locationCategories, setlocationCategories] = useState([]);
   const [menu, setMenu] = useState([]);
-  const [newStores, setNewStores] = useState([]);
   const [events, setEvents] = useState([]);
   const [promotions, setPromotions] = useState([]);
   // 3. '단수' 각각의 데이터패키지 내의 데이터가 들어올 Array 생성
-  const store = [];
+
   const restaurant = [];
   const cafe = [];
+  const bar = [];
+  const beautyShop = [];
+  const studio = [];
+  const petShop = [];
+  const gym = [];
+  const academy = [];
+  const pharmacy = [];
+  const flowerShop = [];
+  const kidShop = [];
+
   const event = [];
   const promotion = [];
   const menuItem = [];
@@ -72,35 +102,6 @@ const StoreProvider = ({ children }) => {
   const secondCategory = [];
   const locationCategory = [];
   const newStore = [];
-
-  // 업체데이터 불러오기
-  useEffect(() => {
-    storeBase('stores')
-      .select({
-        view: 'otherStores',
-        pageSize: 100,
-      })
-      .eachPage(
-        function page(records, fetchNextPage) {
-          records.forEach(function (record) {
-            store.push({
-              id: record.id,
-              ...record._rawJson.fields,
-            });
-          });
-          fetchNextPage();
-          setStores(store);
-        },
-        function done(err) {
-          if (err) {
-            console.error(err);
-          } else {
-            console.log('다른 업체들 불러오기 성공');
-            setLoading(false);
-          }
-        }
-      );
-  }, []);
 
   // 맛집 불러오기
   useEffect(() => {
@@ -155,6 +156,267 @@ const StoreProvider = ({ children }) => {
           } else {
             console.log('카페 불러오기 성공');
             setCafesLoading(false);
+          }
+        }
+      );
+  }, []);
+
+  // 호프 주점 불러오기
+  useEffect(() => {
+    storeBase('stores')
+      .select({
+        view: 'bars',
+        pageSize: 100,
+      })
+      .eachPage(
+        function page(records, fetchNextPage) {
+          records.forEach(function (record) {
+            bar.push({
+              id: record.id,
+              ...record._rawJson.fields,
+            });
+          });
+          fetchNextPage();
+          setBars(bar);
+        },
+        function done(err) {
+          if (err) {
+            console.error(err);
+          } else {
+            console.log('호프주점 불러오기 성공');
+            setBarsLoading(false);
+          }
+        }
+      );
+  }, []);
+
+  // 뷰티 미용 불러오기
+  useEffect(() => {
+    storeBase('stores')
+      .select({
+        view: 'beautyShops',
+        pageSize: 100,
+      })
+      .eachPage(
+        function page(records, fetchNextPage) {
+          records.forEach(function (record) {
+            beautyShop.push({
+              id: record.id,
+              ...record._rawJson.fields,
+            });
+          });
+          fetchNextPage();
+          setBeautyShops(beautyShop);
+        },
+        function done(err) {
+          if (err) {
+            console.error(err);
+          } else {
+            console.log('미용뷰티 불러오기 성공');
+            setBeautyShopsLoading(false);
+          }
+        }
+      );
+  }, []);
+
+  // 스튜디오 불러오기
+  useEffect(() => {
+    storeBase('stores')
+      .select({
+        view: 'studios',
+        pageSize: 100,
+      })
+      .eachPage(
+        function page(records, fetchNextPage) {
+          records.forEach(function (record) {
+            studio.push({
+              id: record.id,
+              ...record._rawJson.fields,
+            });
+          });
+          fetchNextPage();
+          setStudios(studio);
+        },
+        function done(err) {
+          if (err) {
+            console.error(err);
+          } else {
+            console.log('스튜디오 불러오기 성공');
+            setStudiosLoading(false);
+          }
+        }
+      );
+  }, []);
+
+  // 반려동물 불러오기
+  useEffect(() => {
+    storeBase('stores')
+      .select({
+        view: 'petShops',
+        pageSize: 100,
+      })
+      .eachPage(
+        function page(records, fetchNextPage) {
+          records.forEach(function (record) {
+            petShop.push({
+              id: record.id,
+              ...record._rawJson.fields,
+            });
+          });
+          fetchNextPage();
+          setPetShops(petShop);
+        },
+        function done(err) {
+          if (err) {
+            console.error(err);
+          } else {
+            console.log('반려동물 불러오기 성공');
+            setPetShopsLoading(false);
+          }
+        }
+      );
+  }, []);
+
+  // 운동헬스 불러오기
+  useEffect(() => {
+    storeBase('stores')
+      .select({
+        view: 'gyms',
+        pageSize: 100,
+      })
+      .eachPage(
+        function page(records, fetchNextPage) {
+          records.forEach(function (record) {
+            gym.push({
+              id: record.id,
+              ...record._rawJson.fields,
+            });
+          });
+          fetchNextPage();
+          setGyms(gym);
+        },
+        function done(err) {
+          if (err) {
+            console.error(err);
+          } else {
+            console.log('운동헬스 불러오기 성공');
+            setGymsLoading(false);
+          }
+        }
+      );
+  }, []);
+
+  // 키즈 불러오기
+  useEffect(() => {
+    storeBase('stores')
+      .select({
+        view: 'kidShops',
+        pageSize: 100,
+      })
+      .eachPage(
+        function page(records, fetchNextPage) {
+          records.forEach(function (record) {
+            kidShop.push({
+              id: record.id,
+              ...record._rawJson.fields,
+            });
+          });
+          fetchNextPage();
+          setKidShops(kidShop);
+        },
+        function done(err) {
+          if (err) {
+            console.error(err);
+          } else {
+            console.log('키즈 불러오기 성공');
+            setKidShopsLoading(false);
+          }
+        }
+      );
+  }, []);
+
+  // 교육학원 불러오기
+  useEffect(() => {
+    storeBase('stores')
+      .select({
+        view: 'academies',
+        pageSize: 100,
+      })
+      .eachPage(
+        function page(records, fetchNextPage) {
+          records.forEach(function (record) {
+            academy.push({
+              id: record.id,
+              ...record._rawJson.fields,
+            });
+          });
+          fetchNextPage();
+          setAcademies(academy);
+        },
+        function done(err) {
+          if (err) {
+            console.error(err);
+          } else {
+            console.log('교육학원 불러오기 성공');
+            setAcademiesLoading(false);
+          }
+        }
+      );
+  }, []);
+
+  // 약국 불러오기
+  useEffect(() => {
+    storeBase('stores')
+      .select({
+        view: 'pharmacies',
+        pageSize: 100,
+      })
+      .eachPage(
+        function page(records, fetchNextPage) {
+          records.forEach(function (record) {
+            pharmacy.push({
+              id: record.id,
+              ...record._rawJson.fields,
+            });
+          });
+          fetchNextPage();
+          setPharmacies(pharmacy);
+        },
+        function done(err) {
+          if (err) {
+            console.error(err);
+          } else {
+            console.log('약국 불러오기 성공');
+            setPharmaciesLoading(false);
+          }
+        }
+      );
+  }, []);
+
+  // 약국 불러오기
+  useEffect(() => {
+    storeBase('stores')
+      .select({
+        view: 'flowerShops',
+        pageSize: 100,
+      })
+      .eachPage(
+        function page(records, fetchNextPage) {
+          records.forEach(function (record) {
+            flowerShop.push({
+              id: record.id,
+              ...record._rawJson.fields,
+            });
+          });
+          fetchNextPage();
+          setFlowerShops(flowerShop);
+        },
+        function done(err) {
+          if (err) {
+            console.error(err);
+          } else {
+            console.log('꽃집 불러오기 성공');
+            setFlowerShopsLoading(false);
           }
         }
       );
@@ -310,7 +572,7 @@ const StoreProvider = ({ children }) => {
     storeBase('menu')
       .select({
         view: 'Grid view',
-        pageSize: 20,
+        pageSize: 100,
       })
       .eachPage(
         function page(records, fetchNextPage) {
@@ -366,9 +628,17 @@ const StoreProvider = ({ children }) => {
   return (
     <Context.Provider
       value={{
-        loading,
         restaurantLoading,
         cafesLoading,
+        barsLoading,
+        beautyShopsLoading,
+        studiosLoading,
+        petShopsLoading,
+        gymsLoading,
+        kidShopsLoading,
+        academiesLoading,
+        pharmaciesLoading,
+        flowerShopsLoading,
         navigationLoading,
         secondLoading,
         locationLoading,
@@ -377,9 +647,17 @@ const StoreProvider = ({ children }) => {
         eventsLoading,
         promoLoading,
 
-        stores,
         restaurants,
         cafes,
+        bars,
+        beautyShops,
+        studios,
+        petShops,
+        gyms,
+        kidShops,
+        academies,
+        pharmacies,
+        flowerShops,
         menu,
         events,
         firstCategories,

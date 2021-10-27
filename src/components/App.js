@@ -50,31 +50,31 @@ function App() {
     });
   }, []);
 
-  if (isLoading) {
-    return <Loading />;
-  } else
-    return (
-      <ScrollToTop>
-        <Switch>
-          <Route exact path='/' component={LandingPage} />
-          <Route exact path='/login' component={LoginPage} />
-          <Route exact path='/pwreset' component={PwresetPage} />
-          <Route exact path='/register' component={RegisterPage} />
-          <Route exact path='/events' component={EventsPage} />
-          <Route exact path='/bookmarks' component={BookmarkPage} />
-          <Route exact path='/search/:input' component={SearchPage} /> =
-          <Route
-            path='/category/:firstCategory/:locationCategory'
-            component={CategoryPage}
-          />
-          <Route exact path='/privacy' component={Privacy} />
-          <Route exact path='/useragreements' component={UserAgreements} />
-          <Route exact path='/storeagreements' component={StoreAgreements} />
-          <Route path='/store/:id' component={DetailsData} />
-          <Route path='*' component={Error} />
-        </Switch>
-      </ScrollToTop>
-    );
+  // if (isLoading) {
+  //   return <Loading />;
+  // } else
+  return (
+    <ScrollToTop>
+      <Switch>
+        <Route exact path='/' component={LandingPage} />
+        <Route exact path='/login' component={LoginPage} />
+        <Route exact path='/pwreset' component={PwresetPage} />
+        <Route exact path='/register' component={RegisterPage} />
+        <Route exact path='/events' component={EventsPage} />
+        <Route exact path='/bookmarks' component={BookmarkPage} />
+        <Route exact path='/search/:input' component={SearchPage} /> =
+        <Route
+          path='/category/:firstCategory/:locationCategory'
+          component={CategoryPage}
+        />
+        <Route exact path='/privacy' component={Privacy} />
+        <Route exact path='/useragreements' component={UserAgreements} />
+        <Route exact path='/storeagreements' component={StoreAgreements} />
+        <Route path='/store/:id' component={DetailsData} />
+        <Route path='*' component={Error} />
+      </Switch>
+    </ScrollToTop>
+  );
 }
 
 export default App;

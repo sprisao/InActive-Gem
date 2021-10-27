@@ -24,13 +24,30 @@ smoothscroll.polyfill();
 const CategoryPage = () => {
   const { firstCategory, locationCategory } = useParams();
   const {
-    loading,
+    restaurantLoading,
+    cafesLoading,
+    barsLoading,
+    beautyShopsLoading,
+    studiosLoading,
+    petShopsLoading,
+    gymsLoading,
+    kidShopsLoading,
+    academiesLoading,
+    pharmaciesLoading,
+    flowerShopsLoading,
+
     secondCategories,
     restaurants,
     cafes,
-    stores,
-    restaurantLoading,
-    cafesLoading,
+    bars,
+    beautyShops,
+    studios,
+    petShops,
+    gyms,
+    kidShops,
+    academies,
+    pharmacies,
+    flowerShops,
   } = useGlobalContext();
 
   const [stateInit, setstateInit] = useState('전체');
@@ -49,9 +66,33 @@ const CategoryPage = () => {
   } else if (firstCategory === '카페') {
     storeData = cafes;
     loadingCategory = cafesLoading;
-  } else {
-    storeData = stores;
-    loadingCategory = loading;
+  } else if (firstCategory === '호프・주점') {
+    storeData = bars;
+    loadingCategory = barsLoading;
+  } else if (firstCategory === '운동・헬스') {
+    storeData = gyms;
+    loadingCategory = gymsLoading;
+  } else if (firstCategory === '미용・뷰티') {
+    storeData = beautyShops;
+    loadingCategory = beautyShopsLoading;
+  } else if (firstCategory === '스튜디오') {
+    storeData = studios;
+    loadingCategory = studiosLoading;
+  } else if (firstCategory === '반려동물') {
+    storeData = petShops;
+    loadingCategory = petShopsLoading;
+  } else if (firstCategory === '키즈') {
+    storeData = kidShops;
+    loadingCategory = kidShopsLoading;
+  } else if (firstCategory === '교육・학원') {
+    storeData = academies;
+    loadingCategory = academiesLoading;
+  } else if (firstCategory === '병원・약국') {
+    storeData = pharmacies;
+    loadingCategory = pharmaciesLoading;
+  } else if (firstCategory === '꽃') {
+    storeData = flowerShops;
+    loadingCategory = flowerShopsLoading;
   }
 
   // FirstCategory 필터링
