@@ -11,14 +11,32 @@ import './BookmarkPage.css';
 
 const BookmarkPage = (history) => {
   const {
-    loading,
-    secondCategories,
     restaurants,
     cafes,
-    stores,
-    restaurantLoading,
+    bars,
+    beautyShops,
+    studios,
+    petShops,
+    gyms,
+    kidShops,
+    academies,
+    pharmacies,
+    flowerShops,
     cafesLoading,
   } = useGlobalContext();
+
+  const allStores = restaurants.concat(
+    cafes,
+    bars,
+    beautyShops,
+    studios,
+    petShops,
+    gyms,
+    kidShops,
+    academies,
+    pharmacies,
+    flowerShops
+  );
   const [bookmarkedStores, setBookmarkedStores] = useState([]);
   const [leerChecker, setLeerChecker] = useState(true);
 
@@ -44,7 +62,7 @@ const BookmarkPage = (history) => {
   return (
     <>
       <SearchBox />
-      {restaurantLoading || cafesLoading || loading ? (
+      {cafesLoading ? (
         <Loading />
       ) : leerChecker ? (
         <section className='BookmarkPage'>
@@ -57,33 +75,7 @@ const BookmarkPage = (history) => {
         <section className='grid' style={{ marginBottom: '10rem' }}>
           <h1>찜 목록 </h1>
           <div className='grid__wrapper'>
-            {restaurants.map((item) => {
-              if (bookmarkedStores.includes(item.id))
-                return (
-                  <GridCard
-                    key={item.id}
-                    store={item}
-                    open={item.openHour}
-                    close={item.closeHour}
-                    bookmarked={true}
-                  ></GridCard>
-                );
-              else return null;
-            })}
-            {cafes.map((item) => {
-              if (bookmarkedStores.includes(item.id))
-                return (
-                  <GridCard
-                    key={item.id}
-                    store={item}
-                    open={item.openHour}
-                    close={item.closeHour}
-                    bookmarked={true}
-                  ></GridCard>
-                );
-              else return null;
-            })}
-            {stores.map((item) => {
+            {allStores.map((item) => {
               if (bookmarkedStores.includes(item.id))
                 return (
                   <GridCard
