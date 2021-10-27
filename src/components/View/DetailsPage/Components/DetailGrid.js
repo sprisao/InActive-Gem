@@ -4,9 +4,34 @@ import DetailGridCard from './DetailGridCard';
 import './DetailGrid.css';
 
 const DetailGrid = (props) => {
-  const { stores, restaurants, cafes } = useGlobalContext();
-
-  const allStores = stores.concat(restaurants, cafes);
+  const {
+    loading,
+    menu,
+    menuLoading,
+    restaurants,
+    cafes,
+    bars,
+    beautyShops,
+    studios,
+    petShops,
+    gyms,
+    kidShops,
+    academies,
+    pharmacies,
+    flowerShops,
+  } = useGlobalContext();
+  const allStores = restaurants.concat(
+    cafes,
+    bars,
+    beautyShops,
+    studios,
+    petShops,
+    gyms,
+    kidShops,
+    academies,
+    pharmacies,
+    flowerShops
+  );
 
   const maxLength = () => {
     let j = 0;

@@ -8,8 +8,35 @@ import { Link } from 'react-router-dom';
 import './Recommendations.css';
 
 const Recommendations = (props) => {
-  const { stores, restaurants, cafes } = useGlobalContext();
-  const allStores = stores.concat(restaurants, cafes);
+  const {
+    loading,
+    menu,
+    menuLoading,
+    restaurants,
+    cafes,
+    bars,
+    beautyShops,
+    studios,
+    petShops,
+    gyms,
+    kidShops,
+    academies,
+    pharmacies,
+    flowerShops,
+  } = useGlobalContext();
+  const allStores = restaurants.concat(
+    cafes,
+    bars,
+    beautyShops,
+    studios,
+    petShops,
+    gyms,
+    kidShops,
+    academies,
+    pharmacies,
+    flowerShops
+  );
+
   let j = 0;
   for (let i = 0; i < allStores.length; i++) {
     if (

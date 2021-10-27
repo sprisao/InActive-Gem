@@ -7,11 +7,36 @@ import Footer from '../../Footer';
 import DetailsPage from './DetailsPage';
 
 const DetailsData = ({ history }) => {
-  const { cafes, restaurants, loading, stores, menu, menuLoading } =
-    useGlobalContext();
+  const {
+    loading,
+    menu,
+    menuLoading,
+    restaurants,
+    cafes,
+    bars,
+    beautyShops,
+    studios,
+    petShops,
+    gyms,
+    kidShops,
+    academies,
+    pharmacies,
+    flowerShops,
+  } = useGlobalContext();
   const { id } = useParams();
 
-  const allStores = stores.concat(restaurants, cafes);
+  const allStores = restaurants.concat(
+    cafes,
+    bars,
+    beautyShops,
+    studios,
+    petShops,
+    gyms,
+    kidShops,
+    academies,
+    pharmacies,
+    flowerShops
+  );
 
   if (loading) {
     return <Loading />;
