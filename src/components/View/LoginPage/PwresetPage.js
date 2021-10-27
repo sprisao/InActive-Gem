@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
-import logo from '../../../components/images/logo/젬-앱1395.png';
+import logo from '../../images/logo/젬-앱1395.png';
 
 import { getAuth, sendPasswordResetEmail } from 'firebase/auth';
 
