@@ -1,47 +1,4 @@
-@font-face {
-  font-family: 'Noto Sans CJK KR';
-  font-style: normal;
-  font-weight: 100;
-  src: url('styles/fonts/NotoSansKR-Light.woff2') format('woff2'),
-    url('styles/fonts/NotoSansKR-Light.woff') format('woff'),
-    url('styles/fonts/NotoSansKR-Light.otf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Noto Sans CJK KR';
-  font-style: normal;
-  font-weight: normal;
-  src: url('styles/fonts/NotoSansKR-Regular.woff2') format('woff2'),
-    url('styles/fonts/NotoSansKR-Regular.woff') format('woff'),
-    url('styles/fonts/NotoSansKR-Regular.otf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Noto Sans CJK KR';
-  font-style: normal;
-  font-weight: 500;
-  src: url('styles/fonts/NotoSansKR-Medium.woff2') format('woff2'),
-    url('styles/fonts/NotoSansKR-Medium.woff') format('woff'),
-    url('styles/fonts/NotoSansKR-Medium.otf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Noto Sans CJK KR';
-  font-style: normal;
-  font-weight: bold;
-  src: url('styles/fonts/NotoSansKR-Bold.woff2') format('woff2'),
-    url('styles/fonts/NotoSansKR-Bold.woff') format('woff'),
-    url('styles/fonts/NotoSansKR-Bold.otf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Noto Sans CJK KR';
-  font-style: normal;
-  font-weight: 900;
-  src: url('styles/fonts/NotoSansKR-Black.woff2') format('woff2'),
-    url('styles/fonts/NotoSansKR-Black.woff') format('woff'),
-    url('styles/fonts/NotoSansKR-Black.otf') format('truetype');
-}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 
 @font-face {
   font-family: 'CookieRun-Regular';
@@ -74,6 +31,8 @@
   font-weight: normal;
   font-style: normal;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
 
 html {
   font-size: 11px;
@@ -155,7 +114,7 @@ a {
 
 body {
   margin: 0 auto;
-  font-family: 'Noto Sans CJK KR', '맑은 고딕', 'malgun gothic',
+  font-family: 'Noto Sans KR', '맑은 고딕', 'malgun gothic',
     'Apple SD Gothic Neo', 'Apple SD 산돌고딕 Neo', 'Microsoft NeoGothic',
     'Droid sans', 'ONE-Mobile-POP';
   line-height: 1.4;
