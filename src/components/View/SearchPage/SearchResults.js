@@ -7,9 +7,36 @@ import Footer from '../../Footer';
 import '../../Grid/Grid.css';
 
 const SearchResults = (props) => {
-  const { stores, restaurants, cafes } = useGlobalContext();
+  const {
+    loading,
+    menu,
+    menuLoading,
+    restaurants,
+    cafes,
+    bars,
+    beautyShops,
+    studios,
+    petShops,
+    gyms,
+    kidShops,
+    academies,
+    pharmacies,
+    flowerShops,
+  } = useGlobalContext();
 
-  const allStores = stores.concat(restaurants, cafes);
+  const allStores = restaurants.concat(
+    cafes,
+    bars,
+    beautyShops,
+    studios,
+    petShops,
+    gyms,
+    kidShops,
+    academies,
+    pharmacies,
+    flowerShops
+  );
+
   const filterResult = allStores.filter(
     (result) =>
       result.name.includes(props.userInput) ||
