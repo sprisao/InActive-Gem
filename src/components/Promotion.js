@@ -28,7 +28,7 @@ const Promotion = ({ history }) => {
           // onSlideChange={() => console.log('slide change')}
         >
           <div className='Navigation__Item__Header'>
-            <p>젬 추천 공간</p>
+            <p>젬 큐레이션</p>
             <FiChevronRight
               style={{
                 fontSize: '1.35rem',
