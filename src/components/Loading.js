@@ -1,14 +1,12 @@
 import React from 'react';
+import loading from '../components/images/loading.gif';
 
 import './Loading.css';
 const Loading = () => {
   return (
     <section className='loading'>
       <div className='loading__contents'>
-        <img
-          src='https://res.cloudinary.com/diimwnnmj/image/upload/v1629001126/KakaoTalk_Photo_2021-08-15-13-17-13_eluzaj.gif'
-          alt='Loading...'
-        />
+        <img src={loading} alt='Loading...' />
       </div>
     </section>
   );
