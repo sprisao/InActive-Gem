@@ -16,7 +16,7 @@ const CategoryHeader = ({ category, secondCategory, currentLocation }) => {
   const dropdownRef = useRef(null);
   const [isActive, setisActive] = useDetectOutsideClick(dropdownRef, false);
   const onClick = () => setisActive(!isActive);
-  const [locationCategory, setLocationCategory] = useState(currentLocation);
+  const [locationCategory, setLocationCategory] = useState('전체');
 
   return (
     <>
@@ -43,7 +43,7 @@ const CategoryHeader = ({ category, secondCategory, currentLocation }) => {
             >
               <ul>
                 <li>
-                  <Link to={`/category/${category}/전체`}>
+                  <Link to={`/category/${category}/전체/${secondCategory}`}>
                     <button
                       onClick={() => {
                         setLocationCategory('전체');
@@ -56,7 +56,9 @@ const CategoryHeader = ({ category, secondCategory, currentLocation }) => {
                 </li>
                 {locationCategories.map((location) => (
                   <li key={location.id}>
-                    <Link to={`/category/${category}/${location.location}`}>
+                    <Link
+                      to={`/category/${category}/${location.location}/${secondCategory}`}
+                    >
                       <button
                         onClick={() => {
                           setLocationCategory(location.location);

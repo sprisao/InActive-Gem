@@ -19,8 +19,8 @@ SwiperCore.use([Pagination, History]);
 
 smoothscroll.polyfill();
 
-const CategoryPage = () => {
-  const { firstCategory, locationCategory } = useParams();
+const CategoryPage = (history) => {
+  const { firstCategory, secondCategory, locationCategory } = useParams();
   const {
     restaurantLoading,
     cafesLoading,
@@ -54,8 +54,9 @@ const CategoryPage = () => {
     (secondCategory) => secondCategory.firstCategory[0] === firstCategory
   );
 
-  const stateInit = tabFilter[0].title;
-  const [isActive, setIsActive] = useState(stateInit);
+  const [initPage, setInitPage] = useState(secondCategory);
+  const [isActive, setIsActive] = useState(secondCategory);
+  console.log(isActive);
   const [swiper, setSwiper] = useState(null);
 
   // Store Data 필터링
@@ -104,9 +105,13 @@ const CategoryPage = () => {
 
   // 카테고리 클릭시 스크롤 이동
   const clickHandler = (params, e) => {
+    history.history.push(
+      `/category/${firstCategory}/${locationCategory}/${params}`
+    );
     setIsActive(params);
+    setInitPage(params);
     const indexTab = tabFilter.map((item) => item.title);
-    swiper.slideTo(indexTab.indexOf(params));
+    // swiper.slideTo(indexTab.indexOf(params));
 
     let whichTarget;
     if (e.target.localName === 'span') {
@@ -141,35 +146,36 @@ const CategoryPage = () => {
 
   // 스와이프시 스크롤 이동
 
-  const swipeHandler = (e) => {
-    setIsActive(tabFilter[e.activeIndex].title);
-    // console.log(locationCategory);
-    // console.log(e.activeIndex);
-    const refLeftSpace = activeRef.current.offsetLeft;
-    const refTabWidth = activeRef.current.offsetWidth / 2;
-    const refLeftToMiddleSpace = refLeftSpace + refTabWidth;
+  // const swipeHandler = (e) => {
+  //   setIsActive(tabFilter[e.activeIndex].title);
+  //   setInitPage(tabFilter[e.activeIndex].title);
+  //   // console.log(locationCategory);
+  //   // console.log(e.activeIndex);
+  //   const refLeftSpace = activeRef.current.offsetLeft;
+  //   const refTabWidth = activeRef.current.offsetWidth / 2;
+  //   const refLeftToMiddleSpace = refLeftSpace + refTabWidth;
 
-    // 타겟요소를 감싸고있는 부모요소의 스크롤영역을 포함한 넓이
-    const wrapperWidth = wrapperRef.current.scrollWidth;
+  //   // 타겟요소를 감싸고있는 부모요소의 스크롤영역을 포함한 넓이
+  //   const wrapperWidth = wrapperRef.current.scrollWidth;
 
-    // 화면의 중앙가지의 거리
-    const viewWidth = wrapperRef.current.clientWidth / 2;
+  //   // 화면의 중앙가지의 거리
+  //   const viewWidth = wrapperRef.current.clientWidth / 2;
 
-    let refPos = 0;
+  //   let refPos = 0;
 
-    if (refLeftToMiddleSpace < viewWidth) {
-      refPos = 0;
-    } else if (wrapperWidth - refLeftToMiddleSpace < viewWidth) {
-      refPos = wrapperWidth;
-    } else {
-      refPos = refLeftToMiddleSpace - viewWidth;
-    }
+  //   if (refLeftToMiddleSpace < viewWidth) {
+  //     refPos = 0;
+  //   } else if (wrapperWidth - refLeftToMiddleSpace < viewWidth) {
+  //     refPos = wrapperWidth;
+  //   } else {
+  //     refPos = refLeftToMiddleSpace - viewWidth;
+  //   }
 
-    window.scrollTo({
-      top: 0,
-    });
-    wrapperRef.current.scrollTo({ left: refPos, behavior: 'smooth' });
-  };
+  //   window.scrollTo({
+  //     top: 0,
+  //   });
+  //   wrapperRef.current.scrollTo({ left: refPos, behavior: 'smooth' });
+  // };
 
   return (
     <>
@@ -177,125 +183,129 @@ const CategoryPage = () => {
         <div className='Header--Fix--Box'>
           <CategoryHeader
             category={firstCategory}
-            secondCategory={firstCategory}
+            secondCategory={secondCategory}
             currentLocation={locationCategory}
           />
-          {secondLoading ? (
-            <Loading />
-          ) : (
-            <section className='SecondCategory-Container'>
-              <div className='SecondCategory-Wrapper' ref={wrapperRef}>
-                {tabFilter.map((item) => {
-                  if (isActive === item.title) {
-                    return (
-                      <div
-                        className='SecondCategory-Item Active'
-                        key={item.id}
-                        onClick={(e) => {
-                          clickHandler(item.title, e);
-                        }}
-                        ref={activeRef}
-                      >
-                        <span>
-                          {item.emoji} {item.title}
-                        </span>
-                      </div>
-                    );
-                  } else
-                    return (
-                      <div
-                        className='SecondCategory-Item'
-                        key={item.id}
-                        onClick={(e) => {
-                          clickHandler(item.title, e);
-                        }}
-                      >
-                        <span>
-                          {item.emoji} {item.title}
-                        </span>
-                      </div>
-                    );
-                })}
-              </div>
-            </section>
-          )}
+
+          <section className='SecondCategory-Container'>
+            <div className='SecondCategory-Wrapper' ref={wrapperRef}>
+              {tabFilter.map((item) => {
+                if (isActive === item.title) {
+                  return (
+                    <div
+                      className='SecondCategory-Item Active'
+                      key={item.id}
+                      onClick={(e) => {
+                        clickHandler(item.title, e);
+                      }}
+                      ref={activeRef}
+                    >
+                      <span>
+                        {item.emoji} {item.title}
+                      </span>
+                    </div>
+                  );
+                } else
+                  return (
+                    <div
+                      className='SecondCategory-Item'
+                      key={item.id}
+                      onClick={(e) => {
+                        clickHandler(item.title, e);
+                      }}
+                    >
+                      <span>
+                        {item.emoji} {item.title}
+                      </span>
+                    </div>
+                  );
+              })}
+            </div>
+          </section>
         </div>
       </div>
+
       {loadingCategory ? (
         <Loading />
       ) : (
-        <Swiper
-          initialSlide={0}
-          history={{
-            key: `/category/${firstCategory}/${locationTaker}`,
-            replaceState: true,
-          }}
-          slidesPerView={1}
-          speed={600}
-          onSlideChange={(e) => swipeHandler(e)}
-          onSwiper={(swiper) => setSwiper(swiper)}
-          autoHeight={true}
-          className='CategorySwiper'
-        >
-          {tabFilter.map((item) => {
-            return (
-              <SwiperSlide data-history={item.id} key={item.id}>
-                <div className='CategoryGrid' style={{ margin: '0' }}>
-                  <div className='notice'>
-                    <HiBadgeCheck
-                      style={{
-                        alignItems: 'center',
-                        color: '#f21d73',
-                        fontSize: '1.15rem',
-                      }}
-                    />
-                    <span>
-                      는 젬에서 인증하는{' '}
-                      <span
-                        style={{
-                          background:
-                            'linear-gradient(to top, #FFE400 50%, transparent 50% )',
-                        }}
-                      >
-                        지역명소(로컬젬)
-                      </span>
-                      입니다.
-                    </span>
-                  </div>
-                  <section className='grid'>
-                    <div className='grid__wrapper'>
-                      {storeData.map((store) => {
-                        if (locationCategory === '전체') {
-                          if (store.secondCategory[0] === item.title)
-                            return (
-                              <GridCard
-                                key={store.id}
-                                store={store}
-                                open={store.openHour}
-                                close={store.closeHour}
-                              ></GridCard>
-                            );
-                          else return null;
-                        } else if (store.eupmyeondongRi === locationCategory) {
-                          if (store.secondCategory[0] === item.title)
-                            return (
-                              <GridCard
-                                key={store.id}
-                                store={store}
-                                open={store.openHour}
-                                close={store.closeHour}
-                              ></GridCard>
-                            );
-                          else return null;
-                        } else return null;
-                      })}
-                    </div>
-                  </section>
-                </div>
-              </SwiperSlide>
-            );
-          })}
-        </Swiper>
+        <div className='CategoryGrid'>
+          <div className='notice'>
+            <HiBadgeCheck
+              style={{
+                alignItems: 'center',
+                color: '#f21d73',
+                fontSize: '1.15rem',
+              }}
+            />
+            <span>
+              는 젬에서 인증하는{' '}
+              <span
+                style={{
+                  background:
+                    'linear-gradient(to top, #FFE400 50%, transparent 50% )',
+                }}
+              >
+                지역명소(로컬젬)
+              </span>
+              입니다.
+            </span>
+          </div>
+          <section className='grid'>
+            <div className='grid__wrapper'>
+              {storeData.map((store) => {
+                if (
+                  locationCategory === store.eupmyeondongRi &&
+                  store.secondCategory[0] === isActive
+                ) {
+                  return (
+                    <GridCard
+                      key={store.id}
+                      store={store}
+                      open={store.openHour}
+                      close={store.closeHour}
+                    ></GridCard>
+                  );
+                } else if (
+                  locationCategory === '전체' &&
+                  store.secondCategory[0] === isActive
+                ) {
+                  return (
+                    <GridCard
+                      key={store.id}
+                      store={store}
+                      open={store.openHour}
+                      close={store.closeHour}
+                    ></GridCard>
+                  );
+                }
+              })}
+            </div>
+          </section>
+        </div>
+        // <Swiper
+        //   initialSlide={0}
+        //   history={{
+        //     key: `/category/${firstCategory}/${locationTaker}`,
+        //     replaceState: true,
+        //   }}
+        //   slidesPerView={1}
+        //   speed={600}
+        //   onSlideChange={(e) => swipeHandler(e)}
+        //   onSwiper={(swiper) => setSwiper(swiper)}
+        //   autoHeight={true}
+        //   className='CategorySwiper'
+        // >
+        //   {tabFilter.map((item) => {
+        //     if (item.title === isActive) {
+        //       return (
+        //         <SwiperSlide data-history={isActive} key={item.id}>
+        //         </SwiperSlide>
+        //       );
+        //     } else {
+        //       return null;
+        //     }
+        //   })}
+        // </Swiper>
       )}
     </>
   );

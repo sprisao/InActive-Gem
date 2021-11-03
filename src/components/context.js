@@ -103,11 +103,41 @@ const StoreProvider = ({ children }) => {
   const locationCategory = [];
   const newStore = [];
 
+  // 세컨드카테고리 데이터 불러오기
+  useEffect(() => {
+    storeBase('secondCategoryData')
+      .select({
+        view: 'Grid view',
+        pageSize: 50,
+      })
+      .eachPage(
+        function page(records, fetchNextPage) {
+          records.forEach(function (record) {
+            secondCategory.push({
+              id: record.id,
+              ...record._rawJson.fields,
+            });
+          });
+          setSecondCategories(secondCategory);
+          fetchNextPage();
+        },
+        function done(err) {
+          if (err) {
+            console.error(err);
+          } else {
+            console.log('세컨드 카테고리 데이터 불러오기 성공');
+            setSecondLoading(false);
+          }
+        }
+      );
+  }, []);
+
   // 맛집 불러오기
   useEffect(() => {
     storeBase('stores')
       .select({
         view: 'restaurants',
+        maxRecords: 300,
         pageSize: 100,
       })
       .eachPage(
@@ -137,6 +167,7 @@ const StoreProvider = ({ children }) => {
     storeBase('stores')
       .select({
         view: 'cafes',
+        maxRecords: 200,
         pageSize: 100,
       })
       .eachPage(
@@ -504,35 +535,6 @@ const StoreProvider = ({ children }) => {
           } else {
             console.log('카테고리 데이터 불러오기 성공');
             setNavigationLoading(false);
-          }
-        }
-      );
-  }, []);
-
-  // 세컨드카테고리 데이터 불러오기
-  useEffect(() => {
-    storeBase('secondCategoryData')
-      .select({
-        view: 'Grid view',
-        pageSize: 50,
-      })
-      .eachPage(
-        function page(records, fetchNextPage) {
-          records.forEach(function (record) {
-            secondCategory.push({
-              id: record.id,
-              ...record._rawJson.fields,
-            });
-          });
-          setSecondCategories(secondCategory);
-          fetchNextPage();
-        },
-        function done(err) {
-          if (err) {
-            console.error(err);
-          } else {
-            console.log('세컨드 카테고리 데이터 불러오기 성공');
-            setSecondLoading(false);
           }
         }
       );

@@ -15,12 +15,14 @@ import EventsPage from './View/EventsPage/EventsPage';
 import BookmarkPage from './View/BookmarkPage/BookmarkPage';
 import SearchPage from './View/SearchPage/SearchPage';
 import CategoryPage from './View/CategoryPage/CategoryPage';
+import CategorySelectPage from './View/CategoryPage/CategorySelectPage';
+
+import CategoryPageTest from './View/CategoryPage/CategoryPageTest';
 import DetailsData from './View/DetailsPage/DetailsData';
 import Privacy from './Privacy';
 import UserAgreements from './UserAgreements';
 import StoreAgreements from './StoreAgreements';
 import Error from './View/ErrorPage/Error';
-import Loading from './Loading';
 
 import ScrollToTop from './ScrollToTop';
 
@@ -62,11 +64,18 @@ function App() {
         <Route exact path='/register' component={RegisterPage} />
         <Route exact path='/events' component={EventsPage} />
         <Route exact path='/bookmarks' component={BookmarkPage} />
-        <Route exact path='/search/:input' component={SearchPage} /> =
+        <Route exact path='/search/:input' component={SearchPage} />
         <Route
-          path='/category/:firstCategory/:locationCategory'
+          exact
+          path='/select/:firstCategory'
+          component={CategorySelectPage}
+        />
+
+        <Route
+          path='/category/:firstCategory/:locationCategory/:secondCategory'
           component={CategoryPage}
         />
+        <Route path='/categorytest/' component={CategoryPageTest} />
         <Route exact path='/privacy' component={Privacy} />
         <Route exact path='/useragreements' component={UserAgreements} />
         <Route exact path='/storeagreements' component={StoreAgreements} />

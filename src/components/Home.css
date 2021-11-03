@@ -47,6 +47,7 @@
 .Navigtaion__FirstItem__Emoji img {
   width: 7.5rem;
   height: auto;
+  filter: drop-shadow(2px 1px 3px rgba(0, 0, 0, 0.487));
 }
 
 .Navigation__Item__Message p {
@@ -62,7 +63,7 @@
   font-family: 'ONE-Mobile-POP';
   color: #333;
   font-weight: 100;
-  font-size: 1.75rem;
+  font-size: 2rem;
 }
 
 .Navigation__Item__ComingSoon {
@@ -118,6 +119,7 @@
 .HOEX-Button .Navigation__Item__Emoji__Container img {
   width: 3.5rem;
   height: auto;
+  filter: drop-shadow(2px 1px 3px rgba(0, 0, 0, 0.487));
 }
 
 .HOEX-Button .Navigation__Item__Emoji__Container {
@@ -180,6 +182,7 @@
 .Navigation__Item__Emoji__Container img {
   z-index: 4;
   width: 3rem;
+  filter: drop-shadow(2px 1px 3px rgba(0, 0, 0, 0.487));
 }
 
 .FourthGrid__Wrap {
