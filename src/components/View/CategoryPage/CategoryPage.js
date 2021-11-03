@@ -2,8 +2,6 @@ import React, { useRef, useState, useEffect } from 'react';
 import CategoryHeader from './CategoryPageComponent/CategoryHeader';
 import GridCard from '../../Grid/GridCard';
 import Loading from '../../Loading';
-import RecommendPage from './RecommendPage';
-import Footer from '../../Footer';
 
 import { HiBadgeCheck } from 'react-icons/hi';
 
@@ -35,6 +33,7 @@ const CategoryPage = () => {
     academiesLoading,
     pharmaciesLoading,
     flowerShopsLoading,
+    secondLoading,
 
     secondCategories,
     restaurants,
@@ -50,10 +49,15 @@ const CategoryPage = () => {
     flowerShops,
   } = useGlobalContext();
 
-  const [stateInit, setstateInit] = useState('전체');
+  // SecondCategory 필터링
+  const tabFilter = secondCategories.filter(
+    (secondCategory) => secondCategory.firstCategory[0] === firstCategory
+  );
 
-  const [swiper, setSwiper] = useState(null);
+  const stateInit = tabFilter[0].title;
   const [isActive, setIsActive] = useState(stateInit);
+  const [swiper, setSwiper] = useState(null);
+
   // Store Data 필터링
   let storeData;
   let loadingCategory;
@@ -94,11 +98,6 @@ const CategoryPage = () => {
     storeData = flowerShops;
     loadingCategory = flowerShopsLoading;
   }
-
-  // FirstCategory 필터링
-  const tabFilter = secondCategories.filter(
-    (secondCategory) => secondCategory.firstCategory[0] === firstCategory
-  );
 
   const wrapperRef = useRef();
   const activeRef = useRef();
@@ -144,8 +143,8 @@ const CategoryPage = () => {
 
   const swipeHandler = (e) => {
     setIsActive(tabFilter[e.activeIndex].title);
-    console.log(locationCategory);
-    console.log(e.activeIndex);
+    // console.log(locationCategory);
+    // console.log(e.activeIndex);
     const refLeftSpace = activeRef.current.offsetLeft;
     const refTabWidth = activeRef.current.offsetWidth / 2;
     const refLeftToMiddleSpace = refLeftSpace + refTabWidth;
@@ -172,25 +171,6 @@ const CategoryPage = () => {
     wrapperRef.current.scrollTo({ left: refPos, behavior: 'smooth' });
   };
 
-  // 각 카테고리별 로딩 중인지 체크
-  //
-
-  const onScroll = () => {
-    if (
-      window.scrollY + document.documentElement.clientHeight >
-      document.documentElement.scrollHeight - 100
-    ) {
-      console.log('hit the bottom');
-    }
-  };
-
-  useEffect(() => {
-    window.addEventListener('scroll', onScroll);
-    return () => {
-      window.removeEventListener('scroll', onScroll);
-    };
-  }, []);
-
   return (
     <>
       <div className='CategoryPage--Header--Container'>
@@ -200,42 +180,45 @@ const CategoryPage = () => {
             secondCategory={firstCategory}
             currentLocation={locationCategory}
           />
-
-          <section className='SecondCategory-Container'>
-            <div className='SecondCategory-Wrapper' ref={wrapperRef}>
-              {tabFilter.map((item) => {
-                if (isActive === item.title) {
-                  return (
-                    <div
-                      className='SecondCategory-Item Active'
-                      key={item.id}
-                      onClick={(e) => {
-                        clickHandler(item.title, e);
-                      }}
-                      ref={activeRef}
-                    >
-                      <span>
-                        {item.emoji} {item.title}
-                      </span>
-                    </div>
-                  );
-                } else
-                  return (
-                    <div
-                      className='SecondCategory-Item'
-                      key={item.id}
-                      onClick={(e) => {
-                        clickHandler(item.title, e);
-                      }}
-                    >
-                      <span>
-                        {item.emoji} {item.title}
-                      </span>
-                    </div>
-                  );
-              })}
-            </div>
-          </section>
+          {secondLoading ? (
+            <Loading />
+          ) : (
+            <section className='SecondCategory-Container'>
+              <div className='SecondCategory-Wrapper' ref={wrapperRef}>
+                {tabFilter.map((item) => {
+                  if (isActive === item.title) {
+                    return (
+                      <div
+                        className='SecondCategory-Item Active'
+                        key={item.id}
+                        onClick={(e) => {
+                          clickHandler(item.title, e);
+                        }}
+                        ref={activeRef}
+                      >
+                        <span>
+                          {item.emoji} {item.title}
+                        </span>
+                      </div>
+                    );
+                  } else
+                    return (
+                      <div
+                        className='SecondCategory-Item'
+                        key={item.id}
+                        onClick={(e) => {
+                          clickHandler(item.title, e);
+                        }}
+                      >
+                        <span>
+                          {item.emoji} {item.title}
+                        </span>
+                      </div>
+                    );
+                })}
+              </div>
+            </section>
+          )}
         </div>
       </div>
       {loadingCategory ? (
@@ -280,12 +263,10 @@ const CategoryPage = () => {
                     </span>
                   </div>
                   <section className='grid'>
-                    {item.title === '추천' ? (
-                      <RecommendPage firstCategory={firstCategory} />
-                    ) : item.title === '전체' ? (
-                      <div className='grid__wrapper'>
-                        {storeData.map((store) => {
-                          if (locationCategory === '전체') {
+                    <div className='grid__wrapper'>
+                      {storeData.map((store) => {
+                        if (locationCategory === '전체') {
+                          if (store.secondCategory[0] === item.title)
                             return (
                               <GridCard
                                 key={store.id}
@@ -294,9 +275,9 @@ const CategoryPage = () => {
                                 close={store.closeHour}
                               ></GridCard>
                             );
-                          } else if (
-                            store.eupmyeondongRi === locationCategory
-                          ) {
+                          else return null;
+                        } else if (store.eupmyeondongRi === locationCategory) {
+                          if (store.secondCategory[0] === item.title)
                             return (
                               <GridCard
                                 key={store.id}
@@ -305,40 +286,10 @@ const CategoryPage = () => {
                                 close={store.closeHour}
                               ></GridCard>
                             );
-                          } else return null;
-                        })}
-                      </div>
-                    ) : (
-                      <div className='grid__wrapper'>
-                        {storeData.map((store) => {
-                          if (locationCategory === '전체') {
-                            if (store.secondCategory[0] === item.title)
-                              return (
-                                <GridCard
-                                  key={store.id}
-                                  store={store}
-                                  open={store.openHour}
-                                  close={store.closeHour}
-                                ></GridCard>
-                              );
-                            else return null;
-                          } else if (
-                            store.eupmyeondongRi === locationCategory
-                          ) {
-                            if (store.secondCategory[0] === item.title)
-                              return (
-                                <GridCard
-                                  key={store.id}
-                                  store={store}
-                                  open={store.openHour}
-                                  close={store.closeHour}
-                                ></GridCard>
-                              );
-                            else return null;
-                          } else return null;
-                        })}
-                      </div>
-                    )}
+                          else return null;
+                        } else return null;
+                      })}
+                    </div>
                   </section>
                 </div>
               </SwiperSlide>
@@ -346,7 +297,6 @@ const CategoryPage = () => {
           })}
         </Swiper>
       )}
-      <Footer />
     </>
   );
 };
