@@ -20,7 +20,6 @@ const SlideWrapper = (props) => {
           {lunchRCCMD.map((store) => {
             return <SlideType1 key={store.id} store={store}></SlideType1>;
           })}
-          ;
         </div>
       );
     }
@@ -30,7 +29,6 @@ const SlideWrapper = (props) => {
           {cafeRCCMD.map((store) => {
             return <SlideType1 key={store.id} store={store}></SlideType1>;
           })}
-          ;
         </div>
       );
     }
@@ -42,7 +40,6 @@ const SlideWrapper = (props) => {
           {cafeRCCMD.map((store) => {
             return <SlideType2 key={store.id} store={store}></SlideType2>;
           })}
-          ;
         </div>
       );
     }
@@ -52,7 +49,6 @@ const SlideWrapper = (props) => {
           {newStores.map((store) => {
             return <SlideType2 key={store.id} store={store}></SlideType2>;
           })}
-          ;
         </div>
       );
     }
