@@ -1,14 +1,9 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useContext, useEffect } from 'react';
 import Airtable from 'airtable';
 
-// Import the functions you need from the SDKs you need
 import { initializeApp } from 'firebase/app';
 
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: 'AIzaSyBG5blnL2Sg_YMV71JAjzkUKm1a9T52Fz8',
   authDomain: 'gem-web-app.firebaseapp.com',
@@ -32,8 +27,6 @@ const storeBase = new Airtable({
 const Context = React.createContext();
 
 const StoreProvider = ({ children }) => {
-  // 1. useState 활용해서 Loading 변수 생성
-
   const [restaurantLoading, setRestaurantLoading] = useState(true);
   const [cafesLoading, setCafesLoading] = useState(true);
   const [barsLoading, setBarsLoading] = useState(true);
@@ -54,7 +47,6 @@ const StoreProvider = ({ children }) => {
   const [eventsLoading, setEventsLoading] = useState(true);
   const [promoLoading, setPromoLoading] = useState(true);
 
-  // 2. '복수' useState 활용해서 새롭게 불러올 데이터 패키지 함수명 지정
   const [restaurants, setRestaurants] = useState([]);
   const [cafes, setCafes] = useState([]);
   const [bars, setBars] = useState([]);
@@ -75,7 +67,6 @@ const StoreProvider = ({ children }) => {
   const [menu, setMenu] = useState([]);
   const [events, setEvents] = useState([]);
   const [promotions, setPromotions] = useState([]);
-  // 3. '단수' 각각의 데이터패키지 내의 데이터가 들어올 Array 생성
 
   const restaurant = [];
   const cafe = [];
@@ -150,7 +141,7 @@ const StoreProvider = ({ children }) => {
           if (err) {
             console.error(err);
           } else {
-            console.log('업체데이터 불러오기 성공');
+            console.log('맛집 불러오기 성공');
             setRestaurantLoading(false);
           }
         }

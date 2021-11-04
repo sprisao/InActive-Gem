@@ -3,6 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 
 // import pages
 import LoginPage from './View/LoginPage/LoginPage';
+import Loading from './Loading';
 import RegisterPage from './View/LoginPage/RegisterPage';
 import PwresetPage from './View/LoginPage/PwresetPage';
 import LandingPage from './View/LandingPage/LandingPage';
@@ -24,10 +25,13 @@ import { getAuth } from 'firebase/auth';
 import { useDispatch } from 'react-redux';
 import { setUser, clearUser } from '../redux/actions/user_actions';
 
+import { useGlobalContext } from './context';
+
 const auth = getAuth();
 
 function App() {
   let dispatch = useDispatch();
+  const { restaurantLoading } = useGlobalContext();
 
   useEffect(() => {
     auth.onAuthStateChanged((user) => {
@@ -42,37 +46,37 @@ function App() {
     });
   }, [dispatch]);
 
-  // if (isLoading) {
-  //   return <Loading />;
-  // } else
-  return (
-    <ScrollToTop>
-      <Switch>
-        <Route exact path='/' component={LandingPage} />
-        <Route exact path='/login' component={LoginPage} />
-        <Route exact path='/pwreset' component={PwresetPage} />
-        <Route exact path='/register' component={RegisterPage} />
-        <Route exact path='/events' component={EventsPage} />
-        <Route exact path='/bookmarks' component={BookmarkPage} />
-        <Route exact path='/search/:input' component={SearchPage} />
-        <Route
-          exact
-          path='/select/:firstCategory'
-          component={CategorySelectPage}
-        />
+  if (restaurantLoading) {
+    return <Loading />;
+  } else
+    return (
+      <ScrollToTop>
+        <Switch>
+          <Route exact path='/' component={LandingPage} />
+          <Route exact path='/login' component={LoginPage} />
+          <Route exact path='/pwreset' component={PwresetPage} />
+          <Route exact path='/register' component={RegisterPage} />
+          <Route exact path='/events' component={EventsPage} />
+          <Route exact path='/bookmarks' component={BookmarkPage} />
+          <Route exact path='/search/:input' component={SearchPage} />
+          <Route
+            exact
+            path='/select/:firstCategory'
+            component={CategorySelectPage}
+          />
 
-        <Route
-          path='/category/:firstCategory/:locationCategory/:secondCategory'
-          component={CategoryPage}
-        />
-        <Route exact path='/privacy' component={Privacy} />
-        <Route exact path='/useragreements' component={UserAgreements} />
-        <Route exact path='/storeagreements' component={StoreAgreements} />
-        <Route path='/store/:id' component={DetailsData} />
-        <Route path='*' component={Error} />
-      </Switch>
-    </ScrollToTop>
-  );
+          <Route
+            path='/category/:firstCategory/:locationCategory/:secondCategory'
+            component={CategoryPage}
+          />
+          <Route exact path='/privacy' component={Privacy} />
+          <Route exact path='/useragreements' component={UserAgreements} />
+          <Route exact path='/storeagreements' component={StoreAgreements} />
+          <Route path='/store/:id' component={DetailsData} />
+          <Route path='*' component={Error} />
+        </Switch>
+      </ScrollToTop>
+    );
 }
 
 export default App;
