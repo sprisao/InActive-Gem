@@ -5,9 +5,6 @@ import './DetailGrid.css';
 
 const DetailGrid = (props) => {
   const {
-    loading,
-    menu,
-    menuLoading,
     restaurants,
     cafes,
     bars,

@@ -21,7 +21,6 @@ import './Information.css';
 const url = 'https://www.instagram.com/';
 
 const Information = (props) => {
-  const [copied, setCopied] = useState(false);
   const [isShowing, setIsShowing] = useState(false);
   const openModal = () => {
     setIsShowing(true);
@@ -144,10 +143,7 @@ const Information = (props) => {
         />
         <p>{props.phoneNumber}</p>
 
-        <CopyToClipboard
-          text={props.phoneNumber}
-          onCopy={() => setCopied(true)}
-        >
+        <CopyToClipboard text={props.phoneNumber}>
           <button type='button' onClick={openModal}>
             <div className='copyBtn__container'>
               <FiCopy style={{ fontSize: '1rem' }} />
@@ -217,10 +213,7 @@ const Information = (props) => {
           <div className='location__fullAddress'>
             <p>{props.fullAddress}</p>
           </div>
-          <CopyToClipboard
-            text={props.fullAddress}
-            onCopy={() => setCopied(true)}
-          >
+          <CopyToClipboard text={props.fullAddress}>
             <button className='btn_container' type='button' onClick={openModal}>
               <div className='copyBtn__container'>
                 <FiCopy style={{ fontSize: '1rem' }} />

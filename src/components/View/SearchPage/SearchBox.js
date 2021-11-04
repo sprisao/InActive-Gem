@@ -1,10 +1,8 @@
 import React, { useState, useRef } from 'react';
 
-import { Link } from 'react-router-dom';
-
 import { useDetectOutsideClick } from '../CategoryPage/CategoryPageComponent/useDetectOutsideClick';
 
-import { FaUserCircle, FaBell } from 'react-icons/fa';
+import { FaUserCircle } from 'react-icons/fa';
 import { RiSearchLine } from 'react-icons/ri';
 
 import { getAuth, signOut } from 'firebase/auth';
@@ -19,6 +17,7 @@ const SearchBox = ({ history }) => {
   const user = auth.currentUser;
 
   const handlePush = () => {
+    console.log(history);
     history.history.push('/login');
   };
 

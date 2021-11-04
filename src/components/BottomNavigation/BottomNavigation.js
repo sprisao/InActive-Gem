@@ -1,8 +1,6 @@
 import React from 'react';
 
-import { FiHome } from 'react-icons/fi';
 import {
-  BsBookmark,
   BsBookmarkFill,
   BsLightningFill,
   BsFillHouseDoorFill,

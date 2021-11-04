@@ -9,9 +9,6 @@ import './Recommendations.css';
 
 const Recommendations = (props) => {
   const {
-    loading,
-    menu,
-    menuLoading,
     restaurants,
     cafes,
     bars,

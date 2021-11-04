@@ -6,7 +6,6 @@ import './Footer.css';
 const url = 'https://www.gogogem.io';
 
 const Footer = () => {
-  const [copied, setCopied] = useState(false);
   const [isShowing, setIsShowing] = useState(false);
   const openModal = () => {
     setIsShowing(true);
@@ -19,7 +18,6 @@ const Footer = () => {
       return () => clearTimeout(notiTimer);
     }
   }, [isShowing]);
-  // if (copied === true) return console.log('copied');
 
   return (
     <section className='footer'>
@@ -47,7 +45,7 @@ const Footer = () => {
           <p>내 가게 문의하기</p>
         </div>
         |
-        <CopyToClipboard text={url} onCopy={() => setCopied(true)}>
+        <CopyToClipboard text={url}>
           <div className='footer__button' onClick={openModal}>
             <p className='emoji'>🚀</p>
             <p>친구에게 '젬' 알리기</p>

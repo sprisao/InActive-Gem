@@ -57,7 +57,7 @@ const BookmarkPage = (history) => {
         }
       });
     }
-  }, []);
+  }, [user, history.history, db]);
 
   return (
     <>

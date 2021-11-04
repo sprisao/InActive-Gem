@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import logo from '../../images/logo.png';
@@ -11,7 +11,6 @@ const LoginPage = (history) => {
     formState: { errors },
     handleSubmit,
   } = useForm({ mode: 'onChange' });
-  const [loading, setLoading] = useState(false);
   const auth = getAuth();
   const user = auth.currentUser;
 
@@ -19,8 +18,7 @@ const LoginPage = (history) => {
     signInWithEmailAndPassword(auth, data.email, data.password)
       .then((userCredential) => {
         // Signed in
-
-        history.history.push('/');
+        return history.history.push('/');
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -60,9 +58,7 @@ const LoginPage = (history) => {
             {errors.password && errors.password.type === 'required' && (
               <p>비밀번호를 입력해주세요.</p>
             )}
-            <button type='submit' disabled={loading}>
-              Login
-            </button>
+            <button type='submit'>Login</button>
             <div className='pwReset-Wrapper'>
               <Link to='/register'>
                 {'  '}

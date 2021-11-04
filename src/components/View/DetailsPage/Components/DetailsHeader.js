@@ -1,13 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { HiBadgeCheck } from 'react-icons/hi';
 import { BsBookmark, BsBookmarkFill } from 'react-icons/bs';
 
 import {
   getFirestore,
-  collection,
-  addDoc,
   doc,
-  setDoc,
   updateDoc,
   arrayUnion,
   arrayRemove,
@@ -18,8 +15,6 @@ import { getAuth } from 'firebase/auth';
 import './DetailsHeader.css';
 
 const DetailsHeader = (props) => {
-  const [bookmarked, setBookmarked] = useState(false);
-  const [bookmarkClicked, setBookmarkClicked] = useState(false);
   const db = getFirestore();
   const auth = getAuth();
   const user = auth.currentUser;

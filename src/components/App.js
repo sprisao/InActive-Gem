@@ -1,10 +1,5 @@
 import React, { useEffect } from 'react';
-import {
-  BrowserRouter as Router,
-  Route,
-  Switch,
-  useHistory,
-} from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
 // import pages
 import LoginPage from './View/LoginPage/LoginPage';
@@ -17,7 +12,6 @@ import SearchPage from './View/SearchPage/SearchPage';
 import CategoryPage from './View/CategoryPage/CategoryPage';
 import CategorySelectPage from './View/CategoryPage/CategorySelectPage';
 
-import CategoryPageTest from './View/CategoryPage/CategoryPageTest';
 import DetailsData from './View/DetailsPage/DetailsData';
 import Privacy from './Privacy';
 import UserAgreements from './UserAgreements';
@@ -27,17 +21,13 @@ import Error from './View/ErrorPage/Error';
 import ScrollToTop from './ScrollToTop';
 
 import { getAuth } from 'firebase/auth';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { setUser, clearUser } from '../redux/actions/user_actions';
 
 const auth = getAuth();
-const user = auth.currentUser;
 
 function App() {
   let dispatch = useDispatch();
-  let history = useHistory();
-
-  const isLoading = useSelector((state) => state.user.isLoading);
 
   useEffect(() => {
     auth.onAuthStateChanged((user) => {
@@ -50,7 +40,7 @@ function App() {
         dispatch(setUser(user));
       }
     });
-  }, []);
+  }, [dispatch]);
 
   // if (isLoading) {
   //   return <Loading />;
@@ -75,7 +65,6 @@ function App() {
           path='/category/:firstCategory/:locationCategory/:secondCategory'
           component={CategoryPage}
         />
-        <Route path='/categorytest/' component={CategoryPageTest} />
         <Route exact path='/privacy' component={Privacy} />
         <Route exact path='/useragreements' component={UserAgreements} />
         <Route exact path='/storeagreements' component={StoreAgreements} />

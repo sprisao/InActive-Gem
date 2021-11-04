@@ -25,7 +25,6 @@ SwiperCore.use([Pagination, History]);
 
 const DetailsPage = ({ store, history, menu, menuLoading }) => {
   const [bookmarked, setBookmarked] = useState(false);
-  const [menFilter, setMenFilter] = useState([]);
 
   let tab = ['정보'];
   let addPromo = [];
@@ -71,7 +70,7 @@ const DetailsPage = ({ store, history, menu, menuLoading }) => {
         }
       });
     }
-  }, [bookmarked]);
+  }, [db, store.id, user]);
 
   const getBookmarkClick = (value) => {
     setBookmarked(value);

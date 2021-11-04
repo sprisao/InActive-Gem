@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef, useState } from 'react';
 import CategoryHeader from './CategoryPageComponent/CategoryHeader';
 import GridCard from '../../Grid/GridCard';
 import Loading from '../../Loading';
@@ -7,7 +7,7 @@ import { HiBadgeCheck } from 'react-icons/hi';
 
 import { useGlobalContext } from '../../context';
 
-import { Swiper, SwiperSlide } from 'swiper/react';
+// import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Pagination, History } from 'swiper';
 
 import smoothscroll from 'smoothscroll-polyfill';
@@ -33,7 +33,6 @@ const CategoryPage = (history) => {
     academiesLoading,
     pharmaciesLoading,
     flowerShopsLoading,
-    secondLoading,
 
     secondCategories,
     restaurants,
@@ -54,16 +53,11 @@ const CategoryPage = (history) => {
     (secondCategory) => secondCategory.firstCategory[0] === firstCategory
   );
 
-  const [initPage, setInitPage] = useState(secondCategory);
   const [isActive, setIsActive] = useState(secondCategory);
-  console.log(isActive);
-  const [swiper, setSwiper] = useState(null);
 
   // Store Data 필터링
   let storeData;
   let loadingCategory;
-
-  const locationTaker = locationCategory;
 
   if (firstCategory === '맛집') {
     storeData = restaurants;
@@ -109,8 +103,6 @@ const CategoryPage = (history) => {
       `/category/${firstCategory}/${locationCategory}/${params}`
     );
     setIsActive(params);
-    setInitPage(params);
-    const indexTab = tabFilter.map((item) => item.title);
     // swiper.slideTo(indexTab.indexOf(params));
 
     let whichTarget;
@@ -277,7 +269,7 @@ const CategoryPage = (history) => {
                       close={store.closeHour}
                     ></GridCard>
                   );
-                }
+                } else return null;
               })}
             </div>
           </section>

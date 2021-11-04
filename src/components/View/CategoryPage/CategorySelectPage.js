@@ -10,14 +10,13 @@ import './CategorySelectPage.css';
 
 const CategorySelectPage = (history) => {
   const { firstCategory } = useParams();
-  const { secondLoading, secondCategories } = useGlobalContext();
+  const { secondCategories } = useGlobalContext();
 
   const filteredSCategory = secondCategories.filter(
     (category) => category.firstCategory[0] === firstCategory
   );
 
-  const clickHandler = (param, e) => {
-    console.log(e);
+  const clickHandler = (param) => {
     history.history.push(`/category/${firstCategory}/전체/${param}`);
   };
 
@@ -32,6 +31,7 @@ const CategorySelectPage = (history) => {
               <div
                 className='Select-Box'
                 onClick={(e) => clickHandler(item.title, e)}
+                key={item.id}
               >
                 <p>{item.title}</p>
                 <span>{item.emoji}</span>

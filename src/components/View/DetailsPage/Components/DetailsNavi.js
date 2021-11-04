@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { FiChevronLeft, FiBookmark } from 'react-icons/fi';
+import { FiChevronLeft } from 'react-icons/fi';
 
 import './DetailsNavi.css';
 

@@ -8,9 +8,6 @@ import '../../Grid/Grid.css';
 
 const SearchResults = (props) => {
   const {
-    loading,
-    menu,
-    menuLoading,
     restaurants,
     cafes,
     bars,

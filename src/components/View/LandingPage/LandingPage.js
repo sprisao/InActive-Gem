@@ -7,13 +7,10 @@ import BottomNavigation from '../../BottomNavigation/BottomNavigation';
 import Footer from '../../Footer';
 
 import Separator from '../../Separator';
-import Loading from '../../Loading';
-import { useGlobalContext } from '../../context';
 
 import './LandingPage.css';
 
 const LandingPage = (history) => {
-  const { promoLoading } = useGlobalContext();
   return (
     <>
       <SearchBox history={history} />
