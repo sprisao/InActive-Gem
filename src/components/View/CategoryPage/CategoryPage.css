@@ -87,3 +87,19 @@
   font-weight: 400;
   opacity: 1;
 }
+
+.NO-DATA {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 20rem;
+}
+
+.NO-DATA img {
+  width: 5rem;
+}
+.NO-DATA h1 {
+  margin: 0.5rem;
+  font-size: 1.5rem;
+}

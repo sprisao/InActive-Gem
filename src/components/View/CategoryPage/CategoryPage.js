@@ -258,7 +258,13 @@ const CategoryPage = (history) => {
               </section>
             </>
           ) : (
-            <h4>노데이터</h4>
+            <section className='NO-DATA'>
+              <img
+                src='https://c.tenor.com/7LxZinFmHbEAAAAi/cute-derpy-duck.gif'
+                alt=''
+              />
+              <h1>텅.. 비었습니다 ㅜㅜ</h1>
+            </section>
           )}
         </div>
       )}
