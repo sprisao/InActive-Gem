@@ -2,6 +2,7 @@ import React, { useRef, useState } from 'react';
 import CategoryHeader from './CategoryPageComponent/CategoryHeader';
 import GridCard from '../../Grid/GridCard';
 import Loading from '../../Loading';
+import BottomNavigation from '../../BottomNavigation/BottomNavigation';
 
 import { HiBadgeCheck } from 'react-icons/hi';
 
@@ -171,6 +172,7 @@ const CategoryPage = (history) => {
 
   return (
     <>
+      <BottomNavigation />
       <div className='CategoryPage--Header--Container'>
         <div className='Header--Fix--Box'>
           <CategoryHeader
