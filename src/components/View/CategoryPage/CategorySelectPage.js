@@ -27,8 +27,8 @@ const CategorySelectPage = (history) => {
       <section className='categorySelect'>
         <div className='Select-Wrapper'>
           <div className='Select-Box' onClick={(e) => clickHandler('전체', e)}>
-            <p>전체</p>
             <span>🅰️</span>
+            <p>전체</p>
           </div>
           {filteredSCategory.map((item) => {
             return (
@@ -37,8 +37,8 @@ const CategorySelectPage = (history) => {
                 onClick={(e) => clickHandler(item.title, e)}
                 key={item.id}
               >
-                <p>{item.title}</p>
                 <span>{item.emoji}</span>
+                <p>{item.title}</p>
               </div>
             );
           })}

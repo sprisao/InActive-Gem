@@ -31,7 +31,7 @@
   border: solid 1.25px #dfdfdf;
   border-radius: 0.65rem;
   padding: 0.95rem;
-  background-color: #f5f5f5;
+
   overflow: hidden;
 }
 
@@ -104,7 +104,7 @@
   border-radius: 0.65rem;
   align-items: flex-start;
   padding: 0.75rem;
-  background-color: #f5f5f5;
+
   overflow: hidden;
 }
 
@@ -141,7 +141,7 @@
   border-radius: 0.65rem;
   align-items: flex-start;
   padding: 0.75rem;
-  background-color: #f5f5f5;
+
   overflow: hidden;
 }
 
@@ -200,7 +200,6 @@
   align-items: flex-start;
   border: solid 1.25px #dfdfdf;
   border-radius: 0.65rem;
-  background-color: #f5f5f5;
 }
 
 .FourthGrid__Item .Navigation__Item__Header p {

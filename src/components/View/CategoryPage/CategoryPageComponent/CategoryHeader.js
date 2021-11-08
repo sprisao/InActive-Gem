@@ -22,7 +22,7 @@ const CategoryHeader = ({ category, secondCategory, currentLocation }) => {
     <>
       <div className='Category__Header__Wrapper'>
         <div className='Category__Header'>
-          <Link to={`/`}>
+          <Link to={`/select/${category}`}>
             <button className='Category__Backward'>
               <FiChevronLeft style={{ fontSize: '1.8rem', color: '#000' }} />
             </button>
