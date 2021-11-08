@@ -123,7 +123,6 @@ const StoreProvider = ({ children }) => {
     storeBase('stores')
       .select({
         view: 'restaurants',
-        maxRecords: 300,
         pageSize: 100,
       })
       .eachPage(
@@ -153,7 +152,6 @@ const StoreProvider = ({ children }) => {
     storeBase('stores')
       .select({
         view: 'cafes',
-        maxRecords: 200,
         pageSize: 100,
       })
       .eachPage(
@@ -587,7 +585,6 @@ const StoreProvider = ({ children }) => {
   useEffect(() => {
     storeBase('stores')
       .select({
-        maxRecords: 15,
         pageSize: 30,
         view: 'new',
       })

@@ -26,6 +26,10 @@ const CategorySelectPage = (history) => {
       <BottomNavigation />
       <section className='categorySelect'>
         <div className='Select-Wrapper'>
+          <div className='Select-Box' onClick={(e) => clickHandler('전체', e)}>
+            <p>전체</p>
+            <span>🅰️</span>
+          </div>
           {filteredSCategory.map((item) => {
             return (
               <div

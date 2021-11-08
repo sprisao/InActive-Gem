@@ -38,11 +38,6 @@
   color: rgb(70, 70, 70);
 }
 
-.CategoryGrid {
-  margin-top: calc(9rem + 47px);
-  display: flex;
-  flex-direction: column;
-}
 /* dropdownmenu */
 
 .Category__Menu__Container {
@@ -61,9 +56,9 @@
   align-items: center;
   border: none;
   transition: box-shadow 0.4s ease;
-  background-color: #f21d73;
+  background-color: var(--activeColor);
   color: #ffffff;
-  border-radius: 0.5rem;
+  border-radius: 0.75rem;
   padding: 0.5rem 0.75rem 0.45rem;
   font-size: 0.95rem;
   white-space: nowrap;

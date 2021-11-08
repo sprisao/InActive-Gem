@@ -1,12 +1,41 @@
 import React from 'react';
 import Promotion from './Promotion';
 
+import { useGlobalContext } from './context';
+
 import { FiChevronRight } from 'react-icons/fi';
 
 import { Link } from 'react-router-dom';
 import './Home.css';
 
 const Home = ({ history }) => {
+  const {
+    restaurantLoading,
+    cafesLoading,
+    barsLoading,
+    beautyShopsLoading,
+    studiosLoading,
+    petShopsLoading,
+    gymsLoading,
+    kidShopsLoading,
+    academiesLoading,
+    pharmaciesLoading,
+    flowerShopsLoading,
+
+    secondCategories,
+    restaurants,
+    cafes,
+    bars,
+    beautyShops,
+    studios,
+    petShops,
+    gyms,
+    kidShops,
+    academies,
+    pharmacies,
+    flowerShops,
+  } = useGlobalContext();
+
   return (
     <section className='new__Navigation'>
       <div className='Navigation__Container'>
