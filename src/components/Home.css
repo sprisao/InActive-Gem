@@ -45,7 +45,7 @@
   justify-content: flex-end;
 }
 .Navigtaion__FirstItem__Emoji img {
-  width: 7.5rem;
+  width: 6.5rem;
   height: auto;
   filter: drop-shadow(2px 1px 3px rgba(0, 0, 0, 0.487));
 }
@@ -87,19 +87,18 @@
   grid-template-rows: 1fr 1fr;
 }
 
-.HOEX__Wrap {
+.SpotsGrid--Wrapper {
   width: 100%;
   display: grid;
   grid-gap: 0.75rem;
   grid-template-rows: 1fr;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
 }
 
-.HOEX-Button {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  height: 5.35rem;
+.Spots--Button {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  height: 6.5rem;
   border: solid 1.25px #dfdfdf;
   border-radius: 0.65rem;
   align-items: flex-start;
@@ -108,27 +107,35 @@
   overflow: hidden;
 }
 
-.HOEX-Button p {
+.Spots--Header h3 {
+  display: flex;
   font-family: 'ONE-Mobile-POP';
   color: #333;
   font-weight: 300;
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   white-space: nowrap;
+  align-items: center;
 }
 
-.HOEX-Button .Navigation__Item__Emoji__Container img {
-  width: 3.5rem;
+.Spots--Header span {
+  display: flex;
+  width: 100%;
+  margin-top: 0.25rem;
+  font-size: 0.95rem;
+  color: #5e5e5e;
+  word-break: keep-all;
+}
+.Spots--Emoji_Container img {
+  width: 4.5rem;
   height: auto;
   filter: drop-shadow(2px 1px 3px rgba(0, 0, 0, 0.487));
 }
 
-.HOEX-Button .Navigation__Item__Emoji__Container {
+.Spots--Emoji_Container {
   display: flex;
   position: relative;
   width: 100%;
   height: 100%;
-  top: -0.35rem;
-  left: 0.9rem;
   justify-content: flex-end;
 }
 
@@ -183,31 +190,4 @@
   z-index: 4;
   width: 3rem;
   filter: drop-shadow(2px 1px 3px rgba(0, 0, 0, 0.487));
-}
-
-.FourthGrid__Wrap {
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 0.75rem;
-}
-
-.FourthGrid__Item {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  padding: 0.55rem;
-  align-items: flex-start;
-  border: solid 1.25px #dfdfdf;
-  border-radius: 0.65rem;
-}
-
-.FourthGrid__Item .Navigation__Item__Header p {
-  font-family: 'ONE-Mobile-POP';
-  color: #333;
-  font-size: 1.2rem;
-}
-
-.FourthGrid__Item .Navigation__Item__ComingSoon p {
-  font-size: 1rem;
 }

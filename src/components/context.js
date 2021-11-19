@@ -30,6 +30,8 @@ const StoreProvider = ({ children }) => {
   const [restaurantLoading, setRestaurantLoading] = useState(true);
   const [cafesLoading, setCafesLoading] = useState(true);
   const [barsLoading, setBarsLoading] = useState(true);
+  const [spotsLoading, setspotsLoading] = useState(true);
+  const [spotsCategoryLoading, setSpotsCategoryLoading] = useState(true);
   const [beautyShopsLoading, setBeautyShopsLoading] = useState(true);
   const [studiosLoading, setStudiosLoading] = useState(true);
   const [petShopsLoading, setPetShopsLoading] = useState(true);
@@ -50,6 +52,8 @@ const StoreProvider = ({ children }) => {
   const [restaurants, setRestaurants] = useState([]);
   const [cafes, setCafes] = useState([]);
   const [bars, setBars] = useState([]);
+  const [spots, setSpots] = useState([]);
+  const [spotsCategories, setSpotsCategories] = useState([]);
   const [beautyShops, setBeautyShops] = useState([]);
   const [studios, setStudios] = useState([]);
   const [petShops, setPetShops] = useState([]);
@@ -71,6 +75,8 @@ const StoreProvider = ({ children }) => {
   const restaurant = [];
   const cafe = [];
   const bar = [];
+  const spot = [];
+  const spotsCategory = [];
   const beautyShop = [];
   const studio = [];
   const petShop = [];
@@ -200,6 +206,64 @@ const StoreProvider = ({ children }) => {
           } else {
             console.log('호프주점 불러오기 성공');
             setBarsLoading(false);
+          }
+        }
+      );
+  }, []);
+
+  // 가볼만한 곳 불러오기
+  useEffect(() => {
+    storeBase('spots')
+      .select({
+        view: 'Grid view',
+        pageSize: 100,
+      })
+      .eachPage(
+        function page(records, fetchNextPage) {
+          records.forEach(function (record) {
+            spot.push({
+              id: record.id,
+              ...record._rawJson.fields,
+            });
+          });
+          fetchNextPage();
+          setSpots(spot);
+        },
+        function done(err) {
+          if (err) {
+            console.error(err);
+          } else {
+            console.log('가볼만한 곳 불러오기 성공');
+            setspotsLoading(false);
+          }
+        }
+      );
+  }, []);
+
+  // 가볼만한 곳 카테고리 불러오기
+  useEffect(() => {
+    storeBase('spotsCategory')
+      .select({
+        view: 'Grid view',
+        pageSize: 100,
+      })
+      .eachPage(
+        function page(records, fetchNextPage) {
+          records.forEach(function (record) {
+            spotsCategory.push({
+              id: record.id,
+              ...record._rawJson.fields,
+            });
+          });
+          fetchNextPage();
+          setSpotsCategories(spotsCategory);
+        },
+        function done(err) {
+          if (err) {
+            console.error(err);
+          } else {
+            console.log('가볼만한 곳 카테고리 불러오기');
+            setspotsLoading(false);
           }
         }
       );
@@ -616,6 +680,7 @@ const StoreProvider = ({ children }) => {
         restaurantLoading,
         cafesLoading,
         barsLoading,
+        spotsLoading,
         beautyShopsLoading,
         studiosLoading,
         petShopsLoading,
@@ -635,6 +700,8 @@ const StoreProvider = ({ children }) => {
         restaurants,
         cafes,
         bars,
+        spots,
+        spotsCategories,
         beautyShops,
         studios,
         petShops,

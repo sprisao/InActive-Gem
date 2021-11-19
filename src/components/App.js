@@ -11,6 +11,7 @@ import EventsPage from './View/EventsPage/EventsPage';
 import BookmarkPage from './View/BookmarkPage/BookmarkPage';
 import SearchPage from './View/SearchPage/SearchPage';
 import CategoryPage from './View/CategoryPage/CategoryPage';
+import SpotsPage from './View/CategoryPage/SpotsPage/SpotsPage';
 import CategorySelectPage from './View/CategoryPage/CategorySelectPage';
 
 import DetailsData from './View/DetailsPage/DetailsData';
@@ -64,6 +65,7 @@ function App() {
             path='/select/:firstCategory'
             component={CategorySelectPage}
           />
+          <Route exact path='/sightseeing' component={SpotsPage} />
 
           <Route
             path='/category/:firstCategory/:locationCategory/:secondCategory'

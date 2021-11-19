@@ -1,41 +1,11 @@
 import React from 'react';
 import Promotion from './Promotion';
-
-import { useGlobalContext } from './context';
-
 import { FiChevronRight } from 'react-icons/fi';
 
 import { Link } from 'react-router-dom';
 import './Home.css';
 
 const Home = ({ history }) => {
-  const {
-    restaurantLoading,
-    cafesLoading,
-    barsLoading,
-    beautyShopsLoading,
-    studiosLoading,
-    petShopsLoading,
-    gymsLoading,
-    kidShopsLoading,
-    academiesLoading,
-    pharmaciesLoading,
-    flowerShopsLoading,
-
-    secondCategories,
-    restaurants,
-    cafes,
-    bars,
-    beautyShops,
-    studios,
-    petShops,
-    gyms,
-    kidShops,
-    academies,
-    pharmacies,
-    flowerShops,
-  } = useGlobalContext();
-
   return (
     <section className='new__Navigation'>
       <div className='Navigation__Container'>
@@ -64,7 +34,6 @@ const Home = ({ history }) => {
                 <img
                   src='https://res.cloudinary.com/diimwnnmj/image/upload/v1628679629/icons/u1F363_czigul.png'
                   alt='맛집'
-                  className='Home__Slider__Image'
                 />
               </div>
             </div>
@@ -203,34 +172,31 @@ const Home = ({ history }) => {
             </div>
           </Link>
         </div>
-        <div className='HOEX__Wrap'>
-          <Link to={`/select/병원・약국`}>
-            <div className='HOEX-Button'>
-              <div className='Navigation__Item__Header'>
-                <p>병원·약국</p>
+        <div className='SpotsGrid--Wrapper'>
+          <Link to={`/sightseeing`}>
+            <div className='Spots--Button'>
+              <div className='Spots--Header'>
+                <h3>
+                  가볼만한 곳
+                  <FiChevronRight
+                    style={{
+                      fontSize: '1.5rem',
+                      strokeWidth: '3px',
+                      color: '#c6c6c6',
+                      marginLeft: '0.3rem',
+                    }}
+                  />
+                </h3>
+                <span>관광, 레져, 사진 맛집까지 </span>
               </div>
-              <div className='Navigation__Item__Emoji__Container'>
+              <div className='Spots--Emoji_Container'>
                 <img
-                  src='https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/285/face-with-thermometer_1f912.png'
-                  alt='병원・약국'
+                  src='https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/285/national-park_1f3de-fe0f.png'
+                  alt=''
                 />
               </div>
             </div>
           </Link>
-          <div className='HOEX-Button'>
-            <div className='Navigation__Item__Header'>
-              <p>전문가</p>
-            </div>
-            <div
-              className='Navigation__Item__Emoji__Container'
-              style={{ opacity: '0.5' }}
-            >
-              <img
-                src='https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/285/woman-office-worker-light-skin-tone_1f469-1f3fb-200d-1f4bc.png'
-                alt=''
-              />
-            </div>
-          </div>
         </div>
         <Promotion history={history}></Promotion>
       </div>
