@@ -7,13 +7,9 @@ import { useGlobalContext } from '../../../context';
 import './SpotsPage.css';
 
 const SpotsPage = (history) => {
-  console.log(history);
-
   const { spotsCategories } = useGlobalContext();
 
   const clickHandler = (params, e) => {
-    console.log(e);
-    console.log(params);
     history.history.push(`/sightseeing/${params}/전체`);
   };
 

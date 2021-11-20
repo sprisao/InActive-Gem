@@ -9,7 +9,7 @@ import { FiChevronLeft, FiChevronDown } from 'react-icons/fi';
 
 import './CategoryHeader.css';
 
-const CategoryHeader = ({ category, secondCategory, currentLocation }) => {
+const CategoryHeader = ({ category, secondCategory }) => {
   const { locationCategories } = useGlobalContext();
 
   // 드롭다운 메뉴

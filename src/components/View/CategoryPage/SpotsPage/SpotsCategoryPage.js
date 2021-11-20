@@ -17,7 +17,6 @@ const SpotsCategoryPage = () => {
   useEffect(() => {
     if (spotsCategory !== 'all') {
       filteredSpots = spots.filter((x) => x.category_id[0] === spotsCategory);
-      console.log(filteredSpots);
       filteredSpots.forEach((element) => {
         if (!location.includes(element.miniAddress)) {
           location.push(element.miniAddress);
@@ -36,17 +35,21 @@ const SpotsCategoryPage = () => {
     }
   }, [spotsCategory]);
 
-  console.log(locationList);
-
   return (
     <>
       <SpotsCategoryHeader
         spotsCategory={spotsCategory}
         filteredLocation={locationList}
-        currentLocation={spotsLocation}
       />
       {newSpots.map((item) => {
-        return <div key={item.id}>{item.name}</div>;
+        if (spotsLocation === '전체') {
+          return <div>{item.name}</div>;
+        }
+        if (item.miniAddress === spotsLocation) {
+          return <div>{item.name}되야지</div>;
+        } else {
+          return null;
+        }
       })}
     </>
   );

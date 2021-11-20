@@ -1,25 +1,16 @@
 import React, { useState, useRef } from 'react';
 
 import { useDetectOutsideClick } from '../CategoryPageComponent/useDetectOutsideClick';
-import { useGlobalContext } from '../../../context';
 
 import { Link } from 'react-router-dom';
 
 import { FiChevronLeft, FiChevronDown } from 'react-icons/fi';
 
-const SpotsCategoryHeader = ({
-  spotsCategory,
-  currentLocation,
-  filteredLocation,
-}) => {
-  const { spotsLocations } = useGlobalContext();
-
+const SpotsCategoryHeader = ({ spotsCategory, filteredLocation }) => {
   const dropdownRef = useRef(null);
   const [isActive, setisActive] = useDetectOutsideClick(dropdownRef, false);
   const onClick = () => setisActive(!isActive);
   const [locationCategory, setLocationCategory] = useState('전체');
-
-  console.log(spotsCategory);
 
   return (
     <>
@@ -35,7 +26,7 @@ const SpotsCategoryHeader = ({
           </div>
           <div className='Category__Menu__Container'>
             <div onClick={onClick} className='menu-trigger'>
-              <span>{currentLocation}</span>
+              <span>{locationCategory}</span>
               <FiChevronDown
                 style={{ fontSize: '1rem', marginRight: '-0.25rem' }}
               />
