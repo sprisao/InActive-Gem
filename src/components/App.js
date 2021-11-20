@@ -11,6 +11,7 @@ import EventsPage from './View/EventsPage/EventsPage';
 import BookmarkPage from './View/BookmarkPage/BookmarkPage';
 import SearchPage from './View/SearchPage/SearchPage';
 import CategoryPage from './View/CategoryPage/CategoryPage';
+import SpotsCategoryPage from './View/CategoryPage/SpotsPage/SpotsCategoryPage';
 import SpotsPage from './View/CategoryPage/SpotsPage/SpotsPage';
 import CategorySelectPage from './View/CategoryPage/CategorySelectPage';
 
@@ -71,6 +72,12 @@ function App() {
             path='/category/:firstCategory/:locationCategory/:secondCategory'
             component={CategoryPage}
           />
+
+          <Route
+            path='/sightseeing/:spotsCategory/:spotsLocation'
+            component={SpotsCategoryPage}
+          />
+
           <Route exact path='/privacy' component={Privacy} />
           <Route exact path='/useragreements' component={UserAgreements} />
           <Route exact path='/storeagreements' component={StoreAgreements} />

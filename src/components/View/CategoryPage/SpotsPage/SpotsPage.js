@@ -6,8 +6,16 @@ import { useGlobalContext } from '../../../context';
 
 import './SpotsPage.css';
 
-const SpotsPage = () => {
-  const { spots, spotsCategories, spotsLoading } = useGlobalContext();
+const SpotsPage = (history) => {
+  console.log(history);
+
+  const { spotsCategories } = useGlobalContext();
+
+  const clickHandler = (params, e) => {
+    console.log(e);
+    console.log(params);
+    history.history.push(`/sightseeing/${params}/전체`);
+  };
 
   return (
     <>
@@ -15,12 +23,30 @@ const SpotsPage = () => {
       <BottomNavigation />
       <div className='Sightseeing'>
         <div className='Sightseeing--Wrapper'>
-          <div className='Sightseeing--Category--All'>
+          <div
+            className='Sightseeing--Category--All'
+            style={{
+              backgroundImage:
+                'url(https://www.wonju.go.kr/site/english/images/contents/gangwon_gamyoung01.jpg)',
+            }}
+            onClick={(e) => {
+              clickHandler('all', e);
+            }}
+          >
             <p>전체</p>
           </div>
           <div className='Sightseeing--Categories--Wrapper'>
             {spotsCategories.map((item) => (
-              <div key={item.id} className='Sightseeing--Category'>
+              <div
+                key={item.id}
+                className='Sightseeing--Category'
+                onClick={(e) => {
+                  clickHandler(item.id, e);
+                }}
+                style={{
+                  backgroundImage: `linear-gradient(to top right , rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.35)), url(${item.images[1].url})`,
+                }}
+              >
                 <p>{item.name}</p>
               </div>
             ))}
