@@ -28,9 +28,3 @@
     grid-template-columns: repeat(auto-fill, minmax(191px, 1fr));
   }
 }
-
-@media screen and (min-width: 500px) {
-  .grid__wrapper2 {
-    grid-template-columns: repeat(auto-fill, minmax(191px, 1fr));
-  }
-}

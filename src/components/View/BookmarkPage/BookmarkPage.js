@@ -61,7 +61,7 @@ const BookmarkPage = (history) => {
 
   return (
     <>
-      <SearchBox />
+      <SearchBox history={history} />
       {cafesLoading ? (
         <Loading />
       ) : leerChecker ? (

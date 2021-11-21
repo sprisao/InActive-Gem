@@ -22,7 +22,7 @@ const CategorySelectPage = (history) => {
 
   return (
     <>
-      <SearchBox />
+      <SearchBox history={history} />
       <BottomNavigation />
       <section className='categorySelect'>
         <div className='Select-Wrapper'>

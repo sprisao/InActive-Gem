@@ -1,9 +1,12 @@
 import React, { useEffect, useState, useRef } from 'react';
 
 import SpotsCategoryHeader from './SpotsCategoryHeader';
+import SpotCard from './SpotCard';
 
 import { useGlobalContext } from '../../../context';
 import { useParams } from 'react-router-dom';
+
+import './SpotsCategoryPage.css';
 
 const SpotsCategoryPage = (history) => {
   const { spotsCategory, spotsLocation } = useParams();
@@ -25,7 +28,7 @@ const SpotsCategoryPage = (history) => {
         } else return null;
       });
       setNewSpots(filteredSpots);
-      setLocationList(location);
+      setLocationList(location.sort());
     } else {
       spots.forEach((element) => {
         if (!location.includes(element.miniAddress)) {
@@ -33,7 +36,7 @@ const SpotsCategoryPage = (history) => {
         } else return null;
       });
       setNewSpots(spots);
-      setLocationList(location);
+      setLocationList(location.sort());
     }
   }, [spotsCategory]);
 
@@ -92,7 +95,7 @@ const SpotsCategoryPage = (history) => {
             }}
             ref={activeRef}
           >
-            <span>🅰️ 전체</span>
+            <span>전체 ({spots.length})</span>
           </div>
           {spotsCategories.map((item) => {
             return (
@@ -106,23 +109,30 @@ const SpotsCategoryPage = (history) => {
                 }}
                 ref={activeRef}
               >
-                <span>{item.name}</span>
+                <span>
+                  {item.name} (
+                  {spots.filter((x) => x.category_id[0] === item.id).length})
+                </span>
               </div>
             );
           })}
         </div>
       </section>
 
-      {newSpots.map((item) => {
-        if (spotsLocation === '전체') {
-          return <div key={item.id}>{item.name}</div>;
-        }
-        if (item.miniAddress === spotsLocation) {
-          return <div key={item.id}>{item.name}</div>;
-        } else {
-          return null;
-        }
-      })}
+      <section className='SpotCards'>
+        <div className='SpotCard--Grid'>
+          {newSpots.map((item) => {
+            if (spotsLocation === '전체') {
+              return <SpotCard key={item.id} spot={item}></SpotCard>;
+            }
+            if (item.miniAddress === spotsLocation) {
+              return <SpotCard key={item.id} spot={item}></SpotCard>;
+            } else {
+              return null;
+            }
+          })}
+        </div>
+      </section>
     </>
   );
 };

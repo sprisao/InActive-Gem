@@ -1,0 +1,30 @@
+.SpotCard {
+  display: grid;
+  /* height: 17rem; */
+}
+
+.SpotCard-ImageContainer {
+  width: 100%;
+  overflow: hidden;
+}
+
+.SpotCard-ImageContainer img {
+  width: 100%;
+  height: 13.5rem;
+  object-fit: cover;
+  border-radius: 0.25rem;
+}
+
+.SpotCard-ArticleConateinr {
+  height: 4.5rem;
+}
+.SpotCard_Header {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.SpotCard_Header p {
+  font-weight: 200;
+  font-size: 1rem;
+}

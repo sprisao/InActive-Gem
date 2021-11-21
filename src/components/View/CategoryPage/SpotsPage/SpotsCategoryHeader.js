@@ -24,7 +24,8 @@ const SpotsCategoryHeader = ({ spotsCategory, filteredLocation }) => {
           <div className='Category__Title'>
             <h3>가볼만한 곳</h3>
           </div>
-          <div className='Category__Menu__Container'>
+          <div style={{ width: '7rem' }}></div>
+          {/* <div className='Category__Menu__Container'>
             <div onClick={onClick} className='menu-trigger'>
               <span>{locationCategory}</span>
               <FiChevronDown
@@ -64,7 +65,7 @@ const SpotsCategoryHeader = ({ spotsCategory, filteredLocation }) => {
                 ))}
               </ul>
             </nav>
-          </div>
+          </div> */}
         </div>
       </div>
     </>

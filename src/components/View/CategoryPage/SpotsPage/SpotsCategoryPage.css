@@ -1,0 +1,24 @@
+.SpotCard--Grid {
+  padding: 0 0.75rem;
+}
+
+.SpotCard--Grid {
+  display: grid;
+  white-space: wrap;
+  max-width: var(--maxWidth);
+  grid-gap: 0.75rem;
+  grid-template-columns: repeat(2, minmax(10rem, 1fr));
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 430px) {
+  .SpotCard--Grid {
+    grid-template-columns: repeat(auto-fill, minmax(191px, 1fr));
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .SpotCard--Grid {
+    grid-template-columns: repeat(auto-fill, minmax(191px, 1fr));
+  }
+}
