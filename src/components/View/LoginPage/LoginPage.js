@@ -1,4 +1,6 @@
 import React from 'react';
+
+import BottomNavigaton from '../../../components/BottomNavigation/BottomNavigation';
 import { Link } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import logo from '../../images/logo.png';
@@ -33,6 +35,7 @@ const LoginPage = (history) => {
   if (!user) {
     return (
       <section className='Auth'>
+        <BottomNavigaton />
         <div className='auth-wrapper'>
           <div className='auth-logobox'>
             <img src={logo} alt='logo' className='auth-logo' />
