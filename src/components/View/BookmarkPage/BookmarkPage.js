@@ -23,6 +23,7 @@ const BookmarkPage = (history) => {
     pharmacies,
     flowerShops,
     cafesLoading,
+    spots,
   } = useGlobalContext();
 
   const allStores = restaurants.concat(
@@ -35,7 +36,8 @@ const BookmarkPage = (history) => {
     kidShops,
     academies,
     pharmacies,
-    flowerShops
+    flowerShops,
+    spots
   );
   const [bookmarkedStores, setBookmarkedStores] = useState([]);
   const [leerChecker, setLeerChecker] = useState(true);

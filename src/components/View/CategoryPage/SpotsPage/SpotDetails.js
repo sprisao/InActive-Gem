@@ -1,18 +1,46 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import DetailsShortcuts from '../../DetailsPage/Components/DetailsShortcuts';
 import DetailsNavi from '../../DetailsPage/Components/DetailsNavi';
 import ImageBox from '../../DetailsPage/Components/DetailsImages';
 import DetailsHeader from '../../DetailsPage/Components/DetailsHeader';
 import Information from '../../DetailsPage/Components/Information';
+import { getFirestore, doc, getDoc } from 'firebase/firestore';
+import { getAuth } from 'firebase/auth';
 
 import { useHistory } from 'react-router';
-import Separator from '../../../Separator';
 
 const SpotDetails = (props) => {
+  const [bookmarked, setBookmarked] = useState(false);
   const history = useHistory();
   const spot = props.location.state.spot;
   console.log(history);
+
+  const db = getFirestore();
+  const auth = getAuth();
+  const user = auth.currentUser;
+
+  useEffect(() => {
+    if (!user) {
+      setBookmarked(false);
+    } else {
+      getDoc(doc(db, 'users', user.uid)).then((docSnap) => {
+        if (docSnap.data().bookmarks) {
+          docSnap.data().bookmarks.includes(spot.id)
+            ? setBookmarked(true)
+            : setBookmarked(false);
+          console.log(docSnap.data().bookmarks);
+        } else {
+          console.log('No such document!');
+        }
+      });
+    }
+  }, [db, spot.id, user]);
+
+  const getBookmarkClick = (value) => {
+    setBookmarked(value);
+  };
+
   return (
     <>
       <DetailsShortcuts
@@ -33,8 +61,8 @@ const SpotDetails = (props) => {
           id={spot.id}
           shortDescription={spot.shortDescription}
           locationCategory={spot.miniAddress}
-          // bookmark={bookmarked}
-          // getBookmarkClick={getBookmarkClick}
+          bookmark={bookmarked}
+          getBookmarkClick={getBookmarkClick}
           history={history}
         />
         <Information
