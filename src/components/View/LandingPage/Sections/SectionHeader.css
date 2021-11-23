@@ -6,8 +6,8 @@
 }
 
 .Section__Title {
-  font-family: 'ONE-Mobile-POP';
   font-size: 1.35rem;
+  font-weight: 900;
   letter-spacing: -0.035rem;
   color: #333;
 }

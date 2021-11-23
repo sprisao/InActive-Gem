@@ -13,32 +13,17 @@ const SpotsCategoryPage = (history) => {
 
   const { spots, spotsCategories } = useGlobalContext();
   const [newSpots, setNewSpots] = useState([]);
-  const [locationList, setLocationList] = useState([]);
   const [isActive, setIsActive] = useState(spotsCategory);
 
-  let location = [];
-  let filteredSpots = [];
+  let filteredSpots = spots.filter((x) => x.category_id[0] === spotsCategory);
 
   useEffect(() => {
     if (spotsCategory !== 'all') {
-      filteredSpots = spots.filter((x) => x.category_id[0] === spotsCategory);
-      filteredSpots.forEach((element) => {
-        if (!location.includes(element.miniAddress)) {
-          location.push(element.miniAddress);
-        } else return null;
-      });
       setNewSpots(filteredSpots);
-      setLocationList(location.sort());
     } else {
-      spots.forEach((element) => {
-        if (!location.includes(element.miniAddress)) {
-          location.push(element.miniAddress);
-        } else return null;
-      });
       setNewSpots(spots);
-      setLocationList(location.sort());
     }
-  }, [spotsCategory]);
+  }, [spotsCategory, filteredSpots, spots]);
 
   const wrapperRef = useRef();
   const activeRef = useRef();
@@ -80,10 +65,7 @@ const SpotsCategoryPage = (history) => {
 
   return (
     <>
-      <SpotsCategoryHeader
-        spotsCategory={spotsCategory}
-        filteredLocation={locationList}
-      />
+      <SpotsCategoryHeader spotsCategory={spotsCategory} />
       <section className='SecontCategory-Container'>
         <div className='SecondCategory-Wrapper' ref={wrapperRef}>
           <div
@@ -95,7 +77,7 @@ const SpotsCategoryPage = (history) => {
             }}
             ref={activeRef}
           >
-            <span>전체 ({spots.length})</span>
+            <p>전체 ({spots.length})</p>
           </div>
           {spotsCategories.map((item) => {
             return (
@@ -109,10 +91,10 @@ const SpotsCategoryPage = (history) => {
                 }}
                 ref={activeRef}
               >
-                <span>
+                <p>
                   {item.name} (
                   {spots.filter((x) => x.category_id[0] === item.id).length})
-                </span>
+                </p>
               </div>
             );
           })}

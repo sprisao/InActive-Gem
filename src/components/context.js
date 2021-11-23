@@ -31,7 +31,6 @@ const StoreProvider = ({ children }) => {
   const [cafesLoading, setCafesLoading] = useState(true);
   const [barsLoading, setBarsLoading] = useState(true);
   const [spotsLoading, setspotsLoading] = useState(true);
-  const [spotsCategoryLoading, setSpotsCategoryLoading] = useState(true);
   const [beautyShopsLoading, setBeautyShopsLoading] = useState(true);
   const [studiosLoading, setStudiosLoading] = useState(true);
   const [petShopsLoading, setPetShopsLoading] = useState(true);
