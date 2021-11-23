@@ -1,11 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import './SpotCard.css';
 
 const SpotCard = ({ spot }) => {
-  console.log(spot.isFree);
   return (
-    <div>
+    <Link to={{ pathname: `/sightseeing/${spot.id}`, state: { spot: spot } }}>
       <section className='SpotCard'>
         <div className='SpotCard-ImageContainer'>
           <img src={spot.images[0].url} alt='' />
@@ -16,7 +16,7 @@ const SpotCard = ({ spot }) => {
           </div>
           <div className='SpotCard_Article'>
             {/* {spot.isFree ? (
-              <span className='free'>무료</span>
+            <span className='free'>무료</span>
             ) : (
               <span className='not-free'>유료</span>
             )} */}
@@ -25,7 +25,7 @@ const SpotCard = ({ spot }) => {
           </div>
         </div>
       </section>
-    </div>
+    </Link>
   );
 };
 

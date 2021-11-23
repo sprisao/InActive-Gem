@@ -60,9 +60,8 @@
 }
 
 .Navigation__Item__Header p {
-  font-family: 'ONE-Mobile-POP';
   color: #333;
-  font-weight: 100;
+  font-weight: 900;
   font-size: 2rem;
 }
 
@@ -109,9 +108,9 @@
 
 .Spots--Header h3 {
   display: flex;
-  font-family: 'ONE-Mobile-POP';
+
   color: #333;
-  font-weight: 300;
+  font-weight: 900;
   font-size: 1.5rem;
   white-space: nowrap;
   align-items: center;
@@ -157,9 +156,8 @@
 }
 
 .ThirdGrid__Item p {
-  font-family: 'ONE-Mobile-POP';
   color: #333;
-  font-weight: 300;
+  font-weight: 600;
   font-size: 0.95rem;
   white-space: nowrap;
 }

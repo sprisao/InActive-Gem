@@ -17,8 +17,10 @@ const DetailGridCard = ({ store, tags }) => {
               return <span key={tag}>#{tag} </span>;
             })}
           </div>
-          <h3>{store.name}</h3>
-          <span>{store.miniAddress}</span>
+          <div className='article__Name_Miniaddress'>
+            <h3>{store.name}</h3>
+            <span>{store.miniAddress}</span>
+          </div>
           <p>{store.shortDescription}</p>
         </div>
       </article>

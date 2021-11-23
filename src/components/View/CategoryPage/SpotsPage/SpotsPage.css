@@ -12,9 +12,9 @@
 }
 
 .Sightseeing--Wrapper p {
-  font-family: 'ONE-Mobile-POP';
   color: white;
   font-size: 1.35rem;
+  font-weight: 600;
 }
 
 .Sightseeing--Category--All {

@@ -1,7 +1,6 @@
 .detail__gridCard {
   display: grid;
-  grid-column-gap: 1rem;
-  grid-template-columns: 3fr;
+  grid-row-gap: 0.35rem;
 }
 
 .imageContainer {
@@ -17,17 +16,26 @@
   object-fit: cover;
 }
 
+.articleContainer {
+  display: grid;
+  grid-row-gap: 0.05rem;
+}
 .articleContainer p {
-  margin-top: 0.2rem;
-  font-weight: 350;
+  font-weight: 300;
   font-size: 1rem;
   color: #444;
 }
 
 .articleContainer h3 {
-  font-weight: 400;
+  font-size: 1.5rem;
+  font-weight: 500;
 }
 
 .menu__intro {
   word-break: keep-all;
+}
+
+.article__Name_Miniaddress {
+  display: grid;
+  align-items: flex-end;
 }

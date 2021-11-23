@@ -56,16 +56,14 @@ hr {
   opacity: 1;
 }
 
-.mySwiper .swiper-slide {
-  /* display: flex; */
-  /* justify-content: center;
-  align-items: center; */
-}
-
 /* Menu CSS */
 
 .menu {
   margin-top: 1rem;
+}
+
+.menu__name h4 {
+  font-size: 1.35rem;
 }
 
 .details__section__menu__header {

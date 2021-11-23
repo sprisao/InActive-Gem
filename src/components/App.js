@@ -13,6 +13,7 @@ import SearchPage from './View/SearchPage/SearchPage';
 import CategoryPage from './View/CategoryPage/CategoryPage';
 import SpotsCategoryPage from './View/CategoryPage/SpotsPage/SpotsCategoryPage';
 import SpotsPage from './View/CategoryPage/SpotsPage/SpotsPage';
+import SpotDetails from './View/CategoryPage/SpotsPage/SpotDetails';
 import CategorySelectPage from './View/CategoryPage/CategorySelectPage';
 
 import DetailsData from './View/DetailsPage/DetailsData';
@@ -67,6 +68,7 @@ function App() {
             component={CategorySelectPage}
           />
           <Route exact path='/sightseeing' component={SpotsPage} />
+          <Route exact path='/sightseeing/:spot_id' component={SpotDetails} />
 
           <Route
             path='/category/:firstCategory/:locationCategory/:secondCategory'

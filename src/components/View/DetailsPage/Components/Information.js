@@ -199,7 +199,7 @@ const Information = (props) => {
   return (
     <div className='details__Information'>
       <div className='details__section__header'>
-        <h2>가게정보</h2>
+        <h2>세부정보</h2>
         <FiChevronDown style={{ fontSize: '1.5rem' }} />
       </div>
       <div className='details__Information__wrapper'>

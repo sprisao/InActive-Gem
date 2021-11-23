@@ -146,7 +146,6 @@ const DetailsPage = ({ store, history, menu, menuLoading }) => {
             ) : null}
             {store.isMenu ? (
               <SwiperSlide data-history='Menu'>
-                {/* <Menu store={store.name} menu={menu} /> */}
                 <section className='menu'>
                   <div className='details__section__menu__header'>
                     <h2>대표메뉴</h2>

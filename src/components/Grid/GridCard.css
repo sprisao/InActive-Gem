@@ -20,8 +20,9 @@
 }
 
 .storeName h3 {
+  font-size: 1.5rem;
   color: black;
-  font-weight: 400;
+  font-weight: 500;
   word-break: break-all;
 }
 
@@ -46,6 +47,7 @@
 }
 .quickInfos__location p {
   margin-left: 0.25rem;
+  font-weight: 200;
 }
 
 .quickInfos__businessHours {

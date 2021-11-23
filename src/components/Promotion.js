@@ -22,11 +22,7 @@ const Promotion = ({ history }) => {
   return (
     <div className='SecondGrid__Wrap'>
       <div className='SecondGrid__Item'>
-        <Swiper
-          navigation={true}
-          // onSwiper={(swiper) => console.log(swiper)}
-          // onSlideChange={() => console.log('slide change')}
-        >
+        <Swiper navigation={true}>
           <div className='Navigation__Item__Header'>
             <p>젬 큐레이션</p>
             <FiChevronRight
