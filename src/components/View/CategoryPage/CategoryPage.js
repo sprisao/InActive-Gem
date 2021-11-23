@@ -86,32 +86,6 @@ const CategoryPage = (history) => {
     loadingCategory = flowerShopsLoading;
   }
 
-  // 1. firstCategory Filtering
-  // 2. LocationCategory Filtering
-  // 3. SecondCategory Filtering
-  // 각각 새로운 페이지 -> param 을 이용하여 무엇을 보여줄지 필터링
-  // firstCategory Data -> 사실 Home에서 이미 필터링 해서 보내주면 됨 (DetailPage에서 했던 것처럼)
-
-  // let lFilteredData = [];
-  // if (locationCategory === '전체') {
-  //   lFilteredData = storeData;
-  // } else {
-  //   lFilteredData = storeData.filter(
-  //     (s) => s.eupmyeondongRi === locationCategory
-  //   );
-  // }
-
-  // let sFilteredData = [];
-  // if (isActive === '전체') {
-  //   sFilteredData = lFilteredData;
-  // } else {
-  //   sFilteredData = lFilteredData.filter(
-  //     (l) => l.secondCategory[0] === isActive
-  //   );
-  // }
-
-  //  `/category/${firstCategory}/${locationCategory}/${params}`
-
   let afterFilter = [];
   if (locationCategory === '전체' && isActive === '전체') {
     afterFilter = storeData;
