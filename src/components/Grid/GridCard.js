@@ -95,7 +95,6 @@ const GridCard = ({ store }) => {
           bookmarks: arrayRemove(store.id),
         });
       }
-      console.log(store.id);
     }
   };
   return (
