@@ -34,7 +34,6 @@ const GridCard = ({ store }) => {
           docSnap.data().bookmarks.includes(store.id)
             ? setBookmarked(true)
             : setBookmarked(false);
-          console.log(docSnap.data().bookmarks);
         } else {
           console.log('No such document!');
         }
