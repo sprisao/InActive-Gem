@@ -57,15 +57,15 @@ const CategoryHeader = ({ category, secondCategory }) => {
                 {locationCategories.map((location) => (
                   <li key={location.id}>
                     <Link
-                      to={`/category/${category}/${location.location}/${secondCategory}`}
+                      to={`/category/${category}/${location.name}/${secondCategory}`}
                     >
                       <button
                         onClick={() => {
-                          setLocationCategory(location.location);
+                          setLocationCategory(location.name);
                           setisActive(!isActive);
                         }}
                       >
-                        {location.location}
+                        {location.name}
                       </button>
                     </Link>
                   </li>

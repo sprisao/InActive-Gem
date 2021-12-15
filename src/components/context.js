@@ -590,7 +590,7 @@ const StoreProvider = ({ children }) => {
   useEffect(() => {
     storeBase('locationCategoryData')
       .select({
-        view: 'dropdown',
+        view: 'data',
         pageSize: 20,
       })
       .eachPage(
