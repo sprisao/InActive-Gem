@@ -106,10 +106,10 @@ const Home = ({ history }) => {
               </div>
             </div>
           </Link>
-          <Link to={`/select/스튜디오`}>
+          <Link to={`/select/사진`}>
             <div className='ThirdGrid__Item'>
               <div className='Navigation__Item__Header'>
-                <p>스튜디오</p>
+                <p>사진</p>
               </div>
               <div className='Navigation__Item__Emoji__Container'>
                 <img

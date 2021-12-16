@@ -66,7 +66,7 @@ const CategoryPage = (history) => {
   } else if (firstCategory === '미용・뷰티') {
     storeData = beautyShops;
     loadingCategory = beautyShopsLoading;
-  } else if (firstCategory === '스튜디오') {
+  } else if (firstCategory === '사진') {
     storeData = studios;
     loadingCategory = studiosLoading;
   } else if (firstCategory === '반려동물') {
