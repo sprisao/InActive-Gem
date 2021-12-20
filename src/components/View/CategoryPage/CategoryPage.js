@@ -90,7 +90,7 @@ const CategoryPage = (history) => {
   if (locationCategory === '전체' && isActive === '전체') {
     afterFilter = storeData;
   } else if (locationCategory === '전체') {
-    afterFilter = storeData.filter((x) => x.secondCategory[0] === isActive);
+    afterFilter = storeData.filter((x) => x.secondCategory === isActive);
   } else if (isActive === '전체') {
     afterFilter = storeData.filter(
       (x) => x.eupmyeondongRi === locationCategory
@@ -98,8 +98,7 @@ const CategoryPage = (history) => {
   } else {
     afterFilter = storeData.filter(
       (x) =>
-        x.eupmyeondongRi === locationCategory &&
-        x.secondCategory[0] === isActive
+        x.eupmyeondongRi === locationCategory && x.secondCategory === isActive
     );
   }
 
