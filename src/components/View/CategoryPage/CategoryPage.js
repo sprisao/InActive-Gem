@@ -42,7 +42,7 @@ const CategoryPage = (history) => {
 
   // SecondCategory 필터링
   const tabFilter = secondCategories.filter(
-    (secondCategory) => secondCategory.firstCategory[0] === firstCategory
+    (secondCategory) => secondCategory.firstCategory === firstCategory
   );
 
   const [isActive, setIsActive] = useState(secondCategory);

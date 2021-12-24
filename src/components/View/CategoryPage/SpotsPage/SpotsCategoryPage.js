@@ -23,7 +23,7 @@ const SpotsCategoryPage = (history) => {
     } else {
       setNewSpots(spots);
     }
-  }, [spotsCategory, filteredSpots, spots]);
+  }, [spotsCategory]);
 
   const wrapperRef = useRef();
   const activeRef = useRef();

@@ -13,7 +13,7 @@ const CategorySelectPage = (history) => {
   const { secondCategories } = useGlobalContext();
 
   const filteredSCategory = secondCategories.filter(
-    (category) => category.firstCategory[0] === firstCategory
+    (category) => category.firstCategory === firstCategory
   );
 
   const clickHandler = (param) => {
@@ -31,6 +31,7 @@ const CategorySelectPage = (history) => {
             <p>전체</p>
           </div>
           {filteredSCategory.map((item) => {
+            console.log(item);
             return (
               <div
                 className='Select-Box'
