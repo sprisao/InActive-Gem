@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useContext, useEffect } from 'react';
 import Airtable from 'airtable';
 
@@ -19,7 +18,6 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-require('dotenv').config();
 const storeBase = new Airtable({
   apiKey: process.env.REACT_APP_AIRTABLE_API_KEY,
 }).base('app0tAUATUh8jBxX4');
