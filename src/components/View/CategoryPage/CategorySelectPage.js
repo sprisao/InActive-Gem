@@ -1,21 +1,24 @@
 import React, {useEffect, useState} from 'react';
 
 import {storeBase, useGlobalContext} from '../../context';
-import {useParams} from 'react-router-dom';
+import {useHistory, useParams} from 'react-router-dom';
 
 import BottomNavigation from '../../BottomNavigation/BottomNavigation';
 import SearchBox from '../SearchPage/SearchBox';
 
 import './CategorySelectPage.css';
 import Loading from "../../Loading";
+import {firstCategoryMapper} from "../../Home";
 
-const CategorySelectPage = (history) => {
+const CategorySelectPage = () => {
+
+    const history = useHistory();
     const {firstCategory} = useParams();
     const [secondCategories, setSecondCategories] = useState([]);
     const [secondLoading, setSecondLoading] = useState(true);
 
     const filteredSCategory = secondCategories.filter(
-        (category) => category.firstCategory === firstCategory
+        (category) => category.firstCategory === firstCategoryMapper[firstCategory]
     );
 
     useEffect(() => {
@@ -55,8 +58,14 @@ const CategorySelectPage = (history) => {
     }, []);
 
     const clickHandler = (param) => {
-        history.history.push(`/category/${firstCategory}/전체/${param}`);
-    };
+        // history.history.push(`/category/${firstCategory}/전체/${param}`);
+
+        history.push({
+            pathname: `/category/${firstCategory}/전체/${param}`,
+            state: {secondCategoryData: filteredSCategory}
+        });
+    }
+
 
     if (secondLoading) {
         return (

@@ -4,14 +4,27 @@ import { FiChevronRight } from 'react-icons/fi';
 
 import { Link } from 'react-router-dom';
 import './Home.css';
-import Separator from "./Separator";
+export const  firstCategoryMapper = {
+  restaurants: '맛집',
+  cafes: '카페',
+  bars: '호프・주점',
+  beautyShops: '미용・뷰티',
+  studios: '사진',
+  petShops: '반려동물',
+  gyms: '운동・헬스',
+  academies: '교육・학원',
+  pharmacies: '약국',
+  kidShops: '키즈',
+  flowerShops: '꽃',
+};
 
 const Home = ({ history }) => {
+
   return (
     <section className='new__Navigation'>
       <div className='Navigation__Container'>
         <div className='FirstGrid__Wrap'>
-          <Link to={`/select/맛집`}>
+          <Link to={`/select/restaurants`}>
             <div className='FirstGrid__Item'>
               <div className='Navigation__Item__Header'>
                 <p>맛집</p>
@@ -39,7 +52,7 @@ const Home = ({ history }) => {
               </div>
             </div>
           </Link>
-          <Link to={`/select/카페`}>
+          <Link to={`/select/cafes`}>
             <div className='FirstGrid__Item'>
               <div className='Navigation__Item__Header'>
                 <p>카페</p>
@@ -68,7 +81,7 @@ const Home = ({ history }) => {
           </Link>
         </div>
         <div className='ThirdGrid__Wrap'>
-          <Link to={`/select/호프・주점`}>
+          <Link to={`/select/bars`}>
             <div className='ThirdGrid__Item'>
               <div className='Navigation__Item__Header'>
                 <p>호프·주점</p>
@@ -81,7 +94,7 @@ const Home = ({ history }) => {
               </div>
             </div>
           </Link>
-          <Link to={`/select/운동・헬스`}>
+          <Link to={`/select/gyms`}>
             <div className='ThirdGrid__Item'>
               <div className='Navigation__Item__Header'>
                 <p>운동·헬스</p>
@@ -94,7 +107,7 @@ const Home = ({ history }) => {
               </div>
             </div>
           </Link>
-          <Link to={`/select/미용・뷰티`}>
+          <Link to={`/select/beautyShops`}>
             <div className='ThirdGrid__Item'>
               <div className='Navigation__Item__Header'>
                 <p>미용·뷰티</p>
@@ -107,7 +120,7 @@ const Home = ({ history }) => {
               </div>
             </div>
           </Link>
-          <Link to={`/select/사진`}>
+          <Link to={`/select/studios`}>
             <div className='ThirdGrid__Item'>
               <div className='Navigation__Item__Header'>
                 <p>사진</p>
@@ -120,7 +133,7 @@ const Home = ({ history }) => {
               </div>
             </div>
           </Link>
-          <Link to={`/select/반려동물`}>
+          <Link to={`/select/petShops`}>
             <div className='ThirdGrid__Item'>
               <div className='Navigation__Item__Header'>
                 <p>반려동물</p>
@@ -133,7 +146,7 @@ const Home = ({ history }) => {
               </div>
             </div>
           </Link>
-          <Link to={`/select/꽃`}>
+          <Link to={`/select/flowerShops`}>
             <div className='ThirdGrid__Item'>
               <div className='Navigation__Item__Header'>
                 <p>꽃</p>
@@ -146,7 +159,7 @@ const Home = ({ history }) => {
               </div>
             </div>
           </Link>
-          <Link to={`/select/키즈`}>
+          <Link to={`/select/kidShops`}>
             <div className='ThirdGrid__Item'>
               <div className='Navigation__Item__Header'>
                 <p>키즈</p>
@@ -159,7 +172,7 @@ const Home = ({ history }) => {
               </div>
             </div>
           </Link>
-          <Link to={`/select/교육・학원`}>
+          <Link to={`/select/academies`}>
             <div className='ThirdGrid__Item'>
               <div className='Navigation__Item__Header'>
                 <p>교육·학원</p>
