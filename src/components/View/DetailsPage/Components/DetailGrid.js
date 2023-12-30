@@ -4,6 +4,7 @@ import DetailGridCard from './DetailGridCard';
 import './DetailGrid.css';
 
 const DetailGrid = (props) => {
+  console.log(`DetailGrid.js: props: ${props}`)
   const {
     restaurants,
     cafes,
@@ -30,9 +31,10 @@ const DetailGrid = (props) => {
     flowerShops
   );
 
-  const maxLength = () => {
-    let j = 0;
-    for (let i = 0; i < allStores.length; i++) {
+const maxLength = () => {
+  let j = 0;
+  for (let i = 0; i < allStores.length; i++) {
+    if (allStores[i] && allStores[i].firstCategory && allStores[i].secondCategory) {
       if (props.categoryType === '1') {
         if (allStores[i].firstCategory[0] === props.filter) {
           j++;
@@ -52,19 +54,20 @@ const DetailGrid = (props) => {
         }
       }
     }
-    if (j > props.length - 1) {
-      return props.length;
-    } else {
-      return j;
-    }
-  };
-  const maxNum = maxLength();
+  }
+  if (j > props.length - 1) {
+    return props.length;
+  } else {
+    return j;
+  }
+};  const maxNum = maxLength();
 
-  const selectIndex = (totalIndex, selectingNumber) => {
-    const randomIndexArray = [];
-    for (let i = 0; i < selectingNumber; i++) {
-      let randomNum = Math.floor(Math.random() * totalIndex);
+const selectIndex = (totalIndex, selectingNumber) => {
+  const randomIndexArray = [];
+  for (let i = 0; i < selectingNumber; i++) {
+    let randomNum = Math.floor(Math.random() * totalIndex);
 
+    if (allStores[randomNum] && allStores[randomNum].firstCategory && allStores[randomNum].secondCategory) {
       if (props.categoryType === '1') {
         if (allStores[randomNum].firstCategory[0] === props.filter) {
           if (randomIndexArray.indexOf(randomNum) === -1) {
@@ -101,10 +104,12 @@ const DetailGrid = (props) => {
           i--;
         }
       }
+    } else {
+      i--;
     }
-    return randomIndexArray;
-  };
-
+  }
+  return randomIndexArray;
+};
   return (
     <section className='detail__grid'>
       {selectIndex(allStores.length, maxNum).map((index) => {
