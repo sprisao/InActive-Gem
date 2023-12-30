@@ -4,6 +4,7 @@ import { FiChevronRight } from 'react-icons/fi';
 
 import { Link } from 'react-router-dom';
 import './Home.css';
+import Separator from "./Separator";
 
 const Home = ({ history }) => {
   return (
@@ -74,7 +75,7 @@ const Home = ({ history }) => {
               </div>
               <div className='Navigation__Item__Emoji__Container'>
                 <img
-                  src='https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/285/beer-mug_1f37a.png'
+                  src='https://em-content.zobj.net/source/apple/354/beer-mug_1f37a.png'
                   alt=''
                 />
               </div>
@@ -87,7 +88,7 @@ const Home = ({ history }) => {
               </div>
               <div className='Navigation__Item__Emoji__Container'>
                 <img
-                  src='https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/285/flexed-biceps_medium-light-skin-tone_1f4aa-1f3fc_1f3fc.png'
+                  src='https://em-content.zobj.net/source/apple/354/person-lifting-weights_light-skin-tone_1f3cb-1f3fb_1f3fb.png'
                   alt=''
                 />
               </div>
@@ -100,7 +101,7 @@ const Home = ({ history }) => {
               </div>
               <div className='Navigation__Item__Emoji__Container'>
                 <img
-                  src='https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/285/lipstick_1f484.png'
+                  src='https://em-content.zobj.net/source/apple/354/lipstick_1f484.png'
                   alt=''
                 />
               </div>
@@ -113,7 +114,7 @@ const Home = ({ history }) => {
               </div>
               <div className='Navigation__Item__Emoji__Container'>
                 <img
-                  src='https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/285/camera_1f4f7.png'
+                  src='https://em-content.zobj.net/source/apple/354/camera-with-flash_1f4f8.png'
                   alt=''
                 />
               </div>
@@ -126,7 +127,7 @@ const Home = ({ history }) => {
               </div>
               <div className='Navigation__Item__Emoji__Container'>
                 <img
-                  src='https://res.cloudinary.com/diimwnnmj/image/upload/v1629118440/icons/u1F415_u1F9BA_axnyeq.png'
+                  src='https://em-content.zobj.net/source/apple/354/service-dog_1f415-200d-1f9ba.png'
                   alt='반려동물'
                 />
               </div>
@@ -139,7 +140,7 @@ const Home = ({ history }) => {
               </div>
               <div className='Navigation__Item__Emoji__Container'>
                 <img
-                  src='https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/285/tulip_1f337.png'
+                  src='https://em-content.zobj.net/source/apple/354/tulip_1f337.png'
                   alt=''
                 />
               </div>
@@ -152,7 +153,7 @@ const Home = ({ history }) => {
               </div>
               <div className='Navigation__Item__Emoji__Container'>
                 <img
-                  src='https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/285/teddy-bear_1f9f8.png'
+                  src='https://em-content.zobj.net/source/apple/354/teddy-bear_1f9f8.png'
                   alt=''
                 />
               </div>
@@ -165,7 +166,7 @@ const Home = ({ history }) => {
               </div>
               <div className='Navigation__Item__Emoji__Container'>
                 <img
-                  src='https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/285/open-book_1f4d6.png'
+                  src='https://em-content.zobj.net/source/apple/354/woman-teacher-light-skin-tone_1f469-1f3fb-200d-1f3eb.png'
                   alt=''
                 />
               </div>
@@ -191,7 +192,7 @@ const Home = ({ history }) => {
               </div>
               <div className='Spots--Emoji_Container'>
                 <img
-                  src='https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/285/national-park_1f3de-fe0f.png'
+                  src='https://em-content.zobj.net/source/apple/354/snow-capped-mountain_1f3d4-fe0f.png'
                   alt=''
                 />
               </div>

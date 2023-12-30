@@ -17,14 +17,6 @@ const LandingPage = (history) => {
       {/* <Header /> */}
       <BottomNavigation activatedButton={'home'} />
       <Home history={history} />
-      <Separator />
-      <RCCMD
-        title='새로 등록된 곳'
-        slideType='type2'
-        view='newStores'
-        category='맛집'
-      />
-
       <Footer />
     </>
   );
