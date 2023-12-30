@@ -35,14 +35,14 @@ const Recommendations = (props) => {
   );
 
   let j = 0;
-  for (let i = 0; i < allStores.length; i++) {
-    if (
-      allStores[i].firstCategory[0] === props.filter &&
-      allStores[i].secondCategory[0] !== props.filter2
-    ) {
-      j++;
-    }
+for (let i = 0; i < allStores.length; i++) {
+  if (
+    allStores[i].firstCategory && allStores[i].firstCategory[0] === props.filter &&
+    allStores[i].secondCategory && allStores[i].secondCategory[0] !== props.filter2
+  ) {
+    j++;
   }
+}
   if (j > 0) {
     return (
       <section className='recommendation'>
