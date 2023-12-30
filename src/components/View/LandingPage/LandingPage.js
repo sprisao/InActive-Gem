@@ -5,7 +5,6 @@ import Home from '../../Home';
 import BottomNavigation from '../../BottomNavigation/BottomNavigation';
 import Footer from '../../Footer';
 
-import Separator from '../../Separator';
 
 import './LandingPage.css';
 import {getAuth, signOut} from "firebase/auth";

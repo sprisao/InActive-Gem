@@ -6,12 +6,12 @@ import BottomNavigation from '../../BottomNavigation/BottomNavigation';
 
 import {HiBadgeCheck} from 'react-icons/hi';
 
-import {storeBase, useGlobalContext} from '../../context';
+import {storeBase} from '../../context';
 
 import {useHistory, useLocation, useParams} from 'react-router-dom';
 import './CategoryPage.css';
 
-const CategoryPage = ({secondCategoryData}) => {
+const CategoryPage = () => {
     const history = useHistory();
     const location = useLocation();
     const [dataLoading, setDataLoading] = useState(true)
@@ -52,7 +52,12 @@ const CategoryPage = ({secondCategoryData}) => {
                 );
         }
         fetchStoreData().then(() => console.log('맛집 불러오기 성공'));
-    }, []);
+    }, [
+        firstCategory,
+        secondCategory,
+        locationCategory,
+        location.state.secondCategoryData,
+    ]);
 
 
     let afterFilter = [];

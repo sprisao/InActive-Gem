@@ -1,11 +1,7 @@
-import React, {useState, useRef} from 'react';
+import React, {useState} from 'react';
 
-import {useDetectOutsideClick} from '../CategoryPage/CategoryPageComponent/useDetectOutsideClick';
-
-import {FaUserCircle} from 'react-icons/fa';
 import {RiSearchLine} from 'react-icons/ri';
 
-import {getAuth, signOut} from 'firebase/auth';
 import './SearchBox.css';
 
 const SearchBox = ({history}) => {

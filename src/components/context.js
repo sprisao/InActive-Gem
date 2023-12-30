@@ -25,63 +25,25 @@ export const storeBase = new Airtable({
 const Context = React.createContext();
 
 const StoreProvider = ({children}) => {
-    const [restaurantLoading, setRestaurantLoading] = useState(true);
-    const [cafesLoading, setCafesLoading] = useState(true);
-    const [barsLoading, setBarsLoading] = useState(true);
     const [spotsLoading, setspotsLoading] = useState(true);
-    const [beautyShopsLoading, setBeautyShopsLoading] = useState(true);
-    const [studiosLoading, setStudiosLoading] = useState(true);
-    const [petShopsLoading, setPetShopsLoading] = useState(true);
-    const [gymsLoading, setGymsLoading] = useState(true);
-    const [academiesLoading, setAcademiesLoading] = useState(true);
-    const [pharmaciesLoading, setPharmaciesLoading] = useState(true);
-    const [kidShopsLoading, setKidShopsLoading] = useState(true);
-    const [flowerShopsLoading, setFlowerShopsLoading] = useState(true);
 
-    const [navigationLoading, setNavigationLoading] = useState(true);
-    const [locationLoading, setLocationLoading] = useState(true);
     const [menuLoading, setMenuLoading] = useState(true);
     const [newStoresLoading, setNewStoresLoading] = useState(true);
     const [eventsLoading, setEventsLoading] = useState(true);
 
-    const [restaurants, setRestaurants] = useState([]);
-    const [cafes, setCafes] = useState([]);
-    const [bars, setBars] = useState([]);
     const [spots, setSpots] = useState([]);
     const [spotsCategories, setSpotsCategories] = useState([]);
-    const [beautyShops, setBeautyShops] = useState([]);
-    const [studios, setStudios] = useState([]);
-    const [petShops, setPetShops] = useState([]);
-    const [gyms, setGyms] = useState([]);
-    const [academies, setAcademies] = useState([]);
-    const [pharmacies, setPharmacies] = useState([]);
-    const [kidShops, setKidShops] = useState([]);
-    const [flowerShops, setFlowerShops] = useState([]);
-
     const [newStores, setNewStores] = useState([]);
 
-    const [locationCategories, setlocationCategories] = useState([]);
     const [menu, setMenu] = useState([]);
     const [events, setEvents] = useState([]);
 
-    const restaurant = [];
-    const cafe = [];
-    const bar = [];
     const spot = [];
     const spotsCategory = [];
-    const beautyShop = [];
-    const studio = [];
-    const petShop = [];
-    const gym = [];
-    const academy = [];
-    const pharmacy = [];
-    const flowerShop = [];
-    const kidShop = [];
 
     const event = [];
     const menuItem = [];
 
-    const locationCategory = [];
     const newStore = [];
 
 
@@ -112,7 +74,7 @@ const StoreProvider = ({children}) => {
                     }
                 }
             );
-    }, []);
+    },);
 
     // 가볼만한 곳 카테고리 불러오기
     useEffect(() => {
@@ -141,8 +103,7 @@ const StoreProvider = ({children}) => {
                     }
                 }
             );
-    }, []);
-
+    }, );
 
 
     // 이벤트 불러오기
@@ -172,8 +133,7 @@ const StoreProvider = ({children}) => {
                     }
                 }
             );
-    }, []);
-
+    }, );
 
 
     // 메뉴 데이터 로딩
@@ -204,7 +164,7 @@ const StoreProvider = ({children}) => {
                     }
                 }
             );
-    }, []);
+    }, );
 
     useEffect(() => {
         storeBase('stores')
@@ -228,49 +188,23 @@ const StoreProvider = ({children}) => {
                     setNewStoresLoading(false);
                     if (err) {
                         console.error(err);
-                        return;
                     }
                 }
             );
-    }, []);
+    }, );
 
     return (
         <Context.Provider
             value={{
-                restaurantLoading,
-                cafesLoading,
-                barsLoading,
                 spotsLoading,
-                beautyShopsLoading,
-                studiosLoading,
-                petShopsLoading,
-                gymsLoading,
-                kidShopsLoading,
-                academiesLoading,
-                pharmaciesLoading,
-                flowerShopsLoading,
-                navigationLoading,
-                locationLoading,
                 menuLoading,
                 newStoresLoading,
                 eventsLoading,
 
-                restaurants,
-                cafes,
-                bars,
                 spots,
                 spotsCategories,
-                beautyShops,
-                studios,
-                petShops,
-                gyms,
-                kidShops,
-                academies,
-                pharmacies,
-                flowerShops,
                 menu,
                 events,
-                locationCategories,
                 newStores,
 
                 app,

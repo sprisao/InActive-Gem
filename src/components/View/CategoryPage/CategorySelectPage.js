@@ -1,13 +1,12 @@
 import React, {useEffect, useState} from 'react';
 
-import {storeBase, useGlobalContext} from '../../context';
+import {storeBase} from '../../context';
 import {useHistory, useParams} from 'react-router-dom';
 
 import BottomNavigation from '../../BottomNavigation/BottomNavigation';
 import SearchBox from '../SearchPage/SearchBox';
 
 import './CategorySelectPage.css';
-import Loading from "../../Loading";
 import {firstCategoryMapper} from "../../Home";
 
 const CategorySelectPage = () => {
