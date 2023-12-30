@@ -39,7 +39,6 @@ const StoreProvider = ({children}) => {
     const [flowerShopsLoading, setFlowerShopsLoading] = useState(true);
 
     const [navigationLoading, setNavigationLoading] = useState(true);
-    const [secondLoading, setSecondLoading] = useState(true);
     const [locationLoading, setLocationLoading] = useState(true);
     const [menuLoading, setMenuLoading] = useState(true);
     const [newStoresLoading, setNewStoresLoading] = useState(true);
@@ -61,8 +60,6 @@ const StoreProvider = ({children}) => {
 
     const [newStores, setNewStores] = useState([]);
 
-    const [firstCategories, setFirstCategories] = useState([]);
-    const [secondCategories, setSecondCategories] = useState([]);
     const [locationCategories, setlocationCategories] = useState([]);
     const [menu, setMenu] = useState([]);
     const [events, setEvents] = useState([]);
@@ -83,40 +80,12 @@ const StoreProvider = ({children}) => {
 
     const event = [];
     const menuItem = [];
-    const firstCategory = [];
-    const secondCategory = [];
+
     const locationCategory = [];
     const newStore = [];
 
     // 세컨드카테고리 데이터 불러오기
 
-    useEffect(() => {
-        storeBase('secondCategoryData')
-            .select({
-                view: 'Grid view',
-                pageSize: 50,
-            })
-            .eachPage(
-                function page(records, fetchNextPage) {
-                    records.forEach(function (record) {
-                        secondCategory.push({
-                            id: record.id,
-                            ...record._rawJson.fields,
-                        });
-                    });
-                    setSecondCategories(secondCategory);
-                    fetchNextPage();
-                },
-                function done(err) {
-                    if (err) {
-                        console.error(err);
-                    } else {
-                        console.log('세컨드 카테고리 데이터 불러오기 성공');
-                        setSecondLoading(false);
-                    }
-                }
-            );
-    }, []);
 
     // 맛집 불러오기
     useEffect(() => {
@@ -527,33 +496,33 @@ const StoreProvider = ({children}) => {
     // 프로모션 불러오기
 
     // 카테고리 데이터 불러오기
-    useEffect(() => {
-        storeBase('firstCategoryData')
-            .select({
-                view: 'Grid view',
-                pageSize: 100,
-            })
-            .eachPage(
-                function page(records, fetchNextPage) {
-                    records.forEach(function (record) {
-                        firstCategory.push({
-                            id: record.id,
-                            ...record._rawJson.fields,
-                        });
-                    });
-                    fetchNextPage();
-                    setFirstCategories(firstCategory);
-                },
-                function done(err) {
-                    if (err) {
-                        console.error(err);
-                    } else {
-                        console.log('카테고리 데이터 불러오기 성공');
-                        setNavigationLoading(false);
-                    }
-                }
-            );
-    }, []);
+    // useEffect(() => {
+    //     storeBase('firstCategoryData')
+    //         .select({
+    //             view: 'Grid view',
+    //             pageSize: 100,
+    //         })
+    //         .eachPage(
+    //             function page(records, fetchNextPage) {
+    //                 records.forEach(function (record) {
+    //                     firstCategory.push({
+    //                         id: record.id,
+    //                         ...record._rawJson.fields,
+    //                     });
+    //                 });
+    //                 fetchNextPage();
+    //                 setFirstCategories(firstCategory);
+    //             },
+    //             function done(err) {
+    //                 if (err) {
+    //                     console.error(err);
+    //                 } else {
+    //                     console.log('카테고리 데이터 불러오기 성공');
+    //                     setNavigationLoading(false);
+    //                 }
+    //             }
+    //         );
+    // }, []);
 
     useEffect(() => {
         storeBase('locationCategoryData')
@@ -657,7 +626,6 @@ const StoreProvider = ({children}) => {
                 pharmaciesLoading,
                 flowerShopsLoading,
                 navigationLoading,
-                secondLoading,
                 locationLoading,
                 menuLoading,
                 newStoresLoading,
@@ -678,8 +646,6 @@ const StoreProvider = ({children}) => {
                 flowerShops,
                 menu,
                 events,
-                firstCategories,
-                secondCategories,
                 locationCategories,
                 newStores,
 
