@@ -17,7 +17,7 @@ import {getAuth} from 'firebase/auth';
 
 import './GridCard.css';
 
-const GridCard = ({store}) => {
+const GridCard = ({store, recommendStore1, recommendStore2}) => {
     const [bookmarked, setBookmarked] = useState(false);
     // 인증업체 필터
     const history = useHistory();
@@ -98,7 +98,14 @@ const GridCard = ({store}) => {
     };
     return (
         <div className='gridCard'>
-            <Link to={`/store/${store.id}/details`} className=''>
+            <Link to={{
+                pathname: `/store/${store.id}/details`,
+                state: {
+                    storeData: store,
+                    recommendStore1: recommendStore1,
+                    recommendStore2: recommendStore2
+                }
+            }} className=''>
                 <div
                     className='gridCard__imageContainer'
                     style={{backgroundImage: `url(${store.images && store.images.length > 0 ? store.images[0].url : 'defaultImageURL'})`}}>

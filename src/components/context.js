@@ -27,7 +27,6 @@ const Context = React.createContext();
 const StoreProvider = ({children}) => {
     const [spotsLoading, setspotsLoading] = useState(true);
 
-    const [menuLoading, setMenuLoading] = useState(true);
     const [newStoresLoading, setNewStoresLoading] = useState(true);
     const [eventsLoading, setEventsLoading] = useState(true);
 
@@ -35,14 +34,12 @@ const StoreProvider = ({children}) => {
     const [spotsCategories, setSpotsCategories] = useState([]);
     const [newStores, setNewStores] = useState([]);
 
-    const [menu, setMenu] = useState([]);
     const [events, setEvents] = useState([]);
 
     const spot = [];
     const spotsCategory = [];
 
     const event = [];
-    const menuItem = [];
 
     const newStore = [];
 
@@ -138,33 +135,6 @@ const StoreProvider = ({children}) => {
 
     // 메뉴 데이터 로딩
 
-    useEffect(() => {
-        storeBase('menu')
-            .select({
-                view: 'Grid view',
-                pageSize: 100,
-            })
-            .eachPage(
-                function page(records, fetchNextPage) {
-                    records.forEach(function (record) {
-                        menuItem.push({
-                            id: record.id,
-                            ...record._rawJson.fields,
-                        });
-                    });
-                    fetchNextPage();
-                    setMenu(menuItem);
-                },
-                function done(err) {
-                    if (err) {
-                        console.error(err);
-                    } else {
-                        console.log('로케이션 카테고리 데이터 불러오기 성공');
-                        setMenuLoading(false);
-                    }
-                }
-            );
-    }, );
 
     useEffect(() => {
         storeBase('stores')
@@ -197,16 +167,12 @@ const StoreProvider = ({children}) => {
         <Context.Provider
             value={{
                 spotsLoading,
-                menuLoading,
                 newStoresLoading,
                 eventsLoading,
-
                 spots,
                 spotsCategories,
-                menu,
                 events,
                 newStores,
-
                 app,
             }}
         >

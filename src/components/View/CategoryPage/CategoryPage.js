@@ -10,19 +10,27 @@ import {storeBase} from '../../context';
 
 import {useHistory, useLocation, useParams} from 'react-router-dom';
 import './CategoryPage.css';
+import {firstCategoryMapper} from "../../Home";
 
 const CategoryPage = () => {
     const history = useHistory();
     const location = useLocation();
     const [dataLoading, setDataLoading] = useState(true)
     const [storeData, setStoreData] = useState([])
+    const [recommendStore1, setRecommendStore1] = useState([])
+    const [recommendStore2, setRecommendStore2] = useState([])
     const {firstCategory, secondCategory, locationCategory} = useParams();
     const [isActive, setIsActive] = useState(secondCategory);
+
+    console.log(`firstCategory: ${firstCategoryMapper[firstCategory]}`)
+    console.log(`secondCategory: ${secondCategory}`)
 
     const secondCategories = location.state.secondCategoryData;
 
     useEffect(() => {
         const store = [];
+        const recommendStore1 = [];
+        const recommendStore2 = [];
         const fetchStoreData = async () => {
             setDataLoading(true)
             storeBase('stores')
@@ -37,9 +45,25 @@ const CategoryPage = () => {
                                 id: record.id,
                                 ...record._rawJson.fields,
                             });
+                            if (record._rawJson.fields.firstCategory === firstCategoryMapper[firstCategory]) {
+                                recommendStore1.push({
+                                    id: record.id,
+                                    ...record._rawJson.fields,
+                                });
+                            }
+                            if (record._rawJson.fields.secondCategory === secondCategory) {
+                                recommendStore2.push({
+                                    id: record.id,
+                                    ...record._rawJson.fields,
+                                });
+                            }
                         });
                         fetchNextPage();
                         setStoreData(store);
+                        setRecommendStore1(recommendStore1)
+                        setRecommendStore2(recommendStore2)
+                        console.log(`recommendStore1: ${recommendStore1}`)
+                        console.log(`recommendStore2: ${recommendStore2}`)
                     },
                     function done(err) {
                         if (err) {
@@ -81,10 +105,6 @@ const CategoryPage = () => {
 
     // 카테고리 클릭시 스크롤 이동
     const clickHandler = (params, e) => {
-        // history.push({
-        //     pathname: `/category/${firstCategory}/전체/${param}`,
-        //     state: {secondCategoryData: filteredSCategory}
-        // });
         history.push(
             {
                 pathname:
@@ -205,6 +225,8 @@ const CategoryPage = () => {
                                             <GridCard
                                                 key={store.id}
                                                 store={store}
+                                                recommendStore1={recommendStore1}
+                                                recommendStore2={recommendStore2}
                                                 open={store.openHour}
                                                 close={store.closeHour}
                                             ></GridCard>
