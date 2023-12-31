@@ -36,64 +36,40 @@ const LandingPage = (history) => {
     const dropHandler = () => setDropActive(!dropActive);
     return (
         <>
-            <div style={{
-                display: 'flex',
-                justifyContent: 'space-between',
-                alignItems: 'center',
-                width: '100%',
-                /*lightgray shadow*/
-                boxShadow: '0 0 0.5rem 0.1rem lightgray',
-                borderRadius: '0 0 0.5rem 0.5rem',
-                padding: '0.5rem 1rem 0.5rem 0.5rem',
-                backgroundColor: '#f5f5f5',
-            }}>
-                <div style={{
-                    width: '60px',
-                    height: '60px',
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                }}>
+            <div
+                className='flex justify-center items-center w-full shadow-md rounded-b-lg bg-gray-100 p-2'
+            >
+                <div className="flex flex-row justify-center w-[400px]">
                     <img
-                        style={{
-                            width: '70px',
-                            height: '70px',
-                            display: 'flex',
-                            justifyContent: 'center',
-                            alignItems: 'center',
-                        }
-                        }
+                        className="w-[70px] h-[70px]"
                         src='/gem-logo.png'
                         alt='로고'
                     />
-                </div>
-                {/* <div className='Notification_Button'>
-          <FaBell />
-        </div> */}
-                <div className='Profile_Button' onClick={dropHandler}>
-                    <FaUserCircle/>
-                    <nav
-                        ref={dropdownRef}
-                        className={`Profile_Drop_Menu ${
-                            dropActive ? 'active' : 'inactive'
-                        }`}
-                    >
-                        <ul>
-                            {user ? (
-                                <>
-                                    <li>
-                                        <button onClick={handleLogout}>로그아웃</button>
-                                    </li>
-                                </>
-                            ) : (
-                                <>
-                                    <li>
-                                        <button onClick={handlePush}>로그인</button>
-                                    </li>
-                                </>
-                            )}
-                        </ul>
-                    </nav>
+                    {/*<div className='Profile_Button' onClick={dropHandler}>*/}
+                    {/*    <FaUserCircle/>*/}
+                    {/*    <nav*/}
+                    {/*        ref={dropdownRef}*/}
+                    {/*        className={`Profile_Drop_Menu ${*/}
+                    {/*            dropActive ? 'active' : 'inactive'*/}
+                    {/*        }`}*/}
+                    {/*    >*/}
+                    {/*        <ul>*/}
+                    {/*            {user ? (*/}
+                    {/*                <>*/}
+                    {/*                    <li>*/}
+                    {/*                        <button onClick={handleLogout}>로그아웃</button>*/}
+                    {/*                    </li>*/}
+                    {/*                </>*/}
+                    {/*            ) : (*/}
+                    {/*                <>*/}
+                    {/*                    <li>*/}
+                    {/*                        <button onClick={handlePush}>로그인</button>*/}
+                    {/*                    </li>*/}
+                    {/*                </>*/}
+                    {/*            )}*/}
+                    {/*        </ul>*/}
+                    {/*    </nav>*/}
+                    {/*</div>*/}
                 </div>
             </div>
             <SearchBox history={history}/>
